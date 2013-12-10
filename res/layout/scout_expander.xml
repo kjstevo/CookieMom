@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:verticalScrollbarPosition="right" android:scrollbars="vertical" android:isScrollContainer="false">
+    <!--<RelativeLayout android:layout_width="fill_parent"-->
+    <!--android:layout_height="fill_parent">-->
+    <!--<TextView android:layout_height="wrap_content" android:layout_width="wrap_content"-->
+    <!--android:id="@id/card_expand_inner_simple_title" android:text="Transactions"-->
+    <!--style="@style/card.header_simple_title" android:layout_centerHorizontal="true"-->
+    <!--android:layout_alignParentTop="true" android:layout_alignParentLeft="false" android:visibility="gone"/>-->
+    <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="114dp" android:id="@+id/scout_tableview"
+            android:layout_below="@id/card_expand_inner_simple_title"
+            android:orientation="vertical" android:measureWithLargestChild="true" android:clipChildren="false"
+            android:duplicateParentState="false" android:isScrollContainer="true"
+            android:verticalScrollbarPosition="right" android:scrollbarStyle="outsideOverlay">
+
+    </TableLayout>
+
+    <!--</RelativeLayout>-->
+</ScrollView>

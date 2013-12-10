@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:card="http://schemas.android.com/apk/res-auto" android:measureWithLargestChild="true"
+              android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+
+    <it.gmariotti.cardslib.library.view.component.CardHeaderView
+            style="@style/card.header_outer_layout"
+            android:id="@+id/card_header_layout"
+            android:layout_width="wrap_content"
+            card:card_header_layout_resourceID="@layout/scout_heder"
+            android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

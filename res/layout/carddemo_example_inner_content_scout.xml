@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ /*******************************************************************************
+  ~   Copyright (c) 2013 Gabriele Mariotti.
+  ~
+  ~   Licensed under the Apache License, Version 2.0 (the "License");
+  ~   you may not use this file except in compliance with the License.
+  ~   You may obtain a copy of the License at
+  ~
+  ~   http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~   Unless required by applicable law or agreed to in writing, software
+  ~   distributed under the License is distributed on an "AS IS" BASIS,
+  ~   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~   See the License for the specific language governing permissions and
+  ~   limitations under the License.
+  ~  ******************************************************************************/
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:background="@drawable/cab_background_bottom_carddemo"
+                android:paddingLeft="@dimen/list_card_padding_left"
+                android:paddingTop="@dimen/list_card_padding_top" android:paddingRight="@dimen/list_card_padding_right"
+                android:paddingBottom="@dimen/list_card_padding_bottom" android:gravity="top"
+                style="@style/card.main_layout" android:clickable="false">
+
+
+    <ImageView
+            android:id="@+id/colorBorder"
+            android:background="@drawable/rectangle"
+            android:layout_width="10dp"
+            android:layout_height="@dimen/card_thumbnail_height"
+            android:layout_toRightOf="@+id/ready_for_pickup"
+            android:contentDescription="@string/border" android:visibility="invisible"/>
+
+    <!-- Use same ID to use built-in features -->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="9"
+            android:textSize="30dp"
+            android:id="@+id/card_main_inner_simple_title" android:textIsSelectable="false"
+
+            android:layout_alignParentLeft="false"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/with_scouts_count" android:layout_alignLeft="@+id/textView"
+            android:layout_alignRight="@+id/textView" android:layout_alignBaseline="@+id/with_scouts_count"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/received"
+            android:id="@+id/textView1"
+            android:layout_marginLeft="10dp" android:visibility="visible"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/colorBorder" android:layout_alignBottom="@+id/colorBorder"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ready_for_pickup"
+            android:text="@string/ready_for_pickup"
+            android:singleLine="false"
+            android:scaleType="fitEnd" android:layout_alignParentLeft="false"
+            android:layout_alignParentBottom="false" android:layout_alignParentTop="false"
+            android:textAppearance="@android:style/TextAppearance.Holo.Small"
+            android:lines="3" android:maxWidth="@android:dimen/app_icon_size" android:gravity="center"
+            android:layout_centerVertical="true" android:textColor="@android:color/holo_red_dark"
+            android:textStyle="italic" android:checkMark="@string/ready_for_pickup" android:visibility="gone"
+            android:layout_alignBottom="@+id/textView1"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:visibility="visible"
+              android:id="@+id/with_scouts_count"
+              android:text="25"
+              android:textSize="30dp"
+              android:layout_alignRight="@+id/textView1"
+              android:layout_alignLeft="@+id/textView1" android:layout_above="@+id/textView1" android:enabled="false"
+              android:longClickable="false" android:gravity="center"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/on_order"
+            android:id="@+id/textView" android:gravity="center|top"
+            android:layout_alignParentLeft="false"
+            android:layout_toRightOf="@+id/textView1" android:layout_alignBaseline="@+id/textView1"
+            android:layout_marginLeft="10dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/paid_text"
+            android:layout_toRightOf="@+id/card_main_inner_simple_title"
+            android:text="$1250" android:gravity="center_horizontal|top"
+            android:textColor="#00b300" android:paddingLeft="5dp"
+            android:layout_alignTop="@+id/with_scouts_count"
+            android:layout_alignParentRight="false"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/owed_text"
+              android:text="$3500"
+              android:textColor="#b31f1b"
+              android:paddingLeft="5dp"
+              android:layout_alignLeft="@+id/paid_text" android:layout_alignParentRight="false"
+              android:gravity="center_horizontal"
+              android:layout_above="@+id/total_due"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/total_due"
+              android:layout_toRightOf="@+id/card_main_inner_simple_title" android:text="$1250"
+              android:textColor="#1186ce" android:paddingLeft="5dp"
+              android:gravity="center_horizontal|top"
+              android:layout_alignBottom="@+id/textView1"
+              android:drawableTop="@android:drawable/divider_horizontal_textfield"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_personal_delete"
+          android:title="@string/delete"
+            />
+    <item android:id="@+id/menu_personal_edit"
+          android:title="@string/edit"
+            />
+    <item android:id="@+id/menu_personal_delivered"
+          android:title="@string/delivered"
+            />
+    <item android:id="@+id/menu_personal_collect"
+          android:title="@string/collect"
+            />
+</menu>

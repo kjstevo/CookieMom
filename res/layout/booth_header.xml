@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+
+                android:background="#00bd1e">
+
+    <!-- This is the Inner Content Header which you can populate runtime
+         with setupInnerViewElements(android.view.ViewGroup, android.view.View) method in CardHeader class. -->
+    <FrameLayout
+            android:id="@+id/card_header_inner_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#080cbd">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="#fafffb" android:linksClickable="false"/>
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,132 @@
+<resources>
+    <style name="carddemo_googlenow_main_inner_lastupdate">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:layout_marginLeft">@dimen/card_header_simple_title_margin_left</item>
+    </style>
+
+    <style name="Birth.card.content_outer_layout" parent="@style/card.content_outer_layout">
+        <!--Style for Content View-->
+        <item name="android:minHeight">60dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/card_content_outer_view_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/card_content_outer_view_margin_bottom</item>
+        <item name="android:layout_marginLeft">@dimen/card_content_outer_view_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/card_content_outer_view_margin_right</item>
+    </style>
+
+
+    <style name="Now"/>
+
+    <style name="Now.card_expand_inner_layout">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="Now.card_expand_inner_layout.light_gray">
+        <item name="android:background">#515254</item>
+        <item name="android:textColor">#B3B2B2</item>
+    </style>
+
+    <style name="Now.card_expand_inner_layout.light_gray.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Now.card_expand_inner_layout.dark">
+        <item name="android:background">#4A4B4D</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+
+    <style name="Now.card_expand_inner_layout.dark.bold" parent="@style/Now.card_expand_inner_layout.dark">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"/>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowBackground">@color/background_window</item>
+        <item name="android:actionBarStyle">@style/ActionBarStyle</item>
+    </style>
+
+    <style name="ActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:icon">@drawable/cookie_momster</item>
+        <item name="android:background">#FF666666</item>
+        <!--<item name="android:background">@android:drawable/button_onoff_indicator_on</item>-->
+    </style>
+
+    <style name="medium_bold">
+        <item name="android:textSize">@dimen/medium_font_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="medium_bold_hms" parent="medium_bold">
+        <item name="android:textSize">@dimen/medium_font_size_hms</item>
+    </style>
+    <style name="medium_light">
+        <item name="android:textSize">@dimen/medium_font_size</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <style name="medium_light_header" parent="medium_light">
+        <item name="android:textSize">@dimen/medium_font_size_header</item>
+    </style>
+    <style name="medium_light_hms" parent="medium_light">
+        <item name="android:textSize">@dimen/medium_font_size_hms</item>
+    </style>
+    <style name="medium_bold_date" parent="@style/medium_bold">
+        <item name="android:textSize">@dimen/medium_date_font_size</item>
+    </style>
+    <style name="medium_light_date" parent="@style/medium_bold">
+        <item name="android:textSize">@dimen/medium_date_font_size</item>
+    </style>
+    <style name="medium_light_expiration">
+        <item name="android:textSize">@dimen/medium_expiration_font_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="label">
+        <item name="android:textSize">@dimen/label_font_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+    <style name="dialpad">
+        <item name="android:textSize">@dimen/dialpad_font_size</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <style name="dialpad_text" parent="dialpad">
+        <item name="android:textSize">@dimen/dialpad_font_size_ampm</item>
+    </style>
+    <style name="dialog_button">
+        <item name="android:textSize">@dimen/dialog_button_font_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+    <style name="tablet_dialpad">
+        <item name="android:textSize">@dimen/tablet_dialpad_font_size</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+    <style name="tablet_dialpad_text">
+        <item name="android:textSize">@dimen/tablet_dialpad_font_size_ampm</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+
+    <style name="aosp_time_label">
+        <item name="android:textSize">@dimen/time_label_size</item>
+        <item name="android:textColor">@color/numbers_text_color</item>
+    </style>
+
+    <style name="aosp_ampm_label">
+        <item name="android:textSize">@dimen/ampm_label_size</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/ampm_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="aosp_day_of_week_label_condensed"/>
+
+</resources>

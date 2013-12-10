@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:card="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RadioGroup android:orientation="horizontal" android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:id="@+id/radiogroup_boxes_cases"
+                android:layout_gravity="center_horizontal">
+        <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content"
+                     android:text="@string/boxes" android:id="@+id/boxes_radio_button"
+                     android:checked="true"
+                     style="@android:style/Widget.DeviceDefault.Light.CompoundButton.RadioButton"/>
+        <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content"
+                     android:text="@string/cases" android:id="@+id/cases_radio_button"
+                     style="@android:style/Widget.DeviceDefault.Light.CompoundButton.RadioButton"/>
+    </RadioGroup>
+
+    <it.gmariotti.cardslib.library.view.CardListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            card:list_card_layout_resourceID="@layout/list_card_thumbnail_layout"
+            android:id="@+id/carddemo_list_base1">
+
+    </it.gmariotti.cardslib.library.view.CardListView>
+</LinearLayout>

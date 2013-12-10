@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="fill_parent" android:background="@drawable/cab_background_bottom_carddemo">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_weight="2"
+            android:background="@android:drawable/picture_frame">
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Assigned Scouts:"
+                android:id="@+id/textView" style="@style/card.base_simple_title" android:textStyle="bold"/>
+        <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/booth_scout_list" style="@android:style/Widget.Holo.Light.ListView"
+                android:choiceMode="singleChoice" android:paddingLeft="5dp"/>
+    </LinearLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginBottom="5dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="When:"
+                android:id="@+id/textView1" style="@style/card.base_simple_title" android:textStyle="bold"
+                android:paddingTop="5dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time:"
+                android:id="@+id/textView2"
+                android:textStyle="bold" android:singleLine="true" android:layout_below="@+id/textView1"
+                android:layout_alignLeft="@+id/textView1"
+                android:paddingLeft="5dp" android:visibility="gone"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sat, Jan 15"
+                android:id="@+id/booth_date" android:singleLine="true"
+                style="@style/card.base_simple_title" android:layout_toRightOf="@+id/textView1"
+                android:layout_alignParentRight="true"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="03:00 AM"
+                android:id="@+id/booth_time" android:singleLine="true"
+                android:layout_alignParentRight="true"
+                style="@style/card.base_simple_title"
+                android:layout_below="@+id/booth_date"
+                android:layout_marginTop="-5dp" android:gravity="left" android:layout_toRightOf="@+id/textView1"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Where:"
+                android:id="@+id/textView5" android:textStyle="bold"
+                android:layout_below="@+id/booth_time" android:layout_alignLeft="@+id/textView2"
+                />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2819 SW Multnomah Blvd."
+                android:id="@+id/booth_address"
+                style="@style/card.base_simple_title"
+                android:textAppearance="@android:style/TextAppearance.Holo.Small"
+                android:layout_below="@+id/booth_time"
+                android:paddingTop="5dp"
+                android:minLines="2" android:lines="2" android:layout_marginTop="-5dp"
+                android:layout_toRightOf="@+id/textView1"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CookieMom.iml" filepath="$PROJECT_DIR$/CookieMom.iml" group="CookieMom and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/android-styled-dialogs-master/demo/demo.iml" filepath="$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/android-styled-dialogs-master/demo/demo.iml" group="CookieMom and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/android-styled-dialogs-master/library/library.iml" filepath="$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/android-styled-dialogs-master/library/library.iml" group="CookieMom and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/PagerSlidingTabStrip-master/library/library1.iml" filepath="$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/PagerSlidingTabStrip-master/library/library1.iml" group="CookieMom and modules" />
+      <module fileurl="file://$PROJECT_DIR$/../../../cardslib-master/cardslib-master/library/src/main/main.iml" filepath="$PROJECT_DIR$/../../../cardslib-master/cardslib-master/library/src/main/main.iml" group="CookieMom and modules" />
+    </modules>
+  </component>
+</project>
+

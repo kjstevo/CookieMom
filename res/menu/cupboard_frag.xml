@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_place_cupboard_order"
+          android:title="@string/place_cupboard_order"
+          android:showAsAction="ifRoom"/>
+    <item android:id="@+id/menu_pickup_cupboard_order"
+          android:title="@string/pickuo_cupboard_order"
+          android:showAsAction="ifRoom"/>
+</menu>

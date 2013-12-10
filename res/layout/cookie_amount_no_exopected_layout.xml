@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="fill_parent" android:background="@drawable/cab_background_bottom_carddemo">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_weight="3"
+            android:background="@android:drawable/picture_frame" android:id="@+id/expected_panel"
+            android:paddingRight="5dp" android:measureWithLargestChild="true">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ordered:"
+                android:id="@+id/textView" style="@style/card.base_simple_title" android:textStyle="bold"
+                android:lines="1" android:gravity="left" android:layout_gravity="left"
+                android:singleLine="true" android:paddingRight="5dp"/>
+        <TextView style="@style/card.header_simple_title" android:layout_width="fill_parent"
+                  android:layout_height="wrap_content" android:text="155" android:id="@+id/boxes_on_order"
+                  android:textStyle="bold" android:layout_weight="1" android:gravity="center"
+                  android:paddingRight="5dp"/>
+        <TextView style="@style/card.header_simple_title" android:layout_width="fill_parent"
+                  android:layout_height="wrap_content" android:text="155" android:id="@+id/cases_ordered"
+                  android:textStyle="bold" android:layout_weight="1" android:gravity="center"
+                  android:paddingRight="5dp" android:visibility="gone"/>
+    </LinearLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_weight="2" android:layout_marginBottom="5dp">
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In Stock:"
+                android:id="@+id/textView1"
+                android:padding="10dp" style="@style/card.header_simple_title"
+                android:lines="2" android:minLines="2"
+                android:maxWidth="90dp" android:textSize="@dimen/card_header_simple_title_text_size"
+                android:gravity="center" android:layout_toLeftOf="@+id/boxes_on_hand"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="000"
+                android:id="@+id/boxes_on_hand"
+                android:padding="10dp"
+                style="@android:style/Widget.DeviceDefault.Light.EditText"
+                android:gravity="center"
+                android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        <TextView style="@android:style/Widget.DeviceDefault.Light.EditText" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" android:text="000" android:id="@+id/text_view_cases"
+                  android:padding="10dp" android:gravity="center" android:layout_alignParentRight="true"
+                  android:layout_centerVertical="true" android:visibility="invisible"/>
+    </RelativeLayout>
+</LinearLayout>
