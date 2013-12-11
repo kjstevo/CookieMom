@@ -17,6 +17,8 @@ import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.scout.SelectScoutListActivity_;
 import net.kmaster.cookiemom.dao.Booth;
+import net.kmaster.cookiemom.dao.BoothAssignments;
+import net.kmaster.cookiemom.dao.BoothAssignmentsDao;
 import net.kmaster.cookiemom.dao.BoothDao;
 
 import java.util.ArrayList;
@@ -115,6 +117,15 @@ public class BoothFragment
     @Override
     public void onPositiveButtonClicked(int requestCode) {
         BoothDao boothDao = Main.daoSession.getBoothDao();
+        List<BoothAssignments> list = Main.daoSession.getBoothAssignmentsDao().queryBuilder()
+                .where(
+                        BoothAssignmentsDao.Properties.BoothAssignBoothId.eq((long) requestCode))
+                .list();
+        if (list != null) {
+            for (BoothAssignments assignments : list) {
+                Main.daoSession.getBoothAssignmentsDao().delete(assignments);
+            }
+        }
         boothDao.delete(boothDao.loadByRowId((long) requestCode));
 
         afterViews();
