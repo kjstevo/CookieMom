@@ -6,19 +6,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <RadioGroup android:orientation="horizontal" android:layout_height="wrap_content"
-                android:layout_width="wrap_content" android:id="@+id/radiogroup_boxes_cases"
-                android:layout_gravity="center_horizontal">
-        <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content"
-                     android:text="@string/boxes" android:id="@+id/boxes_radio_button"
-                     android:checked="true"
-                     style="@android:style/Widget.DeviceDefault.Light.CompoundButton.RadioButton"/>
-        <RadioButton android:layout_height="wrap_content" android:layout_width="wrap_content"
-                     android:text="@string/cases" android:id="@+id/cases_radio_button"
-                     style="@android:style/Widget.DeviceDefault.Light.CompoundButton.RadioButton"/>
-    </RadioGroup>
-
-    <it.gmariotti.cardslib.library.view.CardListView
+      <it.gmariotti.cardslib.library.view.CardListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             card:list_card_layout_resourceID="@layout/list_card_thumbnail_layout"
