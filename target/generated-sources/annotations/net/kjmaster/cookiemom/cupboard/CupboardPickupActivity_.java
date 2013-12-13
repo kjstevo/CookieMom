@@ -19,7 +19,6 @@ import net.kjmaster.cookiemom.R.id;
 import net.kjmaster.cookiemom.R.layout;
 import net.kjmaster.cookiemom.global.ISettings_;
 
-@SuppressWarnings("ALL")
 public final class CupboardPickupActivity_
         extends CupboardPickupActivity {
 
@@ -38,21 +37,6 @@ public final class CupboardPickupActivity_
 
     private void afterSetContentView_() {
         {
-            View view = findViewById(id.cases_radio_button);
-            if (view != null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        CupboardPickupActivity_.this.casesClick();
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = findViewById(id.boxes_radio_button);
             if (view != null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -61,6 +45,21 @@ public final class CupboardPickupActivity_
                     @Override
                     public void onClick(View view) {
                         CupboardPickupActivity_.this.boxesClick();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.cases_radio_button);
+            if (view != null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        CupboardPickupActivity_.this.casesClick();
                     }
 
                 }

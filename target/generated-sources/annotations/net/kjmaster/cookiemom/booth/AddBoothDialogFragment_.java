@@ -14,7 +14,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import net.kjmaster.cookiemom.R.layout;
 
-@SuppressWarnings("UnusedParameters")
 public final class AddBoothDialogFragment_
         extends AddBoothDialogFragment {
 
@@ -30,11 +29,11 @@ public final class AddBoothDialogFragment_
     }
 
     private void afterSetContentView_() {
+        editText = ((EditText) findViewById(net.kjmaster.cookiemom.R.id.editText));
+        dateText = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.Date));
         timeText = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.Time));
         hiddenDateTime = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.text_date_time_hidden));
-        dateText = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.Date));
         addressText = ((EditText) findViewById(net.kjmaster.cookiemom.R.id.add_booth_address));
-        editText = ((EditText) findViewById(net.kjmaster.cookiemom.R.id.editText));
         {
             View view = findViewById(net.kjmaster.cookiemom.R.id.date_time_picker_button);
             if (view != null) {

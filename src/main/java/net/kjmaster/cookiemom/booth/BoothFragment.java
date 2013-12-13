@@ -14,6 +14,7 @@ import it.gmariotti.cardslib.library.internal.base.BaseCard;
 import it.gmariotti.cardslib.library.view.CardListView;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.booth.expander.CustomBoothExpander;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.scout.SelectScoutListActivity_;
 import net.kmaster.cookiemom.dao.Booth;
@@ -74,7 +75,8 @@ public class BoothFragment
                 mCard.addCardHeader(cardHeader);
                 cardHeader.setTitle(booth.getBoothLocation());
                 mCard.setTitle("More Info");
-
+                CustomBoothExpander customExpander = new CustomBoothExpander(getActivity(), booth);
+                mCard.addCardExpand(customExpander);
                 mData.add(mCard);
             }
 
@@ -88,23 +90,30 @@ public class BoothFragment
 
     private void selectBoothMenu(BaseCard card, MenuItem item) {
         Booth booth = ((BoothContentCard) card.getParentCard()).getBooth();
-        if (item.getItemId() == R.id.menu_assign_scout) {
-            SelectScoutListActivity_.intent(getActivity()).requestCode(Constants.ASSIGN_SCOUT_REQUEST_CODE).targetId(booth.getId()).startForResult(Constants.ASSIGN_SCOUT_REQUEST_CODE);
-        }
-        if (item.getItemId() == R.id.menu_booth_delete) {
+        switch (item.getItemId()) {
+            case R.id.menu_assign_scout:
+                SelectScoutListActivity_.intent(getActivity()).requestCode(Constants.ASSIGN_SCOUT_REQUEST_CODE).targetId(booth.getId()).startForResult(Constants.ASSIGN_SCOUT_REQUEST_CODE);
+                break;
+            case R.id.menu_booth_delete:
+                SimpleDialogFragment.createBuilder(getActivity(), getActivity().getSupportFragmentManager())
+                        .setTitle("WARNING!")
+                        .setMessage("Are you sure you want to delete this booth? This action can not be undone!")
+                        .setPositiveButtonText("Delete Booth")
+                        .setNegativeButtonText("Cancel")
+                        .setCancelable(true)
+                        .setTargetFragment(this, booth.getId().intValue())
+                        .setRequestCode(booth.getId().intValue())
+                        .setTag(booth.getId().toString())
+                        .show();
+                break;
+            case R.id.menu_booth_checkout:
+                BoothCheckOutActivity_.intent(getActivity()).BoothId(booth.getId()).start();
 
-            SimpleDialogFragment.createBuilder(getActivity(), getActivity().getSupportFragmentManager())
-                    .setTitle("WARNING!")
-                    .setMessage("Are you sure you want to delete this booth? This action can not be undone!")
-                    .setPositiveButtonText("Delete Booth")
-                    .setNegativeButtonText("Cancel")
-                    .setCancelable(true)
-                    .setTargetFragment(this, booth.getId().intValue())
-                    .setRequestCode(booth.getId().intValue())
-                    .setTag(booth.getId().toString())
-                    .show();
+                break;
+            case R.id.menu_booth_checkin:
+                break;
+            default:
         }
-
     }
 
 

@@ -20,7 +20,6 @@ import net.kjmaster.cookiemom.R.id;
 import net.kjmaster.cookiemom.R.layout;
 import net.kjmaster.cookiemom.R.string;
 
-@SuppressWarnings("UnusedParameters")
 public final class ScoutOrderActivity_
         extends ScoutOrderActivity {
 
@@ -34,27 +33,12 @@ public final class ScoutOrderActivity_
 
     private void init_(Bundle savedInstanceState) {
         Resources resources_ = this.getResources();
-        fragTitle = resources_.getString(string.add_order_title);
         fragTag = resources_.getString(string.add_order);
+        fragTitle = resources_.getString(string.add_order_title);
         injectExtras_();
     }
 
     private void afterSetContentView_() {
-        {
-            View view = findViewById(id.cases_radio_button);
-            if (view != null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        ScoutOrderActivity_.this.casesClick();
-                    }
-
-                }
-                );
-            }
-        }
         {
             View view = findViewById(id.boxes_radio_button);
             if (view != null) {
@@ -64,6 +48,21 @@ public final class ScoutOrderActivity_
                     @Override
                     public void onClick(View view) {
                         ScoutOrderActivity_.this.boxesClick();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = findViewById(id.cases_radio_button);
+            if (view != null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        ScoutOrderActivity_.this.casesClick();
                     }
 
                 }

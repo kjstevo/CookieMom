@@ -490,262 +490,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="724653b3-d774-431b-a637-8e4913711973" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/CookieMom-1.0-SNAPSHOT.ap_" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/CookieMom-1.0-SNAPSHOT.apk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/CookieMom-1.0-SNAPSHOT.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/CookieMom.apk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/CookieMom.unaligned.apk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/actionbar_bottom.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/actionbar_bottom.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/background_card.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/background_card.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/berry.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cab_background_bottom_carddemo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cab_background_top_carddemo.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes.dex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/contact.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cookie_momster.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/dialog_full_holo_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/dialog_full_holo_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/dialog_full_holo_dark.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/dialog_full_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/dialog_full_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/dialog_full_holo_light.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/do_si_do.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/dulce.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_action_search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_action_user.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_action_user.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_backspace_disabled_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_backspace_disabled_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-sw600dp-hdpi/ic_backspace_disabled_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-sw600dp-mdpi/ic_backspace_disabled_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-sw600dp-xhdpi/ic_backspace_disabled_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_backspace_disabled_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_backspace_disabled_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_backspace_disabled_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-sw600dp-hdpi/ic_backspace_disabled_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-sw600dp-mdpi/ic_backspace_disabled_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-sw600dp-xhdpi/ic_backspace_disabled_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_backspace_disabled_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_backspace_normal_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_backspace_normal_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-sw600dp-hdpi/ic_backspace_normal_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-sw600dp-mdpi/ic_backspace_normal_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-sw600dp-xhdpi/ic_backspace_normal_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_backspace_normal_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_backspace_normal_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_backspace_normal_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-sw600dp-hdpi/ic_backspace_normal_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-sw600dp-mdpi/ic_backspace_normal_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-sw600dp-xhdpi/ic_backspace_normal_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_backspace_normal_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_check_dark_disabled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_check_light_disabled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_check_normal_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_check_normal_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-ldpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_launcher_actionbar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_launcher_chrome.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_launcher_gmail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_launcher_gmaps.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_launcher_gplus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/lemon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/mango.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/mint.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/samoa.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/scoutlogo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/smile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/tabs_pattern.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/tabs_pattern.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/tabs_pattern_diagonal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/tabs_pattern_diagonal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/tags.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/thanks.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/trefoil.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionAddScout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionAssignBooth.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionContentCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionCupboardOrder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/action/ActionFragment_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionScoutPickup.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/AddBoothActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/AddBoothActivity_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/AddBoothDialogFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/AddBoothDialogFragment_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/AddScoutActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/AddScoutActivity_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/AddScoutDialogFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/AddScoutDialogFragment_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/numberpicker/AutoScrollHorizontalScrollView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothContentCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/BoothFragment_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothListFragmentCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothTextAdapterListItem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/CompleteCookieCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/Constants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/CookieActionActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/CookieAmountContentCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/CookieAmountsListInputFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/ui/CookieAmountsListInputFragment_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CookieMom.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardContentCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardFragment_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardOrderFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardOrderFragment_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardPickupFragment_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/CustomExpander.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/DateTimePicker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/IAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/ICookieActionFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/ISendActivityResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/ISettings.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/global/ISettings_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Maddy.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/MainActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/MainActivity_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/Main_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/numberpicker/NumberPicker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/numberpicker/NumberPickerBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/numberpicker/NumberPickerDialogFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/numberpicker/NumberPickerErrorTextView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/numberpicker/NumberView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/ObservableValues.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/r/net/kjmaster/cookiemom/R.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpander.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderCookieList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderListLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderTransList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderValues.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderValuesListAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutFragment_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutOrderActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutOrderActivity_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutPickupActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutPickupActivity_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutPickupDialog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutTurnInActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutTurnInActivity_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutTurnInDialog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/SelectScoutListActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/SelectScoutListActivity_.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/numberpicker/ZeroTopPaddingTextView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/action_content.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/action_frag.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/action_header.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/activity_main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/activity_main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/add_booth_dialog.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/add_booth_layout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/add_scout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/add_scout_dialog.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/add_scout_layout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/arrays.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/attrs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/background_tab.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/background_tabs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/background_tabs_diagonal.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/booth_content.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/booth_frag.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/booth_header.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/booth_list_fragment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/booth_overflow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/button_background_dark.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/button_background_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/carddemo_example_inner_content.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/carddemo_example_inner_content_scout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/carddemo_googlenow_inner_expand.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/carddemo_googlenowstock_inner_content.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/carddemo_googlenowstock_list_item.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/cookie_amount_layout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/cookie_amount_no_exopected_layout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/cupboard_frag.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/cupboard_overflow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/color/date_picker_selector.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/color/date_picker_year_selector.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/date_time_dialog.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/datepicker.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/datetimepicker.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/color/dialog_text_color_holo_dark.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/color/dialog_text_color_holo_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-sw600dp/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-sw720dp-land/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/color/done_text_color.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/expand_scout_expanded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/fragment_sample.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ic_backspace_dark.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ic_backspace_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ic_check_dark.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/ic_check_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/ids.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/key_background_dark.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/key_background_light.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/number_picker_dialog.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/number_picker_view.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/personal_frag.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/personal_order_dialog.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/personal_overflow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/rectangle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/color/rectangle_blue.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/scout_card_layout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/scout_expander.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/scout_frag.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/color/scout_header.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/scout_heder.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/scout_order_dialog.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/scout_order_layout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/scout_overflow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/select_scout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/simple_big_text.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/simple_medium_text.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/simple_text.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-v11/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-v14/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/themes.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/three_keys_view.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/three_keys_view_leftright.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/three_keys_view_right_drawable.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/three_keys_view_text.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/timepicker.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInDialog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckOutActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/expander/BoothExpanderCookieList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothOrderActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/expander/CustomBoothExpander.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/InnerExpanderAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/InnerExpanderValues.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/scout_inner_expand.xml" />
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\javadoc\net\kjmaster\cookiemom\scout\expander\ScoutExpanderTransList.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\src\main\java\net\kjmaster\cookiemom\scout\expander\ScoutExpanderTransList.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CookieMom.apk" afterPath="$PROJECT_DIR$/target/CookieMom.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CookieMom.unaligned.apk" afterPath="$PROJECT_DIR$/target/CookieMom.unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/action/ActionFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/action/ActionFragment_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/AddBoothActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/AddBoothActivity_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/AddBoothDialogFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/AddBoothDialogFragment_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothContentCard.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothContentCard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/BoothFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/BoothFragment_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/ui/CookieAmountsListInputFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/ui/CookieAmountsListInputFragment_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardFragment_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardOrderFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardOrderFragment_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardPickupFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardPickupFragment_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/MainActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/MainActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/MainActivity_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/Main_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/Main_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutFragment_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutOrderActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutOrderActivity_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutPickupActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutPickupActivity_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutTurnInActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutTurnInActivity_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/SelectScoutListActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/SelectScoutListActivity_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/booth_overflow.xml" afterPath="$PROJECT_DIR$/res/menu/booth_overflow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <list id="9d0a0215-8efb-451b-a184-5de1526cf397" name="Dao" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-gen/net/kmaster/cookiemom/dao/Booth.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-gen/net/kmaster/cookiemom/dao/BoothAssignments.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-gen/net/kmaster/cookiemom/dao/BoothAssignmentsDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-gen/net/kmaster/cookiemom/dao/BoothDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-gen/net/kmaster/cookiemom/dao/CookieTransactions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-gen/net/kmaster/cookiemom/dao/CookieTransactionsDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-gen/net/kmaster/cookiemom/dao/DaoMaster.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-gen/net/kmaster/cookiemom/dao/DaoSession.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-gen/net/kmaster/cookiemom/dao/Order.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-gen/net/kmaster/cookiemom/dao/OrderDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-gen/net/kmaster/cookiemom/dao/Scout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-gen/net/kmaster/cookiemom/dao/ScoutDao.java" />
-    </list>
+    <list id="9d0a0215-8efb-451b-a184-5de1526cf397" name="Dao" comment="" />
     <ignored path="CookieMom.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/fragment.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1386707214407" ignored="false" />
@@ -756,7 +538,7 @@
     <file path="/CookieMomGenerator.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1386226531059" ignored="false" />
     <file path="/activity_main.xml" changelist="724653b3-d774-431b-a637-8e4913711973" time="1382929159888" ignored="false" />
     <file path="/MyActivity.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1382935576190" ignored="false" />
-    <file path="/Dummy.txt" changelist="724653b3-d774-431b-a637-8e4913711973" time="1386719418659" ignored="false" />
+    <file path="/Dummy.txt" changelist="724653b3-d774-431b-a637-8e4913711973" time="1386940549900" ignored="false" />
     <file path="/AddScoutDialogFragment.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1386630421302" ignored="false" />
     <file path="/SimpleEditDialog.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1382936770485" ignored="false" />
     <file path="/AddScoutActivity.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1386643117046" ignored="false" />
@@ -958,6 +740,8 @@
     <file path="$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/NineOldAndroids-master/library/AndroidManifest.xml" changelist="724653b3-d774-431b-a637-8e4913711973" time="1386554870511" ignored="false" />
     <file path="/SwipeDismissViewTouchListener.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1386708541850" ignored="false" />
     <file path="/NumberPickerErrorTextView.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1386713467959" ignored="false" />
+    <file path="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/Constants.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1386940515890" ignored="false" />
+    <file path="$PROJECT_DIR$/target/generated-sources/r/net/kjmaster/cookiemom/R.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1386940562536" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1008,98 +792,7 @@
         <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity.java" line="-1" class="CupboardPickupActivity.java" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity.java" line="146" class="net.kjmaster.cookiemom.cupboard.CupboardPickupActivity" package="net.kjmaster.cookiemom.cupboard">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity.java" line="99" class="net.kjmaster.cookiemom.cupboard.CupboardOrderActivity" package="net.kjmaster.cookiemom.cupboard">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity.java" line="108" class="net.kjmaster.cookiemom.cupboard.CupboardOrderActivity" package="net.kjmaster.cookiemom.cupboard">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutFragment.java" line="175" class="net.kjmaster.cookiemom.scout.ScoutFragment" package="net.kjmaster.cookiemom.scout">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutFragment.java" line="184" class="net.kjmaster.cookiemom.scout.ScoutFragment" package="net.kjmaster.cookiemom.scout">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -1113,11 +806,8 @@
       <file leaf-file-name="MainActivity_.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/MainActivity_.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="30" selection-start="831" selection-end="831" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#3580#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state line="28" column="30" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1125,10 +815,8 @@
       <file leaf-file-name="SelectScoutListActivity_.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/SelectScoutListActivity_.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="30" selection-start="856" selection-end="856" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#501#538#0" expanded="true" />
-              </folding>
+            <state line="31" column="30" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1136,15 +824,8 @@
       <file leaf-file-name="CupboardOrderActivity_.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity_.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="30" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#3546#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#1095#1310#0" expanded="false" />
-                <element signature="e#1290#1291#0" expanded="false" />
-                <element signature="e#1497#1712#0" expanded="false" />
-                <element signature="e#1692#1693#0" expanded="false" />
-              </folding>
+            <state line="32" column="30" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1152,15 +833,8 @@
       <file leaf-file-name="ScoutOrderActivity_.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutOrderActivity_.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="30" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#5168#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#1390#1602#0" expanded="false" />
-                <element signature="e#1582#1583#0" expanded="false" />
-                <element signature="e#1789#2001#0" expanded="false" />
-                <element signature="e#1981#1982#0" expanded="false" />
-              </folding>
+            <state line="34" column="30" selection-start="933" selection-end="933" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1168,15 +842,8 @@
       <file leaf-file-name="ScoutPickupActivity_.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutPickupActivity_.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="30" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#5429#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#1644#1857#0" expanded="false" />
-                <element signature="e#1837#1838#0" expanded="false" />
-                <element signature="e#2044#2257#0" expanded="false" />
-                <element signature="e#2237#2238#0" expanded="false" />
-              </folding>
+            <state line="35" column="30" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1185,10 +852,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderListLayout.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="58" column="44" selection-start="1956" selection-end="1956" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#2085#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1197,13 +861,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="123" column="49" selection-start="4911" selection-end="4911" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#2249#2257#0" expanded="false" />
-                <element signature="e#2424#2430#0" expanded="false" />
-                <element signature="e#3881#4124#0" expanded="false" />
-                <element signature="e#4109#4110#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1212,9 +870,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="226" column="16" selection-start="7327" selection-end="7327" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1222,7 +878,7 @@
       <file leaf-file-name="NumberPicker.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/numberpicker/NumberPicker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="416" column="12" selection-start="13330" selection-end="13330" vertical-scroll-proportion="0.33333334">
+            <state line="435" column="12" selection-start="13833" selection-end="13833" vertical-scroll-proportion="0.035051547">
               <folding />
             </state>
           </provider>
@@ -1231,11 +887,8 @@
       <file leaf-file-name="ActionFragment_.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/action/ActionFragment_.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="30" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#2232#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state line="18" column="30" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1643,7 +1296,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectStructureProblems">
     <ignored-problems>
@@ -1709,15 +1362,9 @@
               <option name="myItemId" value="CookieMom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1728,24 +1375,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="CookieMom and modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1759,10 +1388,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src-gen" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1798,8 +1423,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1843,11 +1468,11 @@
       <recent name="net.kjmaster.cookiemom" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\libs" />
       <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout" />
       <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\src\main\java\net\kjmaster\cookiemom" />
       <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\src\main\java\net\kjmaster\cookiemom\scout" />
       <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\drawable-xhdpi" />
-      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="net.kjmaster.cookiemom" />
@@ -1860,18 +1485,18 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="net.kjmaster.cookiemom" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\drawable-xhdpi" />
+      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\drawable" />
+      <recent name="C:\Users\Maddy\Downloads\cardslib-master\cardslib-master\library\src\main" />
+      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="net.kjmaster.cookiemom.ui" />
       <recent name="net.kjmaster.cookiemom.global" />
       <recent name="net.kjmaster.cookiemom.scout" />
       <recent name="net.kjmaster.cookiemom.action" />
       <recent name="net.kjmaster.cookiemom" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\drawable-xhdpi" />
-      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\drawable" />
-      <recent name="C:\Users\Maddy\Downloads\cardslib-master\cardslib-master\library\src\main" />
-      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.Main">
@@ -2163,25 +1788,21 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6682616" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67145133" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32376397" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6682616" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2998405" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3030303" sideWeight="0.2998405" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46411484" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="SimpleHttpClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42424244" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.7001595" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3378788" sideWeight="0.53588516" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34848484" sideWeight="0.53588516" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Formatter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29242423" sideWeight="0.53588516" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39872408" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29242423" sideWeight="0.53588516" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="92" y="92" width="1162" height="584" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.53588516" order="3" side_tool="false" content_ui="tabs" />
@@ -2189,9 +1810,13 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29090908" sideWeight="0.53588516" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67145133" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32376397" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46411484" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39872408" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -2270,164 +1895,100 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/AddScoutDialogFragment_.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="30" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#313#350#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="21" column="30" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardFragment_.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="30" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#337#374#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="20" column="30" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardPickupFragment_.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="30" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#365#402#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="21" column="30" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/ui/CookieAmountsListInputFragment_.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="30" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#359#396#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="22" column="30" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/AddBoothDialogFragment_.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="30" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#387#424#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="22" column="30" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardOrderFragment_.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="30" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#401#438#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="22" column="30" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/MainActivity_.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="30" selection-start="831" selection-end="831" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#3580#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state line="28" column="30" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/SelectScoutListActivity_.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="30" selection-start="856" selection-end="856" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#501#538#0" expanded="true" />
-          </folding>
+        <state line="31" column="30" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity_.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="30" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#3546#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1095#1310#0" expanded="false" />
-            <element signature="e#1290#1291#0" expanded="false" />
-            <element signature="e#1497#1712#0" expanded="false" />
-            <element signature="e#1692#1693#0" expanded="false" />
-          </folding>
+        <state line="32" column="30" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutOrderActivity_.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="30" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#5168#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1390#1602#0" expanded="false" />
-            <element signature="e#1582#1583#0" expanded="false" />
-            <element signature="e#1789#2001#0" expanded="false" />
-            <element signature="e#1981#1982#0" expanded="false" />
-          </folding>
+        <state line="34" column="30" selection-start="933" selection-end="933" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderListLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="58" column="44" selection-start="1956" selection-end="1956" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#2085#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="123" column="49" selection-start="4911" selection-end="4911" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2249#2257#0" expanded="false" />
-            <element signature="e#2424#2430#0" expanded="false" />
-            <element signature="e#3881#4124#0" expanded="false" />
-            <element signature="e#4109#4110#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="226" column="16" selection-start="7327" selection-end="7327" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/action/ActionFragment_.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="30" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#2232#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state line="18" column="30" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutPickupActivity_.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="30" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#5429#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1644#1857#0" expanded="false" />
-            <element signature="e#1837#1838#0" expanded="false" />
-            <element signature="e#2044#2257#0" expanded="false" />
-            <element signature="e#2237#2238#0" expanded="false" />
-          </folding>
+        <state line="35" column="30" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/numberpicker/NumberPicker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="416" column="12" selection-start="13330" selection-end="13330" vertical-scroll-proportion="0.33333334">
+        <state line="435" column="12" selection-start="13833" selection-end="13833" vertical-scroll-proportion="0.035051547">
           <folding />
         </state>
       </provider>
@@ -2486,7 +2047,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>CookieMom|CookieMom and modules</last-edited>
+          <last-edited>main|CookieMom and modules</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -2510,7 +2071,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: org.freemarker:freemarker:2.3.19</last-edited>
+          <last-edited>android-support-v13</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

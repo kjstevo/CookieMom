@@ -17,7 +17,6 @@ import com.googlecode.androidannotations.api.SdkVersionHelper;
 import net.kjmaster.cookiemom.R.id;
 import net.kjmaster.cookiemom.R.layout;
 
-@SuppressWarnings("UnusedParameters")
 public final class CupboardOrderActivity_
         extends CupboardOrderActivity {
 

@@ -14,7 +14,6 @@ import it.gmariotti.cardslib.library.view.CardListView;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R.layout;
 
-@SuppressWarnings("UnusedParameters")
 public final class CupboardOrderFragment_
         extends CupboardOrderFragment {
 

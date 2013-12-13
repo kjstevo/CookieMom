@@ -17,7 +17,6 @@ import android.view.ViewGroup.LayoutParams;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
 import net.kjmaster.cookiemom.R.layout;
 
-@SuppressWarnings("ALL")
 public final class AddBoothActivity_
         extends AddBoothActivity {
 

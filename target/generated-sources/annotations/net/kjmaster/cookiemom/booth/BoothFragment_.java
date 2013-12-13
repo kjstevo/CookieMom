@@ -10,7 +10,6 @@ import android.view.*;
 import it.gmariotti.cardslib.library.view.CardListView;
 import net.kjmaster.cookiemom.R.layout;
 
-@SuppressWarnings("UnusedParameters")
 public final class BoothFragment_
         extends BoothFragment {
 

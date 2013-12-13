@@ -27,6 +27,27 @@ import java.util.List;
 public class BoothContentCard extends Card {
     public BoothContentCard(Context context, Booth booth) {
         this(context, R.layout.booth_content, booth);
+        init();
+    }
+
+    private void init() {
+
+        // No Header
+        addPartialOnClickListener(CLICK_LISTENER_CONTENT_VIEW, new OnCardClickListener() {
+            @Override
+            public void onClick(Card card, View view) {
+                View view1 = card.getCardView().findViewById(R.id.card_content_expand_layout);
+                if (view1 != null) {
+
+
+                    if (card.isExpanded()) {
+                        card.getCardView().getOnExpandListAnimatorListener().onCollapseStart(card.getCardView(), view1);
+                    } else {
+                        card.getCardView().getOnExpandListAnimatorListener().onExpandStart(card.getCardView(), view1);
+                    }
+                }
+            }
+        });
     }
 
     public Booth getBooth() {

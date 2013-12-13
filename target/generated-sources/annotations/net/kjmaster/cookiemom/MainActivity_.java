@@ -17,7 +17,6 @@ import android.view.ViewGroup.LayoutParams;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
 import net.kjmaster.cookiemom.R.layout;
 
-@SuppressWarnings("UnusedParameters")
 public final class MainActivity_
         extends MainActivity {
 
@@ -80,14 +79,14 @@ public final class MainActivity_
             case 888:
                 MainActivity_.this.onBoothResult(resultCode, data);
                 break;
-            case 111:
-                MainActivity_.this.onScoutAssign(resultCode, data);
+            case 444:
+                MainActivity_.this.placeCupboardOrder(resultCode, data);
                 break;
             case 4343:
                 MainActivity_.this.scoutResult(resultCode);
                 break;
-            case 444:
-                MainActivity_.this.placeCupboardOrder(resultCode, data);
+            case 111:
+                MainActivity_.this.onScoutAssign(resultCode, data);
                 break;
         }
     }

@@ -137,5 +137,9 @@
     <string name="booth_list">booth_list</string>
     <string name="boxes">Boxes</string>
     <string name="cases">Cases</string>
+    <string name="checkout">Check Out</string>
+    <string name="checkin">Check In</string>
+    <string name="booth_checkout_order">booth_checkout</string>
+    <string name="booth_checkin_order">booth_check_in</string>
 
 </resources>

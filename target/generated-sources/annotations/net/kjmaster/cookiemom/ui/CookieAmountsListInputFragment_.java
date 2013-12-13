@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import it.gmariotti.cardslib.library.view.CardListView;
 import net.kjmaster.cookiemom.R.layout;
 
-@SuppressWarnings("UnusedParameters")
 public final class CookieAmountsListInputFragment_
         extends CookieAmountsListInputFragment {
 
@@ -63,16 +62,16 @@ public final class CookieAmountsListInputFragment_
     private void injectFragmentArguments_() {
         Bundle args_ = getArguments();
         if (args_ != null) {
-            if (args_.containsKey("isEditable")) {
+            if (args_.containsKey("isBoxes")) {
                 try {
-                    isEditable = args_.getBoolean("isEditable");
+                    isBoxes = args_.getBoolean("isBoxes");
                 } catch (ClassCastException e) {
                     Log.e("CookieAmountsListInputFragment_", "Could not cast argument to the expected type, the field is left to its default value", e);
                 }
             }
-            if (args_.containsKey("isBoxes")) {
+            if (args_.containsKey("isEditable")) {
                 try {
-                    isBoxes = args_.getBoolean("isBoxes");
+                    isEditable = args_.getBoolean("isEditable");
                 } catch (ClassCastException e) {
                     Log.e("CookieAmountsListInputFragment_", "Could not cast argument to the expected type, the field is left to its default value", e);
                 }
@@ -94,13 +93,13 @@ public final class CookieAmountsListInputFragment_
             return fragment_;
         }
 
-        public CookieAmountsListInputFragment_.FragmentBuilder_ isEditable(boolean isEditable) {
-            args_.putBoolean("isEditable", isEditable);
+        public CookieAmountsListInputFragment_.FragmentBuilder_ isBoxes(boolean isBoxes) {
+            args_.putBoolean("isBoxes", isBoxes);
             return this;
         }
 
-        public CookieAmountsListInputFragment_.FragmentBuilder_ isBoxes(boolean isBoxes) {
-            args_.putBoolean("isBoxes", isBoxes);
+        public CookieAmountsListInputFragment_.FragmentBuilder_ isEditable(boolean isEditable) {
+            args_.putBoolean("isEditable", isEditable);
             return this;
         }
 

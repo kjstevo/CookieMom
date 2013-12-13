@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import it.gmariotti.cardslib.library.view.CardListView;
 import net.kjmaster.cookiemom.R.layout;
 
-@SuppressWarnings("UnusedParameters")
 public final class CupboardPickupFragment_
         extends CupboardPickupFragment {
 
