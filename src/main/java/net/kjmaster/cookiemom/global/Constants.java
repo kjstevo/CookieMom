@@ -27,6 +27,7 @@ public class Constants {
     public static final int PLACE_CUPBOARD_ORDER = 444;
     public static final int CUPBOARD_REQUEST = 4343;
     public static final int ACTION_REQUEST = 4343;
+    public static final int REMOVE_SCOUT_REQUEST_CODE = 1111;
 
     public static HashMap<String, Integer> getCookieNameImages() {
         cookieImages.put(CookieTypes[0], R.drawable.mint);

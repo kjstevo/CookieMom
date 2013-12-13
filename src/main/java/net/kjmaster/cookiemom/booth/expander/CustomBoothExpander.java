@@ -29,8 +29,11 @@ public class CustomBoothExpander extends CardExpand {
 
         Card card = new BoothExpanderCookieList(getContext(), this.mBooth);
         CardHeader header = new CardHeader(getContext());
-        CardView cardView = (CardView) view.findViewById(R.id.carddemo_example_card3_listeners2);
-        header.setTitle("Cookies");    // should use R.string.
+        CardView cardView = (CardView) view.findViewById(R.id.carddemo_example_card3_listeners1);
+        CardView cardView2 = (CardView) view.findViewById(R.id.carddemo_example_card3_listeners2);
+        cardView2.setVisibility(View.GONE);
+        header.setTitle("Cookies");
+        header.setButtonExpandVisible(false);// should use R.string.
         card.addCardHeader(header);
         cardView.setCard(card);
         super.setupInnerViewElements(parent, view);
@@ -40,7 +43,7 @@ public class CustomBoothExpander extends CardExpand {
     private final Booth mBooth;
 
     public CustomBoothExpander(Context context, Booth booth) {
-        this(context, R.layout.expand_scout_expanded, booth);
+        this(context, R.layout.custom_expander_main_layout, booth);
     }
 
     public CustomBoothExpander(Context context, int innerLayout, Booth booth) {

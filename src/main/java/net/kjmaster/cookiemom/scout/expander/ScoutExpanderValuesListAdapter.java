@@ -52,7 +52,7 @@ public class ScoutExpanderValuesListAdapter extends ArrayAdapter<ScoutExpanderVa
         if (view == null) {
             LayoutInflater li = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            view = li.inflate(R.layout.carddemo_googlenowstock_list_item, parent, false);
+            view = li.inflate(R.layout.custom_scout_expander_list_item, parent, false);
         }
 
         TextView textView1 = (TextView) view.findViewById(R.id.textView1);

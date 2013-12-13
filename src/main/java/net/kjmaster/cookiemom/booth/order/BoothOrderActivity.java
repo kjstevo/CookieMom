@@ -1,4 +1,4 @@
-package net.kjmaster.cookiemom.booth;
+package net.kjmaster.cookiemom.booth.order;
 
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.Click;

@@ -29,8 +29,10 @@ import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.scout.ScoutFragment_;
 import net.kmaster.cookiemom.dao.Booth;
 import net.kmaster.cookiemom.dao.BoothAssignments;
+import net.kmaster.cookiemom.dao.BoothAssignmentsDao;
 
 import java.util.Date;
+import java.util.List;
 
 @OptionsMenu(R.menu.activity_main)
 @EActivity(R.layout.activity_main)
@@ -150,6 +152,28 @@ public class MainActivity extends FragmentActivity {
 
 
     //}
+    @OnActivityResult(Constants.REMOVE_SCOUT_REQUEST_CODE)
+    void onRemoveScout(int resultCode, Intent data) {
+        if (resultCode == RESULT_OK) {
+
+            if (data != null) {
+                long scout_id = data.getLongExtra("scout_id", 0);
+                long target_id = data.getLongExtra("target_id", 0);
+
+                List<BoothAssignments> list = Main.daoSession.getBoothAssignmentsDao().queryBuilder()
+                        .where(
+                                BoothAssignmentsDao.Properties.BoothAssignScoutId.eq(scout_id),
+                                BoothAssignmentsDao.Properties.BoothAssignBoothId.eq(target_id))
+                        .list();
+
+                for (BoothAssignments assignments : list) {
+                    Main.daoSession.getBoothAssignmentsDao().delete(assignments);
+                }
+
+            }
+        }
+    }
+
 
     @OnActivityResult(Constants.ASSIGN_SCOUT_REQUEST_CODE)
     void onScoutAssign(int resultCode, Intent data) {

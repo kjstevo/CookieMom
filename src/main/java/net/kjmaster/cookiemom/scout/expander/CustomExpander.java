@@ -18,7 +18,7 @@ public class CustomExpander extends CardExpand {
 
     // Use your resource ID for your inner layout
     public CustomExpander(Context context, Scout scout) {
-        super(context, R.layout.expand_scout_expanded);
+        super(context, R.layout.custom_expander_main_layout);
         this.scout = scout;
     }
 

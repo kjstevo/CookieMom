@@ -27,7 +27,9 @@
         <activity android:name=".scout.ScoutOrderActivity_" android:label="Scout Order"/>
         <activity android:name=".cupboard.CupboardPickupActivity_" android:label="Pickup from Cupboard"/>
         <activity android:name=".scout.ScoutPickupActivity_" android:label="@string/scout_pickup_order_title"/>
-
+        <activity android:name=".booth.BoothCheckInActivity_" android:label="@string/checkin"/>
+        <activity android:name=".booth.BoothCheckOutActivity_" android:label="@string/checkout"/>
+        <activity android:name=".booth.order.BoothOrderActivity_" android:label="@string/order"/>
         <activity android:name=".scout.ScoutTurnInActivity_" android:label="Turn In"/>
 
     </application>

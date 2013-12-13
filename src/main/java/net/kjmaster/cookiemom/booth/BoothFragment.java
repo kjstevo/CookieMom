@@ -64,6 +64,7 @@ public class BoothFragment
 
                 CardHeader cardHeader = new CardHeader(getActivity());
                 cardHeader.setButtonOverflowVisible(true);
+                cardHeader.setButtonExpandVisible(true);
                 cardHeader.setPopupMenu(R.menu.booth_overflow, new CardHeader.OnClickCardHeaderPopupMenuListener() {
                     @Override
                     public void onMenuItemClick(BaseCard card, MenuItem item) {
@@ -76,6 +77,7 @@ public class BoothFragment
                 cardHeader.setTitle(booth.getBoothLocation());
                 mCard.setTitle("More Info");
                 CustomBoothExpander customExpander = new CustomBoothExpander(getActivity(), booth);
+
                 mCard.addCardExpand(customExpander);
                 mData.add(mCard);
             }
@@ -91,9 +93,15 @@ public class BoothFragment
     private void selectBoothMenu(BaseCard card, MenuItem item) {
         Booth booth = ((BoothContentCard) card.getParentCard()).getBooth();
         switch (item.getItemId()) {
+
             case R.id.menu_assign_scout:
                 SelectScoutListActivity_.intent(getActivity()).requestCode(Constants.ASSIGN_SCOUT_REQUEST_CODE).targetId(booth.getId()).startForResult(Constants.ASSIGN_SCOUT_REQUEST_CODE);
                 break;
+
+            case R.id.menu_remove_scout:
+                SelectScoutListActivity_.intent(getActivity()).requestCode(Constants.REMOVE_SCOUT_REQUEST_CODE).targetId(booth.getId()).startForResult(Constants.REMOVE_SCOUT_REQUEST_CODE);
+                break;
+
             case R.id.menu_booth_delete:
                 SimpleDialogFragment.createBuilder(getActivity(), getActivity().getSupportFragmentManager())
                         .setTitle("WARNING!")
@@ -106,13 +114,18 @@ public class BoothFragment
                         .setTag(booth.getId().toString())
                         .show();
                 break;
+
             case R.id.menu_booth_checkout:
                 BoothCheckOutActivity_.intent(getActivity()).BoothId(booth.getId()).start();
 
                 break;
+
             case R.id.menu_booth_checkin:
+                BoothCheckInActivity_.intent(getActivity()).BoothId(booth.getId()).start();
                 break;
+
             default:
+
         }
     }
 
