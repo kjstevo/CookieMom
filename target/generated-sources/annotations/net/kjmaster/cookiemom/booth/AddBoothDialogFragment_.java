@@ -15,8 +15,7 @@ import android.widget.TextView;
 import net.kjmaster.cookiemom.R.layout;
 
 public final class AddBoothDialogFragment_
-    extends AddBoothDialogFragment
-{
+        extends AddBoothDialogFragment {
 
     private View contentView_;
 
@@ -30,14 +29,14 @@ public final class AddBoothDialogFragment_
     }
 
     private void afterSetContentView_() {
-        hiddenDateTime = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.text_date_time_hidden));
-        addressText = ((EditText) findViewById(net.kjmaster.cookiemom.R.id.add_booth_address));
         dateText = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.Date));
-        timeText = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.Time));
+        addressText = ((EditText) findViewById(net.kjmaster.cookiemom.R.id.add_booth_address));
         editText = ((EditText) findViewById(net.kjmaster.cookiemom.R.id.editText));
+        hiddenDateTime = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.text_date_time_hidden));
+        timeText = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.Time));
         {
             View view = findViewById(net.kjmaster.cookiemom.R.id.date_time_picker_button);
-            if (view!= null) {
+            if (view != null) {
                 view.setOnClickListener(new OnClickListener() {
 
 

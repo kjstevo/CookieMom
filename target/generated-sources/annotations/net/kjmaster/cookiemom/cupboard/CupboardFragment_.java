@@ -7,19 +7,13 @@ package net.kjmaster.cookiemom.cupboard;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import it.gmariotti.cardslib.library.view.CardListView;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R.layout;
 
 public final class CupboardFragment_
-    extends CupboardFragment
-{
+        extends CupboardFragment {
 
     private View contentView_;
 
@@ -78,12 +72,12 @@ public final class CupboardFragment_
             return true;
         }
         int itemId_ = item.getItemId();
-        if (itemId_ == net.kjmaster.cookiemom.R.id.menu_place_cupboard_order) {
-            placeOrder();
-            return true;
-        }
         if (itemId_ == net.kjmaster.cookiemom.R.id.menu_pickup_cupboard_order) {
             pickupOrder();
+            return true;
+        }
+        if (itemId_ == net.kjmaster.cookiemom.R.id.menu_place_cupboard_order) {
+            placeOrder();
             return true;
         }
         return false;
@@ -93,7 +87,7 @@ public final class CupboardFragment_
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         CupboardFragment_.super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
-            case  4343 :
+            case 4343:
                 CupboardFragment_.this.cupboardResults();
                 break;
         }

@@ -6,7 +6,7 @@ import com.googlecode.androidannotations.annotations.Extra;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
-import net.kjmaster.cookiemom.global.CookieActionActivity;
+import net.kjmaster.cookiemom.global.CookieOrCashDialogBase;
 import net.kjmaster.cookiemom.ui.CookieAmountsListInputFragment;
 import net.kjmaster.cookiemom.ui.CookieAmountsListInputFragment_;
 import net.kmaster.cookiemom.dao.CookieTransactions;
@@ -20,8 +20,24 @@ import java.util.Calendar;
  * Time: 8:40 PM
  */
 @EActivity(R.layout.scout_order_layout)
-public class BoothCheckOutActivity extends CookieActionActivity {
+public class BoothCheckOutActivity extends CookieOrCashDialogBase {
     private String fragName;
+
+    @Override
+    protected void createActionFragment() {
+        createFrag();
+    }
+
+    @Override
+    protected boolean isEditableValue() {
+        return true;
+    }
+
+
+    @Override
+    protected void saveForemData() {
+        performCheckOut();
+    }
 
     @Override
     protected boolean isEditable() {
@@ -36,9 +52,19 @@ public class BoothCheckOutActivity extends CookieActionActivity {
         performCheckOut();
     }
 
+    @Override
+    protected boolean isNegative() {
+        return true;
+    }
+
     @AfterViews
     void afterViewFrag() {
+        super.CreateDialog(BoothId, this, "Booth Check-out");
 
+
+    }
+
+    private void createFrag() {
         fragName = getString(R.string.booth_checkout_order);
         replaceFrag(
                 createFragmentTransaction(fragName),
@@ -46,7 +72,6 @@ public class BoothCheckOutActivity extends CookieActionActivity {
                 fragName);
 
         createActionMode(fragName);
-
     }
 
     private void performCheckOut() {

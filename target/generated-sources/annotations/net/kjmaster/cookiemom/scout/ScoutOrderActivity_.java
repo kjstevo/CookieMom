@@ -13,16 +13,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
-import net.kjmaster.cookiemom.R.id;
 import net.kjmaster.cookiemom.R.layout;
 import net.kjmaster.cookiemom.R.string;
 
 public final class ScoutOrderActivity_
-    extends ScoutOrderActivity
-{
+        extends ScoutOrderActivity {
 
 
     @Override
@@ -40,36 +37,6 @@ public final class ScoutOrderActivity_
     }
 
     private void afterSetContentView_() {
-        {
-            View view = findViewById(id.cases_radio_button);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        ScoutOrderActivity_.this.casesClick();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.boxes_radio_button);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        ScoutOrderActivity_.this.boxesClick();
-                    }
-
-                }
-                );
-            }
-        }
         afterViewFrag();
     }
 
@@ -93,7 +60,7 @@ public final class ScoutOrderActivity_
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (((SdkVersionHelper.getSdkInt()< 5)&&(keyCode == KeyEvent.KEYCODE_BACK))&&(event.getRepeatCount() == 0)) {
+        if (((SdkVersionHelper.getSdkInt() < 5) && (keyCode == KeyEvent.KEYCODE_BACK)) && (event.getRepeatCount() == 0)) {
             onBackPressed();
         }
         return super.onKeyDown(keyCode, event);
@@ -106,17 +73,17 @@ public final class ScoutOrderActivity_
     private void injectExtras_() {
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
-        if (extras_!= null) {
-            if (extras_.containsKey("scoutId")) {
+        if (extras_ != null) {
+            if (extras_.containsKey("requestCode")) {
                 try {
-                    scoutId = ((Long) extras_.get("scoutId"));
+                    requestCode = ((Integer) extras_.get("requestCode"));
                 } catch (ClassCastException e) {
                     Log.e("ScoutOrderActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("requestCode")) {
+            if (extras_.containsKey("scoutId")) {
                 try {
-                    requestCode = ((Integer) extras_.get("requestCode"));
+                    scoutId = ((Long) extras_.get("scoutId"));
                 } catch (ClassCastException e) {
                     Log.e("ScoutOrderActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -161,13 +128,13 @@ public final class ScoutOrderActivity_
             }
         }
 
-        public ScoutOrderActivity_.IntentBuilder_ scoutId(long scoutId) {
-            intent_.putExtra("scoutId", scoutId);
+        public ScoutOrderActivity_.IntentBuilder_ requestCode(int requestCode) {
+            intent_.putExtra("requestCode", requestCode);
             return this;
         }
 
-        public ScoutOrderActivity_.IntentBuilder_ requestCode(int requestCode) {
-            intent_.putExtra("requestCode", requestCode);
+        public ScoutOrderActivity_.IntentBuilder_ scoutId(long scoutId) {
+            intent_.putExtra("scoutId", scoutId);
             return this;
         }
 

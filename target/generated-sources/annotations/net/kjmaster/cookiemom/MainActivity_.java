@@ -18,8 +18,7 @@ import com.googlecode.androidannotations.api.SdkVersionHelper;
 import net.kjmaster.cookiemom.R.layout;
 
 public final class MainActivity_
-    extends MainActivity
-{
+        extends MainActivity {
 
 
     @Override
@@ -56,7 +55,7 @@ public final class MainActivity_
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (((SdkVersionHelper.getSdkInt()< 5)&&(keyCode == KeyEvent.KEYCODE_BACK))&&(event.getRepeatCount() == 0)) {
+        if (((SdkVersionHelper.getSdkInt() < 5) && (keyCode == KeyEvent.KEYCODE_BACK)) && (event.getRepeatCount() == 0)) {
             onBackPressed();
         }
         return super.onKeyDown(keyCode, event);
@@ -77,20 +76,23 @@ public final class MainActivity_
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         MainActivity_.super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
-            case  444 :
-                MainActivity_.this.placeCupboardOrder(resultCode, data);
-                break;
-            case  111 :
-                MainActivity_.this.onScoutAssign(resultCode, data);
-                break;
-            case  4343 :
+            case 4343:
                 MainActivity_.this.scoutResult(resultCode);
                 break;
-            case  1111 :
+            case 888:
+                MainActivity_.this.onBoothResult(resultCode, data);
+                break;
+            case 9876:
+                MainActivity_.this.onBoothOrder(resultCode, data);
+                break;
+            case 111:
+                MainActivity_.this.onScoutAssign(resultCode, data);
+                break;
+            case 1111:
                 MainActivity_.this.onRemoveScout(resultCode, data);
                 break;
-            case  888 :
-                MainActivity_.this.onBoothResult(resultCode, data);
+            case 444:
+                MainActivity_.this.placeCupboardOrder(resultCode, data);
                 break;
         }
     }

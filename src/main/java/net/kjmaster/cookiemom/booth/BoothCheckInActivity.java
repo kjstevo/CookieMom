@@ -3,15 +3,12 @@ package net.kjmaster.cookiemom.booth;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
-import eu.inmite.android.lib.dialogs.ISimpleDialogListener;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
-import net.kjmaster.cookiemom.global.CookieActionActivity;
+import net.kjmaster.cookiemom.global.CookieOrCashDialogBase;
 import net.kjmaster.cookiemom.ui.CookieAmountsListInputFragment;
 import net.kjmaster.cookiemom.ui.CookieAmountsListInputFragment_;
-import net.kjmaster.cookiemom.ui.numberpicker.NumberPickerBuilder;
-import net.kjmaster.cookiemom.ui.numberpicker.NumberPickerDialogFragment;
 import net.kmaster.cookiemom.dao.CookieTransactions;
 
 import java.util.Calendar;
@@ -23,7 +20,7 @@ import java.util.Calendar;
  * Time: 8:40 PM
  */
 @EActivity(R.layout.scout_order_layout)
-public class BoothCheckInActivity extends CookieActionActivity implements ISimpleDialogListener, NumberPickerDialogFragment.NumberPickerDialogHandler {
+public class BoothCheckInActivity extends CookieOrCashDialogBase {
     private String fragName;
 
     @Override
@@ -39,13 +36,19 @@ public class BoothCheckInActivity extends CookieActionActivity implements ISimpl
         performCheckIn();
     }
 
+    @Override
+    protected boolean isNegative() {
+        return false;
+    }
+
     @AfterViews
     void afterViewFrag() {
 
-
+        super.CreateDialog(BoothId, this, "Booth Check-in");
     }
 
-    private void createActionFragment() {
+    @Override
+    protected void createActionFragment() {
         fragName = getString(R.string.booth_checkin_order);
         replaceFrag(
                 createFragmentTransaction(fragName),
@@ -66,39 +69,19 @@ public class BoothCheckInActivity extends CookieActionActivity implements ISimpl
             }
         }
 
-    }
-
-    @Override
-    public void onPositiveButtonClicked(int requestCode) {
-        final NumberPickerBuilder numberPickerBuilder =
-                new NumberPickerBuilder()
-                        .setFragmentManager(
-                                getSupportFragmentManager())
-                        .setStyleResId(R.style.BetterPickersDialogFragment_Light);
-
-        numberPickerBuilder.setReference(-1);
-        numberPickerBuilder.show();
 
     }
 
     @Override
-    public void onDialogNumberSet(int reference, int number, double decimal, boolean isNegative, double fullNumber) {
-
-        if (reference == -1) {
-
-            CookieTransactions cookieTransactions = new CookieTransactions(null, -1L, BoothId, "", 0, Calendar.getInstance().getTime(), fullNumber);
-
-            Main.daoSession.getCookieTransactionsDao().insert(cookieTransactions);
-
-            finish();
-
-        } else {
-            super.onDialogNumberSet(reference, number, decimal, isNegative, fullNumber);
-        }
+    protected boolean isEditableValue() {
+        return true;
     }
 
     @Override
-    public void onNegativeButtonClicked(int requestCode) {
-        createActionFragment();
+    protected void saveForemData() {
+        performCheckIn();
+
     }
+
+
 }

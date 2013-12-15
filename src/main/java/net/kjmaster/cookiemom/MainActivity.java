@@ -131,6 +131,8 @@ public class MainActivity extends FragmentActivity {
     private Drawable.Callback drawableCallback = new Drawable.Callback() {
         @Override
         public void invalidateDrawable(Drawable who) {
+
+
             getActionBar().setBackgroundDrawable(who);
         }
 
@@ -194,6 +196,10 @@ public class MainActivity extends FragmentActivity {
         createTabPager();
     }
 
+    @OnActivityResult(Constants.BOOTH_ORDER)
+    void onBoothOrder(int resultCode, Intent data) {
+        refreshAll();
+    }
 
     @OnActivityResult(Constants.PLACE_CUPBOARD_ORDER)
     void placeCupboardOrder(int resultCode, Intent data) {

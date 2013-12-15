@@ -1,8 +1,6 @@
 package net.kjmaster.cookiemom.cupboard;
 
-import android.widget.RadioGroup;
 import com.googlecode.androidannotations.annotations.AfterViews;
-import com.googlecode.androidannotations.annotations.Click;
 import com.googlecode.androidannotations.annotations.EActivity;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
@@ -45,24 +43,7 @@ public class CupboardOrderActivity extends CookieActionActivity {
 //                fragName);
 
         createActionMode(fragName);
-        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radiogroup_boxes_cases);
-        if (radioGroup != null) {
-            radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(RadioGroup group, int checkedId) {
-                    switch (checkedId) {
-                        case R.id.boxes_radio_button:
-                            boxesClick();
-                            break;
-                        case R.id.cases_radio_button:
-                            casesClick();
-                            break;
 
-                    }
-
-                }
-            });
-        }
     }
 
     @Override
@@ -95,23 +76,6 @@ public class CupboardOrderActivity extends CookieActionActivity {
         return this.valMap;
     }
 
-    @Click(R.id.boxes_radio_button)
-    void boxesClick() {
-        replaceFrag(
-                createFragmentTransaction(fragName),
-                CookieAmountsListInputFragment_.builder().isBoxes(true).isEditable(this.isEditable()).build(),
-                fragName);
-
-    }
-
-    @Click(R.id.cases_radio_button)
-    void casesClick() {
-        replaceFrag(
-                createFragmentTransaction(fragName),
-                CookieAmountsListInputFragment_.builder().isBoxes(false).isEditable(this.isEditable()).build(),
-                fragName);
-
-    }
 
     @Override
     protected void saveData() {

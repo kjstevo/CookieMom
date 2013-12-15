@@ -15,6 +15,7 @@ import it.gmariotti.cardslib.library.view.CardListView;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.booth.expander.CustomBoothExpander;
+import net.kjmaster.cookiemom.booth.order.BoothOrderActivity_;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.scout.SelectScoutListActivity_;
 import net.kmaster.cookiemom.dao.Booth;
@@ -116,13 +117,16 @@ public class BoothFragment
                 break;
 
             case R.id.menu_booth_checkout:
-                BoothCheckOutActivity_.intent(getActivity()).BoothId(booth.getId()).start();
+                BoothCheckOutActivity_.intent(getActivity()).BoothId(booth.getId()).startForResult(Constants.BOOTH_ORDER);
 
                 break;
 
             case R.id.menu_booth_checkin:
-                BoothCheckInActivity_.intent(getActivity()).BoothId(booth.getId()).start();
+                BoothCheckInActivity_.intent(getActivity()).BoothId(booth.getId()).startForResult(Constants.BOOTH_ORDER);
+
                 break;
+            case R.id.menu_booth_order:
+                BoothOrderActivity_.intent(getActivity()).boothId(booth.getId()).requestCode(Constants.BOOTH_ORDER).startForResult(Constants.BOOTH_ORDER);
 
             default:
 

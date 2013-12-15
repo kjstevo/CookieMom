@@ -12,16 +12,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
-import net.kjmaster.cookiemom.R.id;
 import net.kjmaster.cookiemom.R.layout;
 import net.kjmaster.cookiemom.global.ISettings_;
 
 public final class CupboardPickupActivity_
-    extends CupboardPickupActivity
-{
+        extends CupboardPickupActivity {
 
 
     @Override
@@ -37,36 +34,6 @@ public final class CupboardPickupActivity_
     }
 
     private void afterSetContentView_() {
-        {
-            View view = findViewById(id.cases_radio_button);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        CupboardPickupActivity_.this.casesClick();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.boxes_radio_button);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        CupboardPickupActivity_.this.boxesClick();
-                    }
-
-                }
-                );
-            }
-        }
         afterViewFrag();
     }
 
@@ -90,7 +57,7 @@ public final class CupboardPickupActivity_
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (((SdkVersionHelper.getSdkInt()< 5)&&(keyCode == KeyEvent.KEYCODE_BACK))&&(event.getRepeatCount() == 0)) {
+        if (((SdkVersionHelper.getSdkInt() < 5) && (keyCode == KeyEvent.KEYCODE_BACK)) && (event.getRepeatCount() == 0)) {
             onBackPressed();
         }
         return super.onKeyDown(keyCode, event);
@@ -103,7 +70,7 @@ public final class CupboardPickupActivity_
     private void injectExtras_() {
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
-        if (extras_!= null) {
+        if (extras_ != null) {
             if (extras_.containsKey("isEditable")) {
                 try {
                     isEditable = ((Boolean) extras_.get("isEditable"));

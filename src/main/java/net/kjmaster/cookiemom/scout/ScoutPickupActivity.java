@@ -1,8 +1,6 @@
 package net.kjmaster.cookiemom.scout;
 
-import android.widget.RadioGroup;
 import com.googlecode.androidannotations.annotations.AfterViews;
-import com.googlecode.androidannotations.annotations.Click;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
 import com.googlecode.androidannotations.annotations.res.StringRes;
@@ -61,6 +59,11 @@ public class ScoutPickupActivity extends CookieActionActivity {
     @AfterViews
     void afterViewFrag() {
 
+        createFrag();
+
+    }
+
+    private void createFrag() {
         replaceFrag(
                 createFragmentTransaction(
                         scout_pickup_order), CookieAmountsListInputFragment_
@@ -72,25 +75,6 @@ public class ScoutPickupActivity extends CookieActionActivity {
         );
 
         createActionMode(scout_pickup_title);
-        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radiogroup_boxes_cases);
-        if (radioGroup != null) {
-            radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(RadioGroup group, int checkedId) {
-                    switch (checkedId) {
-                        case R.id.boxes_radio_button:
-                            boxesClick();
-                            break;
-                        case R.id.cases_radio_button:
-                            casesClick();
-                            break;
-
-                    }
-
-                }
-            });
-        }
-
     }
 
 
@@ -209,34 +193,6 @@ public class ScoutPickupActivity extends CookieActionActivity {
         return isEditable;
     }
 
-
-    @Click(R.id.boxes_radio_button)
-    void boxesClick() {
-
-        replaceFrag(
-                createFragmentTransaction(
-                        scout_pickup_order), CookieAmountsListInputFragment_
-                .builder()
-                .isBoxes(true)
-                .isEditable(this.isEditable)
-                .build(),
-                scout_pickup_order
-        );
-    }
-
-    @Click(R.id.cases_radio_button)
-    void casesClick() {
-
-        replaceFrag(
-                createFragmentTransaction(
-                        scout_pickup_order), CookieAmountsListInputFragment_
-                .builder()
-                .isBoxes(false)
-                .isEditable(this.isEditable)
-                .build(),
-                scout_pickup_order
-        );
-    }
 
     @Override
     public HashMap<String, String> getValMap() {

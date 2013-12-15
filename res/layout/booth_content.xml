@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="horizontal"
+              xmlns:tools="http://schemas.android.com/tools" android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="fill_parent" android:background="@drawable/cab_background_bottom_carddemo">
 
@@ -19,7 +19,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/booth_scout_list" style="@android:style/Widget.Holo.Light.ListView"
-                android:choiceMode="singleChoice" android:paddingLeft="5dp"/>
+                android:choiceMode="singleChoice" android:paddingLeft="5dp"
+                tools:listitem="@layout/simple_text"/>
     </LinearLayout>
     <RelativeLayout
             android:layout_width="fill_parent"
@@ -72,5 +73,25 @@
                 android:paddingTop="5dp"
                 android:minLines="2" android:lines="2" android:layout_marginTop="-5dp"
                 android:layout_toRightOf="@+id/textView1"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rcvd:"
+                  android:id="@+id/textView3" android:textStyle="bold"
+                  android:layout_alignLeft="@+id/textView5" android:layout_alignTop="@+id/booth_owed"/>
+        <TextView style="@style/card.base_simple_title" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/booth_owed" android:textAppearance="@android:style/TextAppearance.Holo.Small"
+                  android:layout_toRightOf="@+id/textView3"
+                  android:text="$0000.00" android:layout_below="@+id/booth_address"
+                  android:textColor="@android:color/holo_blue_light"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/"
+                  android:id="@+id/textView6" android:textStyle="bold"
+                  android:layout_alignParentEnd="false"
+                  android:layout_alignTop="@+id/textView3" android:layout_toRightOf="@+id/booth_owed"
+                  android:gravity="center"/>
+        <TextView style="@style/card.base_simple_title" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" android:id="@+id/booth_recieved"
+                  android:textAppearance="@android:style/TextAppearance.Holo.Small"
+                  android:text="$0000.00" android:layout_alignParentEnd="false"
+                  android:layout_toRightOf="@+id/booth_owed"
+                  android:gravity="center_vertical|left" android:layout_below="@+id/booth_address"/>
     </RelativeLayout>
 </LinearLayout>

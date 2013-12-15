@@ -1,8 +1,6 @@
 package net.kjmaster.cookiemom.cupboard;
 
-import android.widget.RadioGroup;
 import com.googlecode.androidannotations.annotations.AfterViews;
-import com.googlecode.androidannotations.annotations.Click;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
 import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
@@ -42,24 +40,6 @@ public class CupboardPickupActivity extends CookieActionActivity {
         replaceFrag(createFragmentTransaction(fragTag), CupboardPickupFragment_.builder().build(), fragTag);
 
         createActionMode(getString(R.string.pickup_order_title));
-        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radiogroup_boxes_cases);
-        if (radioGroup != null) {
-            radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(RadioGroup group, int checkedId) {
-                    switch (checkedId) {
-                        case R.id.boxes_radio_button:
-                            boxesClick();
-                            break;
-                        case R.id.cases_radio_button:
-                            casesClick();
-                            break;
-
-                    }
-
-                }
-            });
-        }
 
     }
 
@@ -138,14 +118,5 @@ public class CupboardPickupActivity extends CookieActionActivity {
 
     }
 
-    @Click(R.id.boxes_radio_button)
-    void boxesClick() {
-        replaceFrag(createFragmentTransaction(fragTag), CupboardPickupFragment_.builder().build(), fragTag);
-    }
-
-    @Click(R.id.cases_radio_button)
-    void casesClick() {
-        replaceFrag(createFragmentTransaction(fragTag), CupboardPickupFragment_.builder().build(), fragTag);
-    }
 
 }

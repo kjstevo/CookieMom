@@ -13,16 +13,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
-import net.kjmaster.cookiemom.R.id;
 import net.kjmaster.cookiemom.R.layout;
 import net.kjmaster.cookiemom.R.string;
 
 public final class BoothOrderActivity_
-    extends BoothOrderActivity
-{
+        extends BoothOrderActivity {
 
 
     @Override
@@ -34,42 +31,12 @@ public final class BoothOrderActivity_
 
     private void init_(Bundle savedInstanceState) {
         Resources resources_ = this.getResources();
-        fragTitle = resources_.getString(string.add_order_title);
         fragTag = resources_.getString(string.add_order);
+        fragTitle = resources_.getString(string.add_order_title);
         injectExtras_();
     }
 
     private void afterSetContentView_() {
-        {
-            View view = findViewById(id.cases_radio_button);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        BoothOrderActivity_.this.casesClick();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.boxes_radio_button);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        BoothOrderActivity_.this.boxesClick();
-                    }
-
-                }
-                );
-            }
-        }
         afterViewFrag();
     }
 
@@ -93,7 +60,7 @@ public final class BoothOrderActivity_
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (((SdkVersionHelper.getSdkInt()< 5)&&(keyCode == KeyEvent.KEYCODE_BACK))&&(event.getRepeatCount() == 0)) {
+        if (((SdkVersionHelper.getSdkInt() < 5) && (keyCode == KeyEvent.KEYCODE_BACK)) && (event.getRepeatCount() == 0)) {
             onBackPressed();
         }
         return super.onKeyDown(keyCode, event);
@@ -106,7 +73,7 @@ public final class BoothOrderActivity_
     private void injectExtras_() {
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
-        if (extras_!= null) {
+        if (extras_ != null) {
             if (extras_.containsKey("requestCode")) {
                 try {
                     requestCode = ((Integer) extras_.get("requestCode"));

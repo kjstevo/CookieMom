@@ -18,8 +18,7 @@ import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R.layout;
 
 public final class SelectScoutListActivity_
-    extends SelectScoutListActivity
-{
+        extends SelectScoutListActivity {
 
 
     @Override
@@ -36,8 +35,8 @@ public final class SelectScoutListActivity_
 
     private void afterSetContentView_() {
         {
-            AdapterView<?> view = ((AdapterView<?> ) findViewById(android.R.id.list));
-            if (view!= null) {
+            AdapterView<?> view = ((AdapterView<?>) findViewById(android.R.id.list));
+            if (view != null) {
                 view.setOnItemClickListener(new OnItemClickListener() {
 
 
@@ -78,10 +77,10 @@ public final class SelectScoutListActivity_
     private void injectExtras_() {
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
-        if (extras_!= null) {
-            if (extras_.containsKey("requestCode")) {
+        if (extras_ != null) {
+            if (extras_.containsKey("targetId")) {
                 try {
-                    requestCode = ((Integer) extras_.get("requestCode"));
+                    targetId = ((Long) extras_.get("targetId"));
                 } catch (ClassCastException e) {
                     Log.e("SelectScoutListActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -93,9 +92,9 @@ public final class SelectScoutListActivity_
                     Log.e("SelectScoutListActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("targetId")) {
+            if (extras_.containsKey("requestCode")) {
                 try {
-                    targetId = ((Long) extras_.get("targetId"));
+                    requestCode = ((Integer) extras_.get("requestCode"));
                 } catch (ClassCastException e) {
                     Log.e("SelectScoutListActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -110,7 +109,7 @@ public final class SelectScoutListActivity_
     }
 
     @SuppressWarnings("unchecked")
-    private<T >T cast_(Object object) {
+    private <T> T cast_(Object object) {
         return ((T) object);
     }
 
@@ -145,8 +144,8 @@ public final class SelectScoutListActivity_
             }
         }
 
-        public SelectScoutListActivity_.IntentBuilder_ requestCode(int requestCode) {
-            intent_.putExtra("requestCode", requestCode);
+        public SelectScoutListActivity_.IntentBuilder_ targetId(long targetId) {
+            intent_.putExtra("targetId", targetId);
             return this;
         }
 
@@ -155,8 +154,8 @@ public final class SelectScoutListActivity_
             return this;
         }
 
-        public SelectScoutListActivity_.IntentBuilder_ targetId(long targetId) {
-            intent_.putExtra("targetId", targetId);
+        public SelectScoutListActivity_.IntentBuilder_ requestCode(int requestCode) {
+            intent_.putExtra("requestCode", requestCode);
             return this;
         }
 

@@ -1,7 +1,6 @@
 package net.kjmaster.cookiemom.scout;
 
 import com.googlecode.androidannotations.annotations.AfterViews;
-import com.googlecode.androidannotations.annotations.Click;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
 import com.googlecode.androidannotations.annotations.res.StringRes;
@@ -47,15 +46,6 @@ public class ScoutOrderActivity extends CookieActionActivity {
         return true;
     }
 
-    @Click(R.id.boxes_radio_button)
-    void boxesClick() {
-        replaceFrag(createFragmentTransaction(fragTag), CookieAmountsListInputFragment_.builder().isEditable(true).isBoxes(true).build(), fragTag);
-    }
-
-    @Click(R.id.cases_radio_button)
-    void casesClick() {
-        replaceFrag(createFragmentTransaction(fragTag), CookieAmountsListInputFragment_.builder().isEditable(true).isBoxes(false).build(), fragTag);
-    }
 
     protected void saveData() {
         OrderDao dao = Main.daoSession.getOrderDao();

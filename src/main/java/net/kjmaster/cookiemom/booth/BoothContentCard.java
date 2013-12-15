@@ -9,10 +9,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import it.gmariotti.cardslib.library.internal.Card;
+import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kmaster.cookiemom.dao.Booth;
+import net.kmaster.cookiemom.dao.CookieTransactions;
+import net.kmaster.cookiemom.dao.CookieTransactionsDao;
 import net.kmaster.cookiemom.dao.Scout;
 
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -71,7 +75,8 @@ public class BoothContentCard extends Card {
         TextView mTime = (TextView) parent.findViewById(R.id.booth_time);
         TextView mAddress = (TextView) parent.findViewById(R.id.booth_address);
         ListView mScoutList = (ListView) parent.findViewById(R.id.booth_scout_list);
-
+        TextView mSold = (TextView) parent.findViewById(R.id.booth_owed);
+        TextView mCash = (TextView) parent.findViewById(R.id.booth_recieved);
 
         if (mDate != null) {
             try {
@@ -92,6 +97,34 @@ public class BoothContentCard extends Card {
                 if (time != null) {
                     mTime.setText(time);
                 }
+            } catch (Exception e) {
+                Log.w("cookiemom", "Missing field info");
+            }
+        }
+
+        if (mSold != null) {
+            try {
+                List<CookieTransactions> list = Main.daoSession.getCookieTransactionsDao().queryBuilder()
+                        .where(
+                                CookieTransactionsDao.Properties.TransBoothId.eq(mBooth.getId()))
+                        .list();
+                if (list != null) {
+                    Integer totalBoxes = 0;
+                    Double totalCash = 0.0;
+                    for (CookieTransactions cookieTransactions : list) {
+                        totalBoxes += cookieTransactions.getTransBoxes();
+                        totalCash += cookieTransactions.getTransCash();
+                    }
+                    mSold.setText(NumberFormat.getCurrencyInstance().format(totalCash
+                    ));
+                    mCash.setText(NumberFormat.getCurrencyInstance().format(totalBoxes * -4));
+
+                }
+
+
+                //String time=new SimpleDateFormat("HH:mm PM").format(mBooth.getBoothDate());
+
+
             } catch (Exception e) {
                 Log.w("cookiemom", "Missing field info");
             }

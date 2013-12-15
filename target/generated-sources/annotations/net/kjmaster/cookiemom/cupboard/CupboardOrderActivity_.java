@@ -11,15 +11,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
-import net.kjmaster.cookiemom.R.id;
 import net.kjmaster.cookiemom.R.layout;
 
 public final class CupboardOrderActivity_
-    extends CupboardOrderActivity
-{
+        extends CupboardOrderActivity {
 
 
     @Override
@@ -33,36 +30,6 @@ public final class CupboardOrderActivity_
     }
 
     private void afterSetContentView_() {
-        {
-            View view = findViewById(id.cases_radio_button);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        CupboardOrderActivity_.this.casesClick();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = findViewById(id.boxes_radio_button);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        CupboardOrderActivity_.this.boxesClick();
-                    }
-
-                }
-                );
-            }
-        }
         afterViewFrag();
     }
 
@@ -86,7 +53,7 @@ public final class CupboardOrderActivity_
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (((SdkVersionHelper.getSdkInt()< 5)&&(keyCode == KeyEvent.KEYCODE_BACK))&&(event.getRepeatCount() == 0)) {
+        if (((SdkVersionHelper.getSdkInt() < 5) && (keyCode == KeyEvent.KEYCODE_BACK)) && (event.getRepeatCount() == 0)) {
             onBackPressed();
         }
         return super.onKeyDown(keyCode, event);
