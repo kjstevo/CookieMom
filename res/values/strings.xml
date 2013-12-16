@@ -141,5 +141,8 @@
     <string name="checkin">Check In</string>
     <string name="booth_checkout_order">booth_checkout</string>
     <string name="booth_checkin_order">booth_check_in</string>
+    <string name="booths_req_check_out">These booths require check-out today</string>
+    <string name="booths">Booths</string>
+    <string name="booths_need_ordering">The following booths need to be ordered:</string>
 
 </resources>

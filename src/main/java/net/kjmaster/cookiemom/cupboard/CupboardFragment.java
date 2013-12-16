@@ -141,7 +141,7 @@ public class CupboardFragment extends Fragment {
         }
     }
 
-
+    //TODO prevent negative inventory
     @OnActivityResult(Constants.CUPBOARD_REQUEST)
     void cupboardResults() {
         ((MainActivity) getActivity()).refreshAll();

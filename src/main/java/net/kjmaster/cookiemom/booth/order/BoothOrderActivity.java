@@ -9,10 +9,14 @@ import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
 import net.kjmaster.cookiemom.ui.CookieAmountsListInputFragment_;
+import net.kmaster.cookiemom.dao.CookieTransactions;
+import net.kmaster.cookiemom.dao.CookieTransactionsDao;
 import net.kmaster.cookiemom.dao.Order;
 import net.kmaster.cookiemom.dao.OrderDao;
 
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -49,19 +53,52 @@ public class BoothOrderActivity extends CookieActionActivity {
 
     protected void saveData() {
         OrderDao dao = Main.daoSession.getOrderDao();
+        HashMap<String, Integer> orderedBoxes = new HashMap<String, Integer>();
+        HashMap<String, Integer> availBoxes = new HashMap<String, Integer>();
+
+        for (String cookieType : Constants.CookieTypes) {
+            List<Order> orderList = dao.queryBuilder()
+                    .where(
+                            OrderDao.Properties.OrderCookieType.eq(cookieType))
+                    .list();
+
+            if (orderList != null) {
+                int boxes = 0;
+                for (Order order : orderList) {
+                    boxes += order.getOrderedBoxes();
+                }
+                orderedBoxes.put(cookieType, boxes);
+            }
+            List<CookieTransactions> cookieTransactionsist = Main.daoSession.getCookieTransactionsDao().queryBuilder()
+                    .where(CookieTransactionsDao.Properties.CookieType.eq(cookieType)).list();
+            if (cookieTransactionsist != null) {
+                int boxes = 0;
+                for (CookieTransactions cookieTransactions : cookieTransactionsist) {
+                    boxes = boxes + cookieTransactions.getTransBoxes();
+                }
+                availBoxes.put(cookieType, boxes);
+            }
+        }
+
+
         Calendar c = Calendar.getInstance();
         for (int i = 0; i < Constants.CookieTypes.length; i++) {
+            String cookieType = Constants.CookieTypes[i];
             Integer intVal = Integer.valueOf(getFragment()
                     .valuesMap()
-                    .get(Constants.CookieTypes[i])
+                    .get(cookieType)
             );
+            Integer availBox = availBoxes.get(cookieType) - orderedBoxes.get(cookieType);
+            if (availBox > 0) {
+                intVal = intVal - availBox;
+            }
 
             if (intVal > 0) {
                 dao.insert(new Order(
                         null,
                         c.getTime(),
                         (boothId * -1) - 100,
-                        Constants.CookieTypes[i],
+                        cookieType,
                         false,
                         intVal,
                         false));

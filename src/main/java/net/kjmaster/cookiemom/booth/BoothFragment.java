@@ -18,10 +18,7 @@ import net.kjmaster.cookiemom.booth.expander.CustomBoothExpander;
 import net.kjmaster.cookiemom.booth.order.BoothOrderActivity_;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.scout.SelectScoutListActivity_;
-import net.kmaster.cookiemom.dao.Booth;
-import net.kmaster.cookiemom.dao.BoothAssignments;
-import net.kmaster.cookiemom.dao.BoothAssignmentsDao;
-import net.kmaster.cookiemom.dao.BoothDao;
+import net.kmaster.cookiemom.dao.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -143,19 +140,53 @@ public class BoothFragment
     @Override
     public void onPositiveButtonClicked(int requestCode) {
         BoothDao boothDao = Main.daoSession.getBoothDao();
+
+        deleteBoothAssignments(requestCode);
+
+        deleteBoothTrans(requestCode);
+
+        deleteBoothOrders(requestCode);
+
+        deleteBooth(requestCode, boothDao);
+
+        afterViews();
+
+    }
+
+    private void deleteBooth(long requestCode, BoothDao boothDao) {
+        boothDao.delete(boothDao.loadByRowId(requestCode));
+    }
+
+    private void deleteBoothAssignments(long requestCode) {
         List<BoothAssignments> list = Main.daoSession.getBoothAssignmentsDao().queryBuilder()
                 .where(
-                        BoothAssignmentsDao.Properties.BoothAssignBoothId.eq((long) requestCode))
+                        BoothAssignmentsDao.Properties.BoothAssignBoothId.eq(requestCode))
                 .list();
         if (list != null) {
             for (BoothAssignments assignments : list) {
                 Main.daoSession.getBoothAssignmentsDao().delete(assignments);
             }
         }
-        boothDao.delete(boothDao.loadByRowId((long) requestCode));
+    }
 
-        afterViews();
+    private void deleteBoothTrans(long requestCode) {
+        List<CookieTransactions> cookieTransactionsList =
+                Main.daoSession.getCookieTransactionsDao().queryBuilder()
+                        .where(
+                                CookieTransactionsDao.Properties.TransBoothId.eq(requestCode))
+                        .list();
+        for (CookieTransactions cookieTransaction : cookieTransactionsList) {
+            Main.daoSession.getCookieTransactionsDao().delete(cookieTransaction);
+        }
+    }
 
+    private void deleteBoothOrders(long requestCode) {
+        List<Order> orders = Main.daoSession.getOrderDao().queryBuilder()
+                .where(OrderDao.Properties.OrderScoutId.eq(Constants.CalculateNegativeBoothId(requestCode)))
+                .list();
+        for (Order order : orders) {
+            Main.daoSession.getOrderDao().delete(order);
+        }
     }
 
     @Override

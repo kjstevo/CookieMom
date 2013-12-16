@@ -33,10 +33,10 @@ public final class ScoutPickupActivity_
     private void init_(Bundle savedInstanceState) {
         iSettings = new ISettings_(this);
         Resources resources_ = this.getResources();
-        scout_pickup_order = resources_.getString(string.scout_pickup_order);
+        resCancel = resources_.getString(string.cancel);
         scout_pickup_title = resources_.getString(string.scout_pickup_order_title);
         pickup_order = resources_.getString(string.pickup_order);
-        resCancel = resources_.getString(string.cancel);
+        scout_pickup_order = resources_.getString(string.scout_pickup_order);
         injectExtras_();
     }
 
@@ -78,16 +78,16 @@ public final class ScoutPickupActivity_
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
         if (extras_ != null) {
-            if (extras_.containsKey("ScoutId")) {
+            if (extras_.containsKey("isEditable")) {
                 try {
-                    ScoutId = ((Long) extras_.get("ScoutId"));
+                    isEditable = ((Boolean) extras_.get("isEditable"));
                 } catch (ClassCastException e) {
                     Log.e("ScoutPickupActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("isEditable")) {
+            if (extras_.containsKey("ScoutId")) {
                 try {
-                    isEditable = ((Boolean) extras_.get("isEditable"));
+                    ScoutId = ((Long) extras_.get("ScoutId"));
                 } catch (ClassCastException e) {
                     Log.e("ScoutPickupActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -132,13 +132,13 @@ public final class ScoutPickupActivity_
             }
         }
 
-        public ScoutPickupActivity_.IntentBuilder_ ScoutId(long ScoutId) {
-            intent_.putExtra("ScoutId", ScoutId);
+        public ScoutPickupActivity_.IntentBuilder_ isEditable(boolean isEditable) {
+            intent_.putExtra("isEditable", isEditable);
             return this;
         }
 
-        public ScoutPickupActivity_.IntentBuilder_ isEditable(boolean isEditable) {
-            intent_.putExtra("isEditable", isEditable);
+        public ScoutPickupActivity_.IntentBuilder_ ScoutId(long ScoutId) {
+            intent_.putExtra("ScoutId", ScoutId);
             return this;
         }
 

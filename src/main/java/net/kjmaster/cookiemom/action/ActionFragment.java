@@ -49,6 +49,9 @@ public class ActionFragment extends Fragment implements ISimpleDialogListener {
         addBoothAssignCard(actionContentCardLists);
         addCupboardAssignCard(actionContentCardLists);
         addAddScoutCard(actionContentCardLists);
+        addBoothCheckInCard(actionContentCardLists);
+        addBoothCheckOutCard(actionContentCardLists);
+        addBoothOrderCard(actionContentCardLists);
         // addPersonalDelivery(actionContentCardLists);
     }
 
@@ -69,6 +72,17 @@ public class ActionFragment extends Fragment implements ISimpleDialogListener {
         createActionItem(actionContentCardLists, new ActionScoutPickup(getActivity(), this));
     }
 
+    private void addBoothOrderCard(List<ActionContentCard> actionContentCardLists) {
+        createActionItem(actionContentCardLists, new ActionBoothOrder(getActivity()));
+    }
+
+    private void addBoothCheckOutCard(List<ActionContentCard> actionContentCardLists) {
+        createActionItem(actionContentCardLists, new ActionBoothCheckOut(getActivity()));
+    }
+
+    private void addBoothCheckInCard(List<ActionContentCard> actionContentCardLists) {
+        createActionItem(actionContentCardLists, new ActionBoothCheckIn(getActivity()));
+    }
 
     @Override
     public void onPositiveButtonClicked(int requestCode) {

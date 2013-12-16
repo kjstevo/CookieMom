@@ -46,6 +46,7 @@ public class CupboardOrderActivity extends CookieActionActivity {
 
     }
 
+    //TODO add currrent inventory vis
     @Override
     protected boolean isEditable() {
         return true;

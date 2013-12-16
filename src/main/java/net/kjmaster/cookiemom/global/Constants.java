@@ -30,6 +30,14 @@ public class Constants {
     public static final int REMOVE_SCOUT_REQUEST_CODE = 1111;
     public static final int BOOTH_ORDER = 9876;
 
+    public static long CalculateNegativeBoothId(long boothId) {
+        return ((-1 * boothId) - 100);
+    }
+
+    public static long CalculatePositiveBoothId(long scoutId) {
+        return ((scoutId + 100) * -1);
+    }
+
     public static HashMap<String, Integer> getCookieNameImages() {
         cookieImages.put(CookieTypes[0], R.drawable.mint);
         cookieImages.put(CookieTypes[1], R.drawable.samoa);

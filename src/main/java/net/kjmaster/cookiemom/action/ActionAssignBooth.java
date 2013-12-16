@@ -24,7 +24,7 @@ import java.util.List;
 public class ActionAssignBooth extends ActionContentCard {
     private final Context mActivity;
 
-
+    //TODO booth add refresh
     public ActionAssignBooth(Context mActivity) {
         super(mActivity);
         this.mActivity = mActivity;
