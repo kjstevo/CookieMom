@@ -498,7 +498,7 @@
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="724653b3-d774-431b-a637-8e4913711973" name="Default" comment="Corrected booth refresh error and action errors">
+    <list default="true" id="724653b3-d774-431b-a637-8e4913711973" name="Default" comment="Corrected booth refresh error and action errors&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CookieMom.apk" afterPath="$PROJECT_DIR$/target/CookieMom.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CookieMom.unaligned.apk" afterPath="$PROJECT_DIR$/target/CookieMom.unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/action/ActionFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/action/ActionFragment_.java" />
@@ -1799,7 +1799,11 @@
       <created>1387275134633</created>
       <updated>1387275134633</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Corrected booth refresh error and action errors&#10;">
+      <created>1387275243427</created>
+      <updated>1387275243427</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1865,7 +1869,8 @@
     <MESSAGE value="added booth pickup and delivery" />
     <MESSAGE value="added booth order,check out/in action items.  adjusted booth order to account for current inv" />
     <MESSAGE value="Corrected booth refresh error and action errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected booth refresh error and action errors" />
+    <MESSAGE value="Corrected booth refresh error and action errors&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected booth refresh error and action errors&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
