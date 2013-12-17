@@ -11,10 +11,7 @@ import android.widget.TextView;
 import it.gmariotti.cardslib.library.internal.Card;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
-import net.kmaster.cookiemom.dao.Booth;
-import net.kmaster.cookiemom.dao.CookieTransactions;
-import net.kmaster.cookiemom.dao.CookieTransactionsDao;
-import net.kmaster.cookiemom.dao.Scout;
+import net.kmaster.cookiemom.dao.*;
 
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
@@ -137,6 +134,7 @@ public class BoothContentCard extends Card {
                     mAddress.setText(address);
                 }
             } catch (Exception e) {
+
                 Log.w("cookiemom", "Missing field info");
             }
         }
@@ -158,9 +156,15 @@ public class BoothContentCard extends Card {
 
     private List<Scout> getScoutList() {
         List<Scout> arrayList = new ArrayList<Scout>();
-        for (int j = 0; j < mBooth.getScoutsAssigned().size(); j++) {
-            arrayList.add(mBooth.getScoutsAssigned().get(j).getScout());
+        List<BoothAssignments> boothAssignmentses = Main.daoSession.getBoothAssignmentsDao().queryBuilder().where(BoothAssignmentsDao.Properties.BoothAssignBoothId.eq(mBooth.getId())).list();
+        ScoutDao scoutDao = Main.daoSession.getScoutDao();
+        if (boothAssignmentses != null) {
+            for (BoothAssignments boothAssignments : boothAssignmentses) {
+                Scout scout = scoutDao.load(boothAssignments.getBoothAssignScoutId());
+                arrayList.add(scout);
+            }
         }
+
 
         return arrayList;
     }

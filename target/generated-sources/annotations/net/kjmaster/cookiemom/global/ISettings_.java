@@ -8,18 +8,10 @@ package net.kjmaster.cookiemom.global;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import com.googlecode.androidannotations.api.sharedpreferences.BooleanPrefEditorField;
-import com.googlecode.androidannotations.api.sharedpreferences.BooleanPrefField;
-import com.googlecode.androidannotations.api.sharedpreferences.EditorHelper;
-import com.googlecode.androidannotations.api.sharedpreferences.LongPrefEditorField;
-import com.googlecode.androidannotations.api.sharedpreferences.LongPrefField;
-import com.googlecode.androidannotations.api.sharedpreferences.SharedPreferencesHelper;
-import com.googlecode.androidannotations.api.sharedpreferences.StringPrefEditorField;
-import com.googlecode.androidannotations.api.sharedpreferences.StringPrefField;
+import com.googlecode.androidannotations.api.sharedpreferences.*;
 
 public final class ISettings_
-    extends SharedPreferencesHelper
-{
+        extends SharedPreferencesHelper {
 
 
     public ISettings_(Context context) {
@@ -63,8 +55,7 @@ public final class ISettings_
     }
 
     public final static class ISettingsEditor_
-        extends EditorHelper<ISettings_.ISettingsEditor_>
-    {
+            extends EditorHelper<ISettings_.ISettingsEditor_> {
 
 
         ISettingsEditor_(SharedPreferences sharedPreferences) {

@@ -49,6 +49,7 @@ public class BoothFragment
 //        db = helper.getWritableDatabase();
 //        daoMaster = new DaoMaster(db);
 //        daoSession=daoMaster.newSession();
+
         BoothDao boothDao = Main.daoSession.getBoothDao();
 
         List booths = boothDao.queryBuilder()
@@ -86,6 +87,14 @@ public class BoothFragment
         }
 
 
+    }
+
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        //net.kjmaster.cookiemom.booth.BoothFragment.onHiddenChanged returns void
+
+        //12/16/13
+        super.onHiddenChanged(hidden);
     }
 
     private void selectBoothMenu(BaseCard card, MenuItem item) {

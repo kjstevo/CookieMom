@@ -7,18 +7,12 @@ package net.kjmaster.cookiemom.scout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import it.gmariotti.cardslib.library.view.CardListView;
 import net.kjmaster.cookiemom.R.layout;
 
 public final class ScoutFragment_
-    extends ScoutFragment
-{
+        extends ScoutFragment {
 
     private View contentView_;
 
@@ -87,7 +81,7 @@ public final class ScoutFragment_
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         ScoutFragment_.super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
-            case  4343 :
+            case 4343:
                 ScoutFragment_.this.scoutResullts(resultCode);
                 break;
         }

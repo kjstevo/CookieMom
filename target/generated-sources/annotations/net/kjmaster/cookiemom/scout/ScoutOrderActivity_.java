@@ -31,8 +31,8 @@ public final class ScoutOrderActivity_
 
     private void init_(Bundle savedInstanceState) {
         Resources resources_ = this.getResources();
-        fragTag = resources_.getString(string.add_order);
         fragTitle = resources_.getString(string.add_order_title);
+        fragTag = resources_.getString(string.add_order);
         injectExtras_();
     }
 
@@ -74,16 +74,16 @@ public final class ScoutOrderActivity_
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
         if (extras_ != null) {
-            if (extras_.containsKey("scoutId")) {
+            if (extras_.containsKey("requestCode")) {
                 try {
-                    scoutId = ((Long) extras_.get("scoutId"));
+                    requestCode = ((Integer) extras_.get("requestCode"));
                 } catch (ClassCastException e) {
                     Log.e("ScoutOrderActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("requestCode")) {
+            if (extras_.containsKey("scoutId")) {
                 try {
-                    requestCode = ((Integer) extras_.get("requestCode"));
+                    scoutId = ((Long) extras_.get("scoutId"));
                 } catch (ClassCastException e) {
                     Log.e("ScoutOrderActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -128,13 +128,13 @@ public final class ScoutOrderActivity_
             }
         }
 
-        public ScoutOrderActivity_.IntentBuilder_ scoutId(long scoutId) {
-            intent_.putExtra("scoutId", scoutId);
+        public ScoutOrderActivity_.IntentBuilder_ requestCode(int requestCode) {
+            intent_.putExtra("requestCode", requestCode);
             return this;
         }
 
-        public ScoutOrderActivity_.IntentBuilder_ requestCode(int requestCode) {
-            intent_.putExtra("requestCode", requestCode);
+        public ScoutOrderActivity_.IntentBuilder_ scoutId(long scoutId) {
+            intent_.putExtra("scoutId", scoutId);
             return this;
         }
 

@@ -68,32 +68,23 @@ public class ActionBoothCheckIn extends ActionContentCard {
                 .list();
         if (cnt != null) {
             for (Booth booth : cnt) {
-                boolean addBooth = false;
+
                 Long cnt2 = Main.daoSession.getCookieTransactionsDao().queryBuilder()
                         .where(
-                                CookieTransactionsDao.Properties.TransScoutId.eq(
-                                        Constants.CalculateNegativeBoothId(booth.getId())),
-                                CookieTransactionsDao.Properties.TransBoxes.gt(0))
+                                CookieTransactionsDao.Properties.TransBoothId.eq(booth.getId()))
                         .count();
-
                 if (cnt2 > 0) {
-                    boothList.add(booth);
-
+                    return true;
                 }
             }
 
         }
-        if (boothList.isEmpty()) {
-            return false;
-        } else {
-            return true;
-        }
+        return !boothList.isEmpty();
     }
 
     @Override
     public List<Booth> getActionList() {
-        List<Booth> booths = getBooths();
-        return booths;
+        return getBooths();
 
     }
 

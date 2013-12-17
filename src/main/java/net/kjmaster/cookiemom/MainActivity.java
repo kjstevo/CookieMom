@@ -133,7 +133,7 @@ public class MainActivity extends FragmentActivity {
         public void invalidateDrawable(Drawable who) {
 
 
-            getActionBar().setBackgroundDrawable(who);
+            //   getActionBar().setBackgroundDrawable(who);
         }
 
         @Override
@@ -188,7 +188,9 @@ public class MainActivity extends FragmentActivity {
                     )
             );
 
+
         }
+        refreshAll();
     }
 
     public void refreshAll() {

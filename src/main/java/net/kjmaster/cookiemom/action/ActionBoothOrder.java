@@ -63,11 +63,7 @@ public class ActionBoothOrder extends ActionContentCard {
 
             }
         }
-        if (boothList.isEmpty()) {
-            return false;
-        } else {
-            return true;
-        }
+        return !boothList.isEmpty();
 
     }
 

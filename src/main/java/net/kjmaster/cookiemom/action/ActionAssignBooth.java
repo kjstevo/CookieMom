@@ -10,6 +10,7 @@ import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.scout.SelectScoutListActivity_;
 import net.kmaster.cookiemom.dao.Booth;
+import net.kmaster.cookiemom.dao.BoothAssignmentsDao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,13 +52,12 @@ public class ActionAssignBooth extends ActionContentCard {
     @Override
     public Boolean isCardVisible() {
         List<Booth> booths = Main.daoSession.getBoothDao().loadAll();
-        int cnt = 0;
+        long cnt = 0;
         for (Booth booth : booths) {
-            if (booth.getScoutsAssigned().size() <= 1) {
-                cnt = cnt + 1;
-            }
+            cnt = Main.daoSession.getBoothAssignmentsDao().queryBuilder().where(BoothAssignmentsDao.Properties.BoothAssignBoothId.eq(booth.getId())).count();
         }
-        return cnt > 0;
+
+        return cnt < 2;
     }
 
     @Override
@@ -66,7 +66,8 @@ public class ActionAssignBooth extends ActionContentCard {
         List<Booth> booths = Main.daoSession.getBoothDao().loadAll();
 
         for (Booth booth : booths) {
-            if (booth.getScoutsAssigned().size() <= 1) {
+            long cnt = Main.daoSession.getBoothAssignmentsDao().queryBuilder().where(BoothAssignmentsDao.Properties.BoothAssignBoothId.eq(booth.getId())).count();
+            if (cnt < 2) {
 
                 stringList.add(booth);
 

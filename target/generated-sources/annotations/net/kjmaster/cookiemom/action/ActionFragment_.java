@@ -6,17 +6,12 @@
 package net.kjmaster.cookiemom.action;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import it.gmariotti.cardslib.library.view.CardListView;
 import net.kjmaster.cookiemom.R.layout;
 
 public final class ActionFragment_
-    extends ActionFragment
-{
+        extends ActionFragment {
 
     private View contentView_;
 

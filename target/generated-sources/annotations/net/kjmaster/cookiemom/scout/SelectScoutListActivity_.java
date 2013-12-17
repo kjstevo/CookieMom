@@ -74,20 +74,25 @@ public final class SelectScoutListActivity_
         return new SelectScoutListActivity_.IntentBuilder_(context);
     }
 
+    @SuppressWarnings("unchecked")
+    private <T> T cast_(Object object) {
+        return ((T) object);
+    }
+
     private void injectExtras_() {
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
         if (extras_ != null) {
-            if (extras_.containsKey("targetId")) {
+            if (extras_.containsKey("FragmentTag")) {
                 try {
-                    targetId = ((Long) extras_.get("targetId"));
+                    FragmentTag = cast_(extras_.get("FragmentTag"));
                 } catch (ClassCastException e) {
                     Log.e("SelectScoutListActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("FragmentTag")) {
+            if (extras_.containsKey("targetId")) {
                 try {
-                    FragmentTag = cast_(extras_.get("FragmentTag"));
+                    targetId = ((Long) extras_.get("targetId"));
                 } catch (ClassCastException e) {
                     Log.e("SelectScoutListActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -106,11 +111,6 @@ public final class SelectScoutListActivity_
     public void setIntent(Intent newIntent) {
         super.setIntent(newIntent);
         injectExtras_();
-    }
-
-    @SuppressWarnings("unchecked")
-    private <T> T cast_(Object object) {
-        return ((T) object);
     }
 
     public static class IntentBuilder_ {
@@ -144,13 +144,13 @@ public final class SelectScoutListActivity_
             }
         }
 
-        public SelectScoutListActivity_.IntentBuilder_ targetId(long targetId) {
-            intent_.putExtra("targetId", targetId);
+        public SelectScoutListActivity_.IntentBuilder_ FragmentTag(String FragmentTag) {
+            intent_.putExtra("FragmentTag", FragmentTag);
             return this;
         }
 
-        public SelectScoutListActivity_.IntentBuilder_ FragmentTag(String FragmentTag) {
-            intent_.putExtra("FragmentTag", FragmentTag);
+        public SelectScoutListActivity_.IntentBuilder_ targetId(long targetId) {
+            intent_.putExtra("targetId", targetId);
             return this;
         }
 

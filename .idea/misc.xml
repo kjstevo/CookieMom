@@ -42,6 +42,9 @@
       </set>
     </option>
   </component>
+  <component name="ProjectResources">
+    <resource url="http://schemas.android.com/apk/res/android" location="$MAVEN_REPOSITORY$/android/android/4.0_r3/android-4.0_r3.jar!/android" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="Android 4.2.2 Platform (2)" project-jdk-type="Android SDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>

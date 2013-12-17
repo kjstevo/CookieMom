@@ -79,8 +79,8 @@ public class CupboardPickupFragment extends Fragment implements ICookieActionFra
                     (new CookieAmountContentCard(
                             getActivity(),
                             amountExpected,
-                            autoFillEditFields,
-                            showExpected,
+                            false,
+                            true,
                             actualAmount,
                             isBoxes
                     ),

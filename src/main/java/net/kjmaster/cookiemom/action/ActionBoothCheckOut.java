@@ -71,13 +71,9 @@ public class ActionBoothCheckOut extends ActionContentCard {
 
                 Long cnt2 = Main.daoSession.getCookieTransactionsDao().queryBuilder()
                         .where(
-                                CookieTransactionsDao.Properties.TransScoutId.eq(
-                                        Constants.CalculateNegativeBoothId(booth.getId())
-                                ))
+                                CookieTransactionsDao.Properties.TransBoothId.eq(booth.getId()))
                         .count();
-
                 if (cnt2 == 0) {
-
                     return true;
                 }
             }
@@ -88,8 +84,7 @@ public class ActionBoothCheckOut extends ActionContentCard {
 
     @Override
     public List<Booth> getActionList() {
-        List<Booth> booths = getBooths();
-        return booths;
+        return getBooths();
 
     }
 

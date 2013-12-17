@@ -68,8 +68,8 @@ public class CookieAmountsListInputFragment extends Fragment implements ICookieA
                     (new CookieAmountContentCard(
                             getActivity(),
                             amountExpected,
-                            autoFillEditFields,
-                            showExpected,
+                            false,
+                            false,
                             actualAmount,
                             true
                     ),

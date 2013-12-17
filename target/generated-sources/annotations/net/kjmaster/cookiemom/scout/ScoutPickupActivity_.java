@@ -34,8 +34,8 @@ public final class ScoutPickupActivity_
         iSettings = new ISettings_(this);
         Resources resources_ = this.getResources();
         resCancel = resources_.getString(string.cancel);
-        scout_pickup_title = resources_.getString(string.scout_pickup_order_title);
         pickup_order = resources_.getString(string.pickup_order);
+        scout_pickup_title = resources_.getString(string.scout_pickup_order_title);
         scout_pickup_order = resources_.getString(string.scout_pickup_order);
         injectExtras_();
     }
