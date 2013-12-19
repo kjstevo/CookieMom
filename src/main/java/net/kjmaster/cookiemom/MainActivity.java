@@ -203,6 +203,7 @@ public class MainActivity extends FragmentActivity {
         refreshAll();
     }
 
+
     @OnActivityResult(Constants.PLACE_CUPBOARD_ORDER)
     void placeCupboardOrder(int resultCode, Intent data) {
         refreshAll();

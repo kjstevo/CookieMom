@@ -76,23 +76,23 @@ public final class MainActivity_
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         MainActivity_.super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
+            case 9876:
+                MainActivity_.this.onBoothOrder(resultCode, data);
+                break;
             case 4343:
                 MainActivity_.this.scoutResult(resultCode);
                 break;
             case 888:
                 MainActivity_.this.onBoothResult(resultCode, data);
                 break;
-            case 1111:
-                MainActivity_.this.onRemoveScout(resultCode, data);
-                break;
             case 444:
                 MainActivity_.this.placeCupboardOrder(resultCode, data);
                 break;
-            case 9876:
-                MainActivity_.this.onBoothOrder(resultCode, data);
-                break;
             case 111:
                 MainActivity_.this.onScoutAssign(resultCode, data);
+                break;
+            case 1111:
+                MainActivity_.this.onRemoveScout(resultCode, data);
                 break;
         }
     }

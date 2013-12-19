@@ -18,7 +18,8 @@ import net.kjmaster.cookiemom.R.layout;
 import net.kjmaster.cookiemom.global.ISettings_;
 
 public final class CupboardPickupActivity_
-        extends CupboardPickupActivity {
+    extends CupboardPickupActivity
+{
 
 
     @Override
@@ -57,7 +58,7 @@ public final class CupboardPickupActivity_
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (((SdkVersionHelper.getSdkInt() < 5) && (keyCode == KeyEvent.KEYCODE_BACK)) && (event.getRepeatCount() == 0)) {
+        if (((SdkVersionHelper.getSdkInt()< 5)&&(keyCode == KeyEvent.KEYCODE_BACK))&&(event.getRepeatCount() == 0)) {
             onBackPressed();
         }
         return super.onKeyDown(keyCode, event);
@@ -70,7 +71,7 @@ public final class CupboardPickupActivity_
     private void injectExtras_() {
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
-        if (extras_ != null) {
+        if (extras_!= null) {
             if (extras_.containsKey("isEditable")) {
                 try {
                     isEditable = ((Boolean) extras_.get("isEditable"));

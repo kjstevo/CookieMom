@@ -64,7 +64,7 @@ public class CookieAmountContentCard extends Card {
 
         TextView mAmountExpected = (TextView) parent.findViewById(R.id.amount_expected);
         TextView mAmountExpectedCases = (TextView) parent.findViewById(R.id.cases_expected);
-        EditText mCookieAmount = (EditText) parent.findViewById(R.id.cookie_amount);
+        TextView mCookieAmount = (TextView) parent.findViewById(R.id.cookie_amount);
         EditText mCookieAmountCases = (EditText) parent.findViewById(R.id.edit_text_cases);
         mCookieAmount.setTag(this.getCardHeader().getTitle());
         LinearLayout mExpectedPanel = (LinearLayout) parent.findViewById(R.id.expected_panel);

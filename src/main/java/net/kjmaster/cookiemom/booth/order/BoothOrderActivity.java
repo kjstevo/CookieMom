@@ -15,7 +15,6 @@ import net.kmaster.cookiemom.dao.Order;
 import net.kmaster.cookiemom.dao.OrderDao;
 
 import java.util.Calendar;
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -41,7 +40,15 @@ public class BoothOrderActivity extends CookieActionActivity {
 
     @AfterViews
     void afterViewFrag() {
-        replaceFrag(createFragmentTransaction(fragTag), CookieAmountsListInputFragment_.builder().isEditable(true).isBoxes(true).build(), fragTag);
+        replaceFrag(
+                createFragmentTransaction(fragTag),
+                CookieAmountsListInputFragment_.builder()
+                        .isEditable(true)
+                        .isBoxes(true)
+                        .build(),
+                fragTag
+        );
+
         createActionMode(fragTitle);
     }
 
@@ -53,22 +60,24 @@ public class BoothOrderActivity extends CookieActionActivity {
 
     protected void saveData() {
         OrderDao dao = Main.daoSession.getOrderDao();
-        HashMap<String, Integer> orderedBoxes = new HashMap<String, Integer>();
-        HashMap<String, Integer> availBoxes = new HashMap<String, Integer>();
 
+        //Get a list of orders whos cookies are in the inventory awaiting
+        //pick up so we dont jack 'em
         for (String cookieType : Constants.CookieTypes) {
             List<Order> orderList = dao.queryBuilder()
                     .where(
-                            OrderDao.Properties.OrderCookieType.eq(cookieType))
+                            OrderDao.Properties.OrderCookieType.eq(cookieType),
+                            OrderDao.Properties.PickedUpFromCupboard.eq(true))
                     .list();
 
+            //add the total orders awaiting pickup from scout
+            int orderedBoxesWaiting = 0;
             if (orderList != null) {
-                int boxes = 0;
                 for (Order order : orderList) {
-                    boxes += order.getOrderedBoxes();
+                    orderedBoxesWaiting += order.getOrderedBoxes();
                 }
-                orderedBoxes.put(cookieType, boxes);
             }
+            //get current inventory total
             List<CookieTransactions> cookieTransactionsist = Main.daoSession.getCookieTransactionsDao().queryBuilder()
                     .where(CookieTransactionsDao.Properties.CookieType.eq(cookieType)).list();
             if (cookieTransactionsist != null) {
@@ -76,33 +85,48 @@ public class BoothOrderActivity extends CookieActionActivity {
                 for (CookieTransactions cookieTransactions : cookieTransactionsist) {
                     boxes = boxes + cookieTransactions.getTransBoxes();
                 }
-                availBoxes.put(cookieType, boxes);
+                //sub the boxes awaiting p/u
+                boxes = boxes - orderedBoxesWaiting;
+                if (boxes < 0) boxes = 0;
+
+                // get the current booth order num of boxes
+                Integer currentOrder = Integer.valueOf(getFragment()
+                        .valuesMap()
+                        .get(cookieType)
+                );
+
+                //number of boxes not in inv need to be ordered
+                //the extra are marked awaiting p/u
+                Integer currentShortfall = currentOrder - boxes;
+
+                if (currentShortfall <= 0) {
+                    currentShortfall = 0;
+                    createOrder(cookieType, currentOrder, true);
+                }
+                if (currentShortfall > 0) {
+                    createOrder(cookieType, currentShortfall, false);
+                    if (currentOrder > currentShortfall) {
+                        createOrder(cookieType, currentOrder - currentShortfall, true);
+
+                    }
+                }
+
             }
         }
+    }
 
 
+    private void createOrder(String cookieType, Integer amountl, boolean pickedUp) {
         Calendar c = Calendar.getInstance();
-        for (int i = 0; i < Constants.CookieTypes.length; i++) {
-            String cookieType = Constants.CookieTypes[i];
-            Integer intVal = Integer.valueOf(getFragment()
-                    .valuesMap()
-                    .get(cookieType)
-            );
-            Integer availBox = availBoxes.get(cookieType) - orderedBoxes.get(cookieType);
-            if (availBox > 0) {
-                intVal = intVal - availBox;
-            }
+        OrderDao dao = Main.daoSession.getOrderDao();
 
-            if (intVal > 0) {
-                dao.insert(new Order(
-                        null,
-                        c.getTime(),
-                        (boothId * -1) - 100,
-                        cookieType,
-                        false,
-                        intVal,
-                        false));
-            }
-        }
+        dao.insert(new Order(
+                null,
+                c.getTime(),
+                (boothId * -1) - 100,
+                cookieType,
+                pickedUp,
+                amountl,
+                pickedUp));
     }
 }

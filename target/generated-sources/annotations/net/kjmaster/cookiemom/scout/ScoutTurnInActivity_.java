@@ -31,10 +31,10 @@ public final class ScoutTurnInActivity_
 
     private void init_(Bundle savedInstanceState) {
         Resources resources_ = this.getResources();
-        turn_in = resources_.getString(string.turn_in);
-        scout_turn_in__title = resources_.getString(string.scout_turn_in_title);
-        resCancel = resources_.getString(string.cancel);
         scout_turn_in = resources_.getString(string.scout_turn_in);
+        resCancel = resources_.getString(string.cancel);
+        scout_turn_in__title = resources_.getString(string.scout_turn_in_title);
+        turn_in = resources_.getString(string.turn_in);
         injectExtras_();
     }
 
@@ -76,16 +76,16 @@ public final class ScoutTurnInActivity_
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
         if (extras_ != null) {
-            if (extras_.containsKey("isEditable")) {
+            if (extras_.containsKey("ScoutId")) {
                 try {
-                    isEditable = ((Boolean) extras_.get("isEditable"));
+                    ScoutId = ((Long) extras_.get("ScoutId"));
                 } catch (ClassCastException e) {
                     Log.e("ScoutTurnInActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("ScoutId")) {
+            if (extras_.containsKey("isEditable")) {
                 try {
-                    ScoutId = ((Long) extras_.get("ScoutId"));
+                    isEditable = ((Boolean) extras_.get("isEditable"));
                 } catch (ClassCastException e) {
                     Log.e("ScoutTurnInActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -130,13 +130,13 @@ public final class ScoutTurnInActivity_
             }
         }
 
-        public ScoutTurnInActivity_.IntentBuilder_ isEditable(boolean isEditable) {
-            intent_.putExtra("isEditable", isEditable);
+        public ScoutTurnInActivity_.IntentBuilder_ ScoutId(long ScoutId) {
+            intent_.putExtra("ScoutId", ScoutId);
             return this;
         }
 
-        public ScoutTurnInActivity_.IntentBuilder_ ScoutId(long ScoutId) {
-            intent_.putExtra("ScoutId", ScoutId);
+        public ScoutTurnInActivity_.IntentBuilder_ isEditable(boolean isEditable) {
+            intent_.putExtra("isEditable", isEditable);
             return this;
         }
 

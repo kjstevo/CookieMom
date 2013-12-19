@@ -62,8 +62,6 @@ public class CookieAmountsListInputFragment extends Fragment implements ICookieA
             Integer actualAmount = Integer.valueOf(valuesBoxesMap.get(cookieType));
 
             int amountExpected = 0;
-            boolean autoFillEditFields = false;
-            boolean showExpected = false;
             card = CreateCompleteCookieCard
                     (new CookieAmountContentCard(
                             getActivity(),
@@ -80,6 +78,7 @@ public class CookieAmountsListInputFragment extends Fragment implements ICookieA
 
             final CookieActionActivity cookieActionActivity = (CookieActionActivity) getActivity();
             if (cookieActionActivity != null) {
+
                 card.addPartialOnClickListener(Card.CLICK_LISTENER_ALL_VIEW, new Card.OnCardClickListener() {
                     @Override
                     public void onClick(Card card, View view) {

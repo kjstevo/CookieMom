@@ -7,11 +7,19 @@ import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieOrCashDialogBase;
+import net.kjmaster.cookiemom.global.ICookieActionFragment;
 import net.kjmaster.cookiemom.ui.CookieAmountsListInputFragment;
 import net.kjmaster.cookiemom.ui.CookieAmountsListInputFragment_;
 import net.kmaster.cookiemom.dao.CookieTransactions;
+import net.kmaster.cookiemom.dao.CookieTransactionsDao;
+import net.kmaster.cookiemom.dao.Order;
+import net.kmaster.cookiemom.dao.OrderDao;
 
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+
+import static net.kjmaster.cookiemom.global.Constants.CookieTypes;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,6 +30,7 @@ import java.util.Calendar;
 @EActivity(R.layout.scout_order_layout)
 public class BoothCheckOutActivity extends CookieOrCashDialogBase {
     private String fragName;
+    private final HashMap<String, String> valuesMap = new HashMap<String, String>();
 
     @Override
     protected void createActionFragment() {
@@ -36,7 +45,8 @@ public class BoothCheckOutActivity extends CookieOrCashDialogBase {
 
     @Override
     protected void saveForemData() {
-        performCheckOut();
+        //performCheckOut();
+        savePickupData();
     }
 
     @Override
@@ -74,6 +84,113 @@ public class BoothCheckOutActivity extends CookieOrCashDialogBase {
         createActionMode(fragName);
     }
 
+    private void savePickupData() {
+
+
+        Calendar c = Calendar.getInstance();
+
+        CookieTransactionsDao dao = Main.daoSession.getCookieTransactionsDao();
+
+        OrderDao orderDao = Main.daoSession.getOrderDao();
+
+        for (String cookieFlavor : CookieTypes) {
+            Integer boxesInInventory = 0;
+            List<CookieTransactions> transactionsList = Main.daoSession.getCookieTransactionsDao().queryBuilder()
+                    .where(
+                            CookieTransactionsDao.Properties.CookieType.eq(cookieFlavor)
+                    )
+                    .list();
+            for (CookieTransactions transaction : transactionsList) {
+                boxesInInventory += transaction.getTransBoxes();
+            }
+
+            Integer requestedBoxes = Integer.valueOf(getFragment().valuesMap().get(cookieFlavor));
+            if (boxesInInventory > 0) {
+                if (requestedBoxes <= boxesInInventory) {
+                    CookieTransactions cookieTransactions = new CookieTransactions(
+                            null, -1L, BoothId, cookieFlavor, requestedBoxes * -1,
+                            c.getTime(),
+                            (double) 0
+                    );
+                    dao.insert(cookieTransactions);
+                } else {
+                    CookieTransactions cookieTransactions = new CookieTransactions(
+                            null, -1L, BoothId, cookieFlavor, boxesInInventory * -1,
+                            c.getTime(),
+                            (double) 0
+                    );
+                    dao.insert(cookieTransactions);
+                    requestedBoxes = boxesInInventory;
+                }
+            } else {
+                List<Order> orders = orderDao.queryBuilder()
+                        .where(
+                                OrderDao.Properties.OrderScoutId.eq(Constants.CalculateNegativeBoothId(BoothId)),
+                                OrderDao.Properties.OrderCookieType.eq(cookieFlavor)
+                        ).list();
+                for (Order order : orders) {
+                    order.setPickedUpFromCupboard(false);
+                    orderDao.update(order);
+                }
+
+            }
+
+
+            List<Order> orderList =
+                    orderDao.queryBuilder().where(
+                            OrderDao.Properties.OrderCookieType.eq(cookieFlavor),
+                            OrderDao.Properties.OrderScoutId.eq(Constants.CalculateNegativeBoothId(BoothId))
+
+                    ).orderAsc(
+                            OrderDao.Properties.OrderDate
+                    )
+                            .list();
+
+            for (Order order : orderList) {
+                if (requestedBoxes >= order.getOrderedBoxes()) {
+                    requestedBoxes = requestedBoxes - order.getOrderedBoxes();
+
+                    if (order.getPickedUpFromCupboard()) {
+                        orderDao.delete(order);
+                    } else {
+                        order.setOrderScoutId(-1);
+                        orderDao.update(order);
+                    }
+                } else {
+                    if (requestedBoxes > 0) {
+                        Order order2 = new Order(
+                                null,
+                                order.getOrderDate(),
+                                order.getOrderScoutId(),
+                                order.getOrderCookieType(),
+                                false,
+                                (order.getOrderedBoxes() - requestedBoxes),
+                                false
+
+                        );
+
+                        orderDao.insert(order2);
+
+                        if (order.getPickedUpFromCupboard()) {
+
+                            orderDao.delete(order);
+                        } else {
+                            order.setOrderScoutId(-1);
+                            order.setOrderedBoxes(order.getOrderedBoxes() - order2.getOrderedBoxes());
+                            orderDao.update(order);
+                            orderDao.delete(order);
+                        }
+
+                        requestedBoxes = 0;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+
     private void performCheckOut() {
         CookieAmountsListInputFragment fragment = (CookieAmountsListInputFragment) getSupportFragmentManager().findFragmentByTag(fragName);
         Calendar c = Calendar.getInstance();
@@ -82,8 +199,38 @@ public class BoothCheckOutActivity extends CookieOrCashDialogBase {
                 int amt = Integer.valueOf(fragment.valuesMap().get(cookieType));
                 CookieTransactions cookieTransactions = new CookieTransactions(null, -1L, BoothId, cookieType, amt * -1, c.getTime(), 0.0);
                 Main.daoSession.getCookieTransactionsDao().insert(cookieTransactions);
+                List<Order> orderList = Main.daoSession.getOrderDao().queryBuilder()
+                        .where(OrderDao.Properties.OrderScoutId.eq(Constants.CalculateNegativeBoothId(BoothId)))
+                        .list();
+                Main.daoSession.getOrderDao().deleteInTx(orderList);
             }
         }
 
+
     }
+
+    @Override
+    public HashMap<String, String> getValMap() {
+
+        for (int i = 0; i < Constants.CookieTypes.length; i++) {
+            final String cookieType = Constants.CookieTypes[i];
+            Integer amountExpected = 0;
+            List<Order> orderList = Main.daoSession.getOrderDao().queryBuilder()
+                    .where(OrderDao.Properties.OrderScoutId.eq(Constants.CalculateNegativeBoothId(BoothId)),
+                            OrderDao.Properties.OrderCookieType.eq(cookieType))
+                    .list();
+            if (!orderList.isEmpty()) {
+                for (Order order : orderList) {
+                    amountExpected += order.getOrderedBoxes();
+                }
+            }
+            if (!((ICookieActionFragment) getSupportFragmentManager().findFragmentByTag(fragName)).isRefresh()) {
+
+                valuesMap.put(cookieType, String.valueOf(amountExpected));
+
+            }
+        }
+        return valuesMap;
+    }
+
 }
