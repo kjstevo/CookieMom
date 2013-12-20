@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import it.gmariotti.cardslib.library.view.CardListView;
 import net.kjmaster.cookiemom.R.layout;
+import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment;
 
 public final class CookieAmountsListInputFragment_
         extends CookieAmountsListInputFragment {

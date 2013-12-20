@@ -31,8 +31,8 @@ public final class BoothOrderActivity_
 
     private void init_(Bundle savedInstanceState) {
         Resources resources_ = this.getResources();
-        fragTitle = resources_.getString(string.add_order_title);
         fragTag = resources_.getString(string.add_order);
+        fragTitle = resources_.getString(string.add_order_title);
         injectExtras_();
     }
 
@@ -74,16 +74,16 @@ public final class BoothOrderActivity_
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
         if (extras_ != null) {
-            if (extras_.containsKey("requestCode")) {
+            if (extras_.containsKey("boothId")) {
                 try {
-                    requestCode = ((Integer) extras_.get("requestCode"));
+                    boothId = ((Long) extras_.get("boothId"));
                 } catch (ClassCastException e) {
                     Log.e("BoothOrderActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("boothId")) {
+            if (extras_.containsKey("requestCode")) {
                 try {
-                    boothId = ((Long) extras_.get("boothId"));
+                    requestCode = ((Integer) extras_.get("requestCode"));
                 } catch (ClassCastException e) {
                     Log.e("BoothOrderActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -128,13 +128,13 @@ public final class BoothOrderActivity_
             }
         }
 
-        public BoothOrderActivity_.IntentBuilder_ requestCode(int requestCode) {
-            intent_.putExtra("requestCode", requestCode);
+        public BoothOrderActivity_.IntentBuilder_ boothId(long boothId) {
+            intent_.putExtra("boothId", boothId);
             return this;
         }
 
-        public BoothOrderActivity_.IntentBuilder_ boothId(long boothId) {
-            intent_.putExtra("boothId", boothId);
+        public BoothOrderActivity_.IntentBuilder_ requestCode(int requestCode) {
+            intent_.putExtra("requestCode", requestCode);
             return this;
         }
 

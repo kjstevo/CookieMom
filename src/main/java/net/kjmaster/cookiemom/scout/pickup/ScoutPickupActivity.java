@@ -1,4 +1,4 @@
-package net.kjmaster.cookiemom.scout;
+package net.kjmaster.cookiemom.scout.pickup;
 
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
@@ -11,7 +11,7 @@ import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
 import net.kjmaster.cookiemom.global.ICookieActionFragment;
 import net.kjmaster.cookiemom.global.ISettings_;
-import net.kjmaster.cookiemom.ui.CookieAmountsListInputFragment_;
+import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment_;
 import net.kmaster.cookiemom.dao.CookieTransactions;
 import net.kmaster.cookiemom.dao.CookieTransactionsDao;
 import net.kmaster.cookiemom.dao.Order;
@@ -55,6 +55,10 @@ public class ScoutPickupActivity extends CookieActionActivity {
     @StringRes(R.string.cancel)
     String resCancel;
     private final HashMap<String, String> valuesMap = new HashMap<String, String>();
+    private final CookieTransactionsDao cookieTransactionsDao = Main.daoSession.getCookieTransactionsDao();
+    private final OrderDao orderDao = Main.daoSession.getOrderDao();
+    private final Calendar c = Calendar.getInstance();
+    ;
 
     @AfterViews
     void afterViewFrag() {
@@ -83,64 +87,27 @@ public class ScoutPickupActivity extends CookieActionActivity {
             setResult(RESULT_CANCELED);
             finish();
         } else {
-            Calendar c = Calendar.getInstance();
-
-            CookieTransactionsDao dao = Main.daoSession.getCookieTransactionsDao();
-
-            OrderDao orderDao = Main.daoSession.getOrderDao();
 
             for (String cookieFlavor : CookieTypes) {
-                Integer boxesInInventory = 0;
-                List<CookieTransactions> transactionsList = Main.daoSession.getCookieTransactionsDao().queryBuilder()
-                        .where(
-                                CookieTransactionsDao.Properties.CookieType.eq(cookieFlavor)
-                        )
-                        .list();
-                for (CookieTransactions transaction : transactionsList) {
-                    boxesInInventory += transaction.getTransBoxes();
-                }
 
-                Integer requestedBoxes = Integer.valueOf(getFragment().valuesMap().get(cookieFlavor));
+                Integer boxesInInventory = getBoxesInInventory(cookieFlavor);
+
+                Integer requestedBoxes = getRequestedBoxes(cookieFlavor);
+
                 if (boxesInInventory > 0) {
                     if (requestedBoxes <= boxesInInventory) {
-                        CookieTransactions cookieTransactions = new CookieTransactions(
-                                null, ScoutId, -1L, cookieFlavor, requestedBoxes * -1,
-                                c.getTime(),
-                                (double) 0
-                        );
-                        dao.insert(cookieTransactions);
+                        createTrans(cookieFlavor, requestedBoxes);
                     } else {
-                        CookieTransactions cookieTransactions = new CookieTransactions(
-                                null, ScoutId, -1L, cookieFlavor, boxesInInventory * -1,
-                                c.getTime(),
-                                (double) 0
-                        );
-                        dao.insert(cookieTransactions);
+                        createTrans(cookieFlavor, boxesInInventory);
                         requestedBoxes = boxesInInventory;
                     }
                 } else {
-                    List<Order> orders = orderDao.queryBuilder()
-                            .where(
-                                    Properties.OrderScoutId.eq(ScoutId),
-                                    Properties.OrderCookieType.eq(cookieFlavor)
-                            ).list();
-                    for (Order order : orders) {
-                        order.setPickedUpFromCupboard(false);
-                        orderDao.update(order);
-                    }
+                    markOrdersAsPickedUp(cookieFlavor, true);
 
                 }
 
 
-                List<Order> orderList =
-                        orderDao.queryBuilder().where(
-                                Properties.OrderCookieType.eq(cookieFlavor),
-                                Properties.OrderScoutId.eq(ScoutId)
-
-                        ).orderAsc(
-                                Properties.OrderDate
-                        )
-                                .list();
+                List<Order> orderList = getOrders(cookieFlavor);
 
                 for (Order order : orderList) {
                     if (requestedBoxes >= order.getOrderedBoxes()) {
@@ -148,18 +115,7 @@ public class ScoutPickupActivity extends CookieActionActivity {
                         orderDao.delete(order);
                     } else {
                         if (requestedBoxes > 0) {
-                            Order order2 = new Order(
-                                    null,
-                                    order.getOrderDate(),
-                                    order.getOrderScoutId(),
-                                    order.getOrderCookieType(),
-                                    false,
-                                    (order.getOrderedBoxes() - requestedBoxes),
-                                    false
-
-                            );
-
-                            orderDao.insert(order2);
+                            Order order2 = createOrderFromOrder(requestedBoxes, order);
 
                             if (order.getPickedUpFromCupboard()) {
 
@@ -179,6 +135,75 @@ public class ScoutPickupActivity extends CookieActionActivity {
 
             }
         }
+    }
+
+    private Order createOrderFromOrder(Integer requestedBoxes, Order order) {
+
+        Order order2 = new Order(
+                null,
+                order.getOrderDate(),
+                order.getOrderScoutId(),
+                order.getOrderCookieType(),
+                false,
+                (order.getOrderedBoxes() - requestedBoxes),
+                false
+
+        );
+
+        orderDao.insert(order2);
+        return order2;
+    }
+
+    private List<Order> getOrders(String cookieFlavor) {
+
+        return orderDao.queryBuilder().where(
+                Properties.OrderCookieType.eq(cookieFlavor),
+                Properties.OrderScoutId.eq(ScoutId)
+
+        ).orderAsc(
+                Properties.OrderDate
+        )
+                .list();
+    }
+
+    private void markOrdersAsPickedUp(String cookieFlavor, boolean pickedUp) {
+
+        List<Order> orders = orderDao.queryBuilder()
+                .where(
+                        Properties.OrderScoutId.eq(ScoutId),
+                        Properties.OrderCookieType.eq(cookieFlavor)
+                ).list();
+        for (Order order : orders) {
+            order.setPickedUpFromCupboard(pickedUp);
+            orderDao.update(order);
+        }
+    }
+
+    private void createTrans(String cookieFlavor, Integer requestedBoxes) {
+
+        CookieTransactions cookieTransactions = new CookieTransactions(
+                null, ScoutId, -1L, cookieFlavor, requestedBoxes * -1,
+                c.getTime(),
+                (double) 0
+        );
+        cookieTransactionsDao.insert(cookieTransactions);
+    }
+
+    private Integer getRequestedBoxes(String cookieFlavor) {
+        return Integer.valueOf(getFragment().valuesMap().get(cookieFlavor));
+    }
+
+    private Integer getBoxesInInventory(String cookieFlavor) {
+        Integer boxesInInventory = 0;
+        List<CookieTransactions> transactionsList = cookieTransactionsDao.queryBuilder()
+                .where(
+                        CookieTransactionsDao.Properties.CookieType.eq(cookieFlavor)
+                )
+                .list();
+        for (CookieTransactions transaction : transactionsList) {
+            boxesInInventory += transaction.getTransBoxes();
+        }
+        return boxesInInventory;
     }
 
 

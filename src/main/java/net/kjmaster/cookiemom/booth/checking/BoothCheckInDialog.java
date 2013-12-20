@@ -1,23 +1,24 @@
-package net.kjmaster.cookiemom.scout;
+package net.kjmaster.cookiemom.booth.checking;
 
 import android.support.v4.app.FragmentActivity;
 import eu.inmite.android.lib.dialogs.SimpleDialogFragment;
-import net.kmaster.cookiemom.dao.Scout;
+import net.kmaster.cookiemom.dao.Booth;
 
 @SuppressWarnings("MethodNameSameAsClassName")
-public class ScoutTurnInDialog {
-    public ScoutTurnInDialog() {
+public class BoothCheckInDialog {
+    public BoothCheckInDialog() {
     }
 
-    public void ScoutTurnInDialog(Scout scout, FragmentActivity activity) {
+    public void BoothCheckInDialog(Booth booth, FragmentActivity activity) {
         SimpleDialogFragment.createBuilder(activity, activity.getSupportFragmentManager())
-                .setTitle("Turn in for" + scout.getScoutName())
+                .setTitle("Turn in for" + booth.getBoothLocation())
                 .setMessage("Is she turning in money or cookies?")
                 .setPositiveButtonText("Money")
                 .setNegativeButtonText("Cookies")
                 .setCancelable(true)
-                .setRequestCode(scout.getId().intValue())
-                .setTag(scout.getId().toString())
+                .setRequestCode(booth.getId().intValue())
+                .setTag(booth.getId().toString())
+
                 .show();
     }
 }

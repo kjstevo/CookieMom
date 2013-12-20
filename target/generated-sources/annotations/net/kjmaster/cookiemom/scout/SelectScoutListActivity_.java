@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R.layout;
+import net.kjmaster.cookiemom.scout.select.SelectScoutListActivity;
 
 public final class SelectScoutListActivity_
         extends SelectScoutListActivity {

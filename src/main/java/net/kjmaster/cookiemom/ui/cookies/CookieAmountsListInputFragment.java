@@ -1,4 +1,4 @@
-package net.kjmaster.cookiemom.ui;
+package net.kjmaster.cookiemom.ui.cookies;
 
 
 import android.support.v4.app.Fragment;
@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import static net.kjmaster.cookiemom.ui.CompleteCookieCard.CreateCompleteCookieCard;
+import static net.kjmaster.cookiemom.ui.cookies.CompleteCookieCard.CreateCompleteCookieCard;
 
 /**
  * Created with IntelliJ IDEA.

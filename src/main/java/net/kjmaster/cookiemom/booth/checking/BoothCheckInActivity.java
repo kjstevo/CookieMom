@@ -1,4 +1,4 @@
-package net.kjmaster.cookiemom.booth;
+package net.kjmaster.cookiemom.booth.checking;
 
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
@@ -7,8 +7,8 @@ import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieOrCashDialogBase;
-import net.kjmaster.cookiemom.ui.CookieAmountsListInputFragment;
-import net.kjmaster.cookiemom.ui.CookieAmountsListInputFragment_;
+import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment;
+import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment_;
 import net.kmaster.cookiemom.dao.CookieTransactions;
 
 import java.util.Calendar;

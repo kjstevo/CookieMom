@@ -16,10 +16,11 @@ import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
 import net.kjmaster.cookiemom.R.layout;
+import net.kjmaster.cookiemom.scout.add.AddScoutActivity;
+import net.kjmaster.cookiemom.scout.add.AddScoutDialogFragment;
 
 public final class AddScoutActivity_
-    extends AddScoutActivity
-{
+        extends AddScoutActivity {
 
 
     @Override
@@ -57,7 +58,7 @@ public final class AddScoutActivity_
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (((SdkVersionHelper.getSdkInt()< 5)&&(keyCode == KeyEvent.KEYCODE_BACK))&&(event.getRepeatCount() == 0)) {
+        if (((SdkVersionHelper.getSdkInt() < 5) && (keyCode == KeyEvent.KEYCODE_BACK)) && (event.getRepeatCount() == 0)) {
             onBackPressed();
         }
         return super.onKeyDown(keyCode, event);

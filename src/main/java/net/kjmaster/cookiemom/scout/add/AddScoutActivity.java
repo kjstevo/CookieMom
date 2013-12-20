@@ -1,4 +1,4 @@
-package net.kjmaster.cookiemom.scout;
+package net.kjmaster.cookiemom.scout.add;
 
 //~--- non-JDK imports --------------------------------------------------------
 
@@ -38,7 +38,7 @@ public class AddScoutActivity extends CookieActionActivity {
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        //net.kjmaster.cookiemom.scout.AddScoutActivity.onRestoreInstanceState returns void
+        //net.kjmaster.cookiemom.scout.add.AddScoutActivity.onRestoreInstanceState returns void
         AddScoutDialogFragment fragment = (AddScoutDialogFragment) getSupportFragmentManager().findFragmentByTag(fragTag);
         if (fragment != null) {
             fragment.editText.setText(savedInstanceState.getString("scout_name"));
@@ -59,7 +59,7 @@ public class AddScoutActivity extends CookieActionActivity {
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        //net.kjmaster.cookiemom.scout.AddScoutActivity.onSaveInstanceState returns void
+        //net.kjmaster.cookiemom.scout.add.AddScoutActivity.onSaveInstanceState returns void
         AddScoutDialogFragment fragment = (AddScoutDialogFragment) getSupportFragmentManager().findFragmentByTag(fragTag);
         if (fragment != null) {
             outState.putString("scout_name", fragment.editText.getText().toString());

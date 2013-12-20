@@ -17,7 +17,7 @@ import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
 import net.kjmaster.cookiemom.global.ICookieActionFragment;
-import net.kjmaster.cookiemom.ui.CookieAmountContentCard;
+import net.kjmaster.cookiemom.ui.cookies.CookieAmountContentCard;
 import net.kmaster.cookiemom.dao.Order;
 import net.kmaster.cookiemom.dao.OrderDao;
 
@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import static net.kjmaster.cookiemom.ui.CompleteCookieCard.CreateCompleteCookieCard;
+import static net.kjmaster.cookiemom.ui.cookies.CompleteCookieCard.CreateCompleteCookieCard;
 
 /**
  * Created with IntelliJ IDEA.

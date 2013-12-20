@@ -16,10 +16,11 @@ import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
 import net.kjmaster.cookiemom.R.layout;
+import net.kjmaster.cookiemom.booth.add.AddBoothActivity;
+import net.kjmaster.cookiemom.booth.add.AddBoothDialogFragment;
 
 public final class AddBoothActivity_
-    extends AddBoothActivity
-{
+        extends AddBoothActivity {
 
 
     @Override
@@ -57,7 +58,7 @@ public final class AddBoothActivity_
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (((SdkVersionHelper.getSdkInt()< 5)&&(keyCode == KeyEvent.KEYCODE_BACK))&&(event.getRepeatCount() == 0)) {
+        if (((SdkVersionHelper.getSdkInt() < 5) && (keyCode == KeyEvent.KEYCODE_BACK)) && (event.getRepeatCount() == 0)) {
             onBackPressed();
         }
         return super.onKeyDown(keyCode, event);

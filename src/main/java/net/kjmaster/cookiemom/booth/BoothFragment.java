@@ -1,5 +1,3 @@
-
-
 package net.kjmaster.cookiemom.booth;
 
 import android.support.v4.app.Fragment;
@@ -14,10 +12,13 @@ import it.gmariotti.cardslib.library.internal.base.BaseCard;
 import it.gmariotti.cardslib.library.view.CardListView;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.booth.add.AddBoothActivity_;
+import net.kjmaster.cookiemom.booth.checking.BoothCheckInActivity_;
+import net.kjmaster.cookiemom.booth.checking.BoothCheckOutActivity_;
 import net.kjmaster.cookiemom.booth.expander.CustomBoothExpander;
 import net.kjmaster.cookiemom.booth.order.BoothOrderActivity_;
 import net.kjmaster.cookiemom.global.Constants;
-import net.kjmaster.cookiemom.scout.SelectScoutListActivity_;
+import net.kjmaster.cookiemom.scout.select.SelectScoutListActivity_;
 import net.kmaster.cookiemom.dao.*;
 
 import java.util.ArrayList;
@@ -29,26 +30,12 @@ public class BoothFragment
         extends Fragment implements ISimpleDialogListener {
 
 
-//    private DaoMaster daoMaster;
-//
-//    private DaoSession daoSession;
-//    private NoteDao noteDao;
-//
-//    private Cursor cursor;
-
     @ViewById(R.id.carddemo_list_base1)
     CardListView cardView;
 
 
     @AfterViews
     void afterViews() {
-//        Bundle bundle = getArguments();
-//        String label = bundle.getString("label");
-
-//       DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getActivity(), "scouts-db", null);
-//        db = helper.getWritableDatabase();
-//        daoMaster = new DaoMaster(db);
-//        daoSession=daoMaster.newSession();
 
         BoothDao boothDao = Main.daoSession.getBoothDao();
 

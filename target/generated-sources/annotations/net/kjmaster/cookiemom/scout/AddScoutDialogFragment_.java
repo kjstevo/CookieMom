@@ -11,10 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import net.kjmaster.cookiemom.R.layout;
+import net.kjmaster.cookiemom.scout.add.AddScoutDialogFragment;
 
 public final class AddScoutDialogFragment_
-    extends AddScoutDialogFragment
-{
+        extends AddScoutDialogFragment {
 
     private View contentView_;
 

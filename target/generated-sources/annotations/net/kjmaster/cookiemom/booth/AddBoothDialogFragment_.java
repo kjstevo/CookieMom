@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 import net.kjmaster.cookiemom.R.layout;
+import net.kjmaster.cookiemom.booth.add.AddBoothDialogFragment;
 
 public final class AddBoothDialogFragment_
         extends AddBoothDialogFragment {

@@ -1,4 +1,4 @@
-package net.kjmaster.cookiemom.action;
+package net.kjmaster.cookiemom.action.scout;
 
 import android.content.Context;
 import android.view.View;
@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.action.ActionContentCard;
 import net.kjmaster.cookiemom.global.Constants;
 
 import java.util.ArrayList;
@@ -38,7 +39,7 @@ public class ActionAddScout extends ActionContentCard {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                    net.kjmaster.cookiemom.scout.AddScoutActivity_.intent(mActivity).startForResult(Constants.SCOUT_REQUEST);
+                    net.kjmaster.cookiemom.scout.add.AddScoutActivity_.intent(mActivity).startForResult(Constants.SCOUT_REQUEST);
 
                 }
             });

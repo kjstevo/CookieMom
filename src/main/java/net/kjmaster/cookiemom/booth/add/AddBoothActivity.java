@@ -1,4 +1,4 @@
-package net.kjmaster.cookiemom.booth;
+package net.kjmaster.cookiemom.booth.add;
 
 //~--- non-JDK imports --------------------------------------------------------
 

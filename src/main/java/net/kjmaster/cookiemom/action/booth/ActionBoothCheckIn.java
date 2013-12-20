@@ -1,4 +1,4 @@
-package net.kjmaster.cookiemom.action;
+package net.kjmaster.cookiemom.action.booth;
 
 import android.content.Context;
 import android.view.View;
@@ -7,11 +7,13 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
-import net.kjmaster.cookiemom.booth.BoothCheckOutActivity_;
+import net.kjmaster.cookiemom.action.ActionContentCard;
+import net.kjmaster.cookiemom.booth.checking.BoothCheckInActivity_;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kmaster.cookiemom.dao.Booth;
 import net.kmaster.cookiemom.dao.BoothDao;
-import net.kmaster.cookiemom.dao.OrderDao;
+import net.kmaster.cookiemom.dao.CookieTransactions;
+import net.kmaster.cookiemom.dao.CookieTransactionsDao;
 
 import java.sql.Date;
 import java.util.ArrayList;
@@ -24,16 +26,16 @@ import java.util.List;
  * Date: 12/15/13
  * Time: 3:12 PM
  */
-public class ActionBoothCheckOut extends ActionContentCard {
+public class ActionBoothCheckIn extends ActionContentCard {
     private final Calendar c = Calendar.getInstance();
-    private final Date date = new Date(c.getTimeInMillis() + (1000 * 60 * 60 * 24));
+    private final Date date = new Date(c.getTimeInMillis() * 1000 * 60 * 60 * 24);
     private final List<Booth> boothList = new ArrayList<Booth>();
 
-    public ActionBoothCheckOut(Context context, int layout) {
+    public ActionBoothCheckIn(Context context, int layout) {
         super(context, layout);
     }
 
-    public ActionBoothCheckOut(Context context) {
+    public ActionBoothCheckIn(Context context) {
         super(context);
     }
 
@@ -47,7 +49,7 @@ public class ActionBoothCheckOut extends ActionContentCard {
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     Booth booth = (Booth) listView.getAdapter().getItem(i);
                     if (booth != null) {
-                        BoothCheckOutActivity_
+                        BoothCheckInActivity_
                                 .intent(getContext())
                                 .BoothId(booth.getId())
                                 .startForResult(Constants.BOOTH_ORDER);
@@ -68,13 +70,19 @@ public class ActionBoothCheckOut extends ActionContentCard {
                 .list();
         if (booths != null) {
             for (Booth booth : booths) {
-                long orderCount = Main.daoSession.getOrderDao().queryBuilder()
+
+                List<CookieTransactions> transactionsList = Main.daoSession.getCookieTransactionsDao().queryBuilder()
                         .where(
-                                OrderDao.Properties.OrderScoutId.eq(
-                                        Constants.CalculateNegativeBoothId(booth.getId())),
-                                OrderDao.Properties.PickedUpFromCupboard.eq(true))
-                        .count();
-                if (orderCount > 0) {
+                                CookieTransactionsDao.Properties.TransBoothId.eq(booth.getId()))
+                        .list();
+                Integer boxes = 0;
+                double cash = 0.0;
+                for (CookieTransactions transaction : transactionsList) {
+                    boxes += transaction.getTransBoxes();
+                    cash += transaction.getTransCash();
+                }
+
+                if (cash + boxes < 0) {
                     boothList.add(booth);
 
                 }
@@ -85,6 +93,7 @@ public class ActionBoothCheckOut extends ActionContentCard {
         } else {
             return true;
         }
+
     }
 
     @Override
@@ -99,7 +108,7 @@ public class ActionBoothCheckOut extends ActionContentCard {
 
     @Override
     public String getActionTitle() {
-        return getContext().getString(R.string.booths_req_check_out);
+        return getContext().getString(R.string.booths_req_check_in);
     }
 
     @Override

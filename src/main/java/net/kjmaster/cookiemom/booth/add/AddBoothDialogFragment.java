@@ -1,4 +1,4 @@
-package net.kjmaster.cookiemom.booth;
+package net.kjmaster.cookiemom.booth.add;
 
 
 import android.app.Dialog;
@@ -12,7 +12,7 @@ import com.googlecode.androidannotations.annotations.Click;
 import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.ViewById;
 import net.kjmaster.cookiemom.R;
-import net.kjmaster.cookiemom.ui.DateTimePicker;
+import net.kjmaster.cookiemom.ui.datetimepicker.DateTimePicker;
 
 import java.sql.Date;
 import java.text.DateFormat;

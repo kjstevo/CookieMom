@@ -1,4 +1,4 @@
-package net.kjmaster.cookiemom.action;
+package net.kjmaster.cookiemom.action.booth;
 
 import android.content.Context;
 import android.view.View;
@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.action.ActionContentCard;
 import net.kjmaster.cookiemom.booth.order.BoothOrderActivity_;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kmaster.cookiemom.dao.Booth;
@@ -85,7 +86,7 @@ public class ActionBoothOrder extends ActionContentCard {
 
     @Override
     public void setupInnerViewElements(ViewGroup parent, View view) {
-        //net.kjmaster.cookiemom.action.ActionBoothOrder.setupInnerViewElements returns void
+        //net.kjmaster.cookiemom.action.booth.ActionBoothOrder.setupInnerViewElements returns void
         super.setupInnerViewElements(parent, view);    //To change body of overridden methods use File | Settings | File Templates.
         final ListView listView = (ListView) parent.findViewById(R.id.action_list);
         if (listView != null) {

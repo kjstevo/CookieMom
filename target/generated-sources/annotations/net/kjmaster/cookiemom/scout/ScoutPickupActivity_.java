@@ -18,6 +18,7 @@ import com.googlecode.androidannotations.api.SdkVersionHelper;
 import net.kjmaster.cookiemom.R.layout;
 import net.kjmaster.cookiemom.R.string;
 import net.kjmaster.cookiemom.global.ISettings_;
+import net.kjmaster.cookiemom.scout.pickup.ScoutPickupActivity;
 
 public final class ScoutPickupActivity_
         extends ScoutPickupActivity {
@@ -34,8 +35,8 @@ public final class ScoutPickupActivity_
         iSettings = new ISettings_(this);
         Resources resources_ = this.getResources();
         scout_pickup_title = resources_.getString(string.scout_pickup_order_title);
-        pickup_order = resources_.getString(string.pickup_order);
         resCancel = resources_.getString(string.cancel);
+        pickup_order = resources_.getString(string.pickup_order);
         scout_pickup_order = resources_.getString(string.scout_pickup_order);
         injectExtras_();
     }

@@ -1,4 +1,4 @@
-package net.kjmaster.cookiemom.action;
+package net.kjmaster.cookiemom.action.scout;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -8,7 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
-import net.kjmaster.cookiemom.scout.ScoutPickupDialog;
+import net.kjmaster.cookiemom.action.ActionContentCard;
+import net.kjmaster.cookiemom.scout.pickup.ScoutPickupDialog;
 import net.kmaster.cookiemom.dao.Order;
 import net.kmaster.cookiemom.dao.OrderDao;
 import net.kmaster.cookiemom.dao.Scout;

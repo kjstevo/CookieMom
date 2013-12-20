@@ -17,6 +17,7 @@ import android.view.ViewGroup.LayoutParams;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
 import net.kjmaster.cookiemom.R.layout;
 import net.kjmaster.cookiemom.R.string;
+import net.kjmaster.cookiemom.scout.order.ScoutOrderActivity;
 
 public final class ScoutOrderActivity_
         extends ScoutOrderActivity {

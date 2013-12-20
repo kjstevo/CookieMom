@@ -17,6 +17,7 @@ import android.view.ViewGroup.LayoutParams;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
 import net.kjmaster.cookiemom.R.layout;
 import net.kjmaster.cookiemom.R.string;
+import net.kjmaster.cookiemom.scout.turnin.ScoutTurnInActivity;
 
 public final class ScoutTurnInActivity_
         extends ScoutTurnInActivity {
@@ -31,10 +32,10 @@ public final class ScoutTurnInActivity_
 
     private void init_(Bundle savedInstanceState) {
         Resources resources_ = this.getResources();
-        scout_turn_in = resources_.getString(string.scout_turn_in);
         resCancel = resources_.getString(string.cancel);
-        scout_turn_in__title = resources_.getString(string.scout_turn_in_title);
+        scout_turn_in = resources_.getString(string.scout_turn_in);
         turn_in = resources_.getString(string.turn_in);
+        scout_turn_in__title = resources_.getString(string.scout_turn_in_title);
         injectExtras_();
     }
 

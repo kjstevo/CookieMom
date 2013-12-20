@@ -1,4 +1,3 @@
-
 package net.kjmaster.cookiemom;
 
 import android.content.Intent;

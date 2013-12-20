@@ -1,4 +1,4 @@
-package net.kjmaster.cookiemom.scout;
+package net.kjmaster.cookiemom.scout.select;
 
 import android.app.ListActivity;
 import android.widget.ArrayAdapter;

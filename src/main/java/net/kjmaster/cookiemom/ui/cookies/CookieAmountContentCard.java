@@ -1,4 +1,4 @@
-package net.kjmaster.cookiemom.ui;
+package net.kjmaster.cookiemom.ui.cookies;
 
 import android.content.Context;
 import android.util.Log;

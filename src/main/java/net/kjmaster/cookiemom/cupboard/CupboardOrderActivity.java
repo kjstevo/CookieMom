@@ -6,7 +6,7 @@ import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
-import net.kjmaster.cookiemom.ui.CookieAmountsListInputFragment_;
+import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment_;
 import net.kmaster.cookiemom.dao.Order;
 import net.kmaster.cookiemom.dao.OrderDao;
 

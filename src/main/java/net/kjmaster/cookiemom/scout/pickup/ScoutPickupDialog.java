@@ -1,4 +1,4 @@
-package net.kjmaster.cookiemom.scout;
+package net.kjmaster.cookiemom.scout.pickup;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;

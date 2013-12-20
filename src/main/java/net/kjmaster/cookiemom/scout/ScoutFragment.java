@@ -1,5 +1,3 @@
-
-
 package net.kjmaster.cookiemom.scout;
 
 import android.support.v4.app.Fragment;
@@ -16,7 +14,12 @@ import net.kjmaster.cookiemom.MainActivity;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.ICookieActionFragment;
+import net.kjmaster.cookiemom.scout.add.AddScoutActivity_;
 import net.kjmaster.cookiemom.scout.expander.CustomExpander;
+import net.kjmaster.cookiemom.scout.order.ScoutOrderActivity_;
+import net.kjmaster.cookiemom.scout.pickup.ScoutPickupActivity_;
+import net.kjmaster.cookiemom.scout.pickup.ScoutPickupDialog;
+import net.kjmaster.cookiemom.scout.turnin.ScoutTurnInActivity_;
 import net.kmaster.cookiemom.dao.*;
 
 import java.text.NumberFormat;

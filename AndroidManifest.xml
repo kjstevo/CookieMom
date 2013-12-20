@@ -21,16 +21,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".cupboard.CupboardOrderActivity_" android:label="Scout Order"/>
-        <activity android:name=".scout.AddScoutActivity_" android:label="Add Scout"/>
-        <activity android:name=".booth.AddBoothActivity_" android:label="Add Booth"/>
-        <activity android:name=".scout.SelectScoutListActivity_" android:label="Select Scout"/>
-        <activity android:name=".scout.ScoutOrderActivity_" android:label="Scout Order"/>
+        <activity android:name=".scout.add.AddScoutActivity_" android:label="Add Scout"/>
+        <activity android:name=".booth.add.AddBoothActivity_" android:label="Add Booth"/>
+        <activity android:name=".scout.select.SelectScoutListActivity_" android:label="Select Scout"/>
+        <activity android:name=".scout.order.ScoutOrderActivity_" android:label="Scout Order"/>
         <activity android:name=".cupboard.CupboardPickupActivity_" android:label="Pickup from Cupboard"/>
-        <activity android:name=".scout.ScoutPickupActivity_" android:label="@string/scout_pickup_order_title"/>
-        <activity android:name=".booth.BoothCheckInActivity_" android:label="@string/checkin"/>
-        <activity android:name=".booth.BoothCheckOutActivity_" android:label="@string/checkout"/>
+        <activity android:name=".scout.pickup.ScoutPickupActivity_" android:label="@string/scout_pickup_order_title"/>
+        <activity android:name=".booth.checking.BoothCheckInActivity_" android:label="@string/checkin"/>
+        <activity android:name=".booth.checking.BoothCheckOutActivity_" android:label="@string/checkout"/>
         <activity android:name=".booth.order.BoothOrderActivity_" android:label="@string/order"/>
-        <activity android:name=".scout.ScoutTurnInActivity_" android:label="Turn In"/>
+        <activity android:name=".scout.turnin.ScoutTurnInActivity_" android:label="Turn In"/>
 
     </application>
 

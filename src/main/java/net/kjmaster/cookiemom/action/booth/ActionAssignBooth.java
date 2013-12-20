@@ -1,4 +1,4 @@
-package net.kjmaster.cookiemom.action;
+package net.kjmaster.cookiemom.action.booth;
 
 import android.content.Context;
 import android.view.View;
@@ -7,8 +7,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.action.ActionContentCard;
 import net.kjmaster.cookiemom.global.Constants;
-import net.kjmaster.cookiemom.scout.SelectScoutListActivity_;
+import net.kjmaster.cookiemom.scout.select.SelectScoutListActivity_;
 import net.kmaster.cookiemom.dao.Booth;
 import net.kmaster.cookiemom.dao.BoothAssignmentsDao;
 

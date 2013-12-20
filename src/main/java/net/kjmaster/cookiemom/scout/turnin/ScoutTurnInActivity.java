@@ -1,4 +1,4 @@
-package net.kjmaster.cookiemom.scout;
+package net.kjmaster.cookiemom.scout.turnin;
 
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
@@ -8,7 +8,7 @@ import eu.inmite.android.lib.dialogs.ISimpleDialogListener;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
-import net.kjmaster.cookiemom.ui.CookieAmountsListInputFragment_;
+import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment_;
 import net.kjmaster.cookiemom.ui.numberpicker.NumberPickerBuilder;
 import net.kjmaster.cookiemom.ui.numberpicker.NumberPickerDialogFragment;
 import net.kmaster.cookiemom.dao.CookieTransactions;

@@ -14,7 +14,7 @@
  limitations under the License.
 
  */
-package net.kjmaster.cookiemom.ui;
+package net.kjmaster.cookiemom.ui.datetimepicker;
 
 import android.content.Context;
 import android.util.AttributeSet;
