@@ -11,7 +11,7 @@ import net.kjmaster.cookiemom.booth.BoothCheckOutActivity_;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kmaster.cookiemom.dao.Booth;
 import net.kmaster.cookiemom.dao.BoothDao;
-import net.kmaster.cookiemom.dao.CookieTransactionsDao;
+import net.kmaster.cookiemom.dao.OrderDao;
 
 import java.sql.Date;
 import java.util.ArrayList;
@@ -61,25 +61,30 @@ public class ActionBoothCheckOut extends ActionContentCard {
     public Boolean isCardVisible() {
 
 
-        List<Booth> cnt = Main.daoSession.getBoothDao().queryBuilder()
+        List<Booth> booths = Main.daoSession.getBoothDao().queryBuilder()
                 .where(
                         BoothDao.Properties.BoothDate.lt(date),
                         BoothDao.Properties.BoothDate.gt(c.getTime()))
                 .list();
-        if (cnt != null) {
-            for (Booth booth : cnt) {
-
-                Long cnt2 = Main.daoSession.getCookieTransactionsDao().queryBuilder()
+        if (booths != null) {
+            for (Booth booth : booths) {
+                long orderCount = Main.daoSession.getOrderDao().queryBuilder()
                         .where(
-                                CookieTransactionsDao.Properties.TransBoothId.eq(booth.getId()))
+                                OrderDao.Properties.OrderScoutId.eq(
+                                        Constants.CalculateNegativeBoothId(booth.getId())),
+                                OrderDao.Properties.PickedUpFromCupboard.eq(true))
                         .count();
-                if (cnt2 == 0) {
-                    return true;
+                if (orderCount > 0) {
+                    boothList.add(booth);
+
                 }
             }
-
         }
-        return false;
+        if (boothList.isEmpty()) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     @Override
@@ -89,12 +94,7 @@ public class ActionBoothCheckOut extends ActionContentCard {
     }
 
     private List<Booth> getBooths() {
-        return Main.daoSession.getBoothDao().queryBuilder()
-                .where(
-                        BoothDao.Properties.BoothDate.lt(date),
-                        BoothDao.Properties.BoothDate.gt(c.getTime()))
-                .orderAsc()
-                .list();
+        return boothList;
     }
 
     @Override

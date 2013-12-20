@@ -81,7 +81,7 @@ public class BoothCheckOutActivity extends CookieOrCashDialogBase {
                 CookieAmountsListInputFragment_.builder().isBoxes(true).isEditable(this.isEditable()).build(),
                 fragName);
 
-        createActionMode(fragName);
+        createActionMode(getString(R.string.checkout));
     }
 
     private void savePickupData() {

@@ -7,10 +7,11 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
-import net.kjmaster.cookiemom.booth.BoothCheckOutActivity_;
+import net.kjmaster.cookiemom.booth.BoothCheckInActivity_;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kmaster.cookiemom.dao.Booth;
 import net.kmaster.cookiemom.dao.BoothDao;
+import net.kmaster.cookiemom.dao.CookieTransactions;
 import net.kmaster.cookiemom.dao.CookieTransactionsDao;
 
 import java.sql.Date;
@@ -47,7 +48,7 @@ public class ActionBoothCheckIn extends ActionContentCard {
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     Booth booth = (Booth) listView.getAdapter().getItem(i);
                     if (booth != null) {
-                        BoothCheckOutActivity_
+                        BoothCheckInActivity_
                                 .intent(getContext())
                                 .BoothId(booth.getId())
                                 .startForResult(Constants.BOOTH_ORDER);
@@ -61,25 +62,37 @@ public class ActionBoothCheckIn extends ActionContentCard {
     public Boolean isCardVisible() {
 
 
-        List<Booth> cnt = Main.daoSession.getBoothDao().queryBuilder()
+        List<Booth> booths = Main.daoSession.getBoothDao().queryBuilder()
                 .where(
                         BoothDao.Properties.BoothDate.lt(date),
                         BoothDao.Properties.BoothDate.gt(c.getTime()))
                 .list();
-        if (cnt != null) {
-            for (Booth booth : cnt) {
+        if (booths != null) {
+            for (Booth booth : booths) {
 
-                Long cnt2 = Main.daoSession.getCookieTransactionsDao().queryBuilder()
+                List<CookieTransactions> transactionsList = Main.daoSession.getCookieTransactionsDao().queryBuilder()
                         .where(
                                 CookieTransactionsDao.Properties.TransBoothId.eq(booth.getId()))
-                        .count();
-                if (cnt2 > 0) {
-                    return true;
+                        .list();
+                Integer boxes = 0;
+                double cash = 0.0;
+                for (CookieTransactions transaction : transactionsList) {
+                    boxes += transaction.getTransBoxes();
+                    cash += transaction.getTransCash();
+                }
+
+                if (cash <= 0) {
+                    boothList.add(booth);
+
                 }
             }
-
         }
-        return !boothList.isEmpty();
+        if (boothList.isEmpty()) {
+            return false;
+        } else {
+            return true;
+        }
+
     }
 
     @Override
@@ -94,7 +107,7 @@ public class ActionBoothCheckIn extends ActionContentCard {
 
     @Override
     public String getActionTitle() {
-        return getContext().getString(R.string.booths_req_check_out);
+        return getContext().getString(R.string.booths_req_check_in);
     }
 
     @Override

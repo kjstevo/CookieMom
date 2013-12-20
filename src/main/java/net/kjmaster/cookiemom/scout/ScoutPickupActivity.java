@@ -145,13 +145,7 @@ public class ScoutPickupActivity extends CookieActionActivity {
                 for (Order order : orderList) {
                     if (requestedBoxes >= order.getOrderedBoxes()) {
                         requestedBoxes = requestedBoxes - order.getOrderedBoxes();
-
-                        if (order.getPickedUpFromCupboard()) {
-                            orderDao.delete(order);
-                        } else {
-                            order.setOrderScoutId(-1);
-                            orderDao.update(order);
-                        }
+                        orderDao.delete(order);
                     } else {
                         if (requestedBoxes > 0) {
                             Order order2 = new Order(

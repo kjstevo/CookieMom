@@ -18,6 +18,7 @@ public class BoothCheckInDialog {
                 .setCancelable(true)
                 .setRequestCode(booth.getId().intValue())
                 .setTag(booth.getId().toString())
+
                 .show();
     }
 }

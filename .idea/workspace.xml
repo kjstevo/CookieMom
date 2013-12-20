@@ -503,35 +503,21 @@
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="724653b3-d774-431b-a637-8e4913711973" name="Default" comment="Corrected booth refresh error and action errors&#10;">
-      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\drawable-xhdpi\ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\carddemo_example_inner_content.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\src\main\java\net\kjmaster\cookiemom\cupboard\CupboardOrderFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\target\generated-sources\annotations\net\kjmaster\cookiemom\cupboard\CupboardOrderFragment_.java" afterPath="" />
+    <list default="true" id="724653b3-d774-431b-a637-8e4913711973" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CookieMom.apk" afterPath="$PROJECT_DIR$/target/CookieMom.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CookieMom.unaligned.apk" afterPath="$PROJECT_DIR$/target/CookieMom.unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cookie_momster.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cookie_momster.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/action/ActionFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/action/ActionFragment_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/AddBoothDialogFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/AddBoothDialogFragment_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckIn.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckIn.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckOut.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckOut.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInDialog.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInDialog.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckOutActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckOutActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/order/BoothOrderActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/order/BoothOrderActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/order/BoothOrderActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/order/BoothOrderActivity_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/r/net/kjmaster/cookiemom/BuildConfig.java" afterPath="$PROJECT_DIR$/target/generated-sources/r/net/kjmaster/cookiemom/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/CookieAmountContentCard.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/CookieAmountContentCard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/CookieAmountsListInputFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/CookieAmountsListInputFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/ui/CookieAmountsListInputFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/ui/CookieAmountsListInputFragment_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CookieMom.iml" afterPath="$PROJECT_DIR$/CookieMom.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardFragment_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/MainActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/MainActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/MainActivity_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutFragment_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutOrderActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutOrderActivity_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutPickupActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutPickupActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutPickupActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutPickupActivity_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutTurnInActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutTurnInActivity_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/SelectScoutListActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/SelectScoutListActivity_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/cookie_amount_layout.xml" afterPath="$PROJECT_DIR$/res/layout/cookie_amount_layout.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -540,17 +526,30 @@
     <ignored path="CookieMom.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="target/" />
-    <file path="/Dummy.txt" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387313897969" ignored="false" />
+    <file path="/Dummy.txt" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387484619261" ignored="false" />
     <file path="/strings.xml" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387314559128" ignored="false" />
     <file path="/CookieAmountsListInputFragment.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387318604878" ignored="false" />
-    <file path="/fragment.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387474577655" ignored="false" />
+    <file path="/fragment.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387491697318" ignored="false" />
     <file path="/CookieAmountContentCard.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387319306085" ignored="false" />
-    <file path="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/BoothCheckInActivity_.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387319410575" ignored="false" />
-    <file path="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/BoothCheckOutActivity_.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387319410575" ignored="false" />
     <file path="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/BoothFragment_.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387319410575" ignored="false" />
-    <file path="/CupboardPickupActivity.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387332807877" ignored="false" />
-    <file path="/BoothOrderActivity.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387474437930" ignored="false" />
-    <file path="/BoothCheckOutActivity.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387475098468" ignored="false" />
+    <file path="/CupboardPickupActivity.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387509214488" ignored="false" />
+    <file path="/BoothOrderActivity.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387491497920" ignored="false" />
+    <file path="/BoothCheckOutActivity.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387505028654" ignored="false" />
+    <file path="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/BoothCheckOutActivity_.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387475734296" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/PagerSlidingTabStrip-master/library/gen/com/astuetz/viewpager/extensions/BuildConfig.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387483025505" ignored="false" />
+    <file path="/library1.eml" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387484423582" ignored="false" />
+    <file path="/project.properties" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387484795007" ignored="false" />
+    <file path="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardPickupFragment_.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387492553442" ignored="false" />
+    <file path="/CupboardOrderController.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387491410866" ignored="false" />
+    <file path="/ScoutOrderActivity.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387491643675" ignored="false" />
+    <file path="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity_.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387492553440" ignored="false" />
+    <file path="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity_.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387492553441" ignored="false" />
+    <file path="/ActionBoothCheckOut.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387504770295" ignored="false" />
+    <file path="/ActionBoothCheckIn.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387504726831" ignored="false" />
+    <file path="/BoothCheckInDialog.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387496270339" ignored="false" />
+    <file path="/BoothCheckInActivity.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387504999712" ignored="false" />
+    <file path="/CupboardOrderActivity.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387508889862" ignored="false" />
+    <file path="/ScoutPickupActivity.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387506122514" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -628,13 +627,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SelectScoutListActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/SelectScoutListActivity.java">
+      <file leaf-file-name="BoothCheckInActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="71" selection-start="1639" selection-end="1639" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="59" column="0" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoothCheckOutActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckOutActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="5" selection-start="1994" selection-end="1994" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CupboardOrderActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="47" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScoutPickupActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutPickupActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="140" column="10" selection-start="4986" selection-end="4986" vertical-scroll-proportion="0.39257294">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -642,16 +666,7 @@
       <file leaf-file-name="CupboardPickupActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="128" selection-start="1256" selection-end="1256" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CookieAmountsListInputFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/CookieAmountsListInputFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="0" selection-start="3658" selection-end="3658" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -660,64 +675,48 @@
       <file leaf-file-name="CookieActionActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/CookieActionActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="9" selection-start="1418" selection-end="1418" vertical-scroll-proportion="0.0">
+            <state line="80" column="35" selection-start="2273" selection-end="2273" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CupboardFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardFragment.java">
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="50" selection-start="4281" selection-end="4281" vertical-scroll-proportion="0.0">
+            <state line="17" column="26" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BoothOrderActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/order/BoothOrderActivity.java">
+      <file leaf-file-name="CookieOrCashDialogBase.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/CookieOrCashDialogBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="0" selection-start="3846" selection-end="3846" vertical-scroll-proportion="0.0">
+            <state line="79" column="0" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScoutPickupActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutPickupActivity.java">
+      <file leaf-file-name="ActionBoothCheckIn.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckIn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="128" selection-start="2266" selection-end="6804" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoothCheckOutActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckOutActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="203" column="68" selection-start="7811" selection-end="7811" vertical-scroll-proportion="0.89440995">
+            <state line="83" column="0" selection-start="3146" selection-end="3146" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1226#1242#0" expanded="true" />
+                <element signature="e#1071#1078#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScoutPickupDialog.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutPickupDialog.java">
+      <file leaf-file-name="ActionBoothCheckOut.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckOut.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScoutExpanderValues.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderValues.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="13" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="83" column="12" selection-start="3070" selection-end="3070" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -743,300 +742,301 @@
     </option>
   </component>
   <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
     <option name="myDateState">
       <MyDateState />
     </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="availableTasks">
-      <set>
+      <list>
         <GradleTaskDescriptor>
-          <option name="description" value="Displays the Android dependencies of the project" />
-          <option name="name" value="androidDependencies" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Assembles all variants of all applications and secondary packages." />
-          <option name="name" value="assemble" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Assembles all Debug builds" />
-          <option name="name" value="assembleDebug" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Assembles all Release builds" />
-          <option name="name" value="assembleRelease" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Assembles the Test build for the Debug build" />
-          <option name="name" value="assembleTest" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Assembles and tests this project." />
-          <option name="name" value="build" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Assembles and tests this project and all projects that depend on it." />
-          <option name="name" value="buildDependents" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Assembles and tests this project and all projects it depends on." />
-          <option name="name" value="buildNeeded" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Assembles a bundle containing the library in Debug." />
-          <option name="name" value="bundleDebug" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Assembles a bundle containing the library in Release." />
-          <option name="name" value="bundleRelease" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Runs all checks." />
-          <option name="name" value="check" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Deletes the build directory." />
-          <option name="name" value="clean" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="compileDebug" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="compileDebugAidl" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="compileDebugRenderscript" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="compileLint" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="compileRelease" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="compileReleaseAidl" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="compileReleaseRenderscript" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="compileTest" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="compileTestAidl" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="compileTestRenderscript" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Runs all device checks on currently connected devices." />
-          <option name="name" value="connectedCheck" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Installs and runs the tests for Build 'Debug' on connected devices." />
-          <option name="name" value="connectedInstrumentTest" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="copyDebugLint" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="copyReleaseLint" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Runs all device checks using Device Providers and Test Servers." />
-          <option name="name" value="deviceCheck" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="dexDebug" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="dexRelease" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="dexTest" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="generateDebugBuildConfig" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="generateDebugSources" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="generateReleaseBuildConfig" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="generateReleaseSources" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="generateTestBuildConfig" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="generateTestSources" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Installs the Debug build" />
-          <option name="name" value="installDebug" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Installs the Test build for the Debug build" />
-          <option name="name" value="installTest" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Runs lint on all variants." />
-          <option name="name" value="lint" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="lintDebug" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="lintRelease" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="lintTest" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Merges all the Android test reports from the sub projects." />
-          <option name="name" value="mergeAndroidReports" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="mergeDebugAssets" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="mergeDebugProguardFiles" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="mergeDebugResources" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="mergeReleaseAssets" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="mergeReleaseProguardFiles" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="mergeReleaseResources" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="mergeTestAssets" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="mergeTestResources" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="packageDebug" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="packageDebugAidl" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="packageDebugJar" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="packageDebugLocalJar" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="packageDebugRenderscript" />
+          <option name="name" value="packageReleaseAidl" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
           <option name="name" value="packageDebugResources" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
-          <option name="name" value="packageRelease" />
+          <option name="name" value="mergeTestResources" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
-          <option name="name" value="packageReleaseAidl" />
+          <option name="name" value="mergeDebugAssets" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
-          <option name="name" value="packageReleaseJar" />
+          <option name="name" value="generateTestBuildConfig" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
-          <option name="name" value="packageReleaseLocalJar" />
+          <option name="name" value="mergeDebugResources" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
-          <option name="name" value="packageReleaseRenderscript" />
+          <option name="name" value="mergeReleaseProguardFiles" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
-          <option name="name" value="packageReleaseResources" />
+          <option name="name" value="packageDebug" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="packageDebugRenderscript" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="validateDebugSigning" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="compileTestRenderscript" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="generateDebugSources" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
           <option name="name" value="packageTest" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="preBuild" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="preDebugBuild" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="preReleaseBuild" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="preTestBuild" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Prepare com.github.gabrielemariotti.cards:library:0.6.1-SNAPSHOT" />
-          <option name="name" value="prepareComGithubGabrielemariottiCardsLibrary061SNAPSHOTLibrary" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="prepareDebugDependencies" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="prepareReleaseDependencies" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="prepareTestDependencies" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="processDebugJavaRes" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="processDebugManifest" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="processDebugResources" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="processReleaseJavaRes" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="processReleaseManifest" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="processReleaseResources" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="processTestJavaRes" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="processTestResources" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="processTestTestManifest" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
           <option name="description" value="Displays the signing info for each variant" />
           <option name="name" value="signingReport" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
-          <option name="description" value="Uninstall all applications." />
-          <option name="name" value="uninstallAll" />
+          <option name="name" value="prepareTestDependencies" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="compileDebugRenderscript" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles all Release builds" />
+          <option name="name" value="assembleRelease" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="compileTest" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="dexTest" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="dexRelease" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="packageReleaseLocalJar" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="packageDebugLocalJar" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="mergeReleaseResources" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles the Test build for the Debug build" />
+          <option name="name" value="assembleTest" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
           <option name="description" value="Uninstalls the Debug build" />
           <option name="name" value="uninstallDebug" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
+          <option name="name" value="packageDebugJar" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Prepare com.github.gabrielemariotti.cards:library:0.6.1-SNAPSHOT" />
+          <option name="name" value="prepareComGithubGabrielemariottiCardsLibrary061SNAPSHOTLibrary" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="compileReleaseRenderscript" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="prepareDebugDependencies" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="processDebugResources" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="copyDebugLint" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="packageReleaseRenderscript" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="processTestResources" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="compileDebug" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="mergeReleaseAssets" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="mergeDebugProguardFiles" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="processReleaseJavaRes" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="packageReleaseJar" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Merges all the Android test reports from the sub projects." />
+          <option name="name" value="mergeAndroidReports" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Uninstall all applications." />
+          <option name="name" value="uninstallAll" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="prepareReleaseDependencies" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Runs lint on all variants." />
+          <option name="name" value="lint" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Installs the Debug build" />
+          <option name="name" value="installDebug" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles all variants of all applications and secondary packages." />
+          <option name="name" value="assemble" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="mergeTestAssets" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="lintTest" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
           <option name="description" value="Uninstalls the Release build" />
           <option name="name" value="uninstallRelease" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="generateTestSources" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="processTestTestManifest" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="processDebugManifest" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles a bundle containing the library in Debug." />
+          <option name="name" value="bundleDebug" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Deletes the build directory." />
+          <option name="name" value="clean" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="compileRelease" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="processReleaseManifest" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="generateReleaseSources" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles a bundle containing the library in Release." />
+          <option name="name" value="bundleRelease" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="generateDebugBuildConfig" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="lintRelease" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="packageReleaseResources" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
           <option name="description" value="Uninstalls the Test build for the Debug build" />
           <option name="name" value="uninstallTest" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
-          <option name="name" value="validateDebugSigning" />
+          <option name="description" value="Assembles and tests this project and all projects it depends on." />
+          <option name="name" value="buildNeeded" />
         </GradleTaskDescriptor>
-      </set>
+        <GradleTaskDescriptor>
+          <option name="description" value="Installs and runs the tests for Build 'Debug' on connected devices." />
+          <option name="name" value="connectedInstrumentTest" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="lintDebug" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="preBuild" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="compileTestAidl" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="generateReleaseBuildConfig" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="packageDebugAidl" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles and tests this project." />
+          <option name="name" value="build" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="dexDebug" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="packageRelease" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Runs all device checks on currently connected devices." />
+          <option name="name" value="connectedCheck" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="processTestJavaRes" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="preTestBuild" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="compileReleaseAidl" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Displays the Android dependencies of the project" />
+          <option name="name" value="androidDependencies" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Runs all device checks using Device Providers and Test Servers." />
+          <option name="name" value="deviceCheck" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="preDebugBuild" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="compileDebugAidl" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="copyReleaseLint" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="compileLint" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+          <option name="name" value="buildDependents" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="preReleaseBuild" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Installs the Test build for the Debug build" />
+          <option name="name" value="installTest" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles all Debug builds" />
+          <option name="name" value="assembleDebug" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="processDebugJavaRes" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Runs all checks." />
+          <option name="name" value="check" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="processReleaseResources" />
+        </GradleTaskDescriptor>
+      </list>
     </option>
     <option name="expandStates">
       <map>
@@ -1052,22 +1052,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothContentCard.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionAssignBooth.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckOut.java" />
+        <option value="$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/android-styled-dialogs-master/library/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/android-styled-dialogs-master/library/project.properties" />
+        <option value="$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/android-styled-dialogs-master/library/build.gradle" />
+        <option value="$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/android-styled-dialogs-master/library/.classpath" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardOrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/order/BoothOrderActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutOrderActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInDialog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/CookieOrCashDialogBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckIn.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/MainActivity.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/CookieAmountContentCard.java" />
-        <option value="$PROJECT_DIR$/res/layout/cookie_amount_layout.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckOut.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckOutActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/CookieAmountsListInputFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutPickupActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/order/BoothOrderActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckOutActivity.java" />
       </list>
     </option>
   </component>
@@ -1130,7 +1130,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectStructureProblems">
     <ignored-problems>
@@ -1207,6 +1207,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Android 4.2.2 Platform (2) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="CookieMom and modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
             </PATH_ELEMENT>
@@ -1252,6 +1266,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="cookiemom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom and modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cookiemom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1286,6 +1334,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom and modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cookiemom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1357,6 +1439,102 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom and modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cookiemom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="action" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom and modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom and modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-xhdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom and modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-sw600dp-xhdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -1364,43 +1542,71 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Facets" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="136" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="154" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/target" />
-    <property name="DEBUGGABLE_DEVICE" value="e0921bae" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="158" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="160" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="832" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="840" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="153" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="147" />
     <property name="DEBUGGABLE_PROCESS" value="net.kjmaster.cookiemom" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="12AVD_for_2_7in_QVGA" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\lib" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/target/generated-sources/r/net/kjmaster/cookiemom" />
+    <property name="Downloaded.Files.Path" value="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\lib" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="options.lastSelected" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="project.structure.side.proportion" value="0.5" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cookiemom-tests" />
+    <property name="DEBUGGABLE_DEVICE" value="e0921bae" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/target/generated-sources/r/net/kjmaster/cookiemom/tests/scout" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="SearchEverywhereHistory" value="setBackgroundDrawable" />
     <property name="AndroidLayoutSelectedEditor" value="android-designer" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
-    <property name="project.structure.side.proportion" value="0.5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="e0921bae" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="extract.method.default.visibility" value="private" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="gradle.tool.window.active" value="Tasks" />
     <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="net.kjmaster.cookiemom.tests" />
+      <recent name="net.kjmaster.cookiemom.tests.scout" />
+      <recent name="net.kjmaster.cookiemom.scout" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="net.kjmaster.cookiemom.global.CookieActionActivity" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="net.kjmaster.cookiemom.action" />
       <recent name="net.kjmaster.cookiemom.scout" />
@@ -1426,18 +1632,18 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="net.kjmaster.cookiemom" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="net.kjmaster.cookiemom.dao" />
-      <recent name="net.kjmaster.cookiemom" />
-      <recent name="net.kjmaster" />
-      <recent name="net.kjmaster.cookiemom.action" />
-      <recent name="net.kjmaster.cookiemom.ui" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\drawable-xhdpi" />
       <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\drawable" />
       <recent name="C:\Users\Maddy\Downloads\cardslib-master\cardslib-master\library\src\main" />
       <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="net.kjmaster.cookiemom" />
+      <recent name="net.kjmaster" />
+      <recent name="net.kjmaster.cookiemom.dao" />
+      <recent name="net.kjmaster.cookiemom.action" />
+      <recent name="net.kjmaster.cookiemom.ui" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.Main">
@@ -1445,6 +1651,24 @@
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -1469,30 +1693,25 @@
       </MavenSettings>
       <method />
     </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -1520,19 +1739,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1655,6 +1861,26 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="Scout Tests" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="CookieMom" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="false" name="CookieMomGenerator" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="CookieMomGenerator" />
       <option name="VM_PARAMETERS" value="" />
@@ -1679,12 +1905,51 @@
         <option name="Make" enabled="false" />
       </method>
     </configuration>
-    <list size="5">
+    <configuration default="false" name="CookieMomTests" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="CookieMomTests" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Cookie" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="Cookie" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <method />
+    </configuration>
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Android Application.Main" />
       <item index="1" class="java.lang.String" itemvalue="Android Application.demo" />
       <item index="2" class="java.lang.String" itemvalue="Android Application.sample" />
       <item index="3" class="java.lang.String" itemvalue="Android Application.Older Devices" />
-      <item index="4" class="java.lang.String" itemvalue="Application.CookieMomGenerator" />
+      <item index="4" class="java.lang.String" itemvalue="Android Tests.Scout Tests" />
+      <item index="5" class="java.lang.String" itemvalue="Application.CookieMomGenerator" />
+      <item index="6" class="java.lang.String" itemvalue="Android Tests.CookieMomTests" />
+      <item index="7" class="java.lang.String" itemvalue="Android Tests.Cookie" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1746,47 +2011,52 @@
       <created>1387275243427</created>
       <updated>1387275243427</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="corrected booth duplicate ordering, using extra boxes, and deleting orders">
+      <created>1387475324842</created>
+      <updated>1387475324842</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.67783093" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28863636" sideWeight="0.67623603" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259587" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6682616" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67145133" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5917065" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08863636" sideWeight="0.67464113" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32216907" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32216907" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6682616" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29923666" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2982456" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3030303" sideWeight="0.2998405" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45427728" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32824427" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4752791" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54066986" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="SimpleHttpClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42925277" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4290271" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.7001595" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36666667" sideWeight="0.57416266" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36666667" sideWeight="0.5263158" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Formatter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27727273" sideWeight="0.67623603" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32376397" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27651516" sideWeight="0.67623603" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39712918" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32376397" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="92" y="92" width="1162" height="584" />
-      <window_info id="Jindent" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.67783093" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Jindent" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28863636" sideWeight="0.67623603" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67145133" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3984733" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -1803,7 +2073,7 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
       <value>
         <are-packages-shown value="false" />
@@ -1839,7 +2109,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected booth refresh error and action errors&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="corrected booth duplicate ordering, using extra boxes, and deleting orders" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1860,6 +2130,7 @@
     <MESSAGE value="added booth order,check out/in action items.  adjusted booth order to account for current inv" />
     <MESSAGE value="Corrected booth refresh error and action errors" />
     <MESSAGE value="Corrected booth refresh error and action errors&#10;" />
+    <MESSAGE value="corrected booth duplicate ordering, using extra boxes, and deleting orders" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1975,119 +2246,121 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javadoc/index-files/index-17.html">
+    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/sources/android-17/android/app/Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="527" column="94" selection-start="35983" selection-end="35983" vertical-scroll-proportion="0.36026937">
+        <state line="5007" column="0" selection-start="211100" selection-end="211100" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderValuesListAdapter.java">
+    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/sources/android-17/android/app/Instrumentation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="20" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.0">
+        <state line="1078" column="0" selection-start="41364" selection-end="41364" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/expander/BoothExpanderCookieList.java">
+    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/sources/android-17/android/os/Handler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="8" selection-start="2652" selection-end="2652" vertical-scroll-proportion="0.0">
+        <state line="98" column="0" selection-start="4070" selection-end="4070" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutOrderActivity.java">
+    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/sources/android-17/android/os/Looper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="13" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0">
+        <state line="136" column="0" selection-start="4739" selection-end="4739" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutFragment.java">
+    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/sources/android-17/java/lang/reflect/Method.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.0">
+        <state line="510" column="0" selection-start="18362" selection-end="18362" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#20822#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothContentCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="0" selection-start="3930" selection-end="3930" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutPickupDialog.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckIn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="83" column="0" selection-start="3146" selection-end="3146" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1071#1078#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderValues.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckOut.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1202" selection-end="1202" vertical-scroll-proportion="0.24338624">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/SelectScoutListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="71" selection-start="1639" selection-end="1639" vertical-scroll-proportion="0.0">
+        <state line="83" column="12" selection-start="3070" selection-end="3070" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/CookieOrCashDialogBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="128" selection-start="1256" selection-end="1256" vertical-scroll-proportion="0.0">
+        <state line="79" column="0" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/CookieAmountsListInputFragment.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="0" selection-start="3658" selection-end="3658" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/CookieActionActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="9" selection-start="1418" selection-end="1418" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="50" selection-start="4281" selection-end="4281" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutPickupActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="128" selection-start="2266" selection-end="6804" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/order/BoothOrderActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="0" selection-start="3846" selection-end="3846" vertical-scroll-proportion="0.0">
+        <state line="59" column="0" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckOutActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="68" selection-start="7811" selection-end="7811" vertical-scroll-proportion="0.89440995">
-          <folding>
-            <element signature="e#1226#1242#0" expanded="true" />
-          </folding>
+        <state line="74" column="5" selection-start="1994" selection-end="1994" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/CookieActionActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="35" selection-start="2273" selection-end="2273" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="47" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="26" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutPickupActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="10" selection-start="4986" selection-end="4986" vertical-scroll-proportion="0.39257294">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2145,7 +2418,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>CookieMom|CookieMom and modules</last-edited>
+          <last-edited>demo|CookieMom and modules</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

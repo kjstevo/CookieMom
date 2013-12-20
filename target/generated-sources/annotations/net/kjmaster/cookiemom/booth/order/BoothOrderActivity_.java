@@ -19,8 +19,7 @@ import net.kjmaster.cookiemom.R.layout;
 import net.kjmaster.cookiemom.R.string;
 
 public final class BoothOrderActivity_
-    extends BoothOrderActivity
-{
+        extends BoothOrderActivity {
 
 
     @Override
@@ -32,8 +31,8 @@ public final class BoothOrderActivity_
 
     private void init_(Bundle savedInstanceState) {
         Resources resources_ = this.getResources();
-        fragTag = resources_.getString(string.add_order);
         fragTitle = resources_.getString(string.add_order_title);
+        fragTag = resources_.getString(string.add_order);
         injectExtras_();
     }
 
@@ -61,7 +60,7 @@ public final class BoothOrderActivity_
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (((SdkVersionHelper.getSdkInt()< 5)&&(keyCode == KeyEvent.KEYCODE_BACK))&&(event.getRepeatCount() == 0)) {
+        if (((SdkVersionHelper.getSdkInt() < 5) && (keyCode == KeyEvent.KEYCODE_BACK)) && (event.getRepeatCount() == 0)) {
             onBackPressed();
         }
         return super.onKeyDown(keyCode, event);
@@ -74,7 +73,7 @@ public final class BoothOrderActivity_
     private void injectExtras_() {
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
-        if (extras_!= null) {
+        if (extras_ != null) {
             if (extras_.containsKey("requestCode")) {
                 try {
                     requestCode = ((Integer) extras_.get("requestCode"));

@@ -42,7 +42,7 @@ public class CupboardOrderActivity extends CookieActionActivity {
 //                CupboardOrderFragment_.builder().build(),
 //                fragName);
 
-        createActionMode(fragName);
+        createActionMode(getString(R.string.order));
 
     }
 

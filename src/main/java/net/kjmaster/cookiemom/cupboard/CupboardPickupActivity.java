@@ -27,15 +27,13 @@ import java.util.List;
 public class CupboardPickupActivity extends CookieActionActivity {
 
 
-    private String fragTag;
-
     @Pref
     ISettings_ iSettings;
 
     @AfterViews
     void afterViewFrag() {
 
-        fragTag = getString(R.string.pickup_from_cupboard);
+        String fragTag = getString(R.string.pickup_from_cupboard);
 
         replaceFrag(createFragmentTransaction(fragTag), CupboardPickupFragment_.builder().build(), fragTag);
 
@@ -98,14 +96,13 @@ public class CupboardPickupActivity extends CookieActionActivity {
                                 order.getOrderCookieType(),
                                 true,
                                 (order.getOrderedBoxes() - totalBoxes),
-                                null
+                                false
 
                         ));
 
                         order.setOrderedBoxes(totalBoxes);
-
-                        totalBoxes = 0;
                         order.setPickedUpFromCupboard(true);
+                        totalBoxes = 0;
                     }
                 }
 
