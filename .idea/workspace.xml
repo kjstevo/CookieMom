@@ -504,21 +504,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="724653b3-d774-431b-a637-8e4913711973" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\src\main\java\net\kjmaster\cookiemom\ui\ObservableValues.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CookieMom.apk" afterPath="$PROJECT_DIR$/target/CookieMom.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CookieMom.unaligned.apk" afterPath="$PROJECT_DIR$/target/CookieMom.unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cookie_momster.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cookie_momster.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckIn.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckIn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckOut.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckOut.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInDialog.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckOutActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckOutActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/order/BoothOrderActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/order/BoothOrderActivity_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutOrderActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutOrderActivity_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutPickupActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutPickupActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/AddBoothDialogFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/AddBoothDialogFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/AddBoothDialogFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/AddBoothDialogFragment_.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutPickupActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutPickupActivity_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="9d0a0215-8efb-451b-a184-5de1526cf397" name="Dao" comment="Dao" />
@@ -526,7 +518,7 @@
     <ignored path="CookieMom.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="target/" />
-    <file path="/Dummy.txt" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387484619261" ignored="false" />
+    <file path="/Dummy.txt" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387515767157" ignored="false" />
     <file path="/strings.xml" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387314559128" ignored="false" />
     <file path="/CookieAmountsListInputFragment.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387318604878" ignored="false" />
     <file path="/fragment.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387491697318" ignored="false" />
@@ -545,11 +537,12 @@
     <file path="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity_.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387492553440" ignored="false" />
     <file path="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity_.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387492553441" ignored="false" />
     <file path="/ActionBoothCheckOut.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387504770295" ignored="false" />
-    <file path="/ActionBoothCheckIn.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387504726831" ignored="false" />
+    <file path="/ActionBoothCheckIn.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387530127811" ignored="false" />
     <file path="/BoothCheckInDialog.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387496270339" ignored="false" />
     <file path="/BoothCheckInActivity.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387504999712" ignored="false" />
     <file path="/CupboardOrderActivity.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387508889862" ignored="false" />
     <file path="/ScoutPickupActivity.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387506122514" ignored="false" />
+    <file path="/AddBoothDialogFragment.java" changelist="724653b3-d774-431b-a637-8e4913711973" time="1387532385014" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -627,15 +620,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BoothCheckInActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="0" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BoothCheckOutActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckOutActivity.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -654,10 +638,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScoutPickupActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ScoutPickupActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutPickupActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="140" column="10" selection-start="4986" selection-end="4986" vertical-scroll-proportion="0.39257294">
+            <state line="140" column="10" selection-start="4986" selection-end="4986" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddBoothDialogFragment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/AddBoothDialogFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="79" selection-start="2733" selection-end="2733" vertical-scroll-proportion="0.43956044">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2202#3465#0" expanded="true" />
+                <element signature="e#3454#3455#0" expanded="true" />
+                <element signature="e#3613#3801#0" expanded="true" />
+                <element signature="e#3790#3791#0" expanded="true" />
+                <element signature="e#3959#4146#0" expanded="true" />
+                <element signature="e#4135#4136#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionBoothCheckIn.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckIn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="36" selection-start="3097" selection-end="3097" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1011#1018#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DateTimePicker.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/DateTimePicker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="134" column="19" selection-start="5103" selection-end="5104" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -686,37 +707,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="17" column="26" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CookieOrCashDialogBase.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/CookieOrCashDialogBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="0" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActionBoothCheckIn.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckIn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="0" selection-start="3146" selection-end="3146" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1071#1078#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActionBoothCheckOut.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckOut.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="12" selection-start="3070" selection-end="3070" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -1052,7 +1042,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/android-styled-dialogs-master/library/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/android-styled-dialogs-master/library/project.properties" />
         <option value="$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/android-styled-dialogs-master/library/build.gradle" />
         <option value="$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/android-styled-dialogs-master/library/.classpath" />
@@ -1061,13 +1050,14 @@
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutOrderActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInDialog.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/CookieOrCashDialogBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckIn.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckOut.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckInActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothCheckOutActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutPickupActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckIn.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/AddBoothDialogFragment.java" />
       </list>
     </option>
   </component>
@@ -1333,75 +1323,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cookiemom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="global" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cookiemom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cupboard" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1470,68 +1392,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="action" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-xhdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-sw600dp-xhdpi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2015,7 +1875,11 @@
       <created>1387475324842</created>
       <updated>1387475324842</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="scout piclup bugs new icon corrected typo in boot check in that made it act like check out">
+      <created>1387515789105</created>
+      <updated>1387515789105</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2109,7 +1973,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="corrected booth duplicate ordering, using extra boxes, and deleting orders" />
+    <option name="LAST_COMMIT_MESSAGE" value="scout piclup bugs new icon corrected typo in boot check in that made it act like check out" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -2131,6 +1995,7 @@
     <MESSAGE value="Corrected booth refresh error and action errors" />
     <MESSAGE value="Corrected booth refresh error and action errors&#10;" />
     <MESSAGE value="corrected booth duplicate ordering, using extra boxes, and deleting orders" />
+    <MESSAGE value="scout piclup bugs new icon corrected typo in boot check in that made it act like check out" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2246,27 +2111,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/sources/android-17/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5007" column="0" selection-start="211100" selection-end="211100" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/sources/android-17/android/app/Instrumentation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1078" column="0" selection-start="41364" selection-end="41364" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/sources/android-17/android/os/Handler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="0" selection-start="4070" selection-end="4070" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/sources/android-17/android/os/Looper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="136" column="0" selection-start="4739" selection-end="4739" vertical-scroll-proportion="0.0">
@@ -2290,18 +2134,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="0" selection-start="3146" selection-end="3146" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1071#1078#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckOut.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="12" selection-start="3070" selection-end="3070" vertical-scroll-proportion="0.0">
+        <state line="83" column="12" selection-start="3041" selection-end="3041" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2359,8 +2194,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutPickupActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="10" selection-start="4986" selection-end="4986" vertical-scroll-proportion="0.39257294">
+        <state line="140" column="10" selection-start="4986" selection-end="4986" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionBoothCheckIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="36" selection-start="3097" selection-end="3097" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1011#1018#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javadoc/net/kjmaster/cookiemom/ui/ObservableValues.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="70" selection-start="4488" selection-end="4488" vertical-scroll-proportion="0.35693216">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/DateTimePicker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="19" selection-start="5103" selection-end="5104" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/AddBoothDialogFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="79" selection-start="2733" selection-end="2733" vertical-scroll-proportion="0.43956044">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2202#3465#0" expanded="true" />
+            <element signature="e#3454#3455#0" expanded="true" />
+            <element signature="e#3613#3801#0" expanded="true" />
+            <element signature="e#3790#3791#0" expanded="true" />
+            <element signature="e#3959#4146#0" expanded="true" />
+            <element signature="e#4135#4136#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

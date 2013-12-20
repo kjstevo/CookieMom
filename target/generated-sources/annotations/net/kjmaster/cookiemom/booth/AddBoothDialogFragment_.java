@@ -29,11 +29,11 @@ public final class AddBoothDialogFragment_
     }
 
     private void afterSetContentView_() {
-        dateText = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.Date));
-        hiddenDateTime = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.text_date_time_hidden));
         addressText = ((EditText) findViewById(net.kjmaster.cookiemom.R.id.add_booth_address));
-        timeText = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.Time));
         editText = ((EditText) findViewById(net.kjmaster.cookiemom.R.id.editText));
+        hiddenDateTime = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.text_date_time_hidden));
+        timeText = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.Time));
+        dateText = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.Date));
         {
             View view = findViewById(net.kjmaster.cookiemom.R.id.date_time_picker_button);
             if (view != null) {

@@ -81,7 +81,7 @@ public class ActionBoothCheckIn extends ActionContentCard {
                     cash += transaction.getTransCash();
                 }
 
-                if (cash <= 0) {
+                if (cash + boxes < 0) {
                     boothList.add(booth);
 
                 }

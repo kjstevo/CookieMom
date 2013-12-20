@@ -14,6 +14,10 @@ import com.googlecode.androidannotations.annotations.ViewById;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.ui.DateTimePicker;
 
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 
@@ -59,15 +63,21 @@ public class AddBoothDialogFragment extends DialogFragment {
             public void onClick(View v) {
                 mDateTimePicker.clearFocus();
                 // TODO Auto-generated method stub
-                ((TextView) getActivity().findViewById(R.id.Date)).setText(mDateTimePicker.get(Calendar.YEAR) + "/" + (mDateTimePicker.get(Calendar.MONTH) + 1) + "/"
-                        + mDateTimePicker.get(Calendar.DAY_OF_MONTH));
+
+                String eventDate = SimpleDateFormat.getDateInstance(DateFormat.LONG).format(new Date(mDateTimePicker.getDateTimeMillis()));
+                ((TextView) getActivity().findViewById(R.id.Date)).setText(eventDate);
                 if (mDateTimePicker.is24HourView()) {
                     ((TextView) getActivity().findViewById(R.id.Time)).setText(mDateTimePicker.get(Calendar.HOUR_OF_DAY) + ":" + mDateTimePicker.get(Calendar.MINUTE));
                 } else {
-                    ((TextView) getActivity().findViewById(R.id.Time)).setText(mDateTimePicker.get(Calendar.HOUR) + ":" + mDateTimePicker.get(Calendar.MINUTE) + " "
+                    NumberFormat fmt = NumberFormat.getNumberInstance();
+                    fmt.setMinimumIntegerDigits(2);
+
+                    ((TextView) getActivity().findViewById(R.id.Time)).setText(fmt.format(mDateTimePicker.get(Calendar.HOUR)) +
+                            ":" + fmt.format(mDateTimePicker.get(Calendar.MINUTE)) + " "
                             + (mDateTimePicker.get(Calendar.AM_PM) == Calendar.AM ? "AM" : "PM"));
 
                 }
+
 
                 hiddenDateTime.setText(String.valueOf(mDateTimePicker.getDateTimeMillis()));
                 mDateTimeDialog.dismiss();
