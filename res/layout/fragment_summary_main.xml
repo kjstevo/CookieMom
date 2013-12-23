@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+    <com.astuetz.viewpager.extensions.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="62dip"
+            android:background="@drawable/background_tabs"/>
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tabs"
+            tools:context=".MainActivity" android:spinnerMode="dropdown" android:clickable="false"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner" android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+            android:focusable="false" android:spinnerMode="dropdown"
+
+            />
+    <FrameLayout android:layout_width="match_parent"
+                 android:layout_height="fill_parent" android:id="@+id/graph_content"
+                 android:layout_below="@+id/spinner"/>
+
+
+</RelativeLayout>
+
+

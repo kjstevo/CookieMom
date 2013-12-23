@@ -14,6 +14,8 @@ import net.kjmaster.cookiemom.global.Constants;
 public class CompleteCookieCard {
 
     public static CookieAmountContentCard CreateCompleteCookieCard(CookieAmountContentCard mCard, String cookieType, Context context) {
+
+
         CardHeader cardHeader = new CardHeader(context);
         cardHeader.setTitle(cookieType);
         mCard.addCardHeader(cardHeader);

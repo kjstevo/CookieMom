@@ -18,6 +18,9 @@ import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
 import net.kjmaster.cookiemom.global.ICookieActionFragment;
 import net.kjmaster.cookiemom.ui.cookies.CookieAmountContentCard;
+import net.kjmaster.cookiemom.ui.cookies.CookieCardHeader;
+import net.kmaster.cookiemom.dao.CookieTransactions;
+import net.kmaster.cookiemom.dao.CookieTransactionsDao;
 import net.kmaster.cookiemom.dao.Order;
 import net.kmaster.cookiemom.dao.OrderDao;
 
@@ -109,7 +112,16 @@ public class CupboardPickupFragment extends Fragment implements ICookieActionFra
     }
 
     private CardHeader getCardHeader(String cookieType) {
-        CardHeader cardHeader = new CardHeader(getActivity());
+        List<CookieTransactions> list = Main.daoSession.getCookieTransactionsDao().queryBuilder()
+                .where(CookieTransactionsDao.Properties.CookieType.eq(cookieType))
+                .list();
+        int total = 0;
+        if (list != null) {
+            for (CookieTransactions cookieTransactions : list) {
+                total += cookieTransactions.getTransBoxes();
+            }
+        }
+        CardHeader cardHeader = new CookieCardHeader(getActivity(), total, cookieType);
         cardHeader.setTitle(cookieType);
         return cardHeader;
     }

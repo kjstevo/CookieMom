@@ -26,6 +26,7 @@ import net.kjmaster.cookiemom.booth.BoothFragment_;
 import net.kjmaster.cookiemom.cupboard.CupboardFragment_;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.scout.ScoutFragment_;
+import net.kjmaster.cookiemom.summary.SummaryFragment_;
 import net.kmaster.cookiemom.dao.Booth;
 import net.kmaster.cookiemom.dao.BoothAssignments;
 import net.kmaster.cookiemom.dao.BoothAssignmentsDao;
@@ -272,7 +273,9 @@ public class MainActivity extends FragmentActivity {
                     fragment = CupboardFragment_.builder().build();
                     break;
 
-
+                case 4:
+                    fragment = SummaryFragment_.builder().build();
+                    break;
                 default:
                     fragment = ScoutFragment_.builder().build();
 

@@ -93,6 +93,8 @@ public class CupboardFragment extends Fragment {
             mCard.addCardThumbnail(cardThumbnail);
             CardHeader cardHeader = new CardHeader(getActivity());
             cardHeader.setButtonOverflowVisible(true);
+
+
             cardHeader.setPopupMenu(R.menu.cupboard_overflow, new CardHeader.OnClickCardHeaderPopupMenuListener() {
                 @Override
                 public void onMenuItemClick(BaseCard card, MenuItem item) {

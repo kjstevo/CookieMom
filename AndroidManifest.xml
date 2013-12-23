@@ -32,6 +32,7 @@
         <activity android:name=".booth.order.BoothOrderActivity_" android:label="@string/order"/>
         <activity android:name=".scout.turnin.ScoutTurnInActivity_" android:label="Turn In"/>
 
+
     </application>
 
 </manifest>

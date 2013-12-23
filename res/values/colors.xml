@@ -31,5 +31,16 @@
     <color name="date_picker_view_animator">#f2f2f2</color>
     <color name="calendar_selected_date_text">#ff767676</color>
     <color name="background_window">#FFE5E5E5</color>
-
+    <color name="bar_due">#ffc72309</color>
+    <color name="bar_cash">#ff11c71b</color>
+    <color name="bar_booth">#ff30a5c7</color>
+    <color name="bar_scout">#ffc731ba</color>
+    <color name="color_thin_mints">#ff1ec72f</color>
+    <color name="color_berry">#ff9f37c7</color>
+    <color name="color_dulce">#ff42c7af</color>
+    <color name="color_tags">#ff9e7c53</color>
+    <color name="color_trefoils">#fff2eda4</color>
+    <color name="color_samoas">#ffdd4a2d</color>
+    <color name="color_dosidos">#ff437c9e</color>
+    <color name="color_smiles">#ffe5ea2d</color>
 </resources>

@@ -16,6 +16,11 @@ public class Constants {
     public static final String[] CookieTypes = new String[]{
             "Thin Mint", "Samoas", "Trefoils", "Tag-a-Longs",
             "Do Si Dos", "Dulce", "Berry", "Smiles"};
+    public static final int[] CookieColors = new int[]{
+            R.color.color_thin_mints, R.color.color_samoas, R.color.color_trefoils,
+            R.color.color_tags, R.color.color_dosidos, R.color.color_dulce,
+            R.color.color_berry, R.color.color_smiles
+    };
     public static final int SCOUT_REQUEST = 4343;
     public static final int ADD_BOOTH_REQUEST_CODE = 888;
     public static final int ADD_BOOTH_RESULT_OK = 777;
