@@ -21,6 +21,8 @@
       <sourceFolder url="file://$MODULE_DIR$/CookieMom-Generator/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/generated-sources/annotations" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/res/layout/datetime" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/res/layout/summary" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/CookieMom-Generator" />
       <excludeFolder url="file://$MODULE_DIR$/src/main/java/net/kjmaster/cookiemom/personal" />
       <excludeFolder url="file://$MODULE_DIR$/target/classes" />

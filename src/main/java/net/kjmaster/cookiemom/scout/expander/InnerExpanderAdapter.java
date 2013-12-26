@@ -30,7 +30,7 @@ public class InnerExpanderAdapter extends ArrayAdapter<InnerExpanderValues> {
         if (view == null) {
             LayoutInflater li = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            view = li.inflate(R.layout.custom_expander_list_item, parent, false);
+            view = li.inflate(R.layout.scout_expander_list_item, parent, false);
             TextView textView1 = (TextView) view.findViewById(R.id.textView1);
             TextView textView2 = (TextView) view.findViewById(R.id.textView2);
             TextView textView3 = (TextView) view.findViewById(R.id.textView3);

@@ -21,7 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 
-@EFragment(R.layout.add_booth_dialog)
+@EFragment(R.layout.booth_add_booth_dialog)
 public class AddBoothDialogFragment extends DialogFragment {
     @ViewById(R.id.editText)
     EditText editText;
@@ -50,7 +50,7 @@ public class AddBoothDialogFragment extends DialogFragment {
         // Create the dialog
         final Dialog mDateTimeDialog = new Dialog(getActivity());
         // Inflate the root layout
-        final RelativeLayout mDateTimeDialogView = (RelativeLayout) getActivity().getLayoutInflater().inflate(R.layout.date_time_dialog, null);
+        final RelativeLayout mDateTimeDialogView = (RelativeLayout) getActivity().getLayoutInflater().inflate(R.layout.ui_date_time_dialog, null);
         // Grab widget instance
         final DateTimePicker mDateTimePicker = (DateTimePicker) mDateTimeDialogView.findViewById(R.id.DateTimePicker);
         // Check is system is set to use 24h time (this doesn't seem to work as expected though)

@@ -143,7 +143,7 @@ public class BoothContentCard extends Card {
             try {
                 mScoutList.setAdapter(new ArrayAdapter<Scout>(
                         getContext(),
-                        R.layout.simple_text,
+                        R.layout.ui_simple_text,
                         R.id.content,
                         getScoutList()
                 ));

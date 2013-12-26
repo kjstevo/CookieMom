@@ -21,7 +21,7 @@ import java.util.List;
  * Date: 12/21/13
  * Time: 6:35 PM
  */
-@EFragment(R.layout.fragment_piegraph)
+@EFragment(R.layout.summary_piegraph_fragment)
 public class SummaryCookiesFragment extends android.support.v4.app.Fragment {
 
     @ViewById(R.id.piegraph)
@@ -32,7 +32,7 @@ public class SummaryCookiesFragment extends android.support.v4.app.Fragment {
 //
 //    @Override
 //    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//        //final View v = inflater.inflate(R.layout.fragment_piegraph, container, false);
+//        //final View v = inflater.inflate(R.layout.summary_piegraph_fragment, container, false);
 
 
     @AfterViews

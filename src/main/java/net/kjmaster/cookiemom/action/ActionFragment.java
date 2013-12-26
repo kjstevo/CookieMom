@@ -29,7 +29,7 @@ import java.util.List;
 //~--- JDK imports ------------------------------------------------------------
 
 @OptionsMenu(R.menu.action_frag)
-@EFragment(R.layout.fragment_sample)
+@EFragment(R.layout.main_fragment)
 public class ActionFragment extends Fragment implements ISimpleDialogListener {
     @ViewById(R.id.carddemo_list_base1)
     CardListView cardView;

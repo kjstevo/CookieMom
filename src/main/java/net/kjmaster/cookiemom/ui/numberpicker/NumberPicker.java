@@ -80,7 +80,7 @@ public class NumberPicker extends LinearLayout implements Button.OnClickListener
     }
 
     protected int getLayoutId() {
-        return R.layout.number_picker_view;
+        return R.layout.ui_number_picker_view;
     }
 
     /**

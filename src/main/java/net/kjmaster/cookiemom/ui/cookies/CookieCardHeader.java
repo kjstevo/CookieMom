@@ -17,7 +17,7 @@ public class CookieCardHeader extends CardHeader {
     private final String cookieType;
 
     public CookieCardHeader(Context context, int invTotal, String cookieType) {
-        super(context, net.kjmaster.cookiemom.R.layout.cookie_base_header_layout);
+        super(context, net.kjmaster.cookiemom.R.layout.ui_cookie_base_header_layout);
         this.invTotal = invTotal;
         this.cookieType = cookieType;
     }

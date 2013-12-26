@@ -27,12 +27,12 @@ public class CookieAmountContentCard extends Card {
     private final boolean isBoxes;
 
     public CookieAmountContentCard(Context context, int amountExpected, boolean autoFillEditFields, boolean showExpected, boolean isBoxes) {
-        this(context, R.layout.cookie_amount_layout, amountExpected, autoFillEditFields, showExpected, 0, isBoxes);
+        this(context, R.layout.ui_cookie_amount_layout, amountExpected, autoFillEditFields, showExpected, 0, isBoxes);
 
     }
 
     public CookieAmountContentCard(Context context, int amountExpected, boolean autoFillEditFields, boolean showExpected, int actualAmount, boolean isBoxes) {
-        this(context, R.layout.cookie_amount_layout, amountExpected, autoFillEditFields, showExpected, actualAmount, isBoxes);
+        this(context, R.layout.ui_cookie_amount_layout, amountExpected, autoFillEditFields, showExpected, actualAmount, isBoxes);
 
     }
 

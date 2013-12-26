@@ -28,7 +28,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @OptionsMenu(R.menu.scout_frag)
-@EFragment(R.layout.fragment_sample)
+@EFragment(R.layout.main_fragment)
 public class ScoutFragment extends Fragment implements ISimpleDialogListener, ICookieActionFragment {
 
     @ViewById(R.id.carddemo_list_base1)

@@ -1,6 +1,7 @@
 package net.kjmaster.cookiemom.summary;
 
 import android.support.v4.app.Fragment;
+import android.widget.TextView;
 import com.echo.holographlibrary.Bar;
 import com.echo.holographlibrary.BarGraph;
 import com.googlecode.androidannotations.annotations.AfterViews;
@@ -13,6 +14,7 @@ import net.kmaster.cookiemom.dao.CookieTransactionsDao;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static net.kmaster.cookiemom.dao.CookieTransactionsDao.Properties.TransBoothId;
@@ -25,11 +27,14 @@ import static net.kmaster.cookiemom.dao.CookieTransactionsDao.Properties.TransBo
  * Date: 12/21/13
  * Time: 9:38 PM
  */
-@EFragment(R.layout.fragment_bar)
+@EFragment(R.layout.summary_bar_fragment)
 public class SummarySalesFragment extends Fragment {
 
     @ViewById(net.kjmaster.cookiemom.R.id.bargraph)
     BarGraph barGraph;
+
+    @ViewById(R.id.bar_legend)
+    TextView legend;
 
     @AfterViews
     void afterViews() {
@@ -43,16 +48,16 @@ public class SummarySalesFragment extends Fragment {
         String boxesColumn = TransBoxes.columnName;
         String boothIdColumn = TransBoothId.columnName;
         String tablename = CookieTransactionsDao.TABLENAME;
-
+        final HashMap<String, Integer> hashMap = new HashMap<String, Integer>();
         for (CookieTransactions cookieTransactions : list) {
 
             totalCash += cookieTransactions.getTransCash();
             if (cookieTransactions.getTransBoothId() >= 0) {
-                // totalBooth+=(cookieTransactions.getTransBoxes());
+                totalBooth += (cookieTransactions.getTransBoxes());
                 totalBoothCash += cookieTransactions.getTransCash();
             } else {
                 if (cookieTransactions.getTransScoutId() >= 0) {
-                    //  totalScout+=(cookieTransactions.getTransBoxes());
+                    totalScout += (cookieTransactions.getTransBoxes());
                     totalScoutCash += cookieTransactions.getTransCash();
                 } else {
                     total += cookieTransactions.getTransBoxes();
@@ -68,14 +73,14 @@ public class SummarySalesFragment extends Fragment {
         d.setColor(getResources().getColor(R.color.bar_due));
         d.setName("Due");
         d.setValue(total * 4);
-
+        hashMap.put("Due", total);
         d.setValueString(fmt.format(total * 4));
         Bar d2 = new Bar();
         d2.setColor(getResources().getColor(R.color.bar_cash));
         d2.setName("Cash");
         d2.setValue(totalCash.floatValue());
         d2.setValueString(fmt.format(totalCash));
-
+        hashMap.put("Cash", (totalBooth + totalScout) * -1);
 //        Bar d3=new Bar();
 //        d3.setColor(Color.parseColor("#99CC00"));
 //        d3.setName("Booths");
@@ -86,6 +91,7 @@ public class SummarySalesFragment extends Fragment {
         d4.setName("Booths");
         d4.setValue(totalBoothCash.floatValue());
         d4.setValueString(fmt.format(totalBoothCash));
+        hashMap.put("Booths", totalBooth * -1);
         //     Bar d5=new Bar();
 //        d5.setColor(Color.parseColor("#99CC00"));
 //        d5.setName("Scouts");
@@ -96,6 +102,7 @@ public class SummarySalesFragment extends Fragment {
         d6.setName("Scouts");
         d6.setValue(totalScoutCash.floatValue());
         d6.setValueString(fmt.format(totalScoutCash));
+        hashMap.put("Scouts", totalScout * -1);
         points.add(d);
         points.add(d2);
         //points.add(d3);
@@ -111,8 +118,9 @@ public class SummarySalesFragment extends Fragment {
 
             @Override
             public void onClick(int index) {
-
+                legend.setText(hashMap.get(barGraph.getBars().get(index).getName()).toString() + " bxs.");
             }
+
 
         });
     }

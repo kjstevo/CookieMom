@@ -33,7 +33,7 @@ import static net.kmaster.cookiemom.dao.OrderDao.Properties.PickedUpFromCupboard
  * Time: 4:06 PM
  */
 @OptionsMenu(R.menu.cupboard_frag)
-@EFragment(R.layout.fragment_sample)
+@EFragment(R.layout.main_fragment)
 public class CupboardFragment extends Fragment {
     //    private SQLiteDatabase db;
     public static final int GET_ORDER_REQUEST_CODE = 6936;

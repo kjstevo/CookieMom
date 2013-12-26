@@ -47,7 +47,7 @@ public class ScoutExpanderCookieList extends Card {
     private final Scout scout;
 
     public ScoutExpanderCookieList(Context context, Scout scout) {
-        this(context, scout, R.layout.carddemo_googlenowstock_inner_content);
+        this(context, scout, R.layout.ui_cookie_table_content);
     }
 
     public ScoutExpanderCookieList(Context context, Scout scout, int innerLayout) {

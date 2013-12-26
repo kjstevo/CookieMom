@@ -46,7 +46,7 @@ public class BoothListFragmentCard extends Card {
                     )
                     .list();
             if (!boothAssignments.isEmpty()) {
-                BoothTextAdapterListItem mData = new BoothTextAdapterListItem(context, R.layout.simple_big_text);
+                BoothTextAdapterListItem mData = new BoothTextAdapterListItem(context, R.layout.ui_simple_big_text);
                 for (BoothAssignments assignment : boothAssignments) {
                     Booth booth = Main.daoSession.getBoothDao().load(assignment.getBoothAssignBoothId());
                     if (booth != null) {

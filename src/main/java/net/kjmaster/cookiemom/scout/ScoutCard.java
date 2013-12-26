@@ -33,7 +33,7 @@ public class ScoutCard extends Card {
      * @param context
      */
     public ScoutCard(Context context) {
-        this(context, R.layout.carddemo_example_inner_content_scout);
+        this(context, R.layout.scout_inner_content);
     }
 
     /**

@@ -43,7 +43,7 @@ public class CustomBoothExpander extends CardExpand {
     private final Booth mBooth;
 
     public CustomBoothExpander(Context context, Booth booth) {
-        this(context, R.layout.custom_expander_main_layout, booth);
+        this(context, R.layout.booth_expander_main_layout, booth);
     }
 
     public CustomBoothExpander(Context context, int innerLayout, Booth booth) {

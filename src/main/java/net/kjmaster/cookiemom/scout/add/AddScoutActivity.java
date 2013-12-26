@@ -17,7 +17,7 @@ import net.kmaster.cookiemom.dao.Scout;
  * Date: 10/28/13
  * Time: 1:26 AM
  */
-@EActivity(R.layout.add_scout_layout)
+@EActivity(R.layout.scout_add_scout_layout)
 public class AddScoutActivity extends CookieActionActivity {
 
     @FragmentByTag("add_scout")

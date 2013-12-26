@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @OptionsMenu(R.menu.booth_frag)
-@EFragment(R.layout.fragment_sample)
+@EFragment(R.layout.main_fragment)
 public class BoothFragment
         extends Fragment implements ISimpleDialogListener {
 

@@ -494,13 +494,7 @@
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/res/layout/fragment_bargraph.xml">
-        <config>
-          <device>Nexus One</device>
-          <theme>@style/AppTheme</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/res/layout/fragment_summary_main.xml">
+      <layout url="file://$PROJECT_DIR$/res/layout/summary_main_fragment.xml">
         <config>
           <device>Nexus S</device>
           <theme>@style/AppBaseTheme</theme>
@@ -508,37 +502,104 @@
       </layout>
     </layouts>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="724653b3-d774-431b-a637-8e4913711973" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/cookies/CookieCardHeader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryCookiesFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummarySalesFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/cookie_base_header_layout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/fragment_bar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/fragment_piegraph.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/fragment_summary_main.xml" />
+    <list default="true" id="724653b3-d774-431b-a637-8e4913711973" name="Default" comment="reformatted /added graphs addded inv count to cupboard pickup">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCard.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCardFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutListLayout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutValues.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutValuesListAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/main_fragment.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/summary_stat_scout_card_inner_layout.xml" />
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\custom_scout_expander_list_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\fragment_sample.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\personal_order_dialog.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\target\generated-sources\annotations\net\kjmaster\cookiemom\booth\AddBoothActivity_.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\target\generated-sources\annotations\net\kjmaster\cookiemom\booth\AddBoothDialogFragment_.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\target\generated-sources\annotations\net\kjmaster\cookiemom\booth\BoothCheckInActivity_.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\target\generated-sources\annotations\net\kjmaster\cookiemom\booth\BoothCheckOutActivity_.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\target\generated-sources\annotations\net\kjmaster\cookiemom\scout\AddScoutActivity_.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\target\generated-sources\annotations\net\kjmaster\cookiemom\scout\AddScoutDialogFragment_.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\target\generated-sources\annotations\net\kjmaster\cookiemom\scout\ScoutOrderActivity_.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\target\generated-sources\annotations\net\kjmaster\cookiemom\scout\ScoutPickupActivity_.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\target\generated-sources\annotations\net\kjmaster\cookiemom\scout\ScoutTurnInActivity_.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\target\generated-sources\annotations\net\kjmaster\cookiemom\scout\SelectScoutListActivity_.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\target\generated-sources\annotations\net\kjmaster\cookiemom\ui\CookieAmountsListInputFragment_.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\activity_main.xml" afterPath="$PROJECT_DIR$/res/layout/main_activity.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\add_booth_dialog.xml" afterPath="$PROJECT_DIR$/res/layout/booth_add_booth_dialog.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\add_booth_layout.xml" afterPath="$PROJECT_DIR$/res/layout/booth_add_booth_layout.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\add_scout_dialog.xml" afterPath="$PROJECT_DIR$/res/layout/booth_add_scout_dialog.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\add_scout_layout.xml" afterPath="$PROJECT_DIR$/res/layout/scout_add_scout_layout.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\carddemo_example_inner_content_scout.xml" afterPath="$PROJECT_DIR$/res/layout/scout_inner_content.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\carddemo_googlenow_inner_expand.xml" afterPath="$PROJECT_DIR$/res/layout/scout_expander_inner_expand.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\carddemo_googlenowstock_inner_content.xml" afterPath="$PROJECT_DIR$/res/layout/ui_cookie_table_content.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\cookie_amount_layout.xml" afterPath="$PROJECT_DIR$/res/layout/ui_cookie_amount_layout.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\cookie_amount_no_exopected_layout.xml" afterPath="$PROJECT_DIR$/res/layout/cupboard_cookie_amount_no_exopected_layout.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\cookie_base_header_layout.xml" afterPath="$PROJECT_DIR$/res/layout/ui_cookie_base_header_layout.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\custom_expander_list_item.xml" afterPath="$PROJECT_DIR$/res/layout/scout_expander_list_item.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\custom_expander_main_layout.xml" afterPath="$PROJECT_DIR$/res/layout/booth_expander_main_layout.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\date_time_dialog.xml" afterPath="$PROJECT_DIR$/res/layout/ui_date_time_dialog.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\datepicker.xml" afterPath="$PROJECT_DIR$/res/layout/ui_datepicker.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\datetimepicker.xml" afterPath="$PROJECT_DIR$/res/layout/ui_datetimepicker.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\fragment_bar.xml" afterPath="$PROJECT_DIR$/res/layout/summary_bar_fragment.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\fragment_piegraph.xml" afterPath="$PROJECT_DIR$/res/layout/summary_piegraph_fragment.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\fragment_summary_main.xml" afterPath="$PROJECT_DIR$/res/layout/summary_main_fragment.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\number_picker_dialog.xml" afterPath="$PROJECT_DIR$/res/layout/ui_number_picker_dialog.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\number_picker_view.xml" afterPath="$PROJECT_DIR$/res/layout/ui_number_picker_view.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\scout_inner_expand.xml" afterPath="$PROJECT_DIR$/res/layout/summary_stat_scout_fragment.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\select_scout.xml" afterPath="$PROJECT_DIR$/res/layout/scout_select_scout.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\simple_big_text.xml" afterPath="$PROJECT_DIR$/res/layout/ui_simple_big_text.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\simple_medium_text.xml" afterPath="$PROJECT_DIR$/res/layout/ui_simple_medium_text.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\simple_text.xml" afterPath="$PROJECT_DIR$/res/layout/ui_simple_text.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\three_keys_view.xml" afterPath="$PROJECT_DIR$/res/layout/ui_three_keys_view.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\three_keys_view_leftright.xml" afterPath="$PROJECT_DIR$/res/layout/ui_three_keys_view_leftright.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\three_keys_view_right_drawable.xml" afterPath="$PROJECT_DIR$/res/layout/ui_three_keys_view_right_drawable.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\three_keys_view_text.xml" afterPath="$PROJECT_DIR$/res/layout/ui_three_keys_view_text.xml" />
+      <change type="MOVED" beforePath="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\timepicker.xml" afterPath="$PROJECT_DIR$/res/layout/ui_timepicker.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CookieMom.apk" afterPath="$PROJECT_DIR$/target/CookieMom.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CookieMom.unaligned.apk" afterPath="$PROJECT_DIR$/target/CookieMom.unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionContentCard.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionContentCard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/ActionFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/action/ActionFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/action/ActionFragment_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/add/AddBoothActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/add/AddBoothActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/add/AddBoothDialogFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/add/AddBoothDialogFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/add/AddScoutActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/add/AddScoutActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/add/AddScoutDialogFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/add/AddScoutDialogFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothContentCard.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothContentCard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/expander/BoothExpanderCookieList.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/expander/BoothExpanderCookieList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/BoothFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/BoothFragment_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothListFragmentCard.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothListFragmentCard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/order/BoothOrderActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/order/BoothOrderActivity_.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/r/net/kjmaster/cookiemom/BuildConfig.java" afterPath="$PROJECT_DIR$/target/generated-sources/r/net/kjmaster/cookiemom/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/cookies/CompleteCookieCard.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/cookies/CompleteCookieCard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/cookies/CookieAmountContentCard.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/cookies/CookieAmountContentCard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/cookies/CookieCardHeader.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/cookies/CookieCardHeader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CookieMom.iml" afterPath="$PROJECT_DIR$/CookieMom.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardContentCard.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardContentCard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardFragment_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/expander/CustomBoothExpander.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/expander/CustomBoothExpander.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/CustomExpander.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/CustomExpander.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/datetimepicker/DateTimePicker.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/datetimepicker/DateTimePicker.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/global/ISettings_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/global/ISettings_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/InnerExpanderAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/InnerExpanderAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/MainActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/MainActivity_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/MainActivity_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/numberpicker/NumberPicker.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/numberpicker/NumberPicker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/numberpicker/NumberPickerDialogFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/numberpicker/NumberPickerDialogFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutCard.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutCard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderCookieList.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderCookieList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderValuesListAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderValuesListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutFragment_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/arrays.xml" afterPath="$PROJECT_DIR$/res/values/arrays.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles.xml" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/select/SelectScoutListActivity.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/select/SelectScoutListActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryCookiesFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryCookiesFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummarySalesFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummarySalesFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="9d0a0215-8efb-451b-a184-5de1526cf397" name="Dao" comment="Dao" />
@@ -623,106 +684,102 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CookieActionActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/CookieActionActivity.java">
+      <file leaf-file-name="cupboard_cookie_amount_no_exopected_layout.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/cupboard_cookie_amount_no_exopected_layout.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="165" column="11" selection-start="4858" selection-end="4858" vertical-scroll-proportion="0.0" vertical-offset="2312" max-vertical-offset="2652">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1164#1409#0" expanded="false" />
-                <element signature="e#1398#1399#0" expanded="false" />
-                <element signature="e#2340#2356#0" expanded="false" />
-                <element signature="e#3574#3575#0" expanded="false" />
-                <element signature="e#3606#3607#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CupboardPickupFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="83" selection-start="4645" selection-end="4645" vertical-scroll-proportion="0.0" vertical-offset="1472" max-vertical-offset="2108">
+            <state line="57" column="15" selection-start="3454" selection-end="3454" vertical-scroll-proportion="-7.2" vertical-offset="789" max-vertical-offset="1071">
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SummarySalesFragment.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummarySalesFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="8" selection-start="2773" selection-end="2773" vertical-scroll-proportion="0.795107" vertical-offset="1083" max-vertical-offset="2142">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bar.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/holograph/HoloGraphLibrary/src/com/echo/holographlibrary/Bar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="15" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="748">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BarGraph.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/holograph/HoloGraphLibrary/src/com/echo/holographlibrary/BarGraph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="178" column="122" selection-start="8094" selection-end="8094" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3434">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_bar.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/fragment_bar.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="summary_stat_scout_fragment.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_scout_fragment.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="29" selection-start="290" selection-end="290" vertical-scroll-proportion="-4.76" vertical-offset="0" max-vertical-offset="289">
+            <state line="44" column="12" selection-start="1853" selection-end="1853" vertical-scroll-proportion="-5.44" vertical-offset="612" max-vertical-offset="1003">
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SummaryCookiesFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryCookiesFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="47" selection-start="2211" selection-end="2211" vertical-scroll-proportion="0.0" vertical-offset="472" max-vertical-offset="1479">
-              <folding />
-            </state>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/Constants.java">
+      <file leaf-file-name="summary_stat_scout_card_inner_layout.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_scout_card_inner_layout.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="55" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0" vertical-offset="163" max-vertical-offset="1071">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="colors.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="884">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CookieCardHeader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/cookies/CookieCardHeader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="76" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="748">
+            <state line="52" column="35" selection-start="2685" selection-end="2685" vertical-scroll-proportion="-9.92" vertical-offset="636" max-vertical-offset="1292">
               <folding>
-                <element signature="e#750#751#0" expanded="true" />
-                <element signature="e#781#782#0" expanded="true" />
+                <element signature="e#3329#3374#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SummaryFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="19" selection-start="2615" selection-end="2615" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1224">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SummaryStatScoutListLayout.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutListLayout.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="13" selection-start="1127" selection-end="1127" vertical-scroll-proportion="-1.0879478" vertical-offset="538" max-vertical-offset="935">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SummaryStatScoutCard.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="94" column="67" selection-start="3351" selection-end="3351" vertical-scroll-proportion="0.0" vertical-offset="1045" max-vertical-offset="2992">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1952#1991#0" expanded="true" />
+                <element signature="e#3642#3666#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="summary_main_fragment.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/summary_main_fragment.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="663">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SummaryStatScout.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScout.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="1" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="425">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SummaryStatScoutCardFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCardFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="0" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="969">
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1059,19 +1116,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/javadoc/net/kjmaster/cookiemom/ui/CompleteCookieCard.html" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/checking/BoothCheckInActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/checking/BoothCheckOutActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/order/ScoutOrderActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/turnin/ScoutTurnInActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/order/BoothOrderActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardOrderActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/add_booth_dialog.xml" />
-        <option value="$PROJECT_DIR$/res/layout/add_scout_dialog.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/pickup/ScoutPickupActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/booth/ActionAssignBooth.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/action/scout/ActionAddScout.java" />
         <option value="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/order/ScoutOrderActivity_.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/MainActivity.java" />
@@ -1080,19 +1124,49 @@
         <option value="$PROJECT_DIR$/res/layout/fragment_summary_main.xml" />
         <option value="$PROJECT_DIR$/res/layout/fragment_piegraph.xml" />
         <option value="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/summary/SummaryFragment_.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryFragment.java" />
         <option value="$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/holograph/HoloGraphLibrary/src/com/echo/holographlibrary/BarGraph.java" />
         <option value="$PROJECT_DIR$/res/layout/fragment_bargraph.xml" />
-        <option value="$PROJECT_DIR$/res/layout/fragment_bar.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/cookies/CompleteCookieCard.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardFragment.java" />
         <option value="$PROJECT_DIR$/res/layout/cookie_base_header_layout.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/cookies/CookieCardHeader.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryCookiesFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/Constants.java" />
         <option value="$PROJECT_DIR$/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_bar.xml" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_main.xml" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_sample.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummarySalesFragment.java" />
+        <option value="$PROJECT_DIR$/res/layout/scout_order_layout.xml" />
+        <option value="$PROJECT_DIR$/res/layout/simple_big_text.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryCookiesFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/datetimepicker/DateTimePicker.java" />
+        <option value="$PROJECT_DIR$/res/layout/summary_scout_main_layout.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderListLayout.java" />
+        <option value="$PROJECT_DIR$/res/layout/summary_scout_table_content.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryScoutFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryScoutCard.java" />
+        <option value="$PROJECT_DIR$/res/layout/summary_stats_fragment.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryScoutValues.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryStatsScoutContentCard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryStratsScout.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryStatsScout.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryStatList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryStatScoutListLayout.java" />
+        <option value="$PROJECT_DIR$/res/layout/summary_stat_scout_table_content.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryStatScoutList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryStatsFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/StockListLayout.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/ListStockAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/BaseFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/GoogleNowStockCard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryStatScoutValuesListAdapter.java" />
+        <option value="$PROJECT_DIR$/res/layout/carddemo_googlenowstock_inner_content.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutListLayout.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/StockCardFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCardFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCard.java" />
       </list>
     </option>
   </component>
@@ -1214,8 +1288,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1232,60 +1304,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="CookieMom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1327,6 +1345,92 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom and modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generated-sources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom and modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generated-sources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="annotations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cookiemom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom and modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CookieMom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generated-sources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="annotations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cookiemom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="summary" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1424,6 +1528,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="summary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="scout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1442,119 +1550,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cookiemom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="global" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cookiemom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cupboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1582,6 +1578,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1619,7 +1617,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/holograph/HoloGraphLibrary/HoloGraphLibrary.iml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/res/layout/datetime" />
     <property name="DEBUGGABLE_DEVICE" value="e0921bae" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
@@ -1631,7 +1629,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="SearchEverywhereHistory" value="Title&#10;color&#10;setBackgroundDrawable" />
+    <property name="SearchEverywhereHistory" value=":&#10;Title&#10;color&#10;setBackgroundDrawable" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="e0921bae" />
@@ -1644,28 +1642,28 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.WIDTH" value="182" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-      <recent name="net.kjmaster.cookiemom.global.CookieActionActivity" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="net.kjmaster.cookiemom.tests" />
       <recent name="net.kjmaster.cookiemom.tests.scout" />
       <recent name="net.kjmaster.cookiemom.scout" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="net.kjmaster.cookiemom.global.CookieActionActivity" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="net.kjmaster.cookiemom.summary" />
       <recent name="net.kjmaster.cookiemom.action" />
       <recent name="net.kjmaster.cookiemom.scout" />
       <recent name="net.kjmaster.cookiemom.personal" />
       <recent name="net.kjmaster.cookiemom.cupboard" />
-      <recent name="net.kjmaster.cookiemom" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\src\main\java\net\kjmaster\cookiemom\summary\stat\scout" />
       <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout" />
       <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\drawable-xhdpi" />
       <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\libs" />
       <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\src\main\java\net\kjmaster\cookiemom" />
-      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\src\main\java\net\kjmaster\cookiemom\scout" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="net.kjmaster.cookiemom" />
@@ -1676,8 +1674,16 @@
       <recent name="net.kjmaster.cookiemom.Constants" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="net.kjmaster.cookiemom.summary" />
       <recent name="net.kjmaster.cookiemom.ui.cookies" />
       <recent name="net.kjmaster.cookiemom" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\" />
+      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\summary" />
+      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\booth" />
+      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\layout\datetime" />
+      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\drawable-xhdpi" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="net.kjmaster.cookiemom.booth.checking" />
@@ -1686,38 +1692,12 @@
       <recent name="net.kjmaster.cookiemom.dao" />
       <recent name="net.kjmaster.cookiemom.action" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\drawable-xhdpi" />
-      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom\res\drawable" />
-      <recent name="C:\Users\Maddy\Downloads\cardslib-master\cardslib-master\library\src\main" />
-      <recent name="C:\Users\Maddy\Downloads\CookieMomMain\CookieMom-AndroidKickstartr\CookieMom" />
-    </key>
   </component>
   <component name="RunManager" selected="Android Application.Main">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -1742,25 +1722,32 @@
       </MavenSettings>
       <method />
     </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -1788,6 +1775,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2098,11 +2098,15 @@
       <created>1387575448671</created>
       <updated>1387575448671</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="reformatted /added graphs addded inv count to cupboard pickup">
+      <created>1387786576388</created>
+      <updated>1387786576388</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.67783093" order="3" side_tool="false" content_ui="tabs" />
@@ -2111,48 +2115,48 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.67145133" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32213742" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6682616" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31450382" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6682616" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.57099235" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3030303" sideWeight="0.2998405" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45427728" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3030303" sideWeight="0.2998405" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22748092" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="SimpleHttpClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42900762" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4274809" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.7719298" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36666667" sideWeight="0.5263158" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2688822" sideWeight="0.67623603" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26510575" sideWeight="0.67623603" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32366413" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="92" y="92" width="1162" height="584" />
       <window_info id="Jindent" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
+      <window_info id="SimpleHttpClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08863636" sideWeight="0.67464113" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Formatter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7719298" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7719298" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39712918" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="92" y="92" width="1162" height="584" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.67783093" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="92" y="92" width="1162" height="584" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5901116" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6682616" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Jindent" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45427728" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SimpleHttpClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27114803" sideWeight="0.67623603" order="4" side_tool="false" content_ui="combo" />
@@ -2168,13 +2172,13 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32213742" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.57099235" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3030303" sideWeight="0.2998405" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22748092" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22748092" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42900762" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.7719298" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36666667" sideWeight="0.5263158" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Formatter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.7719298" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
@@ -2209,7 +2213,8 @@
     <MESSAGE value="scout piclup bugs new icon corrected typo in boot check in that made it act like check out" />
     <MESSAGE value="Fixed date formatting" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="reformatted /added graphs addded inv count to cupboard pickup" />
+    <option name="LAST_COMMIT_MESSAGE" value="reformatted /added graphs addded inv count to cupboard pickup" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -2327,428 +2332,358 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/PagerSlidingTabStrip-master/library/res/values/attrs.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="7" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="4080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/ui_datetimepicker.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="12" selection-start="320" selection-end="320" vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/datetimepicker/DateTimePicker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="34" selection-start="1900" selection-end="1900" vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="2227">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/booth_expander_main_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderValuesListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="42" selection-start="2797" selection-end="2797" vertical-scroll-proportion="0.0" vertical-offset="607" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/scout_select_scout.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/PagerSlidingTabStrip-master/library/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/ids.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="7" selection-start="3378" selection-end="3378" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/PagerSlidingTabStrip-master/library/res/values/attrs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/PagerSlidingTabStrip-master/library/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/PagerSlidingTabStrip-master/library/res/drawable/background_tab.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-sw600dp/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/scout_order_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="107" selection-start="433" selection-end="433" vertical-scroll-proportion="-6.8" vertical-offset="0" max-vertical-offset="306">
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <folding />
-        </state>
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_sample.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderCookieList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="7" selection-start="0" selection-end="3276" vertical-scroll-proportion="-0.68" vertical-offset="0" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1903" selection-end="1903" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="278" column="26" selection-start="9163" selection-end="9163" vertical-scroll-proportion="0.0" vertical-offset="3851" max-vertical-offset="4471">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/attrs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="12" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="357">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/themes.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="12" selection-start="1768" selection-end="1768" vertical-scroll-proportion="0.0" vertical-offset="217" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2346">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/arrays.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="1" selection-start="420" selection-end="420" vertical-scroll-proportion="0.6360856" vertical-offset="64" max-vertical-offset="391">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/holograph/HoloGraphLibrary/src/com/echo/holographlibrary/PieGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="13" selection-start="1555" selection-end="1555" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2771">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_summary_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="3" selection-start="1413" selection-end="1413" vertical-scroll-proportion="-9.88" vertical-offset="246" max-vertical-offset="680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/summary/SummaryFragment_.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="31" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1547">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/holograph/HoloGraphLibrary/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/holograph/HoloGraphLibrary/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="327">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/holograph/HoloGraphLibrary/res/values-v14/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="327">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/holograph/HoloGraphLibrary/res/values-v11/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="327">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1879" selection-end="1879" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="1394">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1214#1222#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_piegraph.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="114" selection-start="151" selection-end="151" vertical-scroll-proportion="-1.36" vertical-offset="0" max-vertical-offset="306">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/checking/BoothCheckInDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="19" selection-start="897" selection-end="897" vertical-scroll-proportion="0.0" vertical-offset="64" max-vertical-offset="459">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#196#242#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/checking/BoothCheckInActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="0" selection-start="2538" selection-end="2538" vertical-scroll-proportion="0.0" vertical-offset="1080" max-vertical-offset="1394">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/expander/CustomBoothExpander.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="867">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/expander/BoothExpanderCookieList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="0" selection-start="5848" selection-end="5848" vertical-scroll-proportion="0.0" vertical-offset="1701" max-vertical-offset="2516">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/scout_card_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="48" selection-start="531" selection-end="531" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/scout_heder.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="20" selection-start="975" selection-end="975" vertical-scroll-proportion="-14.28" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="13" selection-start="854" selection-end="854" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2091">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1109#1137#0" expanded="false" />
-            <element signature="e#1394#1935#0" expanded="false" />
-            <element signature="e#1924#1925#0" expanded="false" />
-            <element signature="e#1990#1991#0" expanded="false" />
-            <element signature="e#2030#2031#0" expanded="false" />
-            <element signature="e#2287#2288#0" expanded="false" />
-            <element signature="e#2327#2328#0" expanded="false" />
-            <element signature="e#2375#2376#0" expanded="false" />
-            <element signature="e#2415#2416#0" expanded="false" />
-            <element signature="e#2465#2466#0" expanded="false" />
-            <element signature="e#2507#2508#0" expanded="false" />
-            <element signature="e#3735#3736#0" expanded="false" />
-            <element signature="e#3774#3775#0" expanded="false" />
-            <element signature="e#3835#3836#0" expanded="false" />
-            <element signature="e#3884#3885#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="16" selection-start="3653" selection-end="3653" vertical-scroll-proportion="0.6640625" vertical-offset="1513" max-vertical-offset="4080">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/action_header.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../cardslib-master/cardslib-master/library/src/main/res/layout/base_header_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="9" selection-start="2382" selection-end="2382" vertical-scroll-proportion="-8.16" vertical-offset="714" max-vertical-offset="1326">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/cookies/CookieAmountContentCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="0" selection-start="3705" selection-end="3705" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1768">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/cookies/CompleteCookieCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1836">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="10" selection-start="3831" selection-end="4262" vertical-scroll-proportion="0.0" vertical-offset="994" max-vertical-offset="2244">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/cookie_base_header_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="2338" selection-end="2338" vertical-scroll-proportion="-9.52" vertical-offset="663" max-vertical-offset="1105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/cookies/CookieCardHeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="76" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="748">
-          <folding>
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#781#782#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/CookieActionActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="11" selection-start="4858" selection-end="4858" vertical-scroll-proportion="0.0" vertical-offset="2312" max-vertical-offset="2652">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1164#1409#0" expanded="false" />
-            <element signature="e#1398#1399#0" expanded="false" />
-            <element signature="e#2340#2356#0" expanded="false" />
-            <element signature="e#3574#3575#0" expanded="false" />
-            <element signature="e#3606#3607#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_bar.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="29" selection-start="290" selection-end="290" vertical-scroll-proportion="-4.76" vertical-offset="0" max-vertical-offset="289">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="55" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0" vertical-offset="163" max-vertical-offset="1071">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/cupboard/CupboardPickupFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="83" selection-start="4645" selection-end="4645" vertical-scroll-proportion="0.0" vertical-offset="1472" max-vertical-offset="2108">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/holograph/HoloGraphLibrary/src/com/echo/holographlibrary/Bar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="15" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../adt-bundle-windows-x86/adt-bundle-windows-x86/sdk/libraries/holograph/HoloGraphLibrary/src/com/echo/holographlibrary/BarGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="122" selection-start="8094" selection-end="8094" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3434">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryCookiesFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="47" selection-start="2211" selection-end="2211" vertical-scroll-proportion="0.0" vertical-offset="472" max-vertical-offset="1479">
+        <state line="45" column="19" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="2516">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummarySalesFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="8" selection-start="2773" selection-end="2773" vertical-scroll-proportion="0.795107" vertical-offset="1083" max-vertical-offset="2142">
+        <state line="29" column="20" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryCookiesFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="53" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="1479">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothTextAdapterListItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothListFragmentCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="14" selection-start="2182" selection-end="2182" vertical-scroll-proportion="0.0" vertical-offset="623" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/summary_bar_fragment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.36" vertical-offset="0" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/summary_piegraph_fragment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="351">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main_fragment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="16" selection-start="91" selection-end="142" vertical-scroll-proportion="-0.68" vertical-offset="0" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../cardslib-master/cardslib-master/library/src/main/res/layout/list_card_thumbnail_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="850" selection-end="850" vertical-scroll-proportion="0.96866095" vertical-offset="0" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/expander/BoothExpanderCookieList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="11" selection-start="1901" selection-end="1901" vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="2516">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderListLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="13" selection-start="2085" selection-end="2085" vertical-scroll-proportion="0.74307305" vertical-offset="538" max-vertical-offset="935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="0" selection-start="1875" selection-end="1875" vertical-scroll-proportion="0.0" vertical-offset="389" max-vertical-offset="833">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="6" selection-start="1441" selection-end="2938" vertical-scroll-proportion="0.0" vertical-offset="177" max-vertical-offset="2992">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/ui_cookie_amount_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/scout_inner_content.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="17" selection-start="6009" selection-end="6009" vertical-scroll-proportion="-8.16" vertical-offset="1632" max-vertical-offset="1938">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/scout_expander_list_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="0" selection-start="2940" selection-end="2940" vertical-scroll-proportion="-18.4" vertical-offset="849" max-vertical-offset="1411">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/scout_expander_inner_expand.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="1182" selection-end="1182" vertical-scroll-proportion="-5.32" vertical-offset="343" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/expander/CustomBoothExpander.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="40" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0" vertical-offset="202" max-vertical-offset="867">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/CustomExpander.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="11" selection-start="2047" selection-end="2047" vertical-scroll-proportion="0.0" vertical-offset="674" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpander.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="13" selection-start="3600" selection-end="3600" vertical-scroll-proportion="0.0" vertical-offset="1100" max-vertical-offset="1768">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../cardslib-master/cardslib-master/library/src/main/java/it/gmariotti/cardslib/library/view/CardView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="384" column="0" selection-start="12142" selection-end="12142" vertical-scroll-proportion="0.0" vertical-offset="5692" max-vertical-offset="13243">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../cardslib-master/cardslib-master/library/src/main/java/it/gmariotti/cardslib/library/internal/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="206" column="0" selection-start="5723" selection-end="5723" vertical-scroll-proportion="0.0" vertical-offset="2972" max-vertical-offset="12342">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../cardslib-master/cardslib-master/library/src/main/java/it/gmariotti/cardslib/library/internal/base/BaseCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="0" selection-start="2920" selection-end="2920" vertical-scroll-proportion="0.0" vertical-offset="1370" max-vertical-offset="3179">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="1" selection-start="1833" selection-end="1833" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="833">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutValuesListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="0" selection-start="2668" selection-end="2668" vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/ui_cookie_table_content.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="50" selection-start="849" selection-end="3127" vertical-scroll-proportion="-4.76" vertical-offset="204" max-vertical-offset="1309">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/cupboard_cookie_amount_no_exopected_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="15" selection-start="3454" selection-end="3454" vertical-scroll-proportion="-7.2" vertical-offset="789" max-vertical-offset="1071">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_scout_card_inner_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="35" selection-start="2685" selection-end="2685" vertical-scroll-proportion="-9.92" vertical-offset="636" max-vertical-offset="1292">
+          <folding>
+            <element signature="e#3329#3374#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="1" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCardFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="0" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="969">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="67" selection-start="3351" selection-end="3351" vertical-scroll-proportion="0.0" vertical-offset="1045" max-vertical-offset="2992">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1952#1991#0" expanded="true" />
+            <element signature="e#3642#3666#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/summary_main_fragment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_scout_fragment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="12" selection-start="1853" selection-end="1853" vertical-scroll-proportion="-5.44" vertical-offset="612" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="19" selection-start="2615" selection-end="2615" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutListLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="13" selection-start="1127" selection-end="1127" vertical-scroll-proportion="-1.0879478" vertical-offset="538" max-vertical-offset="935">
+          <folding />
         </state>
       </provider>
     </entry>

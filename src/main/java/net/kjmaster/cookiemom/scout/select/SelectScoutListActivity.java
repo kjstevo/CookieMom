@@ -19,7 +19,7 @@ import java.util.List;
  */
 
 
-@EActivity(R.layout.select_scout)
+@EActivity(R.layout.scout_select_scout)
 public class SelectScoutListActivity extends ListActivity implements ISendActivityResult {
     //    private DaoMaster daoMaster;
 //    private DaoSession daoSession;
@@ -38,7 +38,7 @@ public class SelectScoutListActivity extends ListActivity implements ISendActivi
     void afterViews() {
         setListAdapter(new ArrayAdapter<Scout>(
                 this,
-                R.layout.simple_big_text,
+                R.layout.ui_simple_big_text,
                 R.id.content,
                 getScoutList()
         ));

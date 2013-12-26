@@ -11,7 +11,7 @@ import net.kjmaster.cookiemom.global.ICookieActionFragment;
 import java.util.HashMap;
 
 
-@EFragment(R.layout.add_scout_dialog)
+@EFragment(R.layout.booth_add_scout_dialog)
 public class AddScoutDialogFragment extends DialogFragment implements ICookieActionFragment {
     @ViewById(R.id.editText)
     EditText editText;

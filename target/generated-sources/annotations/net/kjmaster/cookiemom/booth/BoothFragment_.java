@@ -6,18 +6,12 @@
 package net.kjmaster.cookiemom.booth;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import it.gmariotti.cardslib.library.view.CardListView;
 import net.kjmaster.cookiemom.R.layout;
 
 public final class BoothFragment_
-    extends BoothFragment
-{
+        extends BoothFragment {
 
     private View contentView_;
 
@@ -40,7 +34,7 @@ public final class BoothFragment_
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         contentView_ = super.onCreateView(inflater, container, savedInstanceState);
         if (contentView_ == null) {
-            contentView_ = inflater.inflate(layout.fragment_sample, container, false);
+            contentView_ = inflater.inflate(layout.main_fragment, container, false);
         }
         return contentView_;
     }

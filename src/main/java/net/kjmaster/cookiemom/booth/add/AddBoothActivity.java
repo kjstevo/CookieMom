@@ -19,7 +19,7 @@ import net.kjmaster.cookiemom.global.Constants;
  * Date: 10/28/13
  * Time: 1:26 AM
  */
-@EActivity(R.layout.add_booth_layout)
+@EActivity(R.layout.booth_add_booth_layout)
 public class AddBoothActivity extends FragmentActivity implements ActionMode.Callback {
 
     @FragmentByTag("add_booth")

@@ -17,7 +17,7 @@
  */
 
 
-package net.kjmaster.cookiemom.scout.expander;
+package net.kjmaster.cookiemom.summary.stat.scout;
 
 //~--- non-JDK imports --------------------------------------------------------
 
@@ -37,14 +37,14 @@ import java.util.List;
 /**
  * @author Gabriele Mariotti (gabri.mariotti@gmail.com)
  */
-public class ScoutExpanderValuesListAdapter extends ArrayAdapter<ScoutExpanderValues> {
-    public ScoutExpanderValuesListAdapter(Context context, List<ScoutExpanderValues> objects) {
+public class SummaryStatScoutValuesListAdapter extends ArrayAdapter<SummaryStatScoutValues> {
+    public SummaryStatScoutValuesListAdapter(Context context, List<SummaryStatScoutValues> objects) {
         super(context, 0, objects);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ScoutExpanderValues item = getItem(position);
+        SummaryStatScoutValues item = getItem(position);
 
         // Without ViewHolder for demo purpose
         View view = convertView;
@@ -62,7 +62,7 @@ public class ScoutExpanderValuesListAdapter extends ArrayAdapter<ScoutExpanderVa
         NumberFormat fmt = NumberFormat.getCurrencyInstance();
         textView1.setText(item.code);
         textView2.setText("" + Double.valueOf(item.value).intValue());
-        textView3.setText("" + Double.valueOf(item.delta).intValue());
+        textView3.setText("" + fmt.format(Double.valueOf(item.delta).intValue()));
         textView4.setText(fmt.format((double) item.deltaPerc));
 
         return view;

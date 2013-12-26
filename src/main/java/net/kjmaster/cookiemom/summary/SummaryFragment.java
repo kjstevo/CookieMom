@@ -11,6 +11,7 @@ import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.ItemSelect;
 import com.googlecode.androidannotations.annotations.ViewById;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.summary.stat.scout.SummaryStatScoutCardFragment_;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,13 +19,13 @@ import net.kjmaster.cookiemom.R;
  * Date: 12/21/13
  * Time: 6:10 PM
  */
-@EFragment(R.layout.fragment_summary_main)
+@EFragment(R.layout.summary_main_fragment)
 public class SummaryFragment extends Fragment {
 
     @ViewById(R.id.spinner)
     Spinner spinner;
 
-    String[] tags = new String[]{"Cookies", "Sales", "Scouts"};
+    String[] tags = new String[]{"Cookies", "Sales", "Stats"};
 
     @AfterViews
     void afterViews() {
@@ -58,7 +59,7 @@ public class SummaryFragment extends Fragment {
                 ft.replace(R.id.graph_content, SummarySalesFragment_.builder().build(), tags[pos]);
                 break;
             case 2:
-                ft.replace(R.id.graph_content, SummaryCookiesFragment_.builder().build(), tags[pos]);
+                ft.replace(R.id.graph_content, SummaryStatScoutCardFragment_.builder().build(), tags[pos]);
                 break;
             default:
                 ft.replace(R.id.graph_content, SummaryCookiesFragment_.builder().build(), tags[pos]);

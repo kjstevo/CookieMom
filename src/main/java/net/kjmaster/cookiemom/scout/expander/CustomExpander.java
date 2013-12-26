@@ -18,7 +18,7 @@ public class CustomExpander extends CardExpand {
 
     // Use your resource ID for your inner layout
     public CustomExpander(Context context, Scout scout) {
-        super(context, R.layout.custom_expander_main_layout);
+        super(context, R.layout.booth_expander_main_layout);
         this.scout = scout;
     }
 
@@ -54,7 +54,7 @@ public class CustomExpander extends CardExpand {
         card2.addCardHeader(header);
 
         // Add expand
-        ScoutExpander expand = new ScoutExpander(getContext(), R.layout.carddemo_googlenow_inner_expand, scout.getId());
+        ScoutExpander expand = new ScoutExpander(getContext(), R.layout.scout_expander_inner_expand, scout.getId());
 
         card2.addCardExpand(expand);
 

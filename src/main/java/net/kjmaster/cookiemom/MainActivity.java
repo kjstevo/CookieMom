@@ -35,7 +35,7 @@ import java.util.Date;
 import java.util.List;
 
 @OptionsMenu(R.menu.activity_main)
-@EActivity(R.layout.activity_main)
+@EActivity(R.layout.main_activity)
 public class MainActivity extends FragmentActivity {
 
     private final Handler handler = new Handler();

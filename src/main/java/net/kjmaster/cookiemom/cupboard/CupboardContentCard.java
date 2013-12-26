@@ -21,7 +21,7 @@ public class CupboardContentCard extends Card {
     private final int boxesOnOrder;
 
     public CupboardContentCard(Context context, int boxesOnHand, int boxesOnOrder) {
-        this(context, boxesOnHand, boxesOnOrder, R.layout.cookie_amount_no_exopected_layout);
+        this(context, boxesOnHand, boxesOnOrder, R.layout.cupboard_cookie_amount_no_exopected_layout);
     }
 
     public CupboardContentCard(Context context, int boxesOnHand, int boxesOnOrder, int layoutId) {

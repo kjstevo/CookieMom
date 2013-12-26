@@ -50,7 +50,7 @@ public class BoothExpanderCookieList extends Card {
     private final Booth mBooth;
 
     public BoothExpanderCookieList(Context context, Booth booth) {
-        this(context, booth, R.layout.carddemo_googlenowstock_inner_content);
+        this(context, booth, R.layout.ui_cookie_table_content);
     }
 
     public BoothExpanderCookieList(Context context, Booth booth, int innerLayout) {

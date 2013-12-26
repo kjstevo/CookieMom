@@ -53,11 +53,11 @@ public class DateTimePicker extends RelativeLayout implements View.OnClickListen
         // Get LayoutInflater instance
         final LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         // Inflate myself
-        inflater.inflate(R.layout.datetimepicker, this, true);
+        inflater.inflate(R.layout.ui_datetimepicker, this, true);
 
         // Inflate the date and time picker views
-        final LinearLayout datePickerView = (LinearLayout) inflater.inflate(R.layout.datepicker, null);
-        final LinearLayout timePickerView = (LinearLayout) inflater.inflate(R.layout.timepicker, null);
+        final LinearLayout datePickerView = (LinearLayout) inflater.inflate(R.layout.ui_datepicker, null);
+        final LinearLayout timePickerView = (LinearLayout) inflater.inflate(R.layout.ui_timepicker, null);
 
         // Grab a Calendar instance
         mCalendar = Calendar.getInstance();

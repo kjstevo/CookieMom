@@ -53,7 +53,7 @@ public abstract class ActionContentCard extends Card implements IAction {
                 //noinspection unchecked
                 mActionList.setAdapter(new ArrayAdapter(
                         getContext(),
-                        R.layout.simple_medium_text,
+                        R.layout.ui_simple_medium_text,
                         R.id.content,
                         getActionList()
                 ));

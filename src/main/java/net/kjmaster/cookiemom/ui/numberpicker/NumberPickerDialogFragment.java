@@ -137,7 +137,7 @@ public class NumberPickerDialogFragment extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.number_picker_dialog, null);
+        View v = inflater.inflate(R.layout.ui_number_picker_dialog, null);
         Button mSet = (Button) v.findViewById(R.id.set_button);
         Button mCancel = (Button) v.findViewById(R.id.cancel_button);
         mCancel.setOnClickListener(new View.OnClickListener() {
