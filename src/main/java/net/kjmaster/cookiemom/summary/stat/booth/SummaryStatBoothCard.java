@@ -16,7 +16,7 @@
  *  *****************************************************************************
  */
 
-package net.kjmaster.cookiemom.summary.stat.scout;
+package net.kjmaster.cookiemom.summary.stat.booth;
 
 import android.content.Context;
 import android.util.Log;
@@ -27,25 +27,26 @@ import it.gmariotti.cardslib.library.internal.Card;
 import it.gmariotti.cardslib.library.internal.CardHeader;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kmaster.cookiemom.dao.Booth;
 import net.kmaster.cookiemom.dao.CookieTransactions;
-import net.kmaster.cookiemom.dao.Scout;
+import net.kmaster.cookiemom.dao.CookieTransactionsDao;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 /**
- * This class provides a simple card as Google Now SummaryStatScout
+ * This class provides a simple card as Google Now SummaryStatBooth
  *
  * @author Gabriele Mariotti (gabri.mariotti@gmail.com)
  */
-public class SummaryStatScoutCard extends Card {
+public class SummaryStatBoothCard extends Card {
 
-    public SummaryStatScoutCard(Context context) {
-        this(context, R.layout.summary_stat_scout_card_inner_layout);
+    public SummaryStatBoothCard(Context context) {
+        this(context, R.layout.summary_stat_booth_card_inner_layout);
     }
 
-    public SummaryStatScoutCard(Context context, int innerLayout) {
+    public SummaryStatBoothCard(Context context, int innerLayout) {
         super(context, innerLayout);
         init();
 
@@ -55,7 +56,7 @@ public class SummaryStatScoutCard extends Card {
         //Add Header
         CardHeader header = new CardHeader(getContext());
         header.setButtonExpandVisible(true);
-        header.setTitle(getContext().getString(R.string.Scouts)); //should use R.string.
+        header.setTitle(getContext().getString(R.string.Booths)); //should use R.string.
         addCardHeader(header);
 
         //Add expand
@@ -85,9 +86,9 @@ public class SummaryStatScoutCard extends Card {
         TextView textView = (TextView) view.findViewById(R.id.carddemo_googlenow_main_inner_lastupdate);
 //        textView.setText("Update 14:57, 16 September"); //should use R.string.
 
-        SummaryStatScoutListLayout list = (SummaryStatScoutListLayout) view.findViewById(R.id.carddemo_googlenow_main_inner_list);
-        SummaryStatScoutValuesListAdapter mAdapter =
-                new SummaryStatScoutValuesListAdapter(super.getContext(), buildArrayHelper());
+        SummaryStatBoothListLayout list = (SummaryStatBoothListLayout) view.findViewById(R.id.carddemo_googlenow_main_inner_list);
+        SummaryStatBoothValuesListAdapter mAdapter =
+                new SummaryStatBoothValuesListAdapter(super.getContext(), buildArrayHelper());
 
 
         list.setAdapter(mAdapter);
@@ -98,33 +99,33 @@ public class SummaryStatScoutCard extends Card {
     //------------------------------------------------------------------------------------------
 
 
-    ArrayList<SummaryStatScoutValues> buildArrayHelper() {
+    ArrayList<SummaryStatBoothValues> buildArrayHelper() {
         //DataStore        dataStore = new DataStore(getContext());
-        ArrayList<SummaryStatScoutValues> list = new ArrayList<SummaryStatScoutValues>();
+        ArrayList<SummaryStatBoothValues> list = new ArrayList<SummaryStatBoothValues>();
         String cash = "$0.00/$0.00";
         float cashTotal = 0;
-        List<Scout> scoutList = Main.daoSession.getScoutDao().loadAll();
-        for (Scout scout : scoutList) {
-            String scoutName = scout.getScoutName();
-            HashMap<String, String> orderTotals = getTotalOrderPossCashForScoutCookieType(scout);
-            SummaryStatScoutValues summaryStatScoutValues = new SummaryStatScoutValues();
+        List<Booth> boothList = Main.daoSession.getBoothDao().loadAll();
+        for (Booth booth : boothList) {
+            String boothName = booth.getBoothLocation();
+            HashMap<String, String> orderTotals = getTotalOrderPossCashForBoothCookieType(booth);
+            SummaryStatBoothValues summaryStatBoothValues = new SummaryStatBoothValues();
 
-            summaryStatScoutValues.setCode(scoutName);
+            summaryStatBoothValues.setCode(boothName);
             try {
                 float possTotal = Float.valueOf(orderTotals.get("PossTotal")) * -1;
                 float orderTotal = Float.valueOf(orderTotals.get("OrderTotal"));
 
-                summaryStatScoutValues.setValue(possTotal);
+                summaryStatBoothValues.setValue(possTotal);
 
 
                 cash = orderTotals.get("CashTotal");
-                cashTotal = (cashTotal + (summaryStatScoutValues.getValue() * 4));
-                summaryStatScoutValues.setDelta(Float.valueOf(cash));
-                summaryStatScoutValues.setDeltaPerc((possTotal * 4) - Float.valueOf(cash));
+                cashTotal = (cashTotal + (summaryStatBoothValues.getValue() * 4));
+                summaryStatBoothValues.setDelta(Float.valueOf(cash));
+                summaryStatBoothValues.setDeltaPerc(((possTotal * 4) - Float.valueOf(cash)) * -1);
             } catch (Exception e) {
-                Log.e("cookiemom", "error in Google ScoutExpanderValues Card");
+                Log.e("cookiemom", "error in Google BoothExpanderValues Card");
             }
-            list.add(summaryStatScoutValues);
+            list.add(summaryStatBoothValues);
         }
 
         CardHeader header = new CardHeader(getContext());
@@ -133,22 +134,14 @@ public class SummaryStatScoutCard extends Card {
         header.setTitle("$" + cash + "/$" + String.valueOf(cashTotal));    // should use R.string.
         addCardHeader(header);
 
-//      ScoutExpanderValues s1 = new ScoutExpanderValues("GOOG", 889.07f, 0.00f, 0.00f);
-//      ScoutExpanderValues s2 = new ScoutExpanderValues("AAPL", 404.27f, 0.00f, 0.00f);
-//      ScoutExpanderValues s3 = new ScoutExpanderValues("ENI", 17.59f, 0.06f, 0.34f);
-//      ScoutExpanderValues s4 = new ScoutExpanderValues("Don Jones", 15.376f, 0.00f, 0.00f);
-//
-//
-//      list.add(s1);
-//      list.add(s2);
-//      list.add(s3);
-//      list.add(s4);
         return list;
     }
 
-    private HashMap<String, String> getTotalOrderPossCashForScoutCookieType(Scout scout) {
+    private HashMap<String, String> getTotalOrderPossCashForBoothCookieType(Booth booth) {
 
-        List<CookieTransactions> transactionsList = scout.getScoutsCookieTransactions();
+        List<CookieTransactions> transactionsList = Main.daoSession.getCookieTransactionsDao().queryBuilder()
+                .where(CookieTransactionsDao.Properties.TransBoothId.eq(booth.getId()))
+                .list();
 
         HashMap<String, String> hashMap = new HashMap<String, String>();
 

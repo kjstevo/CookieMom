@@ -11,7 +11,7 @@ import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.ItemSelect;
 import com.googlecode.androidannotations.annotations.ViewById;
 import net.kjmaster.cookiemom.R;
-import net.kjmaster.cookiemom.summary.stat.scout.SummaryStatScoutCardFragment_;
+import net.kjmaster.cookiemom.summary.stat.SummaryStatFragment_;
 
 /**
  * Created with IntelliJ IDEA.
@@ -59,10 +59,11 @@ public class SummaryFragment extends Fragment {
                 ft.replace(R.id.graph_content, SummarySalesFragment_.builder().build(), tags[pos]);
                 break;
             case 2:
-                ft.replace(R.id.graph_content, SummaryStatScoutCardFragment_.builder().build(), tags[pos]);
+                ft.replace(R.id.graph_content, SummaryStatFragment_.builder().build(), tags[pos]);
                 break;
             default:
                 ft.replace(R.id.graph_content, SummaryCookiesFragment_.builder().build(), tags[pos]);
+
 
                 break;
         }

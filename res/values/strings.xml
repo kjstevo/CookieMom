@@ -145,5 +145,10 @@
     <string name="booths">Booths</string>
     <string name="booths_need_ordering">The following booths need to be ordered:</string>
     <string name="booths_req_check_in">These booths are awaiting check-in:</string>
+    <string name="totals">Totals</string>
+    <string name="paid">Paid</string>
+    <string name="gifts_of_caring">Gifts of Caring</string>
+    <string name="cash_recieved">Cash Recieved</string>
+    <string name="deficit">Deficit</string>
 
 </resources>

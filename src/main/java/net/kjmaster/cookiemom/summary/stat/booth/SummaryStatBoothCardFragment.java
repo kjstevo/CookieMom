@@ -16,7 +16,7 @@
  *  *****************************************************************************
  */
 
-package net.kjmaster.cookiemom.summary.stat.scout;
+package net.kjmaster.cookiemom.summary.stat.booth;
 
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EFragment;
@@ -29,11 +29,11 @@ import net.kjmaster.cookiemom.R;
  *
  * @author Gabriele Mariotti (gabri.mariotti@gmail.com)
  */
-@EFragment(R.layout.summary_stat_scout_fragment)
-public class SummaryStatScoutCardFragment extends android.support.v4.app.Fragment {
+@EFragment(R.layout.summary_stat_booth_fragment)
+public class SummaryStatBoothCardFragment extends android.support.v4.app.Fragment {
 
 
-    @ViewById(R.id.summary_stat_scout_cardview)
+    @ViewById(R.id.summary_stat_booth_cardview)
     CardView mCardView;
 
     @AfterViews
@@ -49,7 +49,7 @@ public class SummaryStatScoutCardFragment extends android.support.v4.app.Fragmen
     private void initCard() {
 
         //Create a Card
-        SummaryStatScoutCard card = new SummaryStatScoutCard(getActivity().getApplicationContext());
+        SummaryStatBoothCard card = new SummaryStatBoothCard(getActivity().getApplicationContext());
 
         //Set card in the cardView
         mCardView.setCard(card);
