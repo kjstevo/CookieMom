@@ -101,6 +101,9 @@ public class SummaryStatTotalsCard extends Card {
         }
         totalGoc = totalCash - (totalBoxes * 4);
         NumberFormat fmt = NumberFormat.getCurrencyInstance();
+        fmt.setMaximumFractionDigits(0);
+        fmt.setMinimumFractionDigits(0);
+
         boxesView.setText(String.valueOf(totalBoxes));
         cashView.setText(String.valueOf(fmt.format(totalCash)));
         if (totalGoc < 0) {

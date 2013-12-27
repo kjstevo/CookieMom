@@ -66,6 +66,8 @@ public class SummarySalesFragment extends Fragment {
             }
         }
         NumberFormat fmt = NumberFormat.getCurrencyInstance();
+        fmt.setMaximumFractionDigits(0);
+        fmt.setMinimumFractionDigits(0);
 
         ArrayList<Bar> points = new ArrayList<Bar>();
         Bar d = new Bar();

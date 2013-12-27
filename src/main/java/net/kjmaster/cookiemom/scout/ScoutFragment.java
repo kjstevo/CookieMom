@@ -147,6 +147,8 @@ public class ScoutFragment extends Fragment implements ISimpleDialogListener, IC
 
         transTotal = transTotal * -1;
         NumberFormat fmt = NumberFormat.getCurrencyInstance();
+        fmt.setMaximumFractionDigits(0);
+        fmt.setMinimumFractionDigits(0);
         String owed = fmt.format((transTotal * 4) - cashTotal);
 
         mCard.setAltCount(transTotal.toString());

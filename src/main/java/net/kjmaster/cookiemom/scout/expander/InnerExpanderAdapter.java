@@ -36,6 +36,8 @@ public class InnerExpanderAdapter extends ArrayAdapter<InnerExpanderValues> {
             TextView textView3 = (TextView) view.findViewById(R.id.textView3);
             TextView textView4 = (TextView) view.findViewById(R.id.textView4);
             NumberFormat fmt = NumberFormat.getCurrencyInstance();
+            fmt.setMaximumFractionDigits(0);
+            fmt.setMinimumFractionDigits(0);
             textView1.setText(item.getDate());
             textView2.setText("" + String.valueOf(item.getBoxes()));
             textView3.setText("" + fmt.format(item.getCash()));

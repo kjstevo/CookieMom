@@ -60,6 +60,8 @@ public class SummaryStatScoutValuesListAdapter extends ArrayAdapter<SummaryStatS
         TextView textView3 = (TextView) view.findViewById(R.id.textView3);
         TextView textView4 = (TextView) view.findViewById(R.id.textView4);
         NumberFormat fmt = NumberFormat.getCurrencyInstance();
+        fmt.setMaximumFractionDigits(0);
+        fmt.setMinimumFractionDigits(0);
         textView1.setText(item.code);
         textView2.setText("" + Double.valueOf(item.value).intValue());
         textView3.setText("" + fmt.format(Double.valueOf(item.delta).intValue()));

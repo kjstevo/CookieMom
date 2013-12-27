@@ -69,6 +69,8 @@ public class ScoutExpander extends CardExpand {
 
             TextView textView2 = new TextView(context);
             NumberFormat fmt = NumberFormat.getCurrencyInstance();
+            fmt.setMaximumFractionDigits(0);
+            fmt.setMinimumFractionDigits(0);
             textView2.setText(fmt.format(tran.getTransCash()));
             tableRow.addView(textView);
             tableRow.addView(textView1);

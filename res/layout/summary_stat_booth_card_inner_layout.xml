@@ -30,29 +30,29 @@
         <TextView
                 style="@style/carddemo_googlenow_main_inner_lastupdate"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:text="Cookie Type"
+                android:layout_height="wrap_content" android:text="Location"
                 android:textColor="@android:color/black" android:paddingLeft="5dp"
-                android:paddingRight="5dp" android:layout_gravity="center_horizontal|bottom"/>
+                android:paddingRight="5dp" android:layout_gravity="center_horizontal|bottom" android:layout_weight="3"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Boxes"
                 android:id="@+id/textView" android:textColor="@android:color/holo_blue_dark"
                 android:paddingLeft="5dp" android:paddingRight="5dp"
-                android:layout_gravity="center_horizontal|bottom"/>
+                android:layout_gravity="center_horizontal|bottom" android:layout_weight="1"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Paid"
                 android:id="@+id/textView1" android:textColor="@android:color/holo_green_dark"
                 android:paddingLeft="5dp" android:paddingRight="5dp"
-                android:layout_gravity="center_horizontal|bottom"/>
+                android:layout_gravity="center_horizontal|bottom" android:layout_weight="1"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Amt Due"
+                android:text="Diff/Goc"
                 android:id="@+id/textView2" android:paddingLeft="5dp"
-                android:paddingRight="5dp" android:layout_gravity="center_horizontal"/>
+                android:paddingRight="5dp" android:layout_gravity="center_horizontal" android:layout_weight="1"/>
 
     </LinearLayout>
     <TextView

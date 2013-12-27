@@ -512,30 +512,22 @@
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="724653b3-d774-431b-a637-8e4913711973" name="Default" comment="refactoring, added summart scout stats">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBooth.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothCardFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothListLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothValues.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothValuesListAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/SummaryStatFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/totals/SummaryStatTotalsCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/totals/SummaryStatTotalsFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/summary_stat_booth_card_inner_layout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/summary_stat_booth_fragment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/summary_stat_fragment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/summary_stat_totals_card_inner_layout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/summary_stat_totals_fragment.xml" />
+    <list default="true" id="724653b3-d774-431b-a637-8e4913711973" name="Default" comment="added booth info to summary stats">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CookieMom.apk" afterPath="$PROJECT_DIR$/target/CookieMom.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CookieMom.unaligned.apk" afterPath="$PROJECT_DIR$/target/CookieMom.unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/BoothFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/booth/BoothFragment_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/cupboard/CupboardFragment_.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/InnerExpanderAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/InnerExpanderAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpander.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpander.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderValuesListAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderValuesListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutFragment_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCard.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCardFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCardFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummarySalesFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummarySalesFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothValuesListAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothValuesListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutValuesListAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutValuesListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/totals/SummaryStatTotalsCard.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/totals/SummaryStatTotalsCard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/summary_stat_booth_card_inner_layout.xml" afterPath="$PROJECT_DIR$/res/layout/summary_stat_booth_card_inner_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/summary_stat_scout_card_inner_layout.xml" afterPath="$PROJECT_DIR$/res/layout/summary_stat_scout_card_inner_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/summary_stat_totals_card_inner_layout.xml" afterPath="$PROJECT_DIR$/res/layout/summary_stat_totals_card_inner_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/summary_stat_totals_fragment.xml" afterPath="$PROJECT_DIR$/res/layout/summary_stat_totals_fragment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="9d0a0215-8efb-451b-a184-5de1526cf397" name="Dao" comment="Dao" />
@@ -619,125 +611,7 @@
     <favorites_list name="CookieMom" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="SummaryStatBoothValuesListAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothValuesListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="26" selection-start="1700" selection-end="1700" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1173">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SummaryStatBoothCard.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothCard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="51" selection-start="4685" selection-end="4685" vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="2941">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2242#2281#0" expanded="true" />
-                <element signature="e#3932#3956#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="summary_stat_scout_card_inner_layout.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_scout_card_inner_layout.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="5" selection-start="0" selection-end="3503" vertical-scroll-proportion="-8.16" vertical-offset="884" max-vertical-offset="1292">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="summary_stat_totals_card_inner_layout.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_totals_card_inner_layout.xml">
-          <provider editor-type-id="text-editor">
-            <state line="82" column="44" selection-start="4753" selection-end="4753" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="1768">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="summary_stat_totals_fragment.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_totals_fragment.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="-5.32" vertical-offset="20" max-vertical-offset="289">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="summary_stat_fragment.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_fragment.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="16" selection-start="1150" selection-end="1150" vertical-scroll-proportion="-3.8" vertical-offset="313" max-vertical-offset="816">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SummaryStatFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/SummaryStatFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="768" selection-end="768" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="918">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SummaryStatBoothCardFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothCardFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="4" selection-start="1412" selection-end="1412" vertical-scroll-proportion="0.0" vertical-offset="211" max-vertical-offset="867">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SummaryStatScoutCard.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="20" selection-start="6714" selection-end="6726" vertical-scroll-proportion="0.24829932" vertical-offset="2392" max-vertical-offset="2771">
-              <folding>
-                <element signature="e#3642#3666#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="summary_stat_booth_fragment.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_booth_fragment.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="5" selection-start="845" selection-end="845" vertical-scroll-proportion="-6.12" vertical-offset="153" max-vertical-offset="986">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -1068,13 +942,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/global/Constants.java" />
-        <option value="$PROJECT_DIR$/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/res/layout/fragment_bar.xml" />
-        <option value="$PROJECT_DIR$/res/layout/fragment_main.xml" />
-        <option value="$PROJECT_DIR$/res/layout/fragment_sample.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummarySalesFragment.java" />
-        <option value="$PROJECT_DIR$/res/layout/scout_order_layout.xml" />
         <option value="$PROJECT_DIR$/res/layout/simple_big_text.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryCookiesFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/ui/datetimepicker/DateTimePicker.java" />
@@ -1103,22 +970,29 @@
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/StockCardFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/SummartStatFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryFragment.java" />
-        <option value="$PROJECT_DIR$/res/layout/summary_stat_totals_fragment.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCard.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/totals/SummaryStatTotalsFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCardFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/totals/SummaryStatTotalsCard.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBooth.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothValues.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothCardFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothListLayout.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothValuesListAdapter.java" />
-        <option value="$PROJECT_DIR$/res/layout/summary_stat_booth_card_inner_layout.xml" />
         <option value="$PROJECT_DIR$/res/layout/summary_stat_booth_fragment.xml" />
         <option value="$PROJECT_DIR$/res/layout/summary_stat_fragment.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/SummaryStatFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothCard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/totals/SummaryStatTotalsCard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/InnerExpanderAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpander.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderValuesListAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummarySalesFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothValuesListAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutValuesListAdapter.java" />
+        <option value="$PROJECT_DIR$/res/layout/summary_stat_totals_fragment.xml" />
         <option value="$PROJECT_DIR$/res/layout/summary_stat_totals_card_inner_layout.xml" />
+        <option value="$PROJECT_DIR$/res/layout/summary_stat_scout_card_inner_layout.xml" />
+        <option value="$PROJECT_DIR$/res/layout/summary_stat_booth_card_inner_layout.xml" />
       </list>
     </option>
   </component>
@@ -1268,60 +1142,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom and modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleGroupNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CookieMom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -1378,12 +1198,12 @@
     <property name="SearchEverywhereHistory" value="&#10;:&#10;Title&#10;color&#10;setBackgroundDrawable" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="e0921bae" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="9617c353" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="gradle.tool.window.active" value="Tasks" />
     <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="319" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="633" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.WIDTH" value="182" />
   </component>
@@ -1852,7 +1672,11 @@
       <created>1388021997951</created>
       <updated>1388021997951</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added booth info to summary stats">
+      <created>1388096689728</created>
+      <updated>1388096689728</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1878,7 +1702,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.7719298" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36666667" sideWeight="0.5263158" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33610272" sideWeight="0.67623603" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33006042" sideWeight="0.67623603" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32366413" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="92" y="92" width="1162" height="584" />
       <window_info id="Jindent" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
@@ -1965,7 +1789,8 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="reformatted /added graphs addded inv count to cupboard pickup" />
     <MESSAGE value="refactoring, added summart scout stats" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring, added summart scout stats" />
+    <MESSAGE value="added booth info to summary stats" />
+    <option name="LAST_COMMIT_MESSAGE" value="added booth info to summary stats" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -2083,37 +1908,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/scout_order_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="107" selection-start="433" selection-end="433" vertical-scroll-proportion="-6.8" vertical-offset="0" max-vertical-offset="306">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderCookieList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="19" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="2516">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummarySalesFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="20" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1853">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummaryCookiesFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="53" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="1479">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/booth/BoothTextAdapterListItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="13" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="595">
@@ -2232,13 +2026,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpander.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="13" selection-start="3600" selection-end="3600" vertical-scroll-proportion="0.0" vertical-offset="1100" max-vertical-offset="1768">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../cardslib-master/cardslib-master/library/src/main/java/it/gmariotti/cardslib/library/view/CardView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="384" column="0" selection-start="12142" selection-end="12142" vertical-scroll-proportion="0.0" vertical-offset="5692" max-vertical-offset="13243">
@@ -2342,36 +2129,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="23" selection-start="1503" selection-end="1503" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="867">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_scout_fragment.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="986">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/totals/SummaryStatTotalsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="18" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0" vertical-offset="157" max-vertical-offset="595">
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/totals/SummaryStatTotalsCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="67" selection-start="4652" selection-end="4652" vertical-scroll-proportion="0.0" vertical-offset="1189" max-vertical-offset="1683">
-          <folding>
-            <element signature="e#2304#2343#0" expanded="true" />
-            <element signature="e#4540#4576#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2394,15 +2161,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="38" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1003">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutValuesListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="45" selection-start="2003" selection-end="2003" vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="1003">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2416,60 +2176,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_booth_card_inner_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="116" selection-start="2258" selection-end="2258" vertical-scroll-proportion="7.52" vertical-offset="936" max-vertical-offset="1292">
-          <folding>
-            <element signature="e#3341#3386#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothValuesListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="26" selection-start="1700" selection-end="1700" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1173">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_booth_fragment.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="5" selection-start="845" selection-end="845" vertical-scroll-proportion="-6.12" vertical-offset="153" max-vertical-offset="986">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_scout_card_inner_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="5" selection-start="0" selection-end="3503" vertical-scroll-proportion="-8.16" vertical-offset="884" max-vertical-offset="1292">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_totals_fragment.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="-5.32" vertical-offset="20" max-vertical-offset="289">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_fragment.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="16" selection-start="1150" selection-end="1150" vertical-scroll-proportion="-3.8" vertical-offset="313" max-vertical-offset="816">
+        <state line="24" column="20" selection-start="1218" selection-end="1218" vertical-scroll-proportion="-0.0" vertical-offset="408" max-vertical-offset="816">
           <folding />
         </state>
       </provider>
@@ -2479,36 +2188,149 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/SummaryStatFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="768" selection-end="768" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="918">
+        <state line="22" column="4" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="884">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothCardFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="4" selection-start="1412" selection-end="1412" vertical-scroll-proportion="0.0" vertical-offset="211" max-vertical-offset="867">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="35" column="4" selection-start="1340" selection-end="1340" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="833">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothCard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="51" selection-start="4685" selection-end="4685" vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="2941">
+        <state line="119" column="0" selection-start="4451" selection-end="4451" vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="2890">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2242#2281#0" expanded="true" />
-            <element signature="e#3932#3956#0" expanded="true" />
+            <element signature="e#2008#2047#0" expanded="false" />
+            <element signature="e#3698#3722#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="20" selection-start="6714" selection-end="6726" vertical-scroll-proportion="0.0" vertical-offset="2392" max-vertical-offset="2771">
+          <folding>
+            <element signature="e#3642#3666#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="8" selection-start="5359" selection-end="5359" vertical-scroll-proportion="0.0" vertical-offset="1925" max-vertical-offset="3655">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/InnerExpanderAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="12" selection-start="1358" selection-end="1358" vertical-scroll-proportion="0.0" vertical-offset="356" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpander.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="12" selection-start="2505" selection-end="2505" vertical-scroll-proportion="0.0" vertical-offset="830" max-vertical-offset="1768">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderValuesListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="8" selection-start="2339" selection-end="2339" vertical-scroll-proportion="0.0" vertical-offset="485" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummarySalesFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="8" selection-start="2425" selection-end="2425" vertical-scroll-proportion="0.36389685" vertical-offset="706" max-vertical-offset="1853">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1712#1729#0" expanded="false" />
+            <element signature="e#4322#4560#0" expanded="false" />
+            <element signature="e#4547#4548#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothValuesListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="8" selection-start="2358" selection-end="2358" vertical-scroll-proportion="0.36389685" vertical-offset="485" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutValuesListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="8" selection-start="2358" selection-end="2358" vertical-scroll-proportion="0.34383956" vertical-offset="492" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/totals/SummaryStatTotalsCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="59" selection-start="3857" selection-end="3857" vertical-scroll-proportion="0.31805158" vertical-offset="1113" max-vertical-offset="1666">
+          <folding>
+            <element signature="e#1926#1965#0" expanded="true" />
+            <element signature="e#4252#4288#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_totals_fragment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="45" selection-start="399" selection-end="399" vertical-scroll-proportion="0.44884488" vertical-offset="0" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_totals_card_inner_layout.xml">
       <provider editor-type-id="text-editor">
-        <state line="82" column="44" selection-start="4753" selection-end="4753" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="1768">
+        <state line="88" column="12" selection-start="5000" selection-end="5000" vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="1870">
+          <folding>
+            <element signature="e#1128#1159#0" expanded="true" />
+            <element signature="e#1195#1225#0" expanded="true" />
+            <element signature="e#1247#1279#0" expanded="true" />
+            <element signature="e#1318#1351#0" expanded="true" />
+            <element signature="e#1636#1666#0" expanded="true" />
+            <element signature="e#1767#1783#0" expanded="true" />
+            <element signature="e#3079#3105#0" expanded="true" />
+            <element signature="e#3650#3676#0" expanded="true" />
+            <element signature="e#4553#4576#0" expanded="true" />
+            <element signature="e#5178#5203#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_scout_fragment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="51" selection-start="1678" selection-end="1818" vertical-scroll-proportion="0.8919753" vertical-offset="408" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_scout_card_inner_layout.xml">
+      <provider editor-type-id="text-editor">
+        <state line="46" column="92" selection-start="2384" selection-end="2434" vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="1292">
           <folding />
         </state>
       </provider>
@@ -2516,13 +2338,24 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutCard.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_booth_fragment.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="20" selection-start="6714" selection-end="6726" vertical-scroll-proportion="0.24829932" vertical-offset="2392" max-vertical-offset="2771">
-          <folding>
-            <element signature="e#3642#3666#0" expanded="true" />
-          </folding>
+        <state line="18" column="5" selection-start="845" selection-end="845" vertical-scroll-proportion="-0.0" vertical-offset="306" max-vertical-offset="986">
+          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/summary_stat_booth_card_inner_layout.xml">
+      <provider editor-type-id="text-editor">
+        <state line="44" column="52" selection-start="2307" selection-end="2307" vertical-scroll-proportion="0.0" vertical-offset="936" max-vertical-offset="1292">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
   </component>
