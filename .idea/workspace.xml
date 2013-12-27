@@ -512,22 +512,7 @@
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="724653b3-d774-431b-a637-8e4913711973" name="Default" comment="added booth info to summary stats">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CookieMom.apk" afterPath="$PROJECT_DIR$/target/CookieMom.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CookieMom.unaligned.apk" afterPath="$PROJECT_DIR$/target/CookieMom.unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/InnerExpanderAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/InnerExpanderAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpander.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpander.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderValuesListAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/expander/ScoutExpanderValuesListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/scout/ScoutFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutFragment_.java" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/net/kjmaster/cookiemom/scout/ScoutFragment_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummarySalesFragment.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/SummarySalesFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothValuesListAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/booth/SummaryStatBoothValuesListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutValuesListAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/scout/SummaryStatScoutValuesListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/totals/SummaryStatTotalsCard.java" afterPath="$PROJECT_DIR$/src/main/java/net/kjmaster/cookiemom/summary/stat/totals/SummaryStatTotalsCard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/summary_stat_booth_card_inner_layout.xml" afterPath="$PROJECT_DIR$/res/layout/summary_stat_booth_card_inner_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/summary_stat_scout_card_inner_layout.xml" afterPath="$PROJECT_DIR$/res/layout/summary_stat_scout_card_inner_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/summary_stat_totals_card_inner_layout.xml" afterPath="$PROJECT_DIR$/res/layout/summary_stat_totals_card_inner_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/summary_stat_totals_fragment.xml" afterPath="$PROJECT_DIR$/res/layout/summary_stat_totals_fragment.xml" />
+    <list default="true" id="724653b3-d774-431b-a637-8e4913711973" name="Default" comment="fixed formatting on summary and removed cents from dollar figures">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="9d0a0215-8efb-451b-a184-5de1526cf397" name="Dao" comment="Dao" />
@@ -1676,7 +1661,11 @@
       <created>1388096689728</created>
       <updated>1388096689728</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fixed formatting on summary and removed cents from dollar figures">
+      <created>1388118826915</created>
+      <updated>1388118826915</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1790,7 +1779,8 @@
     <MESSAGE value="reformatted /added graphs addded inv count to cupboard pickup" />
     <MESSAGE value="refactoring, added summart scout stats" />
     <MESSAGE value="added booth info to summary stats" />
-    <option name="LAST_COMMIT_MESSAGE" value="added booth info to summary stats" />
+    <MESSAGE value="fixed formatting on summary and removed cents from dollar figures" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed formatting on summary and removed cents from dollar figures" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -2257,8 +2247,8 @@
           <folding>
             <element signature="imports" expanded="false" />
             <element signature="e#1712#1729#0" expanded="false" />
-            <element signature="e#4322#4560#0" expanded="false" />
-            <element signature="e#4547#4548#0" expanded="false" />
+            <element signature="e#4340#4578#0" expanded="false" />
+            <element signature="e#4565#4566#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2282,7 +2272,7 @@
         <state line="100" column="59" selection-start="3857" selection-end="3857" vertical-scroll-proportion="0.31805158" vertical-offset="1113" max-vertical-offset="1666">
           <folding>
             <element signature="e#1926#1965#0" expanded="true" />
-            <element signature="e#4252#4288#0" expanded="true" />
+            <element signature="e#4270#4306#0" expanded="true" />
           </folding>
         </state>
       </provider>
