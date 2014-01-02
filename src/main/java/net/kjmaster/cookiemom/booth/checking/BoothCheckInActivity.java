@@ -1,5 +1,6 @@
 package net.kjmaster.cookiemom.booth.checking;
 
+import android.annotation.SuppressLint;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
@@ -19,6 +20,7 @@ import java.util.Calendar;
  * Date: 12/10/13
  * Time: 8:40 PM
  */
+@SuppressLint("Registered")
 @EActivity(R.layout.scout_order_layout)
 public class BoothCheckInActivity extends CookieOrCashDialogBase {
     private String fragName;

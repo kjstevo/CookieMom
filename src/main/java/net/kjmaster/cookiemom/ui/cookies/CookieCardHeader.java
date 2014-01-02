@@ -4,39 +4,40 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import it.gmariotti.cardslib.library.R;
 import it.gmariotti.cardslib.library.internal.CardHeader;
 
 /**
  * Created with IntelliJ IDEA.
  * User: KJ Stevo
- * Date: 12/22/13
- * Time: 9:00 PM
+ * Date: 1/1/14
+ * Time: 8:37 PM
  */
 public class CookieCardHeader extends CardHeader {
-    private final int invTotal;
-    private final String cookieType;
+    private final int mColor;
 
-    public CookieCardHeader(Context context, int invTotal, String cookieType) {
-        super(context, net.kjmaster.cookiemom.R.layout.ui_cookie_base_header_layout);
-        this.invTotal = invTotal;
-        this.cookieType = cookieType;
+    public CookieCardHeader(Context context, int color) {
+        this(context, R.layout.inner_base_header, color);
+
+
     }
 
-
-    public int getInvTotal() {
-        return invTotal;
+    public CookieCardHeader(Context context, int innerLayout, int color) {
+        super(context, innerLayout);
+        this.mColor = color;
     }
 
     @Override
     public void setupInnerViewElements(ViewGroup parent, View view) {
-        TextView headerTitle = (TextView) parent.findViewById(net.kjmaster.cookiemom.R.id.card_header_inner_simple_title);
-        TextView invHeader = (TextView) parent.findViewById(net.kjmaster.cookiemom.R.id.in_stock_header);
-        if (invHeader != null) {
-            invHeader.setText(String.valueOf(this.invTotal) + " in stock");
+        if (view != null) {
+            TextView mTitleView = (TextView) view.findViewById(R.id.card_header_inner_simple_title);
+
+            if (mTitleView != null) {
+                mTitleView.setTextColor(parent.getResources().getColor(mColor));
+                mTitleView.setText(mTitle);
+            }
+
         }
-        if (headerTitle != null) {
-            headerTitle.setText(cookieType);
-        }
-        super.setupInnerViewElements(parent, view);
+
     }
 }

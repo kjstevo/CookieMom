@@ -3,7 +3,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools" android:orientation="horizontal"
               android:layout_width="match_parent"
-              android:layout_height="fill_parent" android:background="@drawable/cab_background_bottom_carddemo">
+              android:layout_height="fill_parent" android:background="@drawable/cab_background_bottom_carddemo"
+              android:baselineAligned="false">
 
     <LinearLayout
             android:orientation="vertical"
@@ -20,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/booth_scout_list" style="@android:style/Widget.Holo.Light.ListView"
                 android:choiceMode="singleChoice" android:paddingLeft="5dp"
-                tools:listitem="@layout/simple_text"/>
+                tools:listitem="@layout/ui_simple_text"/>
     </LinearLayout>
     <RelativeLayout
             android:layout_width="fill_parent"

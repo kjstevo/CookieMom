@@ -20,8 +20,7 @@ import net.kjmaster.cookiemom.R.string;
 import net.kjmaster.cookiemom.global.ISettings_;
 
 public final class ScoutPickupActivity_
-    extends ScoutPickupActivity
-{
+        extends ScoutPickupActivity {
 
 
     @Override
@@ -34,10 +33,10 @@ public final class ScoutPickupActivity_
     private void init_(Bundle savedInstanceState) {
         iSettings = new ISettings_(this);
         Resources resources_ = this.getResources();
-        scout_pickup_order = resources_.getString(string.scout_pickup_order);
-        pickup_order = resources_.getString(string.pickup_order);
-        scout_pickup_title = resources_.getString(string.scout_pickup_order_title);
         resCancel = resources_.getString(string.cancel);
+        scout_pickup_title = resources_.getString(string.scout_pickup_order_title);
+        pickup_order = resources_.getString(string.pickup_order);
+        scout_pickup_order = resources_.getString(string.scout_pickup_order);
         injectExtras_();
     }
 
@@ -65,7 +64,7 @@ public final class ScoutPickupActivity_
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (((SdkVersionHelper.getSdkInt()< 5)&&(keyCode == KeyEvent.KEYCODE_BACK))&&(event.getRepeatCount() == 0)) {
+        if (((SdkVersionHelper.getSdkInt() < 5) && (keyCode == KeyEvent.KEYCODE_BACK)) && (event.getRepeatCount() == 0)) {
             onBackPressed();
         }
         return super.onKeyDown(keyCode, event);
@@ -78,7 +77,7 @@ public final class ScoutPickupActivity_
     private void injectExtras_() {
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
-        if (extras_!= null) {
+        if (extras_ != null) {
             if (extras_.containsKey("ScoutId")) {
                 try {
                     ScoutId = ((Long) extras_.get("ScoutId"));

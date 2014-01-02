@@ -9,10 +9,12 @@ import android.widget.ListView;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.action.ActionContentCard;
+import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.scout.pickup.ScoutPickupDialog;
 import net.kmaster.cookiemom.dao.Order;
 import net.kmaster.cookiemom.dao.OrderDao;
 import net.kmaster.cookiemom.dao.Scout;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +40,7 @@ public class ActionScoutPickup extends ActionContentCard {
     }
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, View view) {
+    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
         super.setupInnerViewElements(parent, view);    //To change body of overridden methods use File | Settings | File Templates.
         final ListView listView = (ListView) parent.findViewById(R.id.action_list);
         if (listView != null) {
@@ -56,6 +58,7 @@ public class ActionScoutPickup extends ActionContentCard {
     }
 
 
+    @NotNull
     @Override
     public Boolean isCardVisible() {
         long cnt = Main.daoSession.getOrderDao().queryBuilder()
@@ -66,6 +69,7 @@ public class ActionScoutPickup extends ActionContentCard {
         return cnt > 0;
     }
 
+    @NotNull
     @Override
     public List<Scout> getActionList() {
         List<Scout> stringList = new ArrayList<Scout>();
@@ -88,7 +92,7 @@ public class ActionScoutPickup extends ActionContentCard {
 
     @Override
     public String getHeaderText() {
-        return getContext().getString(R.string.Scouts);
+        return Constants.getSCOUT();
     }
 
 

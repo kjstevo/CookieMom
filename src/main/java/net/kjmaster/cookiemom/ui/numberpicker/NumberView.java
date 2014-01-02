@@ -8,7 +8,9 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 import net.kjmaster.cookiemom.R;
+import org.jetbrains.annotations.NotNull;
 
+@SuppressWarnings("ALL")
 public class NumberView extends LinearLayout {
 
     private ZeroTopPaddingTextView mNumber, mDecimal;
@@ -24,7 +26,7 @@ public class NumberView extends LinearLayout {
      *
      * @param context the Context in which to inflate the View
      */
-    public NumberView(Context context) {
+    public NumberView(@NotNull Context context) {
         this(context, null);
     }
 
@@ -34,7 +36,7 @@ public class NumberView extends LinearLayout {
      * @param context the Context in which to inflate the View
      * @param attrs   attributes that define the title color
      */
-    public NumberView(Context context, AttributeSet attrs) {
+    public NumberView(@NotNull Context context, AttributeSet attrs) {
         super(context, attrs);
 
         mAndroidClockMonoThin =
@@ -106,7 +108,7 @@ public class NumberView extends LinearLayout {
      * @param showDecimal  whether it's a decimal or not
      * @param isNegative   whether it's positive or negative
      */
-    public void setNumber(String numbersDigit, String decimalDigit, boolean showDecimal,
+    public void setNumber(@NotNull String numbersDigit, @NotNull String decimalDigit, boolean showDecimal,
                           boolean isNegative) {
         mMinusLabel.setVisibility(isNegative ? View.VISIBLE : View.GONE);
         if (mNumber != null) {

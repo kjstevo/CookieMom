@@ -8,6 +8,7 @@ import android.view.Window;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.Click;
 import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.ViewById;
@@ -30,6 +31,7 @@ public class AddBoothDialogFragment extends DialogFragment {
 
     @ViewById(R.id.text_date_time_hidden)
     TextView hiddenDateTime;
+
     @ViewById(R.id.Date)
     TextView dateText;
 
@@ -44,6 +46,11 @@ public class AddBoothDialogFragment extends DialogFragment {
     @Click(R.id.date_time_picker_button)
     void onPickClick() {
         showDateTimeDialog();
+    }
+
+    @AfterViews
+    void afterViews() {
+        hiddenDateTime.setText(String.valueOf(Calendar.getInstance().getTimeInMillis()));
     }
 
     private void showDateTimeDialog() {

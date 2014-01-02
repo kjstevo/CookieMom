@@ -5,13 +5,14 @@
 
 package net.kjmaster.cookiemom;
 
+import net.kjmaster.cookiemom.global.ISettings_;
 
 public final class Main_
-    extends Main
-{
+        extends Main {
 
 
     private void init_() {
+        miSettings = new ISettings_(this);
     }
 
     @Override

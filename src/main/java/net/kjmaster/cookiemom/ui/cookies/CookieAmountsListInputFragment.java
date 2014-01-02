@@ -4,10 +4,7 @@ package net.kjmaster.cookiemom.ui.cookies;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.View;
-import com.googlecode.androidannotations.annotations.AfterViews;
-import com.googlecode.androidannotations.annotations.EFragment;
-import com.googlecode.androidannotations.annotations.FragmentArg;
-import com.googlecode.androidannotations.annotations.ViewById;
+import com.googlecode.androidannotations.annotations.*;
 import it.gmariotti.cardslib.library.internal.Card;
 import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
 import it.gmariotti.cardslib.library.view.CardListView;
@@ -15,6 +12,7 @@ import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
 import net.kjmaster.cookiemom.global.ICookieActionFragment;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -71,8 +69,8 @@ public class CookieAmountsListInputFragment extends Fragment implements ICookieA
                             actualAmount,
                             true
                     ),
-                            cookieType,
-                            getActivity());
+                            cookieType, getActivity(), Constants.CookieColors[i]
+                    );
 
             final int finalI = i;
 
@@ -82,6 +80,7 @@ public class CookieAmountsListInputFragment extends Fragment implements ICookieA
                 card.addPartialOnClickListener(Card.CLICK_LISTENER_ALL_VIEW, new Card.OnCardClickListener() {
                     @Override
                     public void onClick(Card card, View view) {
+                        cardListPos = cardListView.getFirstVisiblePosition();
                         cookieActionActivity.createNumberPicker(finalI).show();
                     }
                 });
@@ -95,10 +94,17 @@ public class CookieAmountsListInputFragment extends Fragment implements ICookieA
         CardArrayAdapter cardArrayAdapter = new CardArrayAdapter(getActivity(), mData);
 
         cardListView.setAdapter(cardArrayAdapter);
+        if (cardListView.getCount() > cardListPos) {
+            cardListView.setSelectionFromTop(cardListPos, 0);
+        }
+
 
     }
 
+    @InstanceState
+    int cardListPos;
 
+    @NotNull
     @Override
     public HashMap<String, String> valuesMap() {
         return valuesBoxesMap;

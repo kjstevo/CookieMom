@@ -10,6 +10,8 @@ import net.kjmaster.cookiemom.R;
 import net.kmaster.cookiemom.dao.Booth;
 import net.kmaster.cookiemom.dao.BoothAssignments;
 import net.kmaster.cookiemom.dao.BoothAssignmentsDao;
+import net.kmaster.cookiemom.dao.BoothDao;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -23,43 +25,53 @@ public class BoothListFragmentCard extends Card {
     private final long scoutId;
 
     public BoothListFragmentCard(Context context, long scoutId) {
-        this(context, R.layout.booth_list_fragment, scoutId);
-    }
-
-    @SuppressWarnings("WeakerAccess")
-    public BoothListFragmentCard(Context context, @SuppressWarnings("SameParameterValue") int innerLayout, long scoutId) {
-        super(context, innerLayout);
+        super(context, R.layout.booth_list_fragment);
         this.scoutId = scoutId;
     }
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, View view) {
+    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
         //net.kjm
-        Context context = getContext();
-        ListView cardListView = (ListView) parent.findViewById(R.id.booth_listview);
-        if (cardListView != null) {
-            BoothAssignmentsDao boothAssignmentsDao = Main.daoSession.getBoothAssignmentsDao();
+        final Context context = getContext();
+        final BoothDao boothDao = Main.daoSession.getBoothDao();
+        final BoothAssignmentsDao assignmentsDao = Main.daoSession.getBoothAssignmentsDao();
+        final ListView cardListView = (ListView) parent.findViewById(R.id.booth_listview);
 
-            List<BoothAssignments> boothAssignments = boothAssignmentsDao.queryBuilder()
-                    .where(
-                            BoothAssignmentsDao.Properties.BoothAssignScoutId.eq(scoutId)
-                    )
-                    .list();
+        if (
+                cardListView != null
+                        && assignmentsDao != null
+                        && boothDao != null
+                ) {
+
+            List<BoothAssignments> boothAssignments =
+                    assignmentsDao.queryBuilder()
+                            .where(
+                                    BoothAssignmentsDao.Properties.BoothAssignScoutId.eq(scoutId))
+                            .list();
+
             if (!boothAssignments.isEmpty()) {
-                BoothTextAdapterListItem mData = new BoothTextAdapterListItem(context, R.layout.ui_simple_big_text);
-                for (BoothAssignments assignment : boothAssignments) {
-                    Booth booth = Main.daoSession.getBoothDao().load(assignment.getBoothAssignBoothId());
-                    if (booth != null) {
-                        mData.add(booth);
-                    }
-                }
 
+                BoothTextAdapterListItem mData = new BoothTextAdapterListItem(context);
+
+                for (BoothAssignments assignment : boothAssignments) {
+
+                    Booth booth = boothDao.load(assignment.getBoothAssignBoothId());
+
+                    if (booth != null) {
+
+                        mData.add(booth);
+
+                    }
+
+                }
 
                 cardListView.setAdapter(mData);
 
             }
+
         }
-        //12/2/13
 
     }
+
 }
+

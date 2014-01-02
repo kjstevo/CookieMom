@@ -31,7 +31,7 @@
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
             <it.gmariotti.cardslib.library.view.CardView
                     android:id="@+id/summary_stat_booth_cardview"

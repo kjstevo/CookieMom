@@ -1,5 +1,6 @@
 package net.kjmaster.cookiemom.scout.pickup;
 
+import android.annotation.SuppressLint;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
@@ -16,6 +17,7 @@ import net.kmaster.cookiemom.dao.CookieTransactions;
 import net.kmaster.cookiemom.dao.CookieTransactionsDao;
 import net.kmaster.cookiemom.dao.Order;
 import net.kmaster.cookiemom.dao.OrderDao;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Calendar;
 import java.util.HashMap;
@@ -30,6 +32,7 @@ import static net.kmaster.cookiemom.dao.OrderDao.Properties;
  * Date: 11/4/13
  * Time: 2:16 PM
  */
+@SuppressLint("Registered")
 @EActivity(R.layout.scout_order_layout)
 public class ScoutPickupActivity extends CookieActionActivity {
 
@@ -102,7 +105,7 @@ public class ScoutPickupActivity extends CookieActionActivity {
                         requestedBoxes = boxesInInventory;
                     }
                 } else {
-                    markOrdersAsPickedUp(cookieFlavor, true);
+                    markOrdersAsPickedUp(cookieFlavor);
 
                 }
 
@@ -137,7 +140,8 @@ public class ScoutPickupActivity extends CookieActionActivity {
         }
     }
 
-    private Order createOrderFromOrder(Integer requestedBoxes, Order order) {
+    @NotNull
+    private Order createOrderFromOrder(Integer requestedBoxes, @NotNull Order order) {
 
         Order order2 = new Order(
                 null,
@@ -166,7 +170,7 @@ public class ScoutPickupActivity extends CookieActionActivity {
                 .list();
     }
 
-    private void markOrdersAsPickedUp(String cookieFlavor, boolean pickedUp) {
+    private void markOrdersAsPickedUp(String cookieFlavor) {
 
         List<Order> orders = orderDao.queryBuilder()
                 .where(
@@ -174,7 +178,7 @@ public class ScoutPickupActivity extends CookieActionActivity {
                         Properties.OrderCookieType.eq(cookieFlavor)
                 ).list();
         for (Order order : orders) {
-            order.setPickedUpFromCupboard(pickedUp);
+            order.setPickedUpFromCupboard(true);
             orderDao.update(order);
         }
     }
@@ -213,6 +217,7 @@ public class ScoutPickupActivity extends CookieActionActivity {
     }
 
 
+    @NotNull
     @Override
     public HashMap<String, String> getValMap() {
 

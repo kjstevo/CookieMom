@@ -21,11 +21,11 @@ package net.kjmaster.cookiemom.summary.stat.booth;
 /**
  * @author Gabriele Mariotti (gabri.mariotti@gmail.com)
  */
-public class SummaryStatBooth {
-    String code;
-    float value;
-    float delta;
-    float deltaPerc;
+class SummaryStatBooth {
+    private final String code;
+    private final float value;
+    private final float delta;
+    private final float deltaPerc;
 
     public SummaryStatBooth(String code, float value, float delta, float deltaPerc) {
         this.code = code;

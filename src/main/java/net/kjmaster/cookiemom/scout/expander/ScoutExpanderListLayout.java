@@ -25,6 +25,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * @author Gabriele Mariotti (gabri.mariotti@gmail.com)
@@ -43,7 +44,7 @@ public class ScoutExpanderListLayout extends LinearLayout implements View.OnClic
         super(context, attrs, defStyle);
     }
 
-    public void setAdapter(ScoutExpanderValuesListAdapter list) {
+    public void setAdapter(@Nullable ScoutExpanderValuesListAdapter list) {
         setOrientation(VERTICAL);
 
         // Popolute list

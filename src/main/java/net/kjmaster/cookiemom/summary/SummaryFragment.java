@@ -25,7 +25,7 @@ public class SummaryFragment extends Fragment {
     @ViewById(R.id.spinner)
     Spinner spinner;
 
-    String[] tags = new String[]{"Cookies", "Sales", "Stats"};
+    private final String[] tags = new String[]{"Cookies", "Sales", "Stats"};
 
     @AfterViews
     void afterViews() {
@@ -45,7 +45,7 @@ public class SummaryFragment extends Fragment {
     }
 
     @ItemSelect(R.id.spinner)
-    public void onSelected(boolean selected, int pos) {
+    void onSelected(boolean selected, int pos) {
         Fragment fragment = getActivity().getSupportFragmentManager().findFragmentByTag(tags[pos]);
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
         if (fragment != null) {

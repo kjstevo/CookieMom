@@ -2,16 +2,20 @@ package net.kjmaster.cookiemom.booth.add;
 
 //~--- non-JDK imports --------------------------------------------------------
 
+import android.annotation.SuppressLint;
 import android.content.res.Resources;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.*;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.FragmentByTag;
+import eu.inmite.android.lib.dialogs.ISimpleDialogListener;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,8 +23,9 @@ import net.kjmaster.cookiemom.global.Constants;
  * Date: 10/28/13
  * Time: 1:26 AM
  */
+@SuppressLint("Registered")
 @EActivity(R.layout.booth_add_booth_layout)
-public class AddBoothActivity extends FragmentActivity implements ActionMode.Callback {
+public class AddBoothActivity extends FragmentActivity implements ActionMode.Callback, ISimpleDialogListener {
 
     @FragmentByTag("add_booth")
     AddBoothDialogFragment addBoothDialogFragment;
@@ -57,7 +62,7 @@ public class AddBoothActivity extends FragmentActivity implements ActionMode.Cal
     }
 
     @Override
-    public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+    public boolean onCreateActionMode(@NotNull ActionMode mode, Menu menu) {
         MenuInflater inflater = mode.getMenuInflater();
 
         inflater.inflate(R.menu.add_scout, menu);
@@ -76,20 +81,25 @@ public class AddBoothActivity extends FragmentActivity implements ActionMode.Cal
         String boothLocation;
         String boothAddress;
         String boothDate;
+        try {
+            boothLocation = boothDialogFragment.editText.getText().toString();
+            boothAddress = boothDialogFragment.addressText.getText().toString();
+            boothDate = boothDialogFragment.hiddenDateTime.getText().toString();
+            setResult(Constants.ADD_BOOTH_RESULT_OK, getIntent()
+                    .putExtra("add_booth", boothLocation)
+                    .putExtra("address", boothAddress)
+                    .putExtra("booth_date", Long.valueOf(boothDate))
+            );
+        } catch (Exception e) {
+            Log.e(getApplicationInfo().name, "error in net.kjmaster.cookiemom.booth.add.AddBoothActivity.saveScoutData");
 
-        boothLocation = boothDialogFragment.editText.getText().toString();
-        boothAddress = boothDialogFragment.addressText.getText().toString();
-        boothDate = boothDialogFragment.hiddenDateTime.getText().toString();
-        setResult(Constants.ADD_BOOTH_RESULT_OK, getIntent()
-                .putExtra("add_booth", boothLocation)
-                .putExtra("address", boothAddress)
-                .putExtra("booth_date", Long.valueOf(boothDate))
-        );
+        }
+
     }
 
 
     @Override
-    public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+    public boolean onActionItemClicked(@NotNull ActionMode mode, MenuItem item) {
 
         mode.finish();
         return true;
@@ -101,6 +111,15 @@ public class AddBoothActivity extends FragmentActivity implements ActionMode.Cal
         finish();
     }
 
+    @Override
+    public void onPositiveButtonClicked(int requestCode) {
+
+    }
+
+    @Override
+    public void onNegativeButtonClicked(int requestCode) {
+
+    }
 }
 
 

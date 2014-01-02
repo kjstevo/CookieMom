@@ -20,8 +20,6 @@ import net.kjmaster.cookiemom.summary.stat.totals.SummaryStatTotalsCard;
 @EFragment(R.layout.summary_stat_fragment)
 public class SummaryStatFragment extends Fragment {
 
-    private static final String[] tags = new String[]{"stat_totals", "stat_scout"};
-
     @ViewById(R.id.summary_stat_totals_cardview)
     CardView totalsCardView;
 

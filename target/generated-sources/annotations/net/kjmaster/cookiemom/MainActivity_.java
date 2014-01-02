@@ -10,12 +10,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
+import net.kjmaster.cookiemom.R.id;
 import net.kjmaster.cookiemom.R.layout;
+import net.kjmaster.cookiemom.global.ISettings_;
 
 public final class MainActivity_
         extends MainActivity {
@@ -29,6 +30,8 @@ public final class MainActivity_
     }
 
     private void init_(Bundle savedInstanceState) {
+        iSettings = new ISettings_(this);
+        main = ((Main) this.getApplication());
     }
 
     private void afterSetContentView_() {
@@ -66,30 +69,44 @@ public final class MainActivity_
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(net.kjmaster.cookiemom.R.menu.activity_main, menu);
-        return super.onCreateOptionsMenu(menu);
+    public boolean onOptionsItemSelected(MenuItem item) {
+        boolean handled = super.onOptionsItemSelected(item);
+        if (handled) {
+            return true;
+        }
+        int itemId_ = item.getItemId();
+        if ((itemId_ == id.menu_personal) || (itemId_ == id.menu_cookie_mom)) {
+            onProfileSwitch(item);
+            return true;
+        }
+        if (itemId_ == id.menu_eat_cookies) {
+            onEatCookies();
+            return true;
+        }
+        return false;
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         MainActivity_.super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
-            case 111:
-                MainActivity_.this.onScoutAssign(resultCode, data);
-                break;
             case 888:
                 MainActivity_.this.onBoothResult(resultCode, data);
                 break;
             case 9876:
                 MainActivity_.this.onBoothOrder(resultCode, data);
                 break;
+            case 1111:
+                MainActivity_.this.onRemoveScout(resultCode, data);
+                break;
             case 444:
                 MainActivity_.this.placeCupboardOrder(resultCode, data);
                 break;
-            case 1111:
-                MainActivity_.this.onRemoveScout(resultCode, data);
+            case 111:
+                MainActivity_.this.onScoutAssign(resultCode, data);
+                break;
+            case 2232:
+                MainActivity_.this.onEatSelectScoutResult(resultCode, data);
                 break;
             case 4343:
                 MainActivity_.this.scoutResult(resultCode);

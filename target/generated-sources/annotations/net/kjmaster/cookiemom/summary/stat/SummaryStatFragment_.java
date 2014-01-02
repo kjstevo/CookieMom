@@ -13,8 +13,7 @@ import it.gmariotti.cardslib.library.view.CardView;
 import net.kjmaster.cookiemom.R.layout;
 
 public final class SummaryStatFragment_
-    extends SummaryStatFragment
-{
+        extends SummaryStatFragment {
 
     private View contentView_;
 
@@ -28,9 +27,9 @@ public final class SummaryStatFragment_
     }
 
     private void afterSetContentView_() {
+        scoutCardView = ((CardView) findViewById(net.kjmaster.cookiemom.R.id.summary_stat_scout_cardview));
         totalsCardView = ((CardView) findViewById(net.kjmaster.cookiemom.R.id.summary_stat_totals_cardview));
         boothCardView = ((CardView) findViewById(net.kjmaster.cookiemom.R.id.summary_stat_booth_cardview));
-        scoutCardView = ((CardView) findViewById(net.kjmaster.cookiemom.R.id.summary_stat_scout_cardview));
         afterViews();
     }
 

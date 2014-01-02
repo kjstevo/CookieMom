@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.view.MenuItem;
 import com.googlecode.androidannotations.annotations.*;
 import eu.inmite.android.lib.dialogs.ISimpleDialogListener;
+import eu.inmite.android.lib.dialogs.SimpleDialogFragment;
 import it.gmariotti.cardslib.library.internal.Card;
 import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
 import it.gmariotti.cardslib.library.internal.CardHeader;
@@ -15,12 +16,15 @@ import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.ICookieActionFragment;
 import net.kjmaster.cookiemom.scout.add.AddScoutActivity_;
+import net.kjmaster.cookiemom.scout.edit.ScoutEditActivity_;
 import net.kjmaster.cookiemom.scout.expander.CustomExpander;
 import net.kjmaster.cookiemom.scout.order.ScoutOrderActivity_;
 import net.kjmaster.cookiemom.scout.pickup.ScoutPickupActivity_;
 import net.kjmaster.cookiemom.scout.pickup.ScoutPickupDialog;
 import net.kjmaster.cookiemom.scout.turnin.ScoutTurnInActivity_;
 import net.kmaster.cookiemom.dao.*;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -37,6 +41,7 @@ public class ScoutFragment extends Fragment implements ISimpleDialogListener, IC
     private OrderDao orderDao;
     private CookieTransactionsDao cookieTransactionsDao;
     private boolean isRefresh;
+    private boolean isDelete = false;
 
     @AfterViews
     void afterViews() {
@@ -51,7 +56,7 @@ public class ScoutFragment extends Fragment implements ISimpleDialogListener, IC
         }
     }
 
-    private void createScoutListCards(List<Scout> scouts) {
+    private void createScoutListCards(@NotNull List<Scout> scouts) {
         List<Card> mData = new ArrayList<Card>();
 
         for (Scout scout1 : scouts) {
@@ -98,7 +103,8 @@ public class ScoutFragment extends Fragment implements ISimpleDialogListener, IC
         cardView.setAdapter(getCardArrayAdapter(mData));
     }
 
-    private CardHeader getCardHeader(final Scout scout) {
+    @NotNull
+    private CardHeader getCardHeader(@NotNull final Scout scout) {
         CardHeader scoutHeader = new CardHeader(getActivity());
 
         scoutHeader.setButtonExpandVisible(true);
@@ -107,7 +113,7 @@ public class ScoutFragment extends Fragment implements ISimpleDialogListener, IC
 
         scoutHeader.setPopupMenu(R.menu.scout_overflow, new CardHeader.OnClickCardHeaderPopupMenuListener() {
             @Override
-            public void onMenuItemClick(BaseCard card, MenuItem item) {
+            public void onMenuItemClick(BaseCard card, @NotNull MenuItem item) {
                 scoutActionsMenu(item, scout);
             }
         });
@@ -115,13 +121,14 @@ public class ScoutFragment extends Fragment implements ISimpleDialogListener, IC
         return scoutHeader;
     }
 
+    @NotNull
     private CardArrayAdapter getCardArrayAdapter(List<Card> mData) {
         CardArrayAdapter cardArrayAdapter = new CardArrayAdapter(getActivity(), mData);
         cardArrayAdapter.setRowLayoutId(R.layout.scout_card_layout);
         return cardArrayAdapter;
     }
 
-    private void createExpander(List<Card> mData, Scout scout, ScoutCard mCard) {
+    private void createExpander(@NotNull List<Card> mData, Scout scout, @NotNull ScoutCard mCard) {
         CustomExpander expand = new CustomExpander(getActivity(), scout);
 
         // Set inner title in Expand Area
@@ -137,7 +144,7 @@ public class ScoutFragment extends Fragment implements ISimpleDialogListener, IC
 //        mData.add(mCard);
     }
 
-    private void getTransactions(ScoutCard mCard, List<CookieTransactions> transactionse) {
+    private void getTransactions(@NotNull ScoutCard mCard, @NotNull List<CookieTransactions> transactionse) {
         Integer transTotal = 0;
         Double cashTotal = 0D;
         for (CookieTransactions cookieTransactions : transactionse) {
@@ -160,7 +167,7 @@ public class ScoutFragment extends Fragment implements ISimpleDialogListener, IC
 
     }
 
-    private void getOrders(ScoutCard mCard, List<Order> orders) {
+    private void getOrders(@NotNull ScoutCard mCard, @NotNull List<Order> orders) {
         Integer totalOrders = 0;
         for (Order order : orders) {
             totalOrders = totalOrders + order.getOrderedBoxes();
@@ -178,19 +185,28 @@ public class ScoutFragment extends Fragment implements ISimpleDialogListener, IC
 
     @Override
     public void onPositiveButtonClicked(int requestCode) {
-        ScoutPickupActivity_.intent(getActivity())
-                .isEditable(true)
-                .ScoutId(requestCode)
-                .startForResult(Constants.SCOUT_REQUEST
-                );
+        if (isDelete) {
+            deleteScout(scoutDao.load((long) requestCode));
+        } else {
+            ScoutPickupActivity_.intent(getActivity())
+                    .isEditable(true)
+                    .ScoutId(requestCode)
+                    .startForResult(Constants.SCOUT_REQUEST
+                    );
+        }
     }
 
     @Override
     public void onNegativeButtonClicked(int requestCode) {
-        ScoutPickupActivity_.intent(getActivity()).isEditable(false).ScoutId(requestCode).startForResult(Constants.SCOUT_REQUEST);
+        if (isDelete) {
+            isDelete = false;
+
+        } else {
+            ScoutPickupActivity_.intent(getActivity()).isEditable(false).ScoutId(requestCode).startForResult(Constants.SCOUT_REQUEST);
+        }
     }
 
-    private void scoutActionsMenu(MenuItem item, Scout scout) {
+    private void scoutActionsMenu(@NotNull MenuItem item, @NotNull Scout scout) {
         if (item.getItemId() == R.id.menu_scout_order) {
             ScoutOrderActivity_.intent(getActivity()).scoutId(scout.getId()).startForResult(Constants.SCOUT_REQUEST);
         }
@@ -203,6 +219,33 @@ public class ScoutFragment extends Fragment implements ISimpleDialogListener, IC
         if (item.getItemId() == R.id.menu_scout_turnin) {
             ScoutTurnInActivity_.intent(getActivity()).isEditable(true).ScoutId(scout.getId()).startForResult(Constants.SCOUT_REQUEST);
         }
+        if (item.getItemId() == R.id.menu_scout_delete) {
+            isDelete = true;
+            SimpleDialogFragment.createBuilder(getActivity(), getActivity().getSupportFragmentManager())
+                    .setTitle("WARNING!")
+                    .setMessage("Are you sure you want to delete this? This action can not be undone!")
+                    .setPositiveButtonText("Delete")
+                    .setNegativeButtonText("Cancel")
+                    .setCancelable(true)
+                    .setTargetFragment(this, scout.getId().intValue())
+                    .setRequestCode(scout.getId().intValue())
+                    .setTag(scout.getId().toString())
+                    .show();
+
+        }
+        if (item.getItemId() == R.id.menu_scout_edit_order) {
+            ScoutEditActivity_.intent(getActivity()).ScoutId(scout.getId()).requestCode(Constants.SCOUT_REQUEST).startForResult(Constants.SCOUT_REQUEST);
+
+        }
+    }
+
+
+    private void deleteScout(@NotNull Scout scout) {
+        Main.daoSession.getCookieTransactionsDao().deleteInTx(scout.getScoutsCookieTransactions());
+        Main.daoSession.getOrderDao().deleteInTx(scout.getScoutOrders());
+        Main.daoSession.getBoothAssignmentsDao().deleteInTx(scout.getBoothsAssigned());
+        Main.daoSession.getScoutDao().deleteInTx(scout);
+        refreshView();
     }
 
     @OptionsItem(R.id.menu_add_scout)
@@ -211,6 +254,7 @@ public class ScoutFragment extends Fragment implements ISimpleDialogListener, IC
     }
 
 
+    @Nullable
     @Override
     public HashMap<String, String> valuesMap() {
         return null;

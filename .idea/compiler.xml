@@ -35,11 +35,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.6">
-      <module name="CoiokieMomGenerator" target="1.6" />
       <module name="CookieMom" target="1.6" />
-      <module name="library2" target="1.6" />
-      <module name="parent" target="1.6" />
-      <module name="sample" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

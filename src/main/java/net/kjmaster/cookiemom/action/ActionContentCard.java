@@ -10,6 +10,7 @@ import android.widget.TextView;
 import it.gmariotti.cardslib.library.internal.Card;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.IAction;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,17 +20,17 @@ import net.kjmaster.cookiemom.global.IAction;
  */
 
 public abstract class ActionContentCard extends Card implements IAction {
-    public ActionContentCard(Context context, int layout) {
+    protected ActionContentCard(Context context, int layout) {
         super(context, layout);
     }
 
-    public ActionContentCard(Context context) {
+    protected ActionContentCard(Context context) {
         this(context, R.layout.action_content);
     }
 
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, View view) {
+    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
 
         //Retrieve elements
         TextView mActionText = (TextView) parent.findViewById(R.id.available_action_text);

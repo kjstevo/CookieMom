@@ -13,8 +13,7 @@ import android.widget.EditText;
 import net.kjmaster.cookiemom.R.layout;
 
 public final class AddScoutDialogFragment_
-    extends AddScoutDialogFragment
-{
+        extends AddScoutDialogFragment {
 
     private View contentView_;
 
@@ -35,7 +34,7 @@ public final class AddScoutDialogFragment_
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         contentView_ = super.onCreateView(inflater, container, savedInstanceState);
         if (contentView_ == null) {
-            contentView_ = inflater.inflate(layout.booth_add_scout_dialog, container, false);
+            contentView_ = inflater.inflate(layout.scout_add_scout_dialog, container, false);
         }
         return contentView_;
     }

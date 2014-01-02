@@ -12,6 +12,7 @@ import it.gmariotti.cardslib.library.internal.Card;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kmaster.cookiemom.dao.*;
+import org.jetbrains.annotations.NotNull;
 
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
@@ -26,17 +27,13 @@ import java.util.List;
  */
 
 public class BoothContentCard extends Card {
-    public BoothContentCard(Context context, Booth booth) {
-        this(context, R.layout.booth_content, booth);
-        init();
-    }
 
     private void init() {
 
         // No Header
         addPartialOnClickListener(CLICK_LISTENER_CONTENT_VIEW, new OnCardClickListener() {
             @Override
-            public void onClick(Card card, View view) {
+            public void onClick(@NotNull Card card, View view) {
                 View view1 = card.getCardView().findViewById(R.id.card_content_expand_layout);
                 if (view1 != null) {
 
@@ -55,17 +52,17 @@ public class BoothContentCard extends Card {
         return mBooth;
     }
 
-    @SuppressWarnings("WeakerAccess")
-    public BoothContentCard(Context context, int innerLayout, Booth booth) {
-        super(context, innerLayout);
-        mBooth = booth;
 
+    public BoothContentCard(Context context, Booth booth) {
+        super(context, R.layout.booth_content);
+        mBooth = booth;
+        init();
     }
 
-    private final Booth mBooth;
+    private Booth mBooth;
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, View view) {
+    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
 
         //Retrieve elements
         TextView mDate = (TextView) parent.findViewById(R.id.booth_date);
@@ -154,6 +151,7 @@ public class BoothContentCard extends Card {
         }
     }
 
+    @NotNull
     private List<Scout> getScoutList() {
         List<Scout> arrayList = new ArrayList<Scout>();
         List<BoothAssignments> boothAssignmentses = Main.daoSession.getBoothAssignmentsDao().queryBuilder().where(BoothAssignmentsDao.Properties.BoothAssignBoothId.eq(mBooth.getId())).list();

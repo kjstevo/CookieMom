@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import it.gmariotti.cardslib.library.internal.Card;
 import net.kjmaster.cookiemom.R;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,19 +21,16 @@ public class CupboardContentCard extends Card {
 
     private final int boxesOnOrder;
 
-    public CupboardContentCard(Context context, int boxesOnHand, int boxesOnOrder) {
-        this(context, boxesOnHand, boxesOnOrder, R.layout.cupboard_cookie_amount_no_exopected_layout);
-    }
 
-    public CupboardContentCard(Context context, int boxesOnHand, int boxesOnOrder, int layoutId) {
-        super(context, layoutId);
+    public CupboardContentCard(Context context, int boxesOnHand, int boxesOnOrder) {
+        super(context, R.layout.cupboard_cookie_amount_no_exopected_layout);
 
         this.boxesOnHand = boxesOnHand;
         this.boxesOnOrder = boxesOnOrder;
     }
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, View view) {
+    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
         LinearLayout mExpectedBox = (LinearLayout) parent.findViewById(R.id.expected_panel);
         TextView mBoxesOnHand = (TextView) parent.findViewById(R.id.boxes_on_hand);
         if (mBoxesOnHand != null) {

@@ -1,5 +1,6 @@
 package net.kjmaster.cookiemom.scout.turnin;
 
+import android.annotation.SuppressLint;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
@@ -24,6 +25,7 @@ import static net.kjmaster.cookiemom.global.Constants.CookieTypes;
  * Date: 11/4/13
  * Time: 2:16 PM
  */
+@SuppressLint("Registered")
 @EActivity(R.layout.scout_order_layout)
 public class ScoutTurnInActivity extends CookieActionActivity implements ISimpleDialogListener, NumberPickerDialogFragment.NumberPickerDialogHandler {
 

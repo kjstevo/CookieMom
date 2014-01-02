@@ -1,6 +1,8 @@
 package net.kjmaster.cookiemom.global;
 
+import com.googlecode.androidannotations.annotations.EBean;
 import net.kjmaster.cookiemom.R;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 
@@ -10,19 +12,27 @@ import java.util.HashMap;
  * Date: 11/3/13
  * Time: 7:29 PM
  */
+@EBean
 public class Constants {
 
 
     public static final String[] CookieTypes = new String[]{
-            "Thin Mint", "Samoas", "Trefoils", "Tag-a-Longs",
-            "Do Si Dos", "Dulce", "Berry", "Smiles"};
-    public static final int[] CookieColors = new int[]{
-            R.color.color_thin_mints, R.color.color_samoas, R.color.color_trefoils,
-            R.color.color_tags, R.color.color_dosidos, R.color.color_dulce,
-            R.color.color_berry, R.color.color_smiles
+            "Smiles", "Trefoils", "Do Si Dos",
+            "Samoas", "Dulce", "Berry",
+            "Tag-a-Longs", "Thin Mint"
     };
+
+    public static final int[] CookieColors = new int[]{
+            R.color.color_smiles, R.color.color_trefoils,
+            R.color.color_dosidos, R.color.color_samoas,
+            R.color.color_dulce, R.color.color_berry,
+            R.color.color_tags, R.color.color_thin_mints
+    };
+
     public static final int SCOUT_REQUEST = 4343;
+
     public static final int ADD_BOOTH_REQUEST_CODE = 888;
+
     public static final int ADD_BOOTH_RESULT_OK = 777;
 
     //    private SQLiteDatabase db;
@@ -34,6 +44,28 @@ public class Constants {
     public static final int ACTION_REQUEST = 4343;
     public static final int REMOVE_SCOUT_REQUEST_CODE = 1111;
     public static final int BOOTH_ORDER = 9876;
+    public static final int EAT_COOKIES = 2232;
+
+    public static String getSCOUT() {
+        return SCOUT;
+    }
+
+    public static void setSCOUT(String SCOUT) {
+        Constants.SCOUT = SCOUT;
+    }
+
+    private static String SCOUT;
+
+    public static String getADD_SCOUT() {
+        return ADD_SCOUT;
+    }
+
+    public static void setADD_SCOUT(String ADD_SCOUT) {
+        Constants.ADD_SCOUT = ADD_SCOUT;
+    }
+
+    public static String ADD_SCOUT;
+
 
     public static long CalculateNegativeBoothId(long boothId) {
         return ((-1 * boothId) - 100);
@@ -43,6 +75,7 @@ public class Constants {
         return ((scoutId + 100) * -1);
     }
 
+    @NotNull
     public static HashMap<String, Integer> getCookieNameImages() {
         cookieImages.put(CookieTypes[0], R.drawable.mint);
         cookieImages.put(CookieTypes[1], R.drawable.samoa);

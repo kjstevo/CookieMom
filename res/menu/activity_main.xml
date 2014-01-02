@@ -1,8 +1,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+    <item android:id="@+id/menu_eat_cookies"
+          android:title="@string/eat_cookies"
+          android:orderInCategory="100"
+          android:showAsAction="ifRoom"/>
+
     <item android:id="@+id/menu_settings"
           android:title="@string/menu_settings"
-          android:orderInCategory="100"
+          android:orderInCategory="200"
           android:showAsAction="never"/>
+
+    <item android:id="@+id/menu_personal"
+          android:title="@string/Personal"
+          android:orderInCategory="300"
+          android:showAsAction="ifRoom"/>
+
 
 </menu>

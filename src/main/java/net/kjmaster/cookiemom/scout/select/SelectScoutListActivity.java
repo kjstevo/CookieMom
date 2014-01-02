@@ -1,5 +1,6 @@
 package net.kjmaster.cookiemom.scout.select;
 
+import android.annotation.SuppressLint;
 import android.app.ListActivity;
 import android.widget.ArrayAdapter;
 import com.googlecode.androidannotations.annotations.*;
@@ -19,6 +20,7 @@ import java.util.List;
  */
 
 
+@SuppressLint("Registered")
 @EActivity(R.layout.scout_select_scout)
 public class SelectScoutListActivity extends ListActivity implements ISendActivityResult {
     //    private DaoMaster daoMaster;

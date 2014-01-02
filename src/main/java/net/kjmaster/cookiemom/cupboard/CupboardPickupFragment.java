@@ -18,11 +18,12 @@ import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
 import net.kjmaster.cookiemom.global.ICookieActionFragment;
 import net.kjmaster.cookiemom.ui.cookies.CookieAmountContentCard;
-import net.kjmaster.cookiemom.ui.cookies.CookieCardHeader;
+import net.kjmaster.cookiemom.ui.cookies.CookieCardHeaderInStock;
 import net.kmaster.cookiemom.dao.CookieTransactions;
 import net.kmaster.cookiemom.dao.CookieTransactionsDao;
 import net.kmaster.cookiemom.dao.Order;
 import net.kmaster.cookiemom.dao.OrderDao;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -76,8 +77,6 @@ public class CupboardPickupFragment extends Fragment implements ICookieActionFra
 
             Integer actualAmount = Integer.valueOf(valuesMap.get(cookieType));
 
-            boolean autoFillEditFields = false;
-            boolean showExpected = true;
             CookieAmountContentCard card = CreateCompleteCookieCard
                     (new CookieAmountContentCard(
                             getActivity(),
@@ -88,8 +87,8 @@ public class CupboardPickupFragment extends Fragment implements ICookieActionFra
                             isBoxes
                     ),
                             cookieType,
-                            getActivity());
-            card.addCardHeader(getCardHeader(cookieType));
+                            getActivity(), Constants.CookieColors[i]);
+            card.addCardHeader(getCardHeader(cookieType, Constants.CookieColors[i]));
 
             card.addCardThumbnail(getCardThumbnail(cookieType));
 
@@ -111,7 +110,8 @@ public class CupboardPickupFragment extends Fragment implements ICookieActionFra
 
     }
 
-    private CardHeader getCardHeader(String cookieType) {
+    @NotNull
+    private CardHeader getCardHeader(String cookieType, int color) {
         List<CookieTransactions> list = Main.daoSession.getCookieTransactionsDao().queryBuilder()
                 .where(CookieTransactionsDao.Properties.CookieType.eq(cookieType))
                 .list();
@@ -121,17 +121,19 @@ public class CupboardPickupFragment extends Fragment implements ICookieActionFra
                 total += cookieTransactions.getTransBoxes();
             }
         }
-        CardHeader cardHeader = new CookieCardHeader(getActivity(), total, cookieType);
+        CardHeader cardHeader = new CookieCardHeaderInStock(getActivity(), total, cookieType, color);
         cardHeader.setTitle(cookieType);
         return cardHeader;
     }
 
+    @NotNull
     private CardThumbnail getCardThumbnail(String cookieType) {
         CardThumbnail cardThumbnail = new CardThumbnail(getActivity());
         cardThumbnail.setDrawableResource(Constants.getCookieNameImages().get(cookieType));
         return cardThumbnail;
     }
 
+    @NotNull
     @Override
     public HashMap<String, String> valuesMap() {
         return valuesMap;

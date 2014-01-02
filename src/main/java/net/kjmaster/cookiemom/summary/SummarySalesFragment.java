@@ -10,15 +10,11 @@ import com.googlecode.androidannotations.annotations.ViewById;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kmaster.cookiemom.dao.CookieTransactions;
-import net.kmaster.cookiemom.dao.CookieTransactionsDao;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import static net.kmaster.cookiemom.dao.CookieTransactionsDao.Properties.TransBoothId;
-import static net.kmaster.cookiemom.dao.CookieTransactionsDao.Properties.TransBoxes;
 
 
 /**
@@ -45,9 +41,6 @@ public class SummarySalesFragment extends Fragment {
         int totalBooth = 0;
         Double totalScoutCash = 0.0;
         Double totalBoothCash = 0.0;
-        String boxesColumn = TransBoxes.columnName;
-        String boothIdColumn = TransBoothId.columnName;
-        String tablename = CookieTransactionsDao.TABLENAME;
         final HashMap<String, Integer> hashMap = new HashMap<String, Integer>();
         for (CookieTransactions cookieTransactions : list) {
 

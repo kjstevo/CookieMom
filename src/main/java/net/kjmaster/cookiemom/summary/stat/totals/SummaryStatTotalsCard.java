@@ -28,6 +28,7 @@ import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kmaster.cookiemom.dao.CookieTransactions;
 import net.kmaster.cookiemom.dao.CookieTransactionsDao;
+import org.jetbrains.annotations.NotNull;
 
 import java.text.NumberFormat;
 import java.util.List;
@@ -39,12 +40,9 @@ import java.util.List;
  */
 public class SummaryStatTotalsCard extends Card {
 
-    public SummaryStatTotalsCard(Context context) {
-        this(context, R.layout.summary_stat_totals_card_inner_layout);
-    }
 
-    public SummaryStatTotalsCard(Context context, int innerLayout) {
-        super(context, innerLayout);
+    public SummaryStatTotalsCard(Context context) {
+        super(context, R.layout.summary_stat_totals_card_inner_layout);
         init();
 
     }
@@ -79,7 +77,7 @@ public class SummaryStatTotalsCard extends Card {
 
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, View view) {
+    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
 
         TextView boxesView = (TextView) parent.findViewById(R.id.summary_stat_totals_boxes_text);
         TextView cashView = (TextView) parent.findViewById(R.id.summary_stat_totals_paid_text);

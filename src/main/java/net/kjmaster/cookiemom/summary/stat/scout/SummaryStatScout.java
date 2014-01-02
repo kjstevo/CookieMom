@@ -21,11 +21,11 @@ package net.kjmaster.cookiemom.summary.stat.scout;
 /**
  * @author Gabriele Mariotti (gabri.mariotti@gmail.com)
  */
-public class SummaryStatScout {
-    String code;
-    float value;
-    float delta;
-    float deltaPerc;
+class SummaryStatScout {
+    private final String code;
+    private final float value;
+    private final float delta;
+    private final float deltaPerc;
 
     public SummaryStatScout(String code, float value, float delta, float deltaPerc) {
         this.code = code;

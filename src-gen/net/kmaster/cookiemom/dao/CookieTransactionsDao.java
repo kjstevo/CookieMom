@@ -36,8 +36,6 @@ public class CookieTransactionsDao extends AbstractDao<CookieTransactions, Long>
         public final static Property TransCash = new Property(6, Double.class, "transCash", false, "TRANS_CASH");
     }
 
-    ;
-
     private DaoSession daoSession;
 
     private Query<CookieTransactions> scout_ScoutsCookieTransactionsQuery;

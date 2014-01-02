@@ -9,6 +9,7 @@ import it.gmariotti.cardslib.library.internal.CardHeader;
 import it.gmariotti.cardslib.library.view.CardView;
 import net.kjmaster.cookiemom.R;
 import net.kmaster.cookiemom.dao.Booth;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,7 +19,7 @@ import net.kmaster.cookiemom.dao.Booth;
  */
 public class CustomBoothExpander extends CardExpand {
     @Override
-    public void setupInnerViewElements(ViewGroup parent, View view) {
+    public void setupInnerViewElements(ViewGroup parent, @Nullable View view) {
         //net.kjmaster.cookiemom.booth.expander.CustomBoothExpander.setupInnerViewElements returns void
 
         //12/12/13
@@ -42,12 +43,9 @@ public class CustomBoothExpander extends CardExpand {
 
     private final Booth mBooth;
 
-    public CustomBoothExpander(Context context, Booth booth) {
-        this(context, R.layout.booth_expander_main_layout, booth);
-    }
 
-    public CustomBoothExpander(Context context, int innerLayout, Booth booth) {
-        super(context, innerLayout);
+    public CustomBoothExpander(Context context, Booth booth) {
+        super(context, R.layout.booth_expander_main_layout);
         mBooth = booth;
     }
 }

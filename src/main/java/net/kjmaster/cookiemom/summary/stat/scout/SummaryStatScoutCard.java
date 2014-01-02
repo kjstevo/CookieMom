@@ -29,6 +29,7 @@ import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kmaster.cookiemom.dao.CookieTransactions;
 import net.kmaster.cookiemom.dao.Scout;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,8 +46,8 @@ public class SummaryStatScoutCard extends Card {
         this(context, R.layout.summary_stat_scout_card_inner_layout);
     }
 
-    public SummaryStatScoutCard(Context context, int innerLayout) {
-        super(context, innerLayout);
+    private SummaryStatScoutCard(Context context, int innerLayout) {
+        super(context, R.layout.summary_stat_scout_card_inner_layout);
         init();
 
     }
@@ -54,7 +55,7 @@ public class SummaryStatScoutCard extends Card {
     private void init() {
         //Add Header
         CardHeader header = new CardHeader(getContext());
-        header.setButtonExpandVisible(true);
+        header.setButtonExpandVisible(false);
         header.setTitle(getContext().getString(R.string.Scouts)); //should use R.string.
         addCardHeader(header);
 
@@ -80,7 +81,7 @@ public class SummaryStatScoutCard extends Card {
     }
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, View view) {
+    public void setupInnerViewElements(ViewGroup parent, @NotNull View view) {
 
         TextView textView = (TextView) view.findViewById(R.id.carddemo_googlenow_main_inner_lastupdate);
 //        textView.setText("Update 14:57, 16 September"); //should use R.string.
@@ -98,6 +99,7 @@ public class SummaryStatScoutCard extends Card {
     //------------------------------------------------------------------------------------------
 
 
+    @NotNull
     ArrayList<SummaryStatScoutValues> buildArrayHelper() {
         //DataStore        dataStore = new DataStore(getContext());
         ArrayList<SummaryStatScoutValues> list = new ArrayList<SummaryStatScoutValues>();
@@ -146,7 +148,8 @@ public class SummaryStatScoutCard extends Card {
         return list;
     }
 
-    private HashMap<String, String> getTotalOrderPossCashForScoutCookieType(Scout scout) {
+    @NotNull
+    private HashMap<String, String> getTotalOrderPossCashForScoutCookieType(@NotNull Scout scout) {
 
         List<CookieTransactions> transactionsList = scout.getScoutsCookieTransactions();
 
@@ -163,19 +166,17 @@ public class SummaryStatScoutCard extends Card {
             }
         }
 
-        List<CookieTransactions> poss = transactionsList;
         //noinspection UnusedAssignment
         intVal = 0;
         hashMap.put("PossTotal", "0");
-        for (CookieTransactions cookieTransactions : poss) {
+        for (CookieTransactions cookieTransactions : transactionsList) {
 
             intVal = cookieTransactions.getTransBoxes() + Integer.valueOf(hashMap.get("PossTotal"));
             hashMap.put("PossTotal", String.valueOf(intVal));
         }
-        List<CookieTransactions> cashs = transactionsList;
         Double dVal;
         hashMap.put("CashTotal", String.valueOf(0));
-        for (CookieTransactions cash : cashs) {
+        for (CookieTransactions cash : transactionsList) {
             dVal = Double.valueOf(hashMap.get("CashTotal")) + cash.getTransCash();
             hashMap.put("CashTotal", String.valueOf(dVal));
         }

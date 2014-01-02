@@ -1,5 +1,6 @@
 package net.kjmaster.cookiemom;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -16,37 +17,62 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import com.astuetz.viewpager.extensions.PagerSlidingTabStrip;
-import com.googlecode.androidannotations.annotations.AfterViews;
-import com.googlecode.androidannotations.annotations.EActivity;
-import com.googlecode.androidannotations.annotations.OnActivityResult;
-import com.googlecode.androidannotations.annotations.OptionsMenu;
+import com.googlecode.androidannotations.annotations.*;
+import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
 import net.kjmaster.cookiemom.action.ActionFragment_;
 import net.kjmaster.cookiemom.booth.BoothFragment_;
 import net.kjmaster.cookiemom.cupboard.CupboardFragment_;
 import net.kjmaster.cookiemom.global.Constants;
+import net.kjmaster.cookiemom.global.ISettings_;
 import net.kjmaster.cookiemom.scout.ScoutFragment_;
+import net.kjmaster.cookiemom.scout.pickup.ScoutPickupActivity_;
+import net.kjmaster.cookiemom.scout.select.SelectScoutListActivity_;
 import net.kjmaster.cookiemom.summary.SummaryFragment_;
 import net.kmaster.cookiemom.dao.Booth;
 import net.kmaster.cookiemom.dao.BoothAssignments;
 import net.kmaster.cookiemom.dao.BoothAssignmentsDao;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Date;
 import java.util.List;
 
-@OptionsMenu(R.menu.activity_main)
+@SuppressLint("Registered")
 @EActivity(R.layout.main_activity)
 public class MainActivity extends FragmentActivity {
 
     private final Handler handler = new Handler();
     private PagerSlidingTabStrip tabs;
+    @Nullable
     private Drawable oldBackground = null;
-    //private int currentColor = 0xFF666666;
     private int currentColor = Color.GREEN;
+    private String actionItemTitle;
+    private Menu mMenu;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        this.mMenu = menu;
+        MenuInflater menuInflater = getMenuInflater();
+        String dbName = iSettings.dbName().get();
+        if (dbName != null) {
+            if (dbName.toString().equals("personal-db")) {
+                menuInflater.inflate(R.menu.activity_main_personal, menu);
+            } else {
+                menuInflater.inflate(R.menu.activity_main, menu);
+            }
+        }
+
+        return super.onCreateOptionsMenu(menu);
+    }
 
 
     @AfterViews
     void afterViews() {
+
         createTabPager();
 
         changeColor(currentColor);
@@ -115,20 +141,59 @@ public class MainActivity extends FragmentActivity {
         currentColor = newColor;
     }
 
+    @App
+    Main main;
+
+    @Pref
+    ISettings_ iSettings;
+
+    @OptionsItem(R.id.menu_eat_cookies)
+    void onEatCookies() {
+        SelectScoutListActivity_.intent(this)
+                .requestCode(Constants.EAT_COOKIES)
+                .startForResult(Constants.EAT_COOKIES);
+    }
+
+    @OnActivityResult(Constants.EAT_COOKIES)
+    void onEatSelectScoutResult(int resultCode, @Nullable Intent data) {
+        if (data != null) {
+            long scoutId = data.getLongExtra("scout_id", 0);
+            ScoutPickupActivity_.intent(this).ScoutId(scoutId).isEditable(true).startForResult(Constants.SCOUT_REQUEST);
+        }
+    }
+
+    @OptionsItem({R.id.menu_personal, R.id.menu_cookie_mom})
+    void onProfileSwitch(MenuItem item) {
+        if (item.getTitle().toString().equals(getString(R.string.Personal))) {
+            iSettings.dbName().put(iSettings.dbPersonalName().get());
+            main.switchDb(iSettings.dbPersonalName().get());
+            afterViews();
+            item.setTitle(R.string.cookie_mom);
+        } else {
+            iSettings.dbName().put(iSettings.dbCookieMomName().get());
+            main.switchDb(iSettings.dbCookieMomName().get());
+            afterViews();
+            item.setTitle(R.string.Personal);
+        }
+
+
+    }
+
+
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(@NotNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt("currentColor", currentColor);
     }
 
     @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+    protected void onRestoreInstanceState(@NotNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         currentColor = savedInstanceState.getInt("currentColor");
         changeColor(currentColor);
     }
 
-    private Drawable.Callback drawableCallback = new Drawable.Callback() {
+    private final Drawable.Callback drawableCallback = new Drawable.Callback() {
         @Override
         public void invalidateDrawable(Drawable who) {
 
@@ -155,7 +220,7 @@ public class MainActivity extends FragmentActivity {
 
     //}
     @OnActivityResult(Constants.REMOVE_SCOUT_REQUEST_CODE)
-    void onRemoveScout(int resultCode, Intent data) {
+    void onRemoveScout(int resultCode, @Nullable Intent data) {
         if (resultCode == RESULT_OK) {
 
             if (data != null) {
@@ -178,7 +243,7 @@ public class MainActivity extends FragmentActivity {
 
 
     @OnActivityResult(Constants.ASSIGN_SCOUT_REQUEST_CODE)
-    void onScoutAssign(int resultCode, Intent data) {
+    void onScoutAssign(int resultCode, @NotNull Intent data) {
         if (resultCode == RESULT_OK) {
             Main.daoSession.getBoothAssignmentsDao().insert(
                     new BoothAssignments(
@@ -217,7 +282,7 @@ public class MainActivity extends FragmentActivity {
     }
 
     @OnActivityResult(Constants.ADD_BOOTH_REQUEST_CODE)
-    void onBoothResult(int resultCode, Intent data) {
+    void onBoothResult(int resultCode, @Nullable Intent data) {
         if (resultCode == Constants.ADD_BOOTH_RESULT_OK) {
             if (data != null) {
                 Main.daoSession.getBoothDao().insert(
@@ -237,10 +302,19 @@ public class MainActivity extends FragmentActivity {
 
 
     public class MyNewPagerAdapter extends FragmentPagerAdapter {
-        private final String[] TITLES = getResources().getStringArray(R.array.tab_names);
+
+        private String[] TITLES = getResources().getStringArray(R.array.tab_names);
 
         public MyNewPagerAdapter(FragmentManager fm) {
             super(fm);
+            if (iSettings.dbName().get().equals(iSettings.dbPersonalName().get())) {
+                TITLES = getResources().getStringArray(R.array.personal_tab_names);
+                Constants.setADD_SCOUT(getString(R.string.add_customer_title));
+                Constants.setSCOUT(getString(R.string.Customers));
+            } else {
+                Constants.setADD_SCOUT(getString(R.string.add_scout));
+                Constants.setSCOUT(getString(R.string.Scouts));
+            }
         }
 
         @Override

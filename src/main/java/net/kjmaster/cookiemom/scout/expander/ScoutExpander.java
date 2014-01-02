@@ -11,6 +11,7 @@ import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kmaster.cookiemom.dao.CookieTransactions;
 import net.kmaster.cookiemom.dao.CookieTransactionsDao;
+import org.jetbrains.annotations.NotNull;
 
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
@@ -38,7 +39,7 @@ public class ScoutExpander extends CardExpand {
 
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, View view) {
+    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
         super.setupInnerViewElements(parent, view);    //To change body of overridden methods use File | Settings | File Templates.
 
         mTableView = (TableLayout) parent.findViewById(R.id.scout_tableview);

@@ -7,19 +7,22 @@ import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.ViewById;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.ICookieActionFragment;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 
 
-@EFragment(R.layout.booth_add_scout_dialog)
+@EFragment(R.layout.scout_add_scout_dialog)
 public class AddScoutDialogFragment extends DialogFragment implements ICookieActionFragment {
     @ViewById(R.id.editText)
     EditText editText;
 
+    @NotNull
     @Override
     public HashMap<String, String> valuesMap() {
         HashMap<String, String> valueMap = new HashMap<String, String>();
         valueMap.put(getString(R.string.add_scout), editText.getText().toString());
+
         return valueMap;
     }
 

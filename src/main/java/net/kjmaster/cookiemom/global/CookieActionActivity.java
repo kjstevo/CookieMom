@@ -9,6 +9,7 @@ import android.view.*;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.ui.numberpicker.NumberPickerBuilder;
 import net.kjmaster.cookiemom.ui.numberpicker.NumberPickerDialogFragment;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 
@@ -59,7 +60,7 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
         return ft;
     }
 
-    protected void replaceFrag(FragmentTransaction ft, Fragment frag, String fragName) {
+    protected void replaceFrag(@NotNull FragmentTransaction ft, Fragment frag, String fragName) {
 
         mFragment = (ICookieActionFragment) frag;
         ft.replace(R.id.content, frag, fragName);
@@ -69,7 +70,7 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
     }
 
     @Override
-    public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+    public boolean onCreateActionMode(@NotNull ActionMode mode, Menu menu) {
         MenuInflater inflater = mode.getMenuInflater();
 
         inflater.inflate(R.menu.add_scout, menu);
@@ -97,7 +98,7 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
 
 
     @Override
-    public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+    public boolean onActionItemClicked(@NotNull ActionMode mode, MenuItem item) {
 
         setResult(RESULT_CANCELED);
         mode.finish();
@@ -125,6 +126,7 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
         return mFragment;
     }
 
+    @NotNull
     public NumberPickerBuilder createNumberPicker(int finalI) {
         final NumberPickerBuilder numberPickerBuilder =
                 new NumberPickerBuilder()
@@ -140,7 +142,7 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(@NotNull Bundle outState) {
         //net.kjmaster.cookiemom.global.CookieActionActivity.onCreate returns void
         for (String cookieType : Constants.CookieTypes) {
             outState.putString(cookieType, mFragment.valuesMap().get(cookieType));
@@ -151,7 +153,7 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
 
 
     @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+    protected void onRestoreInstanceState(@NotNull Bundle savedInstanceState) {
         for (String cookieType : Constants.CookieTypes) {
             mFragment.valuesMap().put(cookieType, savedInstanceState.getString(cookieType));
 

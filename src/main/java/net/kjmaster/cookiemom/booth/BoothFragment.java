@@ -20,6 +20,7 @@ import net.kjmaster.cookiemom.booth.order.BoothOrderActivity_;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.scout.select.SelectScoutListActivity_;
 import net.kmaster.cookiemom.dao.*;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +54,7 @@ public class BoothFragment
                 cardHeader.setButtonExpandVisible(true);
                 cardHeader.setPopupMenu(R.menu.booth_overflow, new CardHeader.OnClickCardHeaderPopupMenuListener() {
                     @Override
-                    public void onMenuItemClick(BaseCard card, MenuItem item) {
+                    public void onMenuItemClick(@NotNull BaseCard card, @NotNull MenuItem item) {
                         selectBoothMenu(card, item);
                     }
                 });
@@ -84,7 +85,7 @@ public class BoothFragment
         super.onHiddenChanged(hidden);
     }
 
-    private void selectBoothMenu(BaseCard card, MenuItem item) {
+    private void selectBoothMenu(@NotNull BaseCard card, @NotNull MenuItem item) {
         Booth booth = ((BoothContentCard) card.getParentCard()).getBooth();
         switch (item.getItemId()) {
 
@@ -149,7 +150,7 @@ public class BoothFragment
 
     }
 
-    private void deleteBooth(long requestCode, BoothDao boothDao) {
+    private void deleteBooth(long requestCode, @NotNull BoothDao boothDao) {
         boothDao.delete(boothDao.loadByRowId(requestCode));
     }
 

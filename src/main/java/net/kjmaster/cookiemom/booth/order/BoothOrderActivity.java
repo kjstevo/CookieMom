@@ -1,5 +1,6 @@
 package net.kjmaster.cookiemom.booth.order;
 
+import android.annotation.SuppressLint;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
@@ -23,6 +24,7 @@ import java.util.List;
  * Date: 11/4/13
  * Time: 2:16 PM
  */
+@SuppressLint("Registered")
 @EActivity(R.layout.scout_order_layout)
 public class BoothOrderActivity extends CookieActionActivity {
 

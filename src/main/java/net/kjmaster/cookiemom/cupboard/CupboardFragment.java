@@ -2,18 +2,16 @@ package net.kjmaster.cookiemom.cupboard;
 
 import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.MenuItem;
 import com.googlecode.androidannotations.annotations.*;
 import it.gmariotti.cardslib.library.internal.Card;
 import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
-import it.gmariotti.cardslib.library.internal.CardHeader;
 import it.gmariotti.cardslib.library.internal.CardThumbnail;
-import it.gmariotti.cardslib.library.internal.base.BaseCard;
 import it.gmariotti.cardslib.library.view.CardListView;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.MainActivity;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
+import net.kjmaster.cookiemom.ui.cookies.CookieCardHeader;
 import net.kmaster.cookiemom.dao.CookieTransactions;
 import net.kmaster.cookiemom.dao.CookieTransactionsDao;
 import net.kmaster.cookiemom.dao.Order;
@@ -61,13 +59,15 @@ public class CupboardFragment extends Fragment {
 //        daoMaster = new DaoMaster(db);
 //        daoSession=daoMaster.newSession();
 ////        CookieFlavorDao cookieFlavorDao = daoSession.getCookieFlavorDao();
-        List<String> cookieFlavors = new ArrayList<String>(Constants.getCookieNameImages().keySet());
+        //   List<String> cookieFlavors = new ArrayList<String>(Constants.getCookieNameImages().keySet());
 
         CookieTransactionsDao dao = Main.daoSession.getCookieTransactionsDao();
 
 
         List<Card> mData = new ArrayList<Card>();
-        for (final String cookieFlavor : cookieFlavors) {
+        String[] cookieTypes = Constants.CookieTypes;
+        for (int i = 0; i < cookieTypes.length; i++) {
+            String cookieFlavor = cookieTypes[i];
 
             List trans = dao.queryBuilder().where(CookieType.eq(cookieFlavor)).list();
             Integer sumTotal = 0;
@@ -91,16 +91,18 @@ public class CupboardFragment extends Fragment {
             CardThumbnail cardThumbnail = new CardThumbnail(getActivity());
             cardThumbnail.setDrawableResource(Constants.getCookieNameImages().get(cookieFlavor));
             mCard.addCardThumbnail(cardThumbnail);
-            CardHeader cardHeader = new CardHeader(getActivity());
-            cardHeader.setButtonOverflowVisible(true);
+            CookieCardHeader cardHeader = new CookieCardHeader(getActivity(), Constants.CookieColors[i]);
 
+            //change to true to add menu.   also uncomment lines below and add code in method
+            cardHeader.setButtonOverflowVisible(false);
 
-            cardHeader.setPopupMenu(R.menu.cupboard_overflow, new CardHeader.OnClickCardHeaderPopupMenuListener() {
-                @Override
-                public void onMenuItemClick(BaseCard card, MenuItem item) {
-                    selectCookieFlavorMenu(card, item);
-                }
-            });
+//Uncomment to add a menu to the card
+//            cardHeader.setPopupMenu(R.menu.cupboard_overflow, new CardHeader.OnClickCardHeaderPopupMenuListener() {
+//                @Override
+//                public void onMenuItemClick(BaseCard card, MenuItem item) {
+//                    selectCookieFlavorMenu(card, item);
+//                }
+//            });
 
 //                cardHeader.setPopupMenu(R.menu.cupboard_overflow, new CardHeader.OnClickCardHeaderPopupMenuListener() {
 //                    @Override
@@ -120,13 +122,14 @@ public class CupboardFragment extends Fragment {
         cardArrayAdapter.setRowLayoutId(R.layout.scout_card_layout);
         cardView.setAdapter(cardArrayAdapter);
 
-    }
-
-    @SuppressWarnings("UnusedParameters")
-    private void selectCookieFlavorMenu(BaseCard card, MenuItem item) {
-
 
     }
+
+//
+//    private void selectCookieFlavorMenu(BaseCard card, MenuItem item) {
+//
+//
+//    }
 
 
     @OptionsItem(R.id.menu_place_cupboard_order)

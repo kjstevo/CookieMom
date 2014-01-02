@@ -36,11 +36,11 @@
     <color name="bar_booth">#ff30a5c7</color>
     <color name="bar_scout">#ffc731ba</color>
     <color name="color_thin_mints">#ff1ec72f</color>
-    <color name="color_berry">#ff9f37c7</color>
+    <color name="color_berry">#ffdaaecb</color>
     <color name="color_dulce">#ff42c7af</color>
-    <color name="color_tags">#ff9e7c53</color>
-    <color name="color_trefoils">#fff2eda4</color>
-    <color name="color_samoas">#ffdd4a2d</color>
-    <color name="color_dosidos">#ff437c9e</color>
-    <color name="color_smiles">#ffe5ea2d</color>
+    <color name="color_tags">#ffff7808</color>
+    <color name="color_trefoils">#ff127887</color>
+    <color name="color_samoas">#ff970a91</color>
+    <color name="color_dosidos">#ffc1a876</color>
+    <color name="color_smiles">#ffd4ce00</color>
 </resources>

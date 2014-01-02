@@ -12,6 +12,7 @@ import it.gmariotti.cardslib.library.view.CardView;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.booth.BoothListFragmentCard;
 import net.kmaster.cookiemom.dao.Scout;
+import org.jetbrains.annotations.Nullable;
 
 public class CustomExpander extends CardExpand {
     private final Scout scout;
@@ -23,43 +24,43 @@ public class CustomExpander extends CardExpand {
     }
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, View view) {
+    public void setupInnerViewElements(ViewGroup parent, @Nullable View view) {
         if (view == null) {
             return;
         }
 
-        BoothListFragmentCard card1 = new BoothListFragmentCard(getContext(), scout.getId());
-        //Card card1       = new BoothContentCard(getContext(),) Card(getContext(), R.layout.carddemo_example_inner_content);
-        CardHeader cardHeader1 = new CardHeader(getContext());
+        BoothListFragmentCard upcomingBoothsCard = new BoothListFragmentCard(getContext(), scout.getId());
+        //Card upcomingBoothsCard       = new BoothContentCard(getContext(),) Card(getContext(), R.layout.carddemo_example_inner_content);
+        CardHeader upcomingBoothsCardHeader = new CardHeader(getContext());
 
 
-        cardHeader1.setTitle("Upcoming Booths");
-        card1.addCardHeader(cardHeader1);
+        upcomingBoothsCardHeader.setTitle(getContext().getString(R.string.upcoming_booths));
+        upcomingBoothsCard.addCardHeader(upcomingBoothsCardHeader);
 
 //      cardHeader2.setTitle("Booths");
-//     card2.addCardHeader(cardHeader2);
+//     cookieListCard.addCardHeader(cardHeader2);
 
 
         // Retrieve TextView elements
-        CardView cardView1 = (CardView) view.findViewById(R.id.carddemo_example_card3_listeners1);
+        CardView cookieListCardView = (CardView) view.findViewById(R.id.carddemo_example_card3_listeners1);
 //
 
 
-        Card card2 = new ScoutExpanderCookieList(getContext(), this.scout);
-        CardHeader header = new CardHeader(getContext());
-        CardView cardView2 = (CardView) view.findViewById(R.id.carddemo_example_card3_listeners2);
-        cardView2.setCard(card1);
-        header.setButtonExpandVisible(true);
-        header.setTitle("Cookies");    // should use R.string.
-        card2.addCardHeader(header);
+        Card cookieListCard = new ScoutExpanderCookieList(getContext(), this.scout);
+        CardHeader cookieListCardHeader = new CardHeader(getContext());
+        CardView upcomingBoothsCardView = (CardView) view.findViewById(R.id.carddemo_example_card3_listeners2);
+        upcomingBoothsCardView.setCard(upcomingBoothsCard);
+        cookieListCardHeader.setButtonExpandVisible(true);
+        cookieListCardHeader.setTitle("Cookies");    // should use R.string.
+        cookieListCard.addCardHeader(cookieListCardHeader);
 
         // Add expand
         ScoutExpander expand = new ScoutExpander(getContext(), R.layout.scout_expander_inner_expand, scout.getId());
 
-        card2.addCardExpand(expand);
+        cookieListCard.addCardExpand(expand);
 
 
-        cardView1.setCard(card2);
+        cookieListCardView.setCard(cookieListCard);
 
     }
 }

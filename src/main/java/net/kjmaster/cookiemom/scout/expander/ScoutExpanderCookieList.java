@@ -31,6 +31,7 @@ import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kmaster.cookiemom.dao.*;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -62,7 +63,7 @@ public class ScoutExpanderCookieList extends Card {
     }
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, View view) {
+    public void setupInnerViewElements(ViewGroup parent, @NotNull View view) {
 
 //      TextView textView = (TextView) view.findViewById(R.id.carddemo_googlenow_main_inner_lastupdate);
 //      textView.setText("Update 14:57, 16 September"); //should use R.string.
@@ -73,6 +74,7 @@ public class ScoutExpanderCookieList extends Card {
     }
 
     // ------------------------------------------------------------------------------------------
+    @NotNull
     ArrayList<ScoutExpanderValues> buildArrayHelper() {
         //DataStore        dataStore = new DataStore(getContext());
         ArrayList<ScoutExpanderValues> list = new ArrayList<ScoutExpanderValues>();
@@ -119,7 +121,8 @@ public class ScoutExpanderCookieList extends Card {
         return list;
     }
 
-    private HashMap<String, String> getTotalOrderPossCashForScoutCookieType(Scout scout, String cookieType) {
+    @NotNull
+    private HashMap<String, String> getTotalOrderPossCashForScoutCookieType(@NotNull Scout scout, String cookieType) {
 
         List<Order> orderListStockAdapter = Main.daoSession.getOrderDao().queryBuilder()
                 .where(

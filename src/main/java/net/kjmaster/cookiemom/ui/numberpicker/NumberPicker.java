@@ -15,10 +15,11 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import net.kjmaster.cookiemom.R;
+import org.jetbrains.annotations.NotNull;
 
 import java.math.BigDecimal;
 
-@SuppressWarnings({"UnnecessaryLocalVariable", "UnusedParameters", "StatementWithEmptyBody"})
+@SuppressWarnings("ALL")
 public class NumberPicker extends LinearLayout implements Button.OnClickListener,
         Button.OnLongClickListener {
 
@@ -29,6 +30,7 @@ public class NumberPicker extends LinearLayout implements Button.OnClickListener
     protected Button mLeft, mRight;
     protected ImageButton mDelete;
     protected NumberView mEnteredNumber;
+    @NotNull
     protected final Context mContext;
 
     private TextView mLabel;
@@ -54,7 +56,7 @@ public class NumberPicker extends LinearLayout implements Button.OnClickListener
      *
      * @param context the Context required for creation
      */
-    public NumberPicker(Context context) {
+    public NumberPicker(@NotNull Context context) {
         this(context, null);
     }
 
@@ -64,7 +66,7 @@ public class NumberPicker extends LinearLayout implements Button.OnClickListener
      * @param context the Context required for creation
      * @param attrs   additional attributes that define custom colors, selectors, and backgrounds.
      */
-    public NumberPicker(Context context, AttributeSet attrs) {
+    public NumberPicker(@NotNull Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
         LayoutInflater layoutInflater =
@@ -253,14 +255,14 @@ public class NumberPicker extends LinearLayout implements Button.OnClickListener
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(@NotNull View v) {
         v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
         mError.hideImmediately();
         doOnClick(v);
         updateDeleteButton();
     }
 
-    protected void doOnClick(View v) {
+    protected void doOnClick(@NotNull View v) {
         Integer val = (Integer) v.getTag(R.id.numbers_key);
         if (val != null) {
             // A number was pressed
@@ -280,7 +282,7 @@ public class NumberPicker extends LinearLayout implements Button.OnClickListener
     }
 
     @Override
-    public boolean onLongClick(View v) {
+    public boolean onLongClick(@NotNull View v) {
         v.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
         mError.hideImmediately();
         if (v == mDelete) {
@@ -509,6 +511,7 @@ public class NumberPicker extends LinearLayout implements Button.OnClickListener
         return mSign == SIGN_NEGATIVE;
     }
 
+    @NotNull
     @Override
     public Parcelable onSaveInstanceState() {
         final Parcelable parcel = super.onSaveInstanceState();
@@ -549,7 +552,7 @@ public class NumberPicker extends LinearLayout implements Button.OnClickListener
             super(superState);
         }
 
-        private SavedState(Parcel in) {
+        private SavedState(@NotNull Parcel in) {
             super(in);
             mInputPointer = in.readInt();
             in.readIntArray(mInput);
@@ -557,7 +560,7 @@ public class NumberPicker extends LinearLayout implements Button.OnClickListener
         }
 
         @Override
-        public void writeToParcel(Parcel dest, int flags) {
+        public void writeToParcel(@NotNull Parcel dest, int flags) {
             super.writeToParcel(dest, flags);
             dest.writeInt(mInputPointer);
             dest.writeIntArray(mInput);
@@ -566,10 +569,12 @@ public class NumberPicker extends LinearLayout implements Button.OnClickListener
 
         public static final Creator<SavedState> CREATOR
                 = new Creator<SavedState>() {
-            public SavedState createFromParcel(Parcel in) {
+            @NotNull
+            public SavedState createFromParcel(@NotNull Parcel in) {
                 return new SavedState(in);
             }
 
+            @NotNull
             public SavedState[] newArray(int size) {
                 return new SavedState[size];
             }

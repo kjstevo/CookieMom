@@ -25,6 +25,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * @author Gabriele Mariotti (gabri.mariotti@gmail.com)
@@ -43,7 +44,7 @@ public class SummaryStatScoutListLayout extends LinearLayout implements View.OnC
         super(context, attrs, defStyle);
     }
 
-    public void setAdapter(SummaryStatScoutValuesListAdapter list) {
+    public void setAdapter(@Nullable SummaryStatScoutValuesListAdapter list) {
         setOrientation(VERTICAL);
 
         // Popolute list

@@ -2,6 +2,7 @@ package net.kjmaster.cookiemom.booth;
 
 import android.content.Context;
 import android.widget.ArrayAdapter;
+import net.kjmaster.cookiemom.R;
 import net.kmaster.cookiemom.dao.Booth;
 
 import java.text.DateFormat;
@@ -13,8 +14,8 @@ import java.text.DateFormat;
  * Time: 9:41 AM
  */
 public class BoothTextAdapterListItem extends ArrayAdapter<Object> {
-    public BoothTextAdapterListItem(Context context, int textViewResourceId) {
-        super(context, textViewResourceId);
+    public BoothTextAdapterListItem(Context context) {
+        super(context, R.layout.ui_simple_medium_text);
     }
 
     @Override

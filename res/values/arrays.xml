@@ -15,4 +15,11 @@
         <item>Summary</item>
     </string-array>
 
+    <string-array name="personal_tab_names">
+        <item>Actions</item>
+        <item>Customers</item>
+        <item>Booths</item>
+        <item>Cupboard</item>
+    </string-array>
+
 </resources>

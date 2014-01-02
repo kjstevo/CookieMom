@@ -22,7 +22,7 @@ package net.kjmaster.cookiemom.summary.stat.scout;
 /**
  * @author Gabriele Mariotti (gabri.mariotti@gmail.com)
  */
-public class SummaryStatScoutValues {
+class SummaryStatScoutValues {
     String code;
     float value;
     float delta;

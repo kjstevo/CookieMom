@@ -12,7 +12,6 @@
     <TableLayout
             android:layout_width="fill_parent"
             android:layout_height="114dp" android:id="@+id/scout_tableview"
-            android:layout_below="@id/card_expand_inner_simple_title"
             android:orientation="vertical" android:measureWithLargestChild="true" android:clipChildren="false"
             android:duplicateParentState="false" android:isScrollContainer="true"
             android:verticalScrollbarPosition="right" android:scrollbarStyle="outsideOverlay">

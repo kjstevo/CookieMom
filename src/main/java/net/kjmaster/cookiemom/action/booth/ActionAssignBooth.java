@@ -12,6 +12,7 @@ import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.scout.select.SelectScoutListActivity_;
 import net.kmaster.cookiemom.dao.Booth;
 import net.kmaster.cookiemom.dao.BoothAssignmentsDao;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +36,7 @@ public class ActionAssignBooth extends ActionContentCard {
     }
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, View view) {
+    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
         super.setupInnerViewElements(parent, view);    //To change body of overridden methods use File | Settings | File Templates.
         final ListView listView = (ListView) parent.findViewById(R.id.action_list);
         if (listView != null) {
@@ -50,17 +51,29 @@ public class ActionAssignBooth extends ActionContentCard {
     }
 
 
+    @NotNull
     @Override
     public Boolean isCardVisible() {
+        String scoutTitle = Constants.getSCOUT();
+        if (scoutTitle.equals(mContext.getString(R.string.Customers))) {
+            return false;
+        }
         List<Booth> booths = Main.daoSession.getBoothDao().loadAll();
+        if (booths.isEmpty()) {
+            return false;
+        }
         long cnt = 0;
         for (Booth booth : booths) {
-            cnt = Main.daoSession.getBoothAssignmentsDao().queryBuilder().where(BoothAssignmentsDao.Properties.BoothAssignBoothId.eq(booth.getId())).count();
+            cnt = Main.daoSession.getBoothAssignmentsDao().queryBuilder()
+                    .where(
+                            BoothAssignmentsDao.Properties.BoothAssignBoothId.eq(booth.getId()))
+                    .count();
         }
 
         return cnt < 2;
     }
 
+    @NotNull
     @Override
     public List<Booth> getActionList() {
         List<Booth> stringList = new ArrayList<Booth>();
@@ -77,11 +90,13 @@ public class ActionAssignBooth extends ActionContentCard {
         return stringList;
     }
 
+    @NotNull
     @Override
     public String getActionTitle() {
         return "The following booths need to be assigned scouts:";  //To change body of implemented methods use File | Settings | File Templates.
     }
 
+    @NotNull
     @Override
     public String getHeaderText() {
         return "Booths";

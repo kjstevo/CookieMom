@@ -61,6 +61,7 @@ public class SummaryCookiesFragment extends android.support.v4.app.Fragment {
                 total = total - ((total - 255) * 2);
             }
             if (total < 0) {
+                //noinspection UnusedAssignment
                 total = 0;
             }
             //    slice.setColor(Color.parseColor("#FFBB33"));

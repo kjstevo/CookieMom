@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import it.gmariotti.cardslib.library.internal.Card;
 import net.kjmaster.cookiemom.R;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,29 +21,21 @@ public class ScoutCard extends Card {
     private String owedText = "$0.00";
     private String totalText = "$0.00";
     private boolean isReadyForPickup = false;
-    protected TextView mTitle;
-    protected TextView mSecondaryTitle;
-    protected TextView mCheckbox;
-    protected TextView mTotalAmount;
-    protected TextView mScoutPaidText;
-    protected TextView mScoutOwedText;
+    private TextView mTitle;
+    private TextView mSecondaryTitle;
+    private TextView mCheckbox;
+    private TextView mTotalAmount;
+    private TextView mScoutPaidText;
+    private TextView mScoutOwedText;
 
     /**
      * Constructor with a custom inner layout
      *
      * @param context
      */
-    public ScoutCard(Context context) {
-        this(context, R.layout.scout_inner_content);
-    }
-
-    /**
-     * @param context
-     * @param innerLayout
-     */
     @SuppressWarnings("JavaDoc")
-    public ScoutCard(Context context, int innerLayout) {
-        super(context, innerLayout);
+    public ScoutCard(Context context) {
+        super(context, R.layout.scout_inner_content);
         init();
     }
 
@@ -54,7 +47,7 @@ public class ScoutCard extends Card {
         // No Header
         addPartialOnClickListener(CLICK_LISTENER_CONTENT_VIEW, new OnCardClickListener() {
             @Override
-            public void onClick(Card card, View view) {
+            public void onClick(@NotNull Card card, View view) {
                 View view1 = card.getCardView().findViewById(R.id.card_content_expand_layout);
 
                 if (card.isExpanded()) {
@@ -91,7 +84,7 @@ public class ScoutCard extends Card {
     }
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, View view) {
+    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
 
         // Retrieve elements
         mTitle = (TextView) parent.findViewById(R.id.card_main_inner_simple_title);

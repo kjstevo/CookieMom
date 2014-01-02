@@ -1,5 +1,6 @@
 package net.kjmaster.cookiemom.booth.checking;
 
+import android.annotation.SuppressLint;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
@@ -14,6 +15,7 @@ import net.kmaster.cookiemom.dao.CookieTransactions;
 import net.kmaster.cookiemom.dao.CookieTransactionsDao;
 import net.kmaster.cookiemom.dao.Order;
 import net.kmaster.cookiemom.dao.OrderDao;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Calendar;
 import java.util.HashMap;
@@ -27,6 +29,7 @@ import static net.kjmaster.cookiemom.global.Constants.CookieTypes;
  * Date: 12/10/13
  * Time: 8:40 PM
  */
+@SuppressLint("Registered")
 @EActivity(R.layout.scout_order_layout)
 public class BoothCheckOutActivity extends CookieOrCashDialogBase {
     private String fragName;
@@ -209,6 +212,7 @@ public class BoothCheckOutActivity extends CookieOrCashDialogBase {
 
     }
 
+    @NotNull
     @Override
     public HashMap<String, String> getValMap() {
 

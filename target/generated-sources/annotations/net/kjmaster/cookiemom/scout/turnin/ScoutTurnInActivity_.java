@@ -19,8 +19,7 @@ import net.kjmaster.cookiemom.R.layout;
 import net.kjmaster.cookiemom.R.string;
 
 public final class ScoutTurnInActivity_
-    extends ScoutTurnInActivity
-{
+        extends ScoutTurnInActivity {
 
 
     @Override
@@ -32,10 +31,10 @@ public final class ScoutTurnInActivity_
 
     private void init_(Bundle savedInstanceState) {
         Resources resources_ = this.getResources();
-        scout_turn_in = resources_.getString(string.scout_turn_in);
-        turn_in = resources_.getString(string.turn_in);
         scout_turn_in__title = resources_.getString(string.scout_turn_in_title);
+        turn_in = resources_.getString(string.turn_in);
         resCancel = resources_.getString(string.cancel);
+        scout_turn_in = resources_.getString(string.scout_turn_in);
         injectExtras_();
     }
 
@@ -63,7 +62,7 @@ public final class ScoutTurnInActivity_
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (((SdkVersionHelper.getSdkInt()< 5)&&(keyCode == KeyEvent.KEYCODE_BACK))&&(event.getRepeatCount() == 0)) {
+        if (((SdkVersionHelper.getSdkInt() < 5) && (keyCode == KeyEvent.KEYCODE_BACK)) && (event.getRepeatCount() == 0)) {
             onBackPressed();
         }
         return super.onKeyDown(keyCode, event);
@@ -76,7 +75,7 @@ public final class ScoutTurnInActivity_
     private void injectExtras_() {
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
-        if (extras_!= null) {
+        if (extras_ != null) {
             if (extras_.containsKey("isEditable")) {
                 try {
                     isEditable = ((Boolean) extras_.get("isEditable"));

@@ -24,9 +24,11 @@ import android.widget.*;
 import android.widget.DatePicker.OnDateChangedListener;
 import android.widget.TimePicker.OnTimeChangedListener;
 import net.kjmaster.cookiemom.R;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Calendar;
 
+@SuppressWarnings("ALL")
 public class DateTimePicker extends RelativeLayout implements View.OnClickListener, OnDateChangedListener, OnTimeChangedListener {
 
     // DatePicker reference
@@ -39,15 +41,15 @@ public class DateTimePicker extends RelativeLayout implements View.OnClickListen
     private Calendar mCalendar;
 
     // Constructor start
-    public DateTimePicker(Context context) {
+    public DateTimePicker(@NotNull Context context) {
         this(context, null);
     }
 
-    public DateTimePicker(Context context, AttributeSet attrs) {
+    public DateTimePicker(@NotNull Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public DateTimePicker(Context context, AttributeSet attrs, int defStyle) {
+    public DateTimePicker(@NotNull Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
         // Get LayoutInflater instance
@@ -95,7 +97,7 @@ public class DateTimePicker extends RelativeLayout implements View.OnClickListen
     }
 
     // Handle button clicks
-    public void onClick(View v) {
+    public void onClick(@NotNull View v) {
         int i = v.getId();
         if (i == R.id.SwitchToDate) {
             v.setEnabled(false);

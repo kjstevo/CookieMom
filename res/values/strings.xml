@@ -98,8 +98,8 @@
 
     <!-- DO NOT TRANSLATE -->
     <string name="day_of_week_label_typeface">sans-serif</string>
-    <string name="place_cupboard_order">Cupboard Order</string>
-    <string name="pickuo_cupboard_order">Cupboard Pickup</string>
+    <string name="place_cupboard_order">Order</string>
+    <string name="pickuo_cupboard_order">Pickup</string>
     <string name="add_cupboard_order">add_cupboard_order</string>
     <string name="add_cupboard_order_title">Order from Cupboard</string>
     <string name="pickup_order">pickup_order</string>
@@ -113,7 +113,7 @@
     <string name="order_from_cupboard">Order</string>
     <string name="pickup_from_cupboard">Pickup</string>
     <string name="add_personal">Add Order</string>
-    <string name="eat_cookies">Eat Cookies</string>
+    <string name="eat_cookies">Eat</string>
     <string name="edit">Edit</string>
     <string name="delivered">Deliver</string>
     <string name="collect">Collect</string>
@@ -121,15 +121,14 @@
     <string name="scout_id">scout_id</string>
     <string name="scout_turn_in">scout_turn_in</string>
     <string name="scout_turn_in_title">Turning In</string>
-    <string name="add_scout_frag">add_scout</string>
-    <string name="add_scout_title">Add Scout</string>
+    <string name="add_customer_title">Add Customer</string>
     <string name="Actions">Actions</string>
     <string name="Scouts">Scouts</string>
     <string name="Booths">Booth</string>
     <string name="Cupboard">Cupboard</string>
     <string name="Personal">Personal</string>
     <string name="Summary">Summary</string>
-    <string name="add_personal_title">Add Personal Order</string>
+    <string name="add_personal_order_title">Add Personal Order</string>
     <string name="cookies_ready_for_pickup_by">Cookies are ready for pickup by:</string>
     <string name="awaiting_cookie_delivery">The following are awaiting cookie delivery:</string>
     <string name="personal_deliver_order_title">Deliver Order</string>
@@ -148,7 +147,17 @@
     <string name="totals">Totals</string>
     <string name="paid">Paid</string>
     <string name="gifts_of_caring">Gifts of Caring</string>
-    <string name="cash_recieved">Cash Recieved</string>
+    <string name="cash_recieved">Cash Received</string>
     <string name="deficit">Deficit</string>
+    <string name="cookie_mom">Cookie Mom</string>
+    <string name="Customers">Customers</string>
+    <string name="contact_info">Contact Info</string>
+    <string name="customer_name">Customer\'s Name</string>
+    <string name="add">Add</string>
+    <string name="error">Error</string>
+    <string name="edit_order">Edit Order</string>
+    <string name="edit_order_title">Edit Order</string>
+    <string name="select_scout">Select Scout</string>
+    <string name="upcoming_booths">Upcoming Booths</string>
 
 </resources>

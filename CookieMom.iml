@@ -8,6 +8,7 @@
         <option name="CUSTOM_APK_RESOURCE_FOLDER" value="/target/generated-sources/combined-resources/res" />
         <option name="APK_PATH" value="/target/CookieMom.apk" />
         <option name="RUN_PROCESS_RESOURCES_MAVEN_TASK" value="false" />
+        <option name="UPDATE_PROPERTY_FILES" value="true" />
         <option name="COMPILE_CUSTOM_GENERATED_SOURCES" value="false" />
         <includeAssetsFromLibraries>true</includeAssetsFromLibraries>
       </configuration>
@@ -46,6 +47,15 @@
     <orderEntry type="library" name="Maven: de.greenrobot:greendao:1.3.3" level="project" />
     <orderEntry type="library" name="Maven: de.greenrobot:greendao-generator:1.3.0" level="project" />
     <orderEntry type="module" module-name="HoloGraphLibrary" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/annotations.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 

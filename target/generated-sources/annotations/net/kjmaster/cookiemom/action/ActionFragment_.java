@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.*;
 import it.gmariotti.cardslib.library.view.CardListView;
 import net.kjmaster.cookiemom.R.layout;
+import net.kjmaster.cookiemom.global.ISettings_;
 
 public final class ActionFragment_
         extends ActionFragment {
@@ -16,6 +17,7 @@ public final class ActionFragment_
     private View contentView_;
 
     private void init_(Bundle savedInstanceState) {
+        iSettings = new ISettings_(getActivity());
         setHasOptionsMenu(true);
     }
 

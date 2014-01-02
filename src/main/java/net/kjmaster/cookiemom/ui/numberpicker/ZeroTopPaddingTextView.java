@@ -26,6 +26,7 @@ import net.kjmaster.cookiemom.R;
 /**
  * Displays text with no padding at the top.
  */
+@SuppressWarnings("ALL")
 public class ZeroTopPaddingTextView extends TextView {
 
     private static final float NORMAL_FONT_PADDING_RATIO = 0.328f;

@@ -11,6 +11,7 @@ import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.action.ActionContentCard;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kmaster.cookiemom.dao.OrderDao;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,12 +24,13 @@ import java.util.List;
  */
 
 public class ActionCupboardOrder extends ActionContentCard {
+    @NotNull
     private final Context mActivity;
     private final String pickupString;
     private final String orderString;
 
 
-    public ActionCupboardOrder(Context mActivity) {
+    public ActionCupboardOrder(@NotNull Context mActivity) {
         super(mActivity);
         this.mActivity = mActivity;
         this.pickupString = mActivity.getString(R.string.pickup);
@@ -38,7 +40,7 @@ public class ActionCupboardOrder extends ActionContentCard {
     }
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, View view) {
+    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
         super.setupInnerViewElements(parent, view);    //To change body of overridden methods use File | Settings | File Templates.
 
         final ListView listView = (ListView) parent.findViewById(R.id.action_list);
@@ -67,12 +69,14 @@ public class ActionCupboardOrder extends ActionContentCard {
     }
 
 
+    @NotNull
     @Override
     public Boolean isCardVisible() {
         long cnt = Main.daoSession.getOrderDao().queryBuilder().where(OrderDao.Properties.PickedUpFromCupboard.eq(false)).count();
         return cnt > 0;
     }
 
+    @NotNull
     @Override
     public List<String> getActionList() {
         List<String> stringList = new ArrayList<String>();
@@ -99,11 +103,13 @@ public class ActionCupboardOrder extends ActionContentCard {
         return stringList;
     }
 
+    @NotNull
     @Override
     public String getActionTitle() {
         return "Cookie Cupboard activities needing action:";  //To change body of implemented methods use File | Settings | File Templates.
     }
 
+    @NotNull
     @Override
     public String getHeaderText() {
         return "Cookie Cupboard";

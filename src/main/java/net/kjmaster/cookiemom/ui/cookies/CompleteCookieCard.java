@@ -1,9 +1,9 @@
 package net.kjmaster.cookiemom.ui.cookies;
 
 import android.content.Context;
-import it.gmariotti.cardslib.library.internal.CardHeader;
 import it.gmariotti.cardslib.library.internal.CardThumbnail;
 import net.kjmaster.cookiemom.global.Constants;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,10 +13,13 @@ import net.kjmaster.cookiemom.global.Constants;
  */
 public class CompleteCookieCard {
 
-    public static CookieAmountContentCard CreateCompleteCookieCard(CookieAmountContentCard mCard, String cookieType, Context context) {
+    private static int color;
+
+    @NotNull
+    public static CookieAmountContentCard CreateCompleteCookieCard(@NotNull CookieAmountContentCard mCard, String cookieType, Context context, int colorolor) {
 
 
-        CardHeader cardHeader = new CardHeader(context);
+        CookieCardHeader cardHeader = new CookieCardHeader(context, color);
         cardHeader.setTitle(cookieType);
         mCard.addCardHeader(cardHeader);
 

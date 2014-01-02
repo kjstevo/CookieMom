@@ -30,6 +30,7 @@ import net.kjmaster.cookiemom.R;
 import net.kmaster.cookiemom.dao.Booth;
 import net.kmaster.cookiemom.dao.CookieTransactions;
 import net.kmaster.cookiemom.dao.CookieTransactionsDao;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,12 +43,9 @@ import java.util.List;
  */
 public class SummaryStatBoothCard extends Card {
 
-    public SummaryStatBoothCard(Context context) {
-        this(context, R.layout.summary_stat_booth_card_inner_layout);
-    }
 
-    public SummaryStatBoothCard(Context context, int innerLayout) {
-        super(context, innerLayout);
+    public SummaryStatBoothCard(Context context) {
+        super(context, R.layout.summary_stat_booth_card_inner_layout);
         init();
 
     }
@@ -55,7 +53,7 @@ public class SummaryStatBoothCard extends Card {
     private void init() {
         //Add Header
         CardHeader header = new CardHeader(getContext());
-        header.setButtonExpandVisible(true);
+        header.setButtonExpandVisible(false);
         header.setTitle(getContext().getString(R.string.Booths)); //should use R.string.
         addCardHeader(header);
 
@@ -81,7 +79,7 @@ public class SummaryStatBoothCard extends Card {
     }
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, View view) {
+    public void setupInnerViewElements(ViewGroup parent, @NotNull View view) {
 
         TextView textView = (TextView) view.findViewById(R.id.carddemo_googlenow_main_inner_lastupdate);
 //        textView.setText("Update 14:57, 16 September"); //should use R.string.
@@ -99,6 +97,7 @@ public class SummaryStatBoothCard extends Card {
     //------------------------------------------------------------------------------------------
 
 
+    @NotNull
     ArrayList<SummaryStatBoothValues> buildArrayHelper() {
         //DataStore        dataStore = new DataStore(getContext());
         ArrayList<SummaryStatBoothValues> list = new ArrayList<SummaryStatBoothValues>();
@@ -137,7 +136,8 @@ public class SummaryStatBoothCard extends Card {
         return list;
     }
 
-    private HashMap<String, String> getTotalOrderPossCashForBoothCookieType(Booth booth) {
+    @NotNull
+    private HashMap<String, String> getTotalOrderPossCashForBoothCookieType(@NotNull Booth booth) {
 
         List<CookieTransactions> transactionsList = Main.daoSession.getCookieTransactionsDao().queryBuilder()
                 .where(CookieTransactionsDao.Properties.TransBoothId.eq(booth.getId()))
@@ -156,19 +156,17 @@ public class SummaryStatBoothCard extends Card {
             }
         }
 
-        List<CookieTransactions> poss = transactionsList;
         //noinspection UnusedAssignment
         intVal = 0;
         hashMap.put("PossTotal", "0");
-        for (CookieTransactions cookieTransactions : poss) {
+        for (CookieTransactions cookieTransactions : transactionsList) {
 
             intVal = cookieTransactions.getTransBoxes() + Integer.valueOf(hashMap.get("PossTotal"));
             hashMap.put("PossTotal", String.valueOf(intVal));
         }
-        List<CookieTransactions> cashs = transactionsList;
         Double dVal;
         hashMap.put("CashTotal", String.valueOf(0));
-        for (CookieTransactions cash : cashs) {
+        for (CookieTransactions cash : transactionsList) {
             dVal = Double.valueOf(hashMap.get("CashTotal")) + cash.getTransCash();
             hashMap.put("CashTotal", String.valueOf(dVal));
         }

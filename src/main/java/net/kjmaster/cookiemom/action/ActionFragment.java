@@ -7,6 +7,7 @@ import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.OptionsMenu;
 import com.googlecode.androidannotations.annotations.ViewById;
+import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
 import eu.inmite.android.lib.dialogs.ISimpleDialogListener;
 import it.gmariotti.cardslib.library.internal.Card;
 import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
@@ -21,7 +22,9 @@ import net.kjmaster.cookiemom.action.cupboard.ActionCupboardOrder;
 import net.kjmaster.cookiemom.action.scout.ActionAddScout;
 import net.kjmaster.cookiemom.action.scout.ActionScoutPickup;
 import net.kjmaster.cookiemom.global.Constants;
+import net.kjmaster.cookiemom.global.ISettings_;
 import net.kjmaster.cookiemom.scout.pickup.ScoutPickupActivity_;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +36,9 @@ import java.util.List;
 public class ActionFragment extends Fragment implements ISimpleDialogListener {
     @ViewById(R.id.carddemo_list_base1)
     CardListView cardView;
+
+    @Pref
+    ISettings_ iSettings;
 
     @AfterViews
     void afterViews() {
@@ -51,7 +57,8 @@ public class ActionFragment extends Fragment implements ISimpleDialogListener {
         cardView.setAdapter(cardArrayAdapter);
     }
 
-    private void createCards(List<ActionContentCard> actionContentCardLists) {
+    // Create a new action by create a new class extending ActionContentCard  adding a call to its construtor calling method here.
+    private void createCards(@NotNull List<ActionContentCard> actionContentCardLists) {
         addScoutPickupCard(actionContentCardLists);
         addBoothAssignCard(actionContentCardLists);
         addCupboardAssignCard(actionContentCardLists);
@@ -59,35 +66,35 @@ public class ActionFragment extends Fragment implements ISimpleDialogListener {
         addBoothCheckInCard(actionContentCardLists);
         addBoothCheckOutCard(actionContentCardLists);
         addBoothOrderCard(actionContentCardLists);
-        // addPersonalDelivery(actionContentCardLists);
+
     }
 
 
-    private void addAddScoutCard(List<ActionContentCard> actionContentCardLists) {
+    private void addAddScoutCard(@NotNull List<ActionContentCard> actionContentCardLists) {
         createActionItem(actionContentCardLists, new ActionAddScout(getActivity()));
     }
 
-    private void addCupboardAssignCard(List<ActionContentCard> actionContentCardLists) {
+    private void addCupboardAssignCard(@NotNull List<ActionContentCard> actionContentCardLists) {
         createActionItem(actionContentCardLists, new ActionCupboardOrder(getActivity()));
     }
 
-    private void addBoothAssignCard(List<ActionContentCard> actionContentCardLists) {
+    private void addBoothAssignCard(@NotNull List<ActionContentCard> actionContentCardLists) {
         createActionItem(actionContentCardLists, new ActionAssignBooth(getActivity()));
     }
 
-    private void addScoutPickupCard(List<ActionContentCard> actionContentCardLists) {
+    private void addScoutPickupCard(@NotNull List<ActionContentCard> actionContentCardLists) {
         createActionItem(actionContentCardLists, new ActionScoutPickup(getActivity(), this));
     }
 
-    private void addBoothOrderCard(List<ActionContentCard> actionContentCardLists) {
+    private void addBoothOrderCard(@NotNull List<ActionContentCard> actionContentCardLists) {
         createActionItem(actionContentCardLists, new ActionBoothOrder(getActivity()));
     }
 
-    private void addBoothCheckOutCard(List<ActionContentCard> actionContentCardLists) {
+    private void addBoothCheckOutCard(@NotNull List<ActionContentCard> actionContentCardLists) {
         createActionItem(actionContentCardLists, new ActionBoothCheckOut(getActivity()));
     }
 
-    private void addBoothCheckInCard(List<ActionContentCard> actionContentCardLists) {
+    private void addBoothCheckInCard(@NotNull List<ActionContentCard> actionContentCardLists) {
         createActionItem(actionContentCardLists, new ActionBoothCheckIn(getActivity()));
     }
 
@@ -107,10 +114,13 @@ public class ActionFragment extends Fragment implements ISimpleDialogListener {
         }
     }
 
-    private void createActionItem(List<ActionContentCard> actionContentCardLists, ActionContentCard actionItem) {
+    private void createActionItem(@NotNull List<ActionContentCard> actionContentCardLists, @NotNull ActionContentCard actionItem) {
         if (actionItem.isCardVisible()) {
             CardHeader cardHeader = new CardHeader(getActivity());
-            cardHeader.setTitle(actionItem.getHeaderText());
+            String title = actionItem.getHeaderText();
+
+
+            cardHeader.setTitle(title);
             actionItem.addCardHeader(cardHeader);
             actionItem.setSwipeable(true);
             actionContentCardLists.add(actionItem);

@@ -4,12 +4,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Vector;
 
 /**
  * User: derek Date: 5/2/13 Time: 7:55 PM
  */
+@SuppressWarnings("ALL")
 public class NumberPickerBuilder {
 
     private FragmentManager manager; // Required
@@ -21,6 +23,7 @@ public class NumberPickerBuilder {
     private Integer decimalVisibility;
     private String labelText;
     private int mReference;
+    @NotNull
     private Vector<NumberPickerDialogFragment.NumberPickerDialogHandler> mNumberPickerDialogHandlers = new Vector<NumberPickerDialogFragment.NumberPickerDialogHandler>();
 
     /**
@@ -29,6 +32,7 @@ public class NumberPickerBuilder {
      * @param manager the FragmentManager that handles the transaction
      * @return the current Builder object
      */
+    @NotNull
     public NumberPickerBuilder setFragmentManager(FragmentManager manager) {
         this.manager = manager;
         return this;
@@ -41,6 +45,7 @@ public class NumberPickerBuilder {
      * @param styleResId the style resource ID to use for theming
      * @return the current Builder object
      */
+    @NotNull
     public NumberPickerBuilder setStyleResId(int styleResId) {
         this.styleResId = styleResId;
         return this;
@@ -52,6 +57,7 @@ public class NumberPickerBuilder {
      * @param targetFragment the Fragment to attach to
      * @return the current Builder object
      */
+    @NotNull
     public NumberPickerBuilder setTargetFragment(Fragment targetFragment) {
         this.targetFragment = targetFragment;
         return this;
@@ -63,6 +69,7 @@ public class NumberPickerBuilder {
      * @param reference a user-defined int intended for Picker tracking
      * @return the current Builder object
      */
+    @NotNull
     public NumberPickerBuilder setReference(int reference) {
         this.mReference = reference;
         return this;
@@ -74,6 +81,7 @@ public class NumberPickerBuilder {
      * @param minNumber the minimum required number
      * @return the current Builder object
      */
+    @NotNull
     public NumberPickerBuilder setMinNumber(int minNumber) {
         this.minNumber = minNumber;
         return this;
@@ -85,6 +93,7 @@ public class NumberPickerBuilder {
      * @param maxNumber the maximum required number
      * @return the current Builder object
      */
+    @NotNull
     public NumberPickerBuilder setMaxNumber(int maxNumber) {
         this.maxNumber = maxNumber;
         return this;
@@ -99,6 +108,7 @@ public class NumberPickerBuilder {
      * @param plusMinusVisibility an int corresponding to View.VISIBLE, View.INVISIBLE, or View.GONE
      * @return the current Builder object
      */
+    @NotNull
     public NumberPickerBuilder setPlusMinusVisibility(int plusMinusVisibility) {
         this.plusMinusVisibility = plusMinusVisibility;
         return this;
@@ -113,6 +123,7 @@ public class NumberPickerBuilder {
      * @param decimalVisibility an int corresponding to View.VISIBLE, View.INVISIBLE, or View.GONE
      * @return the current Builder object
      */
+    @NotNull
     public NumberPickerBuilder setDecimalVisibility(int decimalVisibility) {
         this.decimalVisibility = decimalVisibility;
         return this;
@@ -125,6 +136,7 @@ public class NumberPickerBuilder {
      * @param labelText the String text to be shown
      * @return the current Builder object
      */
+    @NotNull
     public NumberPickerBuilder setLabelText(String labelText) {
         this.labelText = labelText;
         return this;
@@ -139,6 +151,7 @@ public class NumberPickerBuilder {
      * @param handler an Object implementing the appropriate Picker Handler
      * @return the current Builder object
      */
+    @NotNull
     public NumberPickerBuilder addNumberPickerDialogHandler(NumberPickerDialogFragment.NumberPickerDialogHandler handler) {
         this.mNumberPickerDialogHandlers.add(handler);
         return this;
@@ -150,6 +163,7 @@ public class NumberPickerBuilder {
      * @param handler the Object to remove
      * @return the current Builder object
      */
+    @NotNull
     public NumberPickerBuilder removeNumberPickerDialogHandler(NumberPickerDialogFragment.NumberPickerDialogHandler handler) {
         this.mNumberPickerDialogHandlers.remove(handler);
         return this;

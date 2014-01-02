@@ -7,7 +7,6 @@ package net.kjmaster.cookiemom.global;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import com.googlecode.androidannotations.api.sharedpreferences.*;
 
 public final class ISettings_
@@ -15,11 +14,15 @@ public final class ISettings_
 
 
     public ISettings_(Context context) {
-        super(PreferenceManager.getDefaultSharedPreferences(context));
+        super(context.getSharedPreferences("ISettings", 0));
     }
 
     public ISettings_.ISettingsEditor_ edit() {
         return new ISettings_.ISettingsEditor_(getSharedPreferences());
+    }
+
+    public StringPrefField CookieColors() {
+        return stringField("CookieColors", "");
     }
 
     public StringPrefField CookieList() {
@@ -50,6 +53,18 @@ public final class ISettings_
         return stringField("SmallBoothAmts", "0,0,0,0,0,0,0,0");
     }
 
+    public StringPrefField dbCookieMomName() {
+        return stringField("dbCookieMomName", "scouts-db");
+    }
+
+    public StringPrefField dbName() {
+        return stringField("dbName", "scouts-db");
+    }
+
+    public StringPrefField dbPersonalName() {
+        return stringField("dbPersonalName", "personal-db");
+    }
+
     public BooleanPrefField isDefaultScoutSet() {
         return booleanField("isDefaultScoutSet", false);
     }
@@ -60,6 +75,10 @@ public final class ISettings_
 
         ISettingsEditor_(SharedPreferences sharedPreferences) {
             super(sharedPreferences);
+        }
+
+        public StringPrefEditorField<ISettings_.ISettingsEditor_> CookieColors() {
+            return stringField("CookieColors");
         }
 
         public StringPrefEditorField<ISettings_.ISettingsEditor_> CookieList() {
@@ -88,6 +107,18 @@ public final class ISettings_
 
         public StringPrefEditorField<ISettings_.ISettingsEditor_> SmallBoothAmts() {
             return stringField("SmallBoothAmts");
+        }
+
+        public StringPrefEditorField<ISettings_.ISettingsEditor_> dbCookieMomName() {
+            return stringField("dbCookieMomName");
+        }
+
+        public StringPrefEditorField<ISettings_.ISettingsEditor_> dbName() {
+            return stringField("dbName");
+        }
+
+        public StringPrefEditorField<ISettings_.ISettingsEditor_> dbPersonalName() {
+            return stringField("dbPersonalName");
         }
 
         public BooleanPrefEditorField<ISettings_.ISettingsEditor_> isDefaultScoutSet() {

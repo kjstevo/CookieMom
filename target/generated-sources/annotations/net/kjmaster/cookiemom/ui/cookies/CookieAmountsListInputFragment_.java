@@ -14,13 +14,13 @@ import it.gmariotti.cardslib.library.view.CardListView;
 import net.kjmaster.cookiemom.R.layout;
 
 public final class CookieAmountsListInputFragment_
-    extends CookieAmountsListInputFragment
-{
+        extends CookieAmountsListInputFragment {
 
     private View contentView_;
 
     private void init_(Bundle savedInstanceState) {
         injectFragmentArguments_();
+        restoreSavedInstanceState_(savedInstanceState);
     }
 
     @Override
@@ -62,7 +62,7 @@ public final class CookieAmountsListInputFragment_
 
     private void injectFragmentArguments_() {
         Bundle args_ = getArguments();
-        if (args_!= null) {
+        if (args_ != null) {
             if (args_.containsKey("isBoxes")) {
                 try {
                     isBoxes = args_.getBoolean("isBoxes");
@@ -78,6 +78,19 @@ public final class CookieAmountsListInputFragment_
                 }
             }
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle bundle) {
+        super.onSaveInstanceState(bundle);
+        bundle.putInt("cardListPos", cardListPos);
+    }
+
+    private void restoreSavedInstanceState_(Bundle savedInstanceState) {
+        if (savedInstanceState == null) {
+            return;
+        }
+        cardListPos = savedInstanceState.getInt("cardListPos");
     }
 
     public static class FragmentBuilder_ {

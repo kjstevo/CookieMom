@@ -22,7 +22,7 @@ package net.kjmaster.cookiemom.summary.stat.booth;
 /**
  * @author Gabriele Mariotti (gabri.mariotti@gmail.com)
  */
-public class SummaryStatBoothValues {
+class SummaryStatBoothValues {
     String code;
     float value;
     float delta;

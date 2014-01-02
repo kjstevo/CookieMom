@@ -9,15 +9,20 @@ import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.action.ActionContentCard;
 import net.kjmaster.cookiemom.booth.checking.BoothCheckOutActivity_;
-import net.kjmaster.cookiemom.global.Constants;
 import net.kmaster.cookiemom.dao.Booth;
 import net.kmaster.cookiemom.dao.BoothDao;
-import net.kmaster.cookiemom.dao.OrderDao;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
+import static net.kjmaster.cookiemom.global.Constants.BOOTH_ORDER;
+import static net.kjmaster.cookiemom.global.Constants.CalculateNegativeBoothId;
+import static net.kmaster.cookiemom.dao.OrderDao.Properties.OrderScoutId;
+import static net.kmaster.cookiemom.dao.OrderDao.Properties.PickedUpFromCupboard;
 
 /**
  * Created with IntelliJ IDEA.
@@ -39,9 +44,13 @@ public class ActionBoothCheckOut extends ActionContentCard {
     }
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, View view) {
+    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
         super.setupInnerViewElements(parent, view);    //To change body of overridden methods use File | Settings | File Templates.
         final ListView listView = (ListView) parent.findViewById(R.id.action_list);
+        addCheckOutListener(listView);
+    }
+
+    private void addCheckOutListener(@Nullable final ListView listView) {
         if (listView != null) {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
@@ -51,13 +60,14 @@ public class ActionBoothCheckOut extends ActionContentCard {
                         BoothCheckOutActivity_
                                 .intent(getContext())
                                 .BoothId(booth.getId())
-                                .startForResult(Constants.BOOTH_ORDER);
+                                .startForResult(BOOTH_ORDER);
                     }
                 }
             });
         }
     }
 
+    @NotNull
     @Override
     public Boolean isCardVisible() {
 
@@ -71,9 +81,8 @@ public class ActionBoothCheckOut extends ActionContentCard {
             for (Booth booth : booths) {
                 long orderCount = Main.daoSession.getOrderDao().queryBuilder()
                         .where(
-                                OrderDao.Properties.OrderScoutId.eq(
-                                        Constants.CalculateNegativeBoothId(booth.getId())),
-                                OrderDao.Properties.PickedUpFromCupboard.eq(true))
+                                OrderScoutId.eq(CalculateNegativeBoothId(booth.getId())),
+                                PickedUpFromCupboard.eq(true))
                         .count();
                 if (orderCount > 0) {
                     boothList.add(booth);
@@ -81,19 +90,17 @@ public class ActionBoothCheckOut extends ActionContentCard {
                 }
             }
         }
-        if (boothList.isEmpty()) {
-            return false;
-        } else {
-            return true;
-        }
+        return !boothList.isEmpty();
     }
 
+    @NotNull
     @Override
     public List<Booth> getActionList() {
         return getBooths();
 
     }
 
+    @NotNull
     private List<Booth> getBooths() {
         return boothList;
     }

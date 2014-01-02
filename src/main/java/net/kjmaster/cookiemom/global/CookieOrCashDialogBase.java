@@ -7,6 +7,7 @@ import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.ui.numberpicker.NumberPickerBuilder;
 import net.kmaster.cookiemom.dao.CookieTransactions;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Calendar;
 
@@ -19,7 +20,7 @@ import java.util.Calendar;
 public abstract class CookieOrCashDialogBase extends CookieActionActivity implements ISimpleDialogListener {
     private Long mId;
 
-    public void CreateDialog(Long id, FragmentActivity activity, String title) {
+    protected void CreateDialog(@NotNull Long id, @NotNull FragmentActivity activity, String title) {
         mId = id;
         SimpleDialogFragment.createBuilder(activity, activity.getSupportFragmentManager())
                 .setTitle(title)

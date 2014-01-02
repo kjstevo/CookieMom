@@ -3,8 +3,12 @@ package net.kjmaster.cookiemom;
 import android.app.Application;
 import android.database.sqlite.SQLiteDatabase;
 import com.googlecode.androidannotations.annotations.EApplication;
+import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
+import net.kjmaster.cookiemom.global.Constants;
+import net.kjmaster.cookiemom.global.ISettings_;
 import net.kmaster.cookiemom.dao.DaoMaster;
 import net.kmaster.cookiemom.dao.DaoSession;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,6 +19,14 @@ import net.kmaster.cookiemom.dao.DaoSession;
 @EApplication
 public class Main extends Application {
 
+    @Pref
+    ISettings_ miSettings;
+
+
+    public static String dbName;
+    public static boolean mIsPersonal = false;
+
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -22,13 +34,50 @@ public class Main extends Application {
 
     }
 
+
+    public void switchDb(String newDbName) {
+        dbName = newDbName;
+
+        init();
+
+
+    }
+
     private void init() {
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getApplicationContext(), "scouts-db", null);
+
+        this.dbName = miSettings.dbName().get();
+        if (this.dbName == null) {
+            createDBSettings();
+        }
+
+        initStrings(this.dbName.equals(miSettings.dbPersonalName().get()));
+        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getApplicationContext(), dbName, null);
         SQLiteDatabase db = helper.getWritableDatabase();
         DaoMaster daoMaster = new DaoMaster(db);
         daoSession = daoMaster.newSession();
 
     }
 
+    private void initStrings(boolean isPersonal) {
+        if (isPersonal) {
+            mIsPersonal = true;
+            Constants.setADD_SCOUT(getString(R.string.add_customer_title));
+
+        } else {
+            mIsPersonal = false;
+            Constants.setADD_SCOUT(getString(R.string.add_scout));
+        }
+
+    }
+
+    private void createDBSettings() {
+        miSettings.dbCookieMomName().put("scouts-db");
+        miSettings.dbPersonalName().put("personal-db");
+        miSettings.dbName().put("scouts-db");
+        this.dbName = "scouts-db";
+
+    }
+
+    @Nullable
     public static DaoSession daoSession = null;
 }
