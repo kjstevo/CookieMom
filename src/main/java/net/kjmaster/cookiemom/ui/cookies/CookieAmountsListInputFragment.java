@@ -4,19 +4,25 @@ package net.kjmaster.cookiemom.ui.cookies;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.View;
-import com.googlecode.androidannotations.annotations.*;
-import it.gmariotti.cardslib.library.internal.Card;
-import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
-import it.gmariotti.cardslib.library.view.CardListView;
+
+import com.googlecode.androidannotations.annotations.AfterViews;
+import com.googlecode.androidannotations.annotations.EFragment;
+import com.googlecode.androidannotations.annotations.FragmentArg;
+import com.googlecode.androidannotations.annotations.InstanceState;
+import com.googlecode.androidannotations.annotations.ViewById;
+
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
 import net.kjmaster.cookiemom.global.ICookieActionFragment;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import it.gmariotti.cardslib.library.internal.Card;
+import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
+import it.gmariotti.cardslib.library.view.CardListView;
 
 import static net.kjmaster.cookiemom.ui.cookies.CompleteCookieCard.CreateCompleteCookieCard;
 
@@ -69,7 +75,7 @@ public class CookieAmountsListInputFragment extends Fragment implements ICookieA
                             actualAmount,
                             true
                     ),
-                            cookieType, getActivity(), Constants.CookieColors[i]
+                            cookieType, getActivity(), getResources().getColor(Constants.CookieColors[i])
                     );
 
             final int finalI = i;
@@ -104,7 +110,7 @@ public class CookieAmountsListInputFragment extends Fragment implements ICookieA
     @InstanceState
     int cardListPos;
 
-    @NotNull
+
     @Override
     public HashMap<String, String> valuesMap() {
         return valuesBoxesMap;

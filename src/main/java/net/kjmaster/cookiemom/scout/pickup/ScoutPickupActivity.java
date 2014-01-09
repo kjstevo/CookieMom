@@ -1,30 +1,31 @@
 package net.kjmaster.cookiemom.scout.pickup;
 
 import android.annotation.SuppressLint;
+
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
 import com.googlecode.androidannotations.annotations.res.StringRes;
 import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.dao.CookieTransactions;
+import net.kjmaster.cookiemom.dao.CookieTransactionsDao;
+import net.kjmaster.cookiemom.dao.Order;
+import net.kjmaster.cookiemom.dao.OrderDao;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
 import net.kjmaster.cookiemom.global.ICookieActionFragment;
 import net.kjmaster.cookiemom.global.ISettings_;
 import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment_;
-import net.kmaster.cookiemom.dao.CookieTransactions;
-import net.kmaster.cookiemom.dao.CookieTransactionsDao;
-import net.kmaster.cookiemom.dao.Order;
-import net.kmaster.cookiemom.dao.OrderDao;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
+import static net.kjmaster.cookiemom.dao.OrderDao.Properties;
 import static net.kjmaster.cookiemom.global.Constants.CookieTypes;
-import static net.kmaster.cookiemom.dao.OrderDao.Properties;
 
 /**
  * Created with IntelliJ IDEA.
@@ -140,8 +141,8 @@ public class ScoutPickupActivity extends CookieActionActivity {
         }
     }
 
-    @NotNull
-    private Order createOrderFromOrder(Integer requestedBoxes, @NotNull Order order) {
+
+    private Order createOrderFromOrder(Integer requestedBoxes, Order order) {
 
         Order order2 = new Order(
                 null,
@@ -217,7 +218,6 @@ public class ScoutPickupActivity extends CookieActionActivity {
     }
 
 
-    @NotNull
     @Override
     public HashMap<String, String> getValMap() {
 

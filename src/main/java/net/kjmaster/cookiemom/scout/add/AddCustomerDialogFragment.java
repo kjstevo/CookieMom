@@ -3,11 +3,12 @@ package net.kjmaster.cookiemom.scout.add;
 
 import android.support.v4.app.DialogFragment;
 import android.widget.EditText;
+
 import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.ViewById;
+
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.ICookieActionFragment;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 
@@ -20,7 +21,7 @@ public class AddCustomerDialogFragment extends DialogFragment implements ICookie
     @ViewById(R.id.edit_contact)
     EditText editContact;
 
-    @NotNull
+
     @Override
     public HashMap<String, String> valuesMap() {
         HashMap<String, String> valueMap = new HashMap<String, String>();

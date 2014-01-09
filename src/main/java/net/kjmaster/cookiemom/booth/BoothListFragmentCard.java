@@ -4,16 +4,17 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import it.gmariotti.cardslib.library.internal.Card;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
-import net.kmaster.cookiemom.dao.Booth;
-import net.kmaster.cookiemom.dao.BoothAssignments;
-import net.kmaster.cookiemom.dao.BoothAssignmentsDao;
-import net.kmaster.cookiemom.dao.BoothDao;
-import org.jetbrains.annotations.NotNull;
+import net.kjmaster.cookiemom.dao.Booth;
+import net.kjmaster.cookiemom.dao.BoothAssignments;
+import net.kjmaster.cookiemom.dao.BoothAssignmentsDao;
+import net.kjmaster.cookiemom.dao.BoothDao;
 
 import java.util.List;
+
+import it.gmariotti.cardslib.library.internal.Card;
 
 /**
  * Created with IntelliJ IDEA.
@@ -30,7 +31,7 @@ public class BoothListFragmentCard extends Card {
     }
 
     @Override
-    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
+    public void setupInnerViewElements(ViewGroup parent, View view) {
         //net.kjm
         final Context context = getContext();
         final BoothDao boothDao = Main.daoSession.getBoothDao();

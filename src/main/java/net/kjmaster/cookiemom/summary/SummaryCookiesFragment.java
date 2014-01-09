@@ -1,16 +1,18 @@
 package net.kjmaster.cookiemom.summary;
 
 import android.widget.TextView;
+
 import com.echo.holographlibrary.PieGraph;
 import com.echo.holographlibrary.PieSlice;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.ViewById;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.dao.CookieTransactions;
+import net.kjmaster.cookiemom.dao.CookieTransactionsDao;
 import net.kjmaster.cookiemom.global.Constants;
-import net.kmaster.cookiemom.dao.CookieTransactions;
-import net.kmaster.cookiemom.dao.CookieTransactionsDao;
 
 import java.util.HashMap;
 import java.util.List;

@@ -1,16 +1,18 @@
 package net.kjmaster.cookiemom.booth.checking;
 
 import android.annotation.SuppressLint;
+
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.dao.CookieTransactions;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieOrCashDialogBase;
 import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment;
 import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment_;
-import net.kmaster.cookiemom.dao.CookieTransactions;
 
 import java.util.Calendar;
 

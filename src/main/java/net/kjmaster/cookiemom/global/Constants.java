@@ -1,8 +1,8 @@
 package net.kjmaster.cookiemom.global;
 
 import com.googlecode.androidannotations.annotations.EBean;
+
 import net.kjmaster.cookiemom.R;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 
@@ -45,6 +45,7 @@ public class Constants {
     public static final int REMOVE_SCOUT_REQUEST_CODE = 1111;
     public static final int BOOTH_ORDER = 9876;
     public static final int EAT_COOKIES = 2232;
+    public static final int ADD_SCOUT_REQUEST = 24601;
 
     public static String getSCOUT() {
         return SCOUT;
@@ -75,7 +76,7 @@ public class Constants {
         return ((scoutId + 100) * -1);
     }
 
-    @NotNull
+
     public static HashMap<String, Integer> getCookieNameImages() {
         cookieImages.put(CookieTypes[0], R.drawable.mint);
         cookieImages.put(CookieTypes[1], R.drawable.samoa);

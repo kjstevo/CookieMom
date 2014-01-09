@@ -1,15 +1,16 @@
 package net.kjmaster.cookiemom.global;
 
 import android.support.v4.app.FragmentActivity;
-import eu.inmite.android.lib.dialogs.ISimpleDialogListener;
-import eu.inmite.android.lib.dialogs.SimpleDialogFragment;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.dao.CookieTransactions;
 import net.kjmaster.cookiemom.ui.numberpicker.NumberPickerBuilder;
-import net.kmaster.cookiemom.dao.CookieTransactions;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Calendar;
+
+import eu.inmite.android.lib.dialogs.ISimpleDialogListener;
+import eu.inmite.android.lib.dialogs.SimpleDialogFragment;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,7 +21,7 @@ import java.util.Calendar;
 public abstract class CookieOrCashDialogBase extends CookieActionActivity implements ISimpleDialogListener {
     private Long mId;
 
-    protected void CreateDialog(@NotNull Long id, @NotNull FragmentActivity activity, String title) {
+    protected void CreateDialog(Long id, FragmentActivity activity, String title) {
         mId = id;
         SimpleDialogFragment.createBuilder(activity, activity.getSupportFragmentManager())
                 .setTitle(title)

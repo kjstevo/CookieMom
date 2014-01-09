@@ -2,13 +2,15 @@ package net.kjmaster.cookiemom;
 
 import android.app.Application;
 import android.database.sqlite.SQLiteDatabase;
+
 import com.googlecode.androidannotations.annotations.EApplication;
 import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
+
+import net.kjmaster.cookiemom.dao.DaoMaster;
+import net.kjmaster.cookiemom.dao.DaoSession;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.ISettings_;
-import net.kmaster.cookiemom.dao.DaoMaster;
-import net.kmaster.cookiemom.dao.DaoSession;
-import org.jetbrains.annotations.Nullable;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -78,6 +80,6 @@ public class Main extends Application {
 
     }
 
-    @Nullable
+
     public static DaoSession daoSession = null;
 }

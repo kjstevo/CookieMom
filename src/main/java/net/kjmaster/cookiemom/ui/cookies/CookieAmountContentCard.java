@@ -8,9 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import it.gmariotti.cardslib.library.internal.Card;
+
 import net.kjmaster.cookiemom.R;
-import org.jetbrains.annotations.NotNull;
+
+import it.gmariotti.cardslib.library.internal.Card;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -119,7 +121,7 @@ public class CookieAmountContentCard extends Card {
 
 
     @Override
-    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
+    public void setupInnerViewElements(ViewGroup parent, View view) {
 
         //Retrieve elements
 

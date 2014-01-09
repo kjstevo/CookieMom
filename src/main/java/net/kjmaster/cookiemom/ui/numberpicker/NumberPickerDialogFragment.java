@@ -10,9 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
 import net.kjmaster.cookiemom.R;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Vector;
 
@@ -39,9 +38,9 @@ public class NumberPickerDialogFragment extends DialogFragment {
     private int mButtonBackgroundResId;
     private int mDialogBackgroundResId;
 
-    @Nullable
+
     private Integer mMinNumber = null;
-    @Nullable
+
     private Integer mMaxNumber = null;
     private int mPlusMinusVisibility = View.VISIBLE;
     private int mDecimalVisibility = View.VISIBLE;
@@ -59,9 +58,9 @@ public class NumberPickerDialogFragment extends DialogFragment {
      * @param labelText           (optional) text to add as a label
      * @return a Picker!
      */
-    @NotNull
-    public static NumberPickerDialogFragment newInstance(int reference, int themeResId, @Nullable Integer minNumber,
-                                                         @Nullable Integer maxNumber, @Nullable Integer plusMinusVisibility, @Nullable Integer decimalVisibility, @Nullable String labelText) {
+
+    public static NumberPickerDialogFragment newInstance(int reference, int themeResId, Integer minNumber,
+                                                         Integer maxNumber, Integer plusMinusVisibility, Integer decimalVisibility, String labelText) {
         final NumberPickerDialogFragment frag = new NumberPickerDialogFragment();
         Bundle args = new Bundle();
         args.putInt(REFERENCE_KEY, reference);
@@ -139,7 +138,7 @@ public class NumberPickerDialogFragment extends DialogFragment {
     }
 
     @Override
-    public View onCreateView(@NotNull LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.ui_number_picker_dialog, null);

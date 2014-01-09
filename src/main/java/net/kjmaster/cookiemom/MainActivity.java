@@ -20,23 +20,27 @@ import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
 import com.astuetz.viewpager.extensions.PagerSlidingTabStrip;
-import com.googlecode.androidannotations.annotations.*;
+import com.googlecode.androidannotations.annotations.AfterViews;
+import com.googlecode.androidannotations.annotations.App;
+import com.googlecode.androidannotations.annotations.EActivity;
+import com.googlecode.androidannotations.annotations.OnActivityResult;
+import com.googlecode.androidannotations.annotations.OptionsItem;
 import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
+
 import net.kjmaster.cookiemom.action.ActionFragment_;
 import net.kjmaster.cookiemom.booth.BoothFragment_;
 import net.kjmaster.cookiemom.cupboard.CupboardFragment_;
+import net.kjmaster.cookiemom.dao.Booth;
+import net.kjmaster.cookiemom.dao.BoothAssignments;
+import net.kjmaster.cookiemom.dao.BoothAssignmentsDao;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.ISettings_;
 import net.kjmaster.cookiemom.scout.ScoutFragment_;
 import net.kjmaster.cookiemom.scout.pickup.ScoutPickupActivity_;
 import net.kjmaster.cookiemom.scout.select.SelectScoutListActivity_;
 import net.kjmaster.cookiemom.summary.SummaryFragment_;
-import net.kmaster.cookiemom.dao.Booth;
-import net.kmaster.cookiemom.dao.BoothAssignments;
-import net.kmaster.cookiemom.dao.BoothAssignmentsDao;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Date;
 import java.util.List;
@@ -47,7 +51,7 @@ public class MainActivity extends FragmentActivity {
 
     private final Handler handler = new Handler();
     private PagerSlidingTabStrip tabs;
-    @Nullable
+
     private Drawable oldBackground = null;
     private int currentColor = Color.GREEN;
     private String actionItemTitle;
@@ -155,7 +159,7 @@ public class MainActivity extends FragmentActivity {
     }
 
     @OnActivityResult(Constants.EAT_COOKIES)
-    void onEatSelectScoutResult(int resultCode, @Nullable Intent data) {
+    void onEatSelectScoutResult(int resultCode, Intent data) {
         if (data != null) {
             long scoutId = data.getLongExtra("scout_id", 0);
             ScoutPickupActivity_.intent(this).ScoutId(scoutId).isEditable(true).startForResult(Constants.SCOUT_REQUEST);
@@ -181,13 +185,13 @@ public class MainActivity extends FragmentActivity {
 
 
     @Override
-    protected void onSaveInstanceState(@NotNull Bundle outState) {
+    protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt("currentColor", currentColor);
     }
 
     @Override
-    protected void onRestoreInstanceState(@NotNull Bundle savedInstanceState) {
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         currentColor = savedInstanceState.getInt("currentColor");
         changeColor(currentColor);
@@ -220,7 +224,7 @@ public class MainActivity extends FragmentActivity {
 
     //}
     @OnActivityResult(Constants.REMOVE_SCOUT_REQUEST_CODE)
-    void onRemoveScout(int resultCode, @Nullable Intent data) {
+    void onRemoveScout(int resultCode, Intent data) {
         if (resultCode == RESULT_OK) {
 
             if (data != null) {
@@ -243,7 +247,7 @@ public class MainActivity extends FragmentActivity {
 
 
     @OnActivityResult(Constants.ASSIGN_SCOUT_REQUEST_CODE)
-    void onScoutAssign(int resultCode, @NotNull Intent data) {
+    void onScoutAssign(int resultCode, Intent data) {
         if (resultCode == RESULT_OK) {
             Main.daoSession.getBoothAssignmentsDao().insert(
                     new BoothAssignments(
@@ -282,7 +286,7 @@ public class MainActivity extends FragmentActivity {
     }
 
     @OnActivityResult(Constants.ADD_BOOTH_REQUEST_CODE)
-    void onBoothResult(int resultCode, @Nullable Intent data) {
+    void onBoothResult(int resultCode, Intent data) {
         if (resultCode == Constants.ADD_BOOTH_RESULT_OK) {
             if (data != null) {
                 Main.daoSession.getBoothDao().insert(

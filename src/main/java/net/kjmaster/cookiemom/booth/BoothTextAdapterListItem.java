@@ -2,8 +2,9 @@ package net.kjmaster.cookiemom.booth;
 
 import android.content.Context;
 import android.widget.ArrayAdapter;
+
 import net.kjmaster.cookiemom.R;
-import net.kmaster.cookiemom.dao.Booth;
+import net.kjmaster.cookiemom.dao.Booth;
 
 import java.text.DateFormat;
 

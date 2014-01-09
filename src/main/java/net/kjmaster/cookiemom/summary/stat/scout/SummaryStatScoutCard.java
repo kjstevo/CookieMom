@@ -23,17 +23,18 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import it.gmariotti.cardslib.library.internal.Card;
-import it.gmariotti.cardslib.library.internal.CardHeader;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
-import net.kmaster.cookiemom.dao.CookieTransactions;
-import net.kmaster.cookiemom.dao.Scout;
-import org.jetbrains.annotations.NotNull;
+import net.kjmaster.cookiemom.dao.CookieTransactions;
+import net.kjmaster.cookiemom.dao.Scout;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import it.gmariotti.cardslib.library.internal.Card;
+import it.gmariotti.cardslib.library.internal.CardHeader;
 
 /**
  * This class provides a simple card as Google Now SummaryStatScout
@@ -81,7 +82,7 @@ public class SummaryStatScoutCard extends Card {
     }
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, @NotNull View view) {
+    public void setupInnerViewElements(ViewGroup parent, View view) {
 
         TextView textView = (TextView) view.findViewById(R.id.carddemo_googlenow_main_inner_lastupdate);
 //        textView.setText("Update 14:57, 16 September"); //should use R.string.
@@ -99,7 +100,6 @@ public class SummaryStatScoutCard extends Card {
     //------------------------------------------------------------------------------------------
 
 
-    @NotNull
     ArrayList<SummaryStatScoutValues> buildArrayHelper() {
         //DataStore        dataStore = new DataStore(getContext());
         ArrayList<SummaryStatScoutValues> list = new ArrayList<SummaryStatScoutValues>();
@@ -148,8 +148,8 @@ public class SummaryStatScoutCard extends Card {
         return list;
     }
 
-    @NotNull
-    private HashMap<String, String> getTotalOrderPossCashForScoutCookieType(@NotNull Scout scout) {
+
+    private HashMap<String, String> getTotalOrderPossCashForScoutCookieType(Scout scout) {
 
         List<CookieTransactions> transactionsList = scout.getScoutsCookieTransactions();
 

@@ -1,6 +1,5 @@
 package net.kjmaster.cookiemom.global;
 
-import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 
@@ -12,7 +11,7 @@ import java.util.HashMap;
  */
 public interface ICookieActionFragment {
 
-    @Nullable
+
     public HashMap<String, String> valuesMap();
 
     public void refreshView();

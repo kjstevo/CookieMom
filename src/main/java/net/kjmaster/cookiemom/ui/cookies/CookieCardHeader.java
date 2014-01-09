@@ -4,7 +4,9 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import it.gmariotti.cardslib.library.R;
+
+import net.kjmaster.cookiemom.R;
+
 import it.gmariotti.cardslib.library.internal.CardHeader;
 
 /**
@@ -33,7 +35,7 @@ public class CookieCardHeader extends CardHeader {
             TextView mTitleView = (TextView) view.findViewById(R.id.card_header_inner_simple_title);
 
             if (mTitleView != null) {
-                mTitleView.setTextColor(parent.getResources().getColor(mColor));
+                mTitleView.setTextColor(mColor);
                 mTitleView.setText(mTitle);
             }
 

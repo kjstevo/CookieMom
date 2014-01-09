@@ -3,31 +3,33 @@ package net.kjmaster.cookiemom.cupboard;
 
 import android.support.v4.app.Fragment;
 import android.view.View;
+
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.FragmentArg;
 import com.googlecode.androidannotations.annotations.ViewById;
-import it.gmariotti.cardslib.library.internal.Card;
-import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
-import it.gmariotti.cardslib.library.internal.CardHeader;
-import it.gmariotti.cardslib.library.internal.CardThumbnail;
-import it.gmariotti.cardslib.library.view.CardListView;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.dao.CookieTransactions;
+import net.kjmaster.cookiemom.dao.CookieTransactionsDao;
+import net.kjmaster.cookiemom.dao.Order;
+import net.kjmaster.cookiemom.dao.OrderDao;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
 import net.kjmaster.cookiemom.global.ICookieActionFragment;
 import net.kjmaster.cookiemom.ui.cookies.CookieAmountContentCard;
 import net.kjmaster.cookiemom.ui.cookies.CookieCardHeaderInStock;
-import net.kmaster.cookiemom.dao.CookieTransactions;
-import net.kmaster.cookiemom.dao.CookieTransactionsDao;
-import net.kmaster.cookiemom.dao.Order;
-import net.kmaster.cookiemom.dao.OrderDao;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import it.gmariotti.cardslib.library.internal.Card;
+import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
+import it.gmariotti.cardslib.library.internal.CardHeader;
+import it.gmariotti.cardslib.library.internal.CardThumbnail;
+import it.gmariotti.cardslib.library.view.CardListView;
 
 import static net.kjmaster.cookiemom.ui.cookies.CompleteCookieCard.CreateCompleteCookieCard;
 
@@ -87,7 +89,7 @@ public class CupboardPickupFragment extends Fragment implements ICookieActionFra
                             isBoxes
                     ),
                             cookieType,
-                            getActivity(), Constants.CookieColors[i]);
+                            getActivity(), getResources().getColor(Constants.CookieColors[i]));
             card.addCardHeader(getCardHeader(cookieType, Constants.CookieColors[i]));
 
             card.addCardThumbnail(getCardThumbnail(cookieType));
@@ -110,7 +112,7 @@ public class CupboardPickupFragment extends Fragment implements ICookieActionFra
 
     }
 
-    @NotNull
+
     private CardHeader getCardHeader(String cookieType, int color) {
         List<CookieTransactions> list = Main.daoSession.getCookieTransactionsDao().queryBuilder()
                 .where(CookieTransactionsDao.Properties.CookieType.eq(cookieType))
@@ -126,14 +128,14 @@ public class CupboardPickupFragment extends Fragment implements ICookieActionFra
         return cardHeader;
     }
 
-    @NotNull
+
     private CardThumbnail getCardThumbnail(String cookieType) {
         CardThumbnail cardThumbnail = new CardThumbnail(getActivity());
         cardThumbnail.setDrawableResource(Constants.getCookieNameImages().get(cookieType));
         return cardThumbnail;
     }
 
-    @NotNull
+
     @Override
     public HashMap<String, String> valuesMap() {
         return valuesMap;

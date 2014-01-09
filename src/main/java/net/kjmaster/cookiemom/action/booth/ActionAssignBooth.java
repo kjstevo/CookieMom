@@ -5,14 +5,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.action.ActionContentCard;
+import net.kjmaster.cookiemom.dao.Booth;
+import net.kjmaster.cookiemom.dao.BoothAssignmentsDao;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.scout.select.SelectScoutListActivity_;
-import net.kmaster.cookiemom.dao.Booth;
-import net.kmaster.cookiemom.dao.BoothAssignmentsDao;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +36,7 @@ public class ActionAssignBooth extends ActionContentCard {
     }
 
     @Override
-    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
+    public void setupInnerViewElements(ViewGroup parent, View view) {
         super.setupInnerViewElements(parent, view);    //To change body of overridden methods use File | Settings | File Templates.
         final ListView listView = (ListView) parent.findViewById(R.id.action_list);
         if (listView != null) {
@@ -51,7 +51,6 @@ public class ActionAssignBooth extends ActionContentCard {
     }
 
 
-    @NotNull
     @Override
     public Boolean isCardVisible() {
         String scoutTitle = Constants.getSCOUT();
@@ -73,7 +72,7 @@ public class ActionAssignBooth extends ActionContentCard {
         return cnt < 2;
     }
 
-    @NotNull
+
     @Override
     public List<Booth> getActionList() {
         List<Booth> stringList = new ArrayList<Booth>();
@@ -90,13 +89,13 @@ public class ActionAssignBooth extends ActionContentCard {
         return stringList;
     }
 
-    @NotNull
+
     @Override
     public String getActionTitle() {
         return "The following booths need to be assigned scouts:";  //To change body of implemented methods use File | Settings | File Templates.
     }
 
-    @NotNull
+
     @Override
     public String getHeaderText() {
         return "Booths";

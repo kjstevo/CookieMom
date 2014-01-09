@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
-import org.jetbrains.annotations.NotNull;
+
 
 /**
  * User: derek Date: 6/21/13 Time: 10:37 AM
@@ -50,7 +50,7 @@ public class NumberPickerErrorTextView extends TextView {
         startAnimation(fadeIn);
     }
 
-    @NotNull
+
     private Runnable hideRunnable = new Runnable() {
         @Override
         public void run() {
@@ -58,7 +58,7 @@ public class NumberPickerErrorTextView extends TextView {
         }
     };
 
-    @NotNull
+
     private Handler fadeInEndHandler = new Handler();
 
     public void hide() {

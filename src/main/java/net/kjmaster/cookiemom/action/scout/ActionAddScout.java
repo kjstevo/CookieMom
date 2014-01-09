@@ -5,11 +5,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.action.ActionContentCard;
 import net.kjmaster.cookiemom.global.Constants;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +32,7 @@ public class ActionAddScout extends ActionContentCard {
     }
 
     @Override
-    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
+    public void setupInnerViewElements(ViewGroup parent, View view) {
         super.setupInnerViewElements(parent, view);    //To change body of overridden methods use File | Settings | File Templates.
 
         final ListView listView = (ListView) parent.findViewById(R.id.action_list);
@@ -48,14 +48,13 @@ public class ActionAddScout extends ActionContentCard {
     }
 
 
-    @NotNull
     @Override
     public Boolean isCardVisible() {
         long cnt = Main.daoSession.getScoutDao().count();
         return cnt <= 0;
     }
 
-    @NotNull
+
     @Override
     public List<String> getActionList() {
         List<String> stringList = new ArrayList<String>();
@@ -63,7 +62,7 @@ public class ActionAddScout extends ActionContentCard {
         return stringList;
     }
 
-    @NotNull
+
     @Override
     public String getActionTitle() {
         return "No " + Constants.getSCOUT().toLowerCase() + " currently in database!";  //To change body of implemented methods use File | Settings | File Templates.

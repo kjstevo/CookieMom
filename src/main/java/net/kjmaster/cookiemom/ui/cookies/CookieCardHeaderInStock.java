@@ -4,9 +4,11 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import it.gmariotti.cardslib.library.internal.CardHeader;
+
 import net.kjmaster.cookiemom.global.Constants;
-import org.jetbrains.annotations.NotNull;
+
+import it.gmariotti.cardslib.library.internal.CardHeader;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -33,7 +35,7 @@ public class CookieCardHeaderInStock extends CardHeader {
     }
 
     @Override
-    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
+    public void setupInnerViewElements(ViewGroup parent, View view) {
         TextView headerTitle = (TextView) parent.findViewById(net.kjmaster.cookiemom.R.id.card_header_inner_simple_title);
         TextView invHeader = (TextView) parent.findViewById(net.kjmaster.cookiemom.R.id.in_stock_header);
         if (invHeader != null) {

@@ -5,16 +5,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.action.ActionContentCard;
 import net.kjmaster.cookiemom.booth.checking.BoothCheckInActivity_;
+import net.kjmaster.cookiemom.dao.Booth;
+import net.kjmaster.cookiemom.dao.BoothDao;
+import net.kjmaster.cookiemom.dao.CookieTransactions;
+import net.kjmaster.cookiemom.dao.CookieTransactionsDao;
 import net.kjmaster.cookiemom.global.Constants;
-import net.kmaster.cookiemom.dao.Booth;
-import net.kmaster.cookiemom.dao.BoothDao;
-import net.kmaster.cookiemom.dao.CookieTransactions;
-import net.kmaster.cookiemom.dao.CookieTransactionsDao;
-import org.jetbrains.annotations.NotNull;
 
 import java.sql.Date;
 import java.util.ArrayList;
@@ -41,7 +41,7 @@ public class ActionBoothCheckIn extends ActionContentCard {
     }
 
     @Override
-    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
+    public void setupInnerViewElements(ViewGroup parent, View view) {
         super.setupInnerViewElements(parent, view);    //To change body of overridden methods use File | Settings | File Templates.
         final ListView listView = (ListView) parent.findViewById(R.id.action_list);
         if (listView != null) {
@@ -60,7 +60,7 @@ public class ActionBoothCheckIn extends ActionContentCard {
         }
     }
 
-    @NotNull
+
     @Override
     public Boolean isCardVisible() {
 
@@ -94,14 +94,14 @@ public class ActionBoothCheckIn extends ActionContentCard {
 
     }
 
-    @NotNull
+
     @Override
     public List<Booth> getActionList() {
         return getBooths();
 
     }
 
-    @NotNull
+
     private List<Booth> getBooths() {
         return boothList;
     }

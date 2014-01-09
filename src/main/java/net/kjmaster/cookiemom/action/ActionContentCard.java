@@ -7,10 +7,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import it.gmariotti.cardslib.library.internal.Card;
+
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.IAction;
-import org.jetbrains.annotations.NotNull;
+
+import it.gmariotti.cardslib.library.internal.Card;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -30,7 +32,7 @@ public abstract class ActionContentCard extends Card implements IAction {
 
 
     @Override
-    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
+    public void setupInnerViewElements(ViewGroup parent, View view) {
 
         //Retrieve elements
         TextView mActionText = (TextView) parent.findViewById(R.id.available_action_text);

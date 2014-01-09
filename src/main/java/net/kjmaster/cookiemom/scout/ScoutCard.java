@@ -4,9 +4,11 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import it.gmariotti.cardslib.library.internal.Card;
+
 import net.kjmaster.cookiemom.R;
-import org.jetbrains.annotations.NotNull;
+
+import it.gmariotti.cardslib.library.internal.Card;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -47,7 +49,7 @@ public class ScoutCard extends Card {
         // No Header
         addPartialOnClickListener(CLICK_LISTENER_CONTENT_VIEW, new OnCardClickListener() {
             @Override
-            public void onClick(@NotNull Card card, View view) {
+            public void onClick(Card card, View view) {
                 View view1 = card.getCardView().findViewById(R.id.card_content_expand_layout);
 
                 if (card.isExpanded()) {
@@ -84,7 +86,7 @@ public class ScoutCard extends Card {
     }
 
     @Override
-    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
+    public void setupInnerViewElements(ViewGroup parent, View view) {
 
         // Retrieve elements
         mTitle = (TextView) parent.findViewById(R.id.card_main_inner_simple_title);

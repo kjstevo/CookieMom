@@ -4,15 +4,17 @@ package net.kjmaster.cookiemom.scout.add;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.FragmentByTag;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.dao.Scout;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
-import net.kmaster.cookiemom.dao.Scout;
-import org.jetbrains.annotations.NotNull;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -50,15 +52,22 @@ public class AddScoutActivity extends CookieActionActivity {
     }
 
     @Override
-    protected void onRestoreInstanceState(@NotNull Bundle savedInstanceState) {
-        //net.kjmaster.cookiemom.scout.add.AddScoutActivity.onRestoreInstanceState returns void
-        AddScoutDialogFragment fragment = (AddScoutDialogFragment) getSupportFragmentManager().findFragmentByTag(fragTag);
-        if (fragment != null) {
-            fragment.editText.setText(savedInstanceState.getString("scout_name"));
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+
+
+        if (isScout) {
+            AddScoutDialogFragment fragment = (AddScoutDialogFragment) getSupportFragmentManager().findFragmentByTag(fragTag);
+            if (fragment != null) {
+                fragment.editText.setText(savedInstanceState.getString("scout_name"));
+            }
+        } else {
+            AddCustomerDialogFragment fragment = (AddCustomerDialogFragment) getSupportFragmentManager().findFragmentByTag(fragTag);
+            if (fragment != null) {
+                fragment.editText.setText(savedInstanceState.getString("scout_name"));
+            }
+
         }
 
-
-        //12/8/13
         super.onRestoreInstanceState(savedInstanceState);
     }
 
@@ -77,12 +86,20 @@ public class AddScoutActivity extends CookieActionActivity {
     }
 
     @Override
-    protected void onSaveInstanceState(@NotNull Bundle outState) {
+    protected void onSaveInstanceState(Bundle outState) {
         //net.kjmaster.cookiemom.scout.add.AddScoutActivity.onSaveInstanceState returns void
-        AddScoutDialogFragment fragment = (AddScoutDialogFragment) getSupportFragmentManager().findFragmentByTag(fragTag);
+        if (isScout) {
+            AddScoutDialogFragment fragment = (AddScoutDialogFragment) getSupportFragmentManager().findFragmentByTag(fragTag);
         if (fragment != null) {
             outState.putString("scout_name", fragment.editText.getText().toString());
         }
+        } else {
+            AddCustomerDialogFragment fragment = (AddCustomerDialogFragment) getSupportFragmentManager().findFragmentByTag(fragTag);
+            if (fragment != null) {
+                outState.putString("scout_name", fragment.editText.getText().toString());
+            }
+        }
+
         //12/9/13
         super.onSaveInstanceState(outState);
     }

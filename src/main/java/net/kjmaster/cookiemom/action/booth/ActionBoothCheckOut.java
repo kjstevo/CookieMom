@@ -5,24 +5,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.action.ActionContentCard;
 import net.kjmaster.cookiemom.booth.checking.BoothCheckOutActivity_;
-import net.kmaster.cookiemom.dao.Booth;
-import net.kmaster.cookiemom.dao.BoothDao;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import net.kjmaster.cookiemom.dao.Booth;
+import net.kjmaster.cookiemom.dao.BoothDao;
 
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import static net.kjmaster.cookiemom.dao.OrderDao.Properties.OrderScoutId;
+import static net.kjmaster.cookiemom.dao.OrderDao.Properties.PickedUpFromCupboard;
 import static net.kjmaster.cookiemom.global.Constants.BOOTH_ORDER;
 import static net.kjmaster.cookiemom.global.Constants.CalculateNegativeBoothId;
-import static net.kmaster.cookiemom.dao.OrderDao.Properties.OrderScoutId;
-import static net.kmaster.cookiemom.dao.OrderDao.Properties.PickedUpFromCupboard;
 
 /**
  * Created with IntelliJ IDEA.
@@ -44,13 +43,13 @@ public class ActionBoothCheckOut extends ActionContentCard {
     }
 
     @Override
-    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
+    public void setupInnerViewElements(ViewGroup parent, View view) {
         super.setupInnerViewElements(parent, view);    //To change body of overridden methods use File | Settings | File Templates.
         final ListView listView = (ListView) parent.findViewById(R.id.action_list);
         addCheckOutListener(listView);
     }
 
-    private void addCheckOutListener(@Nullable final ListView listView) {
+    private void addCheckOutListener(final ListView listView) {
         if (listView != null) {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
@@ -67,7 +66,7 @@ public class ActionBoothCheckOut extends ActionContentCard {
         }
     }
 
-    @NotNull
+
     @Override
     public Boolean isCardVisible() {
 
@@ -93,14 +92,14 @@ public class ActionBoothCheckOut extends ActionContentCard {
         return !boothList.isEmpty();
     }
 
-    @NotNull
+
     @Override
     public List<Booth> getActionList() {
         return getBooths();
 
     }
 
-    @NotNull
+
     private List<Booth> getBooths() {
         return boothList;
     }

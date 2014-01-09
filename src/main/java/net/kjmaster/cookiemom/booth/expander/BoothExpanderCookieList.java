@@ -25,20 +25,25 @@ import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import it.gmariotti.cardslib.library.internal.Card;
-import it.gmariotti.cardslib.library.internal.CardHeader;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.dao.Booth;
+import net.kjmaster.cookiemom.dao.CookieTransactions;
+import net.kjmaster.cookiemom.dao.CookieTransactionsDao;
+import net.kjmaster.cookiemom.dao.Order;
+import net.kjmaster.cookiemom.dao.OrderDao;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.scout.expander.ScoutExpanderListLayout;
 import net.kjmaster.cookiemom.scout.expander.ScoutExpanderValues;
 import net.kjmaster.cookiemom.scout.expander.ScoutExpanderValuesListAdapter;
-import net.kmaster.cookiemom.dao.*;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import it.gmariotti.cardslib.library.internal.Card;
+import it.gmariotti.cardslib.library.internal.CardHeader;
 
 //~--- JDK imports ------------------------------------------------------------
 
@@ -66,7 +71,7 @@ public class BoothExpanderCookieList extends Card {
     }
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, @NotNull View view) {
+    public void setupInnerViewElements(ViewGroup parent, View view) {
 
 //      TextView textView = (TextView) view.findViewById(R.id.carddemo_googlenow_main_inner_lastupdate);
 //      textView.setText("Update 14:57, 16 September"); //should use R.string.
@@ -77,7 +82,7 @@ public class BoothExpanderCookieList extends Card {
     }
 
     // ------------------------------------------------------------------------------------------
-    @NotNull
+
     ArrayList<ScoutExpanderValues> buildArrayHelper() {
         //DataStore        dataStore = new DataStore(getContext());
         ArrayList<ScoutExpanderValues> list = new ArrayList<ScoutExpanderValues>();
@@ -124,8 +129,8 @@ public class BoothExpanderCookieList extends Card {
         return list;
     }
 
-    @NotNull
-    private HashMap<String, String> getTotalOrderPossCashForScoutCookieType(@NotNull Booth booth, String cookieType) {
+
+    private HashMap<String, String> getTotalOrderPossCashForScoutCookieType(Booth booth, String cookieType) {
 
         List<Order> orderListStockAdapter = Main.daoSession.getOrderDao().queryBuilder()
                 .where(

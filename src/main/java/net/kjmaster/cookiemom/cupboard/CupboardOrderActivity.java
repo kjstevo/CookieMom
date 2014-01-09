@@ -1,16 +1,17 @@
 package net.kjmaster.cookiemom.cupboard;
 
 import android.annotation.SuppressLint;
+
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.dao.Order;
+import net.kjmaster.cookiemom.dao.OrderDao;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
 import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment_;
-import net.kmaster.cookiemom.dao.Order;
-import net.kmaster.cookiemom.dao.OrderDao;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Calendar;
 import java.util.HashMap;
@@ -55,7 +56,7 @@ public class CupboardOrderActivity extends CookieActionActivity {
         return true;
     }
 
-    @NotNull
+
     @Override
     public HashMap<String, String> getValMap() {
         //net.kjmaster.cookiemom.cupboard.CupboardOrderActivity.getValMap returns HashMap<String, String>

@@ -22,16 +22,17 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import it.gmariotti.cardslib.library.internal.Card;
-import it.gmariotti.cardslib.library.internal.CardHeader;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
-import net.kmaster.cookiemom.dao.CookieTransactions;
-import net.kmaster.cookiemom.dao.CookieTransactionsDao;
-import org.jetbrains.annotations.NotNull;
+import net.kjmaster.cookiemom.dao.CookieTransactions;
+import net.kjmaster.cookiemom.dao.CookieTransactionsDao;
 
 import java.text.NumberFormat;
 import java.util.List;
+
+import it.gmariotti.cardslib.library.internal.Card;
+import it.gmariotti.cardslib.library.internal.CardHeader;
 
 /**
  * This class provides a simple card as Google Now SummaryStatScout
@@ -77,7 +78,7 @@ public class SummaryStatTotalsCard extends Card {
 
 
     @Override
-    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
+    public void setupInnerViewElements(ViewGroup parent, View view) {
 
         TextView boxesView = (TextView) parent.findViewById(R.id.summary_stat_totals_boxes_text);
         TextView cashView = (TextView) parent.findViewById(R.id.summary_stat_totals_paid_text);

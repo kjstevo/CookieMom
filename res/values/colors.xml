@@ -6,7 +6,7 @@
     <color name="default_button_background_dark">#00000000</color>
     <color name="default_button_background_pressed_dark">#46c5c1ff</color>
     <color name="default_keyboard_indicator_color_dark">#ff33b5e5</color>
-    <color name="background_tab_pressed">#6633B5E5</color>
+    <!--<color name="background_tab_pressed">#6633B5E5</color>-->
     <color name="default_text_color_holo_light">#ff000000</color>
     <color name="default_text_color_holo_light_disabled">#ffb2b2b2</color>
     <color name="default_divider_color_light">#28000000</color>

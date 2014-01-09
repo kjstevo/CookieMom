@@ -23,18 +23,19 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import it.gmariotti.cardslib.library.internal.Card;
-import it.gmariotti.cardslib.library.internal.CardHeader;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
-import net.kmaster.cookiemom.dao.Booth;
-import net.kmaster.cookiemom.dao.CookieTransactions;
-import net.kmaster.cookiemom.dao.CookieTransactionsDao;
-import org.jetbrains.annotations.NotNull;
+import net.kjmaster.cookiemom.dao.Booth;
+import net.kjmaster.cookiemom.dao.CookieTransactions;
+import net.kjmaster.cookiemom.dao.CookieTransactionsDao;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import it.gmariotti.cardslib.library.internal.Card;
+import it.gmariotti.cardslib.library.internal.CardHeader;
 
 /**
  * This class provides a simple card as Google Now SummaryStatBooth
@@ -79,7 +80,7 @@ public class SummaryStatBoothCard extends Card {
     }
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, @NotNull View view) {
+    public void setupInnerViewElements(ViewGroup parent, View view) {
 
         TextView textView = (TextView) view.findViewById(R.id.carddemo_googlenow_main_inner_lastupdate);
 //        textView.setText("Update 14:57, 16 September"); //should use R.string.
@@ -97,7 +98,6 @@ public class SummaryStatBoothCard extends Card {
     //------------------------------------------------------------------------------------------
 
 
-    @NotNull
     ArrayList<SummaryStatBoothValues> buildArrayHelper() {
         //DataStore        dataStore = new DataStore(getContext());
         ArrayList<SummaryStatBoothValues> list = new ArrayList<SummaryStatBoothValues>();
@@ -136,8 +136,8 @@ public class SummaryStatBoothCard extends Card {
         return list;
     }
 
-    @NotNull
-    private HashMap<String, String> getTotalOrderPossCashForBoothCookieType(@NotNull Booth booth) {
+
+    private HashMap<String, String> getTotalOrderPossCashForBoothCookieType(Booth booth) {
 
         List<CookieTransactions> transactionsList = Main.daoSession.getCookieTransactionsDao().queryBuilder()
                 .where(CookieTransactionsDao.Properties.TransBoothId.eq(booth.getId()))

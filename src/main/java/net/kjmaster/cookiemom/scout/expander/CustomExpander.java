@@ -5,14 +5,16 @@ package net.kjmaster.cookiemom.scout.expander;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
+
+import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.booth.BoothListFragmentCard;
+import net.kjmaster.cookiemom.dao.Scout;
+
 import it.gmariotti.cardslib.library.internal.Card;
 import it.gmariotti.cardslib.library.internal.CardExpand;
 import it.gmariotti.cardslib.library.internal.CardHeader;
 import it.gmariotti.cardslib.library.view.CardView;
-import net.kjmaster.cookiemom.R;
-import net.kjmaster.cookiemom.booth.BoothListFragmentCard;
-import net.kmaster.cookiemom.dao.Scout;
-import org.jetbrains.annotations.Nullable;
+
 
 public class CustomExpander extends CardExpand {
     private final Scout scout;
@@ -24,7 +26,7 @@ public class CustomExpander extends CardExpand {
     }
 
     @Override
-    public void setupInnerViewElements(ViewGroup parent, @Nullable View view) {
+    public void setupInnerViewElements(ViewGroup parent, View view) {
         if (view == null) {
             return;
         }

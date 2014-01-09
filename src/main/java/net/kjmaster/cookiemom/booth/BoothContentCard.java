@@ -8,16 +8,23 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import it.gmariotti.cardslib.library.internal.Card;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
-import net.kmaster.cookiemom.dao.*;
-import org.jetbrains.annotations.NotNull;
+import net.kjmaster.cookiemom.dao.Booth;
+import net.kjmaster.cookiemom.dao.BoothAssignments;
+import net.kjmaster.cookiemom.dao.BoothAssignmentsDao;
+import net.kjmaster.cookiemom.dao.CookieTransactions;
+import net.kjmaster.cookiemom.dao.CookieTransactionsDao;
+import net.kjmaster.cookiemom.dao.Scout;
+import net.kjmaster.cookiemom.dao.ScoutDao;
 
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+
+import it.gmariotti.cardslib.library.internal.Card;
 
 /**
  * Created with IntelliJ IDEA.
@@ -33,7 +40,7 @@ public class BoothContentCard extends Card {
         // No Header
         addPartialOnClickListener(CLICK_LISTENER_CONTENT_VIEW, new OnCardClickListener() {
             @Override
-            public void onClick(@NotNull Card card, View view) {
+            public void onClick(Card card, View view) {
                 View view1 = card.getCardView().findViewById(R.id.card_content_expand_layout);
                 if (view1 != null) {
 
@@ -62,7 +69,7 @@ public class BoothContentCard extends Card {
     private Booth mBooth;
 
     @Override
-    public void setupInnerViewElements(@NotNull ViewGroup parent, View view) {
+    public void setupInnerViewElements(ViewGroup parent, View view) {
 
         //Retrieve elements
         TextView mDate = (TextView) parent.findViewById(R.id.booth_date);
@@ -151,7 +158,7 @@ public class BoothContentCard extends Card {
         }
     }
 
-    @NotNull
+
     private List<Scout> getScoutList() {
         List<Scout> arrayList = new ArrayList<Scout>();
         List<BoothAssignments> boothAssignmentses = Main.daoSession.getBoothAssignmentsDao().queryBuilder().where(BoothAssignmentsDao.Properties.BoothAssignBoothId.eq(mBooth.getId())).list();

@@ -25,7 +25,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
-import org.jetbrains.annotations.Nullable;
+
 
 /**
  * @author Gabriele Mariotti (gabri.mariotti@gmail.com)
@@ -44,7 +44,7 @@ public class SummaryStatBoothListLayout extends LinearLayout implements View.OnC
         super(context, attrs, defStyle);
     }
 
-    public void setAdapter(@Nullable SummaryStatBoothValuesListAdapter list) {
+    public void setAdapter(SummaryStatBoothValuesListAdapter list) {
         setOrientation(VERTICAL);
 
         // Popolute list

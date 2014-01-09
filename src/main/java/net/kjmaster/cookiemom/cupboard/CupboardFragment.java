@@ -2,26 +2,33 @@ package net.kjmaster.cookiemom.cupboard;
 
 import android.support.v4.app.Fragment;
 import android.util.Log;
-import com.googlecode.androidannotations.annotations.*;
-import it.gmariotti.cardslib.library.internal.Card;
-import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
-import it.gmariotti.cardslib.library.internal.CardThumbnail;
-import it.gmariotti.cardslib.library.view.CardListView;
+
+import com.googlecode.androidannotations.annotations.AfterViews;
+import com.googlecode.androidannotations.annotations.App;
+import com.googlecode.androidannotations.annotations.EFragment;
+import com.googlecode.androidannotations.annotations.OptionsItem;
+import com.googlecode.androidannotations.annotations.OptionsMenu;
+import com.googlecode.androidannotations.annotations.ViewById;
+
 import net.kjmaster.cookiemom.Main;
-import net.kjmaster.cookiemom.MainActivity;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.dao.CookieTransactions;
+import net.kjmaster.cookiemom.dao.CookieTransactionsDao;
+import net.kjmaster.cookiemom.dao.Order;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.ui.cookies.CookieCardHeader;
-import net.kmaster.cookiemom.dao.CookieTransactions;
-import net.kmaster.cookiemom.dao.CookieTransactionsDao;
-import net.kmaster.cookiemom.dao.Order;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static net.kmaster.cookiemom.dao.CookieTransactionsDao.Properties.CookieType;
-import static net.kmaster.cookiemom.dao.OrderDao.Properties.OrderCookieType;
-import static net.kmaster.cookiemom.dao.OrderDao.Properties.PickedUpFromCupboard;
+import it.gmariotti.cardslib.library.internal.Card;
+import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
+import it.gmariotti.cardslib.library.internal.CardThumbnail;
+import it.gmariotti.cardslib.library.view.CardListView;
+
+import static net.kjmaster.cookiemom.dao.CookieTransactionsDao.Properties.CookieType;
+import static net.kjmaster.cookiemom.dao.OrderDao.Properties.OrderCookieType;
+import static net.kjmaster.cookiemom.dao.OrderDao.Properties.PickedUpFromCupboard;
 
 
 /**
@@ -91,7 +98,7 @@ public class CupboardFragment extends Fragment {
             CardThumbnail cardThumbnail = new CardThumbnail(getActivity());
             cardThumbnail.setDrawableResource(Constants.getCookieNameImages().get(cookieFlavor));
             mCard.addCardThumbnail(cardThumbnail);
-            CookieCardHeader cardHeader = new CookieCardHeader(getActivity(), Constants.CookieColors[i]);
+            CookieCardHeader cardHeader = new CookieCardHeader(getActivity(), getResources().getColor(Constants.CookieColors[i]));
 
             //change to true to add menu.   also uncomment lines below and add code in method
             cardHeader.setButtonOverflowVisible(false);
@@ -144,12 +151,6 @@ public class CupboardFragment extends Fragment {
         if (isPickupAvail) {
             CupboardPickupActivity_.intent(getActivity()).startForResult(Constants.CUPBOARD_REQUEST);
         }
-    }
-
-    //TODO prevent negative inventory
-    @OnActivityResult(Constants.CUPBOARD_REQUEST)
-    void cupboardResults() {
-        ((MainActivity) getActivity()).refreshAll();
     }
 
 

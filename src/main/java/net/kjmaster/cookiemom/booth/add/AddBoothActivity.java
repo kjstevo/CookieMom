@@ -8,14 +8,21 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
-import android.view.*;
+import android.view.ActionMode;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.FragmentByTag;
-import eu.inmite.android.lib.dialogs.ISimpleDialogListener;
+
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.global.Constants;
-import org.jetbrains.annotations.NotNull;
+
+import eu.inmite.android.lib.dialogs.ISimpleDialogListener;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -62,7 +69,7 @@ public class AddBoothActivity extends FragmentActivity implements ActionMode.Cal
     }
 
     @Override
-    public boolean onCreateActionMode(@NotNull ActionMode mode, Menu menu) {
+    public boolean onCreateActionMode(ActionMode mode, Menu menu) {
         MenuInflater inflater = mode.getMenuInflater();
 
         inflater.inflate(R.menu.add_scout, menu);
@@ -99,7 +106,7 @@ public class AddBoothActivity extends FragmentActivity implements ActionMode.Cal
 
 
     @Override
-    public boolean onActionItemClicked(@NotNull ActionMode mode, MenuItem item) {
+    public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
 
         mode.finish();
         return true;

@@ -3,13 +3,15 @@ package net.kjmaster.cookiemom.booth.expander;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
+
+import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.dao.Booth;
+
 import it.gmariotti.cardslib.library.internal.Card;
 import it.gmariotti.cardslib.library.internal.CardExpand;
 import it.gmariotti.cardslib.library.internal.CardHeader;
 import it.gmariotti.cardslib.library.view.CardView;
-import net.kjmaster.cookiemom.R;
-import net.kmaster.cookiemom.dao.Booth;
-import org.jetbrains.annotations.Nullable;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,7 +21,7 @@ import org.jetbrains.annotations.Nullable;
  */
 public class CustomBoothExpander extends CardExpand {
     @Override
-    public void setupInnerViewElements(ViewGroup parent, @Nullable View view) {
+    public void setupInnerViewElements(ViewGroup parent, View view) {
         //net.kjmaster.cookiemom.booth.expander.CustomBoothExpander.setupInnerViewElements returns void
 
         //12/12/13

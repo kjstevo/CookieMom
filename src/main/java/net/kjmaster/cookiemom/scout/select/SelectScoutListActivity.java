@@ -3,12 +3,18 @@ package net.kjmaster.cookiemom.scout.select;
 import android.annotation.SuppressLint;
 import android.app.ListActivity;
 import android.widget.ArrayAdapter;
-import com.googlecode.androidannotations.annotations.*;
+
+import com.googlecode.androidannotations.annotations.AfterViews;
+import com.googlecode.androidannotations.annotations.App;
+import com.googlecode.androidannotations.annotations.EActivity;
+import com.googlecode.androidannotations.annotations.Extra;
+import com.googlecode.androidannotations.annotations.ItemClick;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.dao.Scout;
+import net.kjmaster.cookiemom.dao.ScoutDao;
 import net.kjmaster.cookiemom.global.ISendActivityResult;
-import net.kmaster.cookiemom.dao.Scout;
-import net.kmaster.cookiemom.dao.ScoutDao;
 
 import java.util.List;
 

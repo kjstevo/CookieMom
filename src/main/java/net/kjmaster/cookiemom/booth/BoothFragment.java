@@ -2,14 +2,13 @@ package net.kjmaster.cookiemom.booth;
 
 import android.support.v4.app.Fragment;
 import android.view.MenuItem;
-import com.googlecode.androidannotations.annotations.*;
-import eu.inmite.android.lib.dialogs.ISimpleDialogListener;
-import eu.inmite.android.lib.dialogs.SimpleDialogFragment;
-import it.gmariotti.cardslib.library.internal.Card;
-import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
-import it.gmariotti.cardslib.library.internal.CardHeader;
-import it.gmariotti.cardslib.library.internal.base.BaseCard;
-import it.gmariotti.cardslib.library.view.CardListView;
+
+import com.googlecode.androidannotations.annotations.AfterViews;
+import com.googlecode.androidannotations.annotations.EFragment;
+import com.googlecode.androidannotations.annotations.OptionsItem;
+import com.googlecode.androidannotations.annotations.OptionsMenu;
+import com.googlecode.androidannotations.annotations.ViewById;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.booth.add.AddBoothActivity_;
@@ -17,13 +16,27 @@ import net.kjmaster.cookiemom.booth.checking.BoothCheckInActivity_;
 import net.kjmaster.cookiemom.booth.checking.BoothCheckOutActivity_;
 import net.kjmaster.cookiemom.booth.expander.CustomBoothExpander;
 import net.kjmaster.cookiemom.booth.order.BoothOrderActivity_;
+import net.kjmaster.cookiemom.dao.Booth;
+import net.kjmaster.cookiemom.dao.BoothAssignments;
+import net.kjmaster.cookiemom.dao.BoothAssignmentsDao;
+import net.kjmaster.cookiemom.dao.BoothDao;
+import net.kjmaster.cookiemom.dao.CookieTransactions;
+import net.kjmaster.cookiemom.dao.CookieTransactionsDao;
+import net.kjmaster.cookiemom.dao.Order;
+import net.kjmaster.cookiemom.dao.OrderDao;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.scout.select.SelectScoutListActivity_;
-import net.kmaster.cookiemom.dao.*;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import eu.inmite.android.lib.dialogs.ISimpleDialogListener;
+import eu.inmite.android.lib.dialogs.SimpleDialogFragment;
+import it.gmariotti.cardslib.library.internal.Card;
+import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
+import it.gmariotti.cardslib.library.internal.CardHeader;
+import it.gmariotti.cardslib.library.internal.base.BaseCard;
+import it.gmariotti.cardslib.library.view.CardListView;
 
 @OptionsMenu(R.menu.booth_frag)
 @EFragment(R.layout.main_fragment)
@@ -54,7 +67,7 @@ public class BoothFragment
                 cardHeader.setButtonExpandVisible(true);
                 cardHeader.setPopupMenu(R.menu.booth_overflow, new CardHeader.OnClickCardHeaderPopupMenuListener() {
                     @Override
-                    public void onMenuItemClick(@NotNull BaseCard card, @NotNull MenuItem item) {
+                    public void onMenuItemClick(BaseCard card, MenuItem item) {
                         selectBoothMenu(card, item);
                     }
                 });
@@ -85,7 +98,7 @@ public class BoothFragment
         super.onHiddenChanged(hidden);
     }
 
-    private void selectBoothMenu(@NotNull BaseCard card, @NotNull MenuItem item) {
+    private void selectBoothMenu(BaseCard card, MenuItem item) {
         Booth booth = ((BoothContentCard) card.getParentCard()).getBooth();
         switch (item.getItemId()) {
 
@@ -150,7 +163,7 @@ public class BoothFragment
 
     }
 
-    private void deleteBooth(long requestCode, @NotNull BoothDao boothDao) {
+    private void deleteBooth(long requestCode, BoothDao boothDao) {
         boothDao.delete(boothDao.loadByRowId(requestCode));
     }
 

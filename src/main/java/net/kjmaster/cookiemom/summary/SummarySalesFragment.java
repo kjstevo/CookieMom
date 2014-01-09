@@ -2,14 +2,16 @@ package net.kjmaster.cookiemom.summary;
 
 import android.support.v4.app.Fragment;
 import android.widget.TextView;
+
 import com.echo.holographlibrary.Bar;
 import com.echo.holographlibrary.BarGraph;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EFragment;
 import com.googlecode.androidannotations.annotations.ViewById;
+
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
-import net.kmaster.cookiemom.dao.CookieTransactions;
+import net.kjmaster.cookiemom.dao.CookieTransactions;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
