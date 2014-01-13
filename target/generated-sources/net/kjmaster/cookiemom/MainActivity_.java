@@ -76,12 +76,16 @@ public final class MainActivity_
             return true;
         }
         int itemId_ = item.getItemId();
-        if ((itemId_ == id.menu_personal)||(itemId_ == id.menu_cookie_mom)) {
-            onProfileSwitch(item);
-            return true;
-        }
         if (itemId_ == id.menu_eat_cookies) {
             onEatCookies();
+            return true;
+        }
+        if (itemId_ == id.menu_about) {
+            onAbout();
+            return true;
+        }
+        if ((itemId_ == id.menu_personal)||(itemId_ == id.menu_cookie_mom)) {
+            onProfileSwitch(item);
             return true;
         }
         return false;
@@ -94,11 +98,8 @@ public final class MainActivity_
             case  2232 :
                 MainActivity_.this.onEatSelectScoutResult(resultCode, data);
                 break;
-            case  111 :
-                MainActivity_.this.onScoutAssign(resultCode, data);
-                break;
-            case  888 :
-                MainActivity_.this.onBoothResult(resultCode, data);
+            case  1111 :
+                MainActivity_.this.onRemoveScout(resultCode, data);
                 break;
             case  4343 :
                 MainActivity_.this.scoutResult(resultCode);
@@ -106,11 +107,14 @@ public final class MainActivity_
             case  9876 :
                 MainActivity_.this.onBoothOrder(resultCode, data);
                 break;
-            case  1111 :
-                MainActivity_.this.onRemoveScout(resultCode, data);
+            case  111 :
+                MainActivity_.this.onScoutAssign(resultCode, data);
                 break;
             case  444 :
                 MainActivity_.this.placeCupboardOrder(resultCode, data);
+                break;
+            case  888 :
+                MainActivity_.this.onBoothResult(resultCode, data);
                 break;
         }
     }

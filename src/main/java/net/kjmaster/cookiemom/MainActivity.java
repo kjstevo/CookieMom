@@ -45,6 +45,8 @@ import net.kjmaster.cookiemom.summary.SummaryFragment_;
 import java.util.Date;
 import java.util.List;
 
+import de.psdev.licensesdialog.LicensesDialogFragment;
+
 @SuppressLint("Registered")
 @EActivity(R.layout.main_activity)
 public class MainActivity extends FragmentActivity {
@@ -150,6 +152,13 @@ public class MainActivity extends FragmentActivity {
 
     @Pref
     ISettings_ iSettings;
+
+    @OptionsItem(R.id.menu_about)
+    void onAbout(){
+        final LicensesDialogFragment fragment = LicensesDialogFragment.newInstance(R.raw.notices, true);
+        fragment.show(getSupportFragmentManager(), null);
+
+    }
 
     @OptionsItem(R.id.menu_eat_cookies)
     void onEatCookies() {

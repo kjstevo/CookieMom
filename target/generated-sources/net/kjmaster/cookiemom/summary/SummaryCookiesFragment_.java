@@ -29,8 +29,8 @@ public final class SummaryCookiesFragment_
     }
 
     private void afterSetContentView_() {
-        legend = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.legend));
         pg = ((PieGraph) findViewById(net.kjmaster.cookiemom.R.id.piegraph));
+        legend = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.legend));
         afterViews();
     }
 

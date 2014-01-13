@@ -159,5 +159,6 @@
     <string name="edit_order_title">Edit Order</string>
     <string name="select_scout">Select Scout</string>
     <string name="upcoming_booths">Upcoming Booths</string>
+    <string name="menu_about">About</string>
 
 </resources>

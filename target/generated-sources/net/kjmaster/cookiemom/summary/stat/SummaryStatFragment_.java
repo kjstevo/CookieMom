@@ -28,9 +28,9 @@ public final class SummaryStatFragment_
     }
 
     private void afterSetContentView_() {
-        boothCardView = ((CardView) findViewById(net.kjmaster.cookiemom.R.id.summary_stat_booth_cardview));
         totalsCardView = ((CardView) findViewById(net.kjmaster.cookiemom.R.id.summary_stat_totals_cardview));
         scoutCardView = ((CardView) findViewById(net.kjmaster.cookiemom.R.id.summary_stat_scout_cardview));
+        boothCardView = ((CardView) findViewById(net.kjmaster.cookiemom.R.id.summary_stat_booth_cardview));
         afterViews();
     }
 
