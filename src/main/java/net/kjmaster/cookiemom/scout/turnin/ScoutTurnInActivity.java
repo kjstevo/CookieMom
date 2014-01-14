@@ -6,12 +6,14 @@ import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
 import com.googlecode.androidannotations.annotations.res.StringRes;
+import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
 
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.dao.CookieTransactions;
 import net.kjmaster.cookiemom.dao.CookieTransactionsDao;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
+import net.kjmaster.cookiemom.global.ISettings_;
 import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment_;
 import net.kjmaster.cookiemom.ui.numberpicker.NumberPickerBuilder;
 import net.kjmaster.cookiemom.ui.numberpicker.NumberPickerDialogFragment;
@@ -49,6 +51,8 @@ public class ScoutTurnInActivity extends CookieActionActivity implements ISimple
 
     @StringRes(R.string.cancel)
     String resCancel;
+    @Pref
+    ISettings_ iSettings;
 
 
     @AfterViews
@@ -114,7 +118,13 @@ public class ScoutTurnInActivity extends CookieActionActivity implements ISimple
 
     @Override
     public void onNegativeButtonClicked(int requestCode) {
-        replaceFrag(createFragmentTransaction(turn_in), CookieAmountsListInputFragment_.builder().isEditable(this.isEditable).isBoxes(true).build(), turn_in);
+        replaceFrag(createFragmentTransaction(turn_in),
+                CookieAmountsListInputFragment_.builder()
+                        .isEditable(this.isEditable)
+                        .hideCases(true)
+                        .showInventory(false)
+                        .showExpected(false)
+                        .build(), turn_in);
         createActionMode(scout_turn_in__title);
 
     }

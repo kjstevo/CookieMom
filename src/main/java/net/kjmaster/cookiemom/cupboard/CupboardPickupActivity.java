@@ -15,9 +15,12 @@ import net.kjmaster.cookiemom.dao.Order;
 import net.kjmaster.cookiemom.dao.OrderDao;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
+import net.kjmaster.cookiemom.global.ICookieActionFragment;
 import net.kjmaster.cookiemom.global.ISettings_;
+import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment_;
 
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -31,18 +34,52 @@ import java.util.List;
 public class CupboardPickupActivity extends CookieActionActivity {
 
 
+    private final HashMap<String, String> valuesMap = new HashMap<String, String>();
+
     @Pref
     ISettings_ iSettings;
+
+    private String fragTag;
 
     @AfterViews
     void afterViewFrag() {
 
-        String fragTag = getString(R.string.pickup_from_cupboard);
-
-        replaceFrag(createFragmentTransaction(fragTag), CupboardPickupFragment_.builder().isBoxes(false).build(), fragTag);
-
+        fragTag = getString(R.string.pickup_from_cupboard);
+        replaceFrag(createFragmentTransaction(fragTag),
+                CookieAmountsListInputFragment_.builder()
+                        .hideCases(false)
+                        .isEditable(true)
+                        .showInventory(true)
+                        .showExpected(true)
+                        .build(),
+                getString(R.string.pickuo_cupboard_order));
         createActionMode(getString(R.string.pickup_order_title));
 
+    }
+
+    @Override
+    public HashMap<String, String> getValMap() {
+        for (int i = 0; i < Constants.CookieTypes.length; i++) {
+            final String cookieType = Constants.CookieTypes[i];
+            Integer amountExpected = 0;
+            List<Order> orderList = Main.daoSession.getOrderDao().queryBuilder()
+                    .where(OrderDao.Properties.OrderedFromCupboard.eq(true),
+                            OrderDao.Properties.OrderCookieType.eq(cookieType),
+                            OrderDao.Properties.PickedUpFromCupboard.eq(false))
+
+                    .list();
+            if (orderList.isEmpty()) {
+                valuesMap.put(cookieType, String.valueOf(0));
+            } else {
+                for (Order order : orderList) {
+                    amountExpected += order.getOrderedBoxes();
+                    if (!((ICookieActionFragment) getSupportFragmentManager().findFragmentByTag(fragTag)).isRefresh()) {
+                        valuesMap.put(cookieType, String.valueOf(amountExpected));
+                    }
+                }
+            }
+        }
+        return valuesMap;
     }
 
 

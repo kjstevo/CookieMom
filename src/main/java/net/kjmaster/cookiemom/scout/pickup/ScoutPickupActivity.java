@@ -11,7 +11,6 @@ import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.dao.CookieTransactions;
-import net.kjmaster.cookiemom.dao.CookieTransactionsDao;
 import net.kjmaster.cookiemom.dao.Order;
 import net.kjmaster.cookiemom.dao.OrderDao;
 import net.kjmaster.cookiemom.global.Constants;
@@ -52,16 +51,13 @@ public class ScoutPickupActivity extends CookieActionActivity {
     @StringRes(R.string.pickup_order)
     String pickup_order;
 
-    @Pref
-    ISettings_ iSettings;
-
 
     @StringRes(R.string.cancel)
     String resCancel;
     private final HashMap<String, String> valuesMap = new HashMap<String, String>();
-    private final CookieTransactionsDao cookieTransactionsDao = Main.daoSession.getCookieTransactionsDao();
-    private final OrderDao orderDao = Main.daoSession.getOrderDao();
     private final Calendar c = Calendar.getInstance();
+    @Pref
+    ISettings_ iSettings;
     ;
 
     @AfterViews
@@ -76,7 +72,9 @@ public class ScoutPickupActivity extends CookieActionActivity {
                 createFragmentTransaction(
                         scout_pickup_order), CookieAmountsListInputFragment_
                 .builder()
-                .isBoxes(true)
+                .hideCases(false)
+                .showInventory(true)
+                .showExpected(true)
                 .isEditable(this.isEditable)
                 .build(),
                 scout_pickup_order
@@ -196,19 +194,6 @@ public class ScoutPickupActivity extends CookieActionActivity {
 
     private Integer getRequestedBoxes(String cookieFlavor) {
         return Integer.valueOf(getFragment().valuesMap().get(cookieFlavor));
-    }
-
-    private Integer getBoxesInInventory(String cookieFlavor) {
-        Integer boxesInInventory = 0;
-        List<CookieTransactions> transactionsList = cookieTransactionsDao.queryBuilder()
-                .where(
-                        CookieTransactionsDao.Properties.CookieType.eq(cookieFlavor)
-                )
-                .list();
-        for (CookieTransactions transaction : transactionsList) {
-            boxesInInventory += transaction.getTransBoxes();
-        }
-        return boxesInInventory;
     }
 
 

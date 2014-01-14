@@ -31,7 +31,6 @@ public class CookieAmountContentCard extends Card {
     private final boolean isBoxes;
     private TextView mCookieAmountCases;
     private TextView mAmountExpectedCases;
-    private TextView mAmountCasesCaption;
 
     public CookieAmountContentCard(
             Context context,
@@ -128,7 +127,7 @@ public class CookieAmountContentCard extends Card {
         TextView mAmountExpected = (TextView) parent.findViewById(R.id.amount_expected);
         mAmountExpectedCases = (TextView) parent.findViewById(R.id.cases_expected);
         TextView mCookieAmount = (TextView) parent.findViewById(R.id.cookie_amount);
-        mAmountCasesCaption = (TextView) parent.findViewById(R.id.amount_cases_caption);
+        TextView mAmountCasesCaption = (TextView) parent.findViewById(R.id.amount_cases_caption);
 
         mCookieAmount.addTextChangedListener(new CookieTextWatcher());
 

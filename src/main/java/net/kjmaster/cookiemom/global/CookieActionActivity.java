@@ -11,11 +11,16 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
+import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.dao.CookieTransactions;
+import net.kjmaster.cookiemom.dao.CookieTransactionsDao;
+import net.kjmaster.cookiemom.dao.OrderDao;
 import net.kjmaster.cookiemom.ui.numberpicker.NumberPickerBuilder;
 import net.kjmaster.cookiemom.ui.numberpicker.NumberPickerDialogFragment;
 
 import java.util.HashMap;
+import java.util.List;
 
 import static net.kjmaster.cookiemom.global.Constants.CookieTypes;
 
@@ -28,17 +33,26 @@ import static net.kjmaster.cookiemom.global.Constants.CookieTypes;
 
 public abstract class CookieActionActivity extends FragmentActivity implements ActionMode.Callback, NumberPickerDialogFragment.NumberPickerDialogHandler {
 
+    protected final CookieTransactionsDao cookieTransactionsDao = Main.daoSession.getCookieTransactionsDao();
+    protected final OrderDao orderDao = Main.daoSession.getOrderDao();
     private ActionMode actionMode;
 
-
     protected void createActionMode(String title) {
+
         actionMode = startActionMode(this);
+        if (actionMode == null) return;
+        if (!setActionTitle(title)) return;
 
-        actionMode.setTitle(title);
+        setDoneAction();
+    }
 
-        int doneButtonId = Resources.getSystem().getIdentifier("action_mode_close_button", "id", "android");
+    private boolean setDoneAction() {
 
-        View doneButton = this.findViewById(doneButtonId);
+        final View doneButton = getDoneButton();
+
+        if (doneButton == null) {
+            return false;
+        }
 
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +63,28 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
                 finish();
             }
         });
+        return true;
     }
+
+
+    private View getDoneButton() {
+        Resources resources = Resources.getSystem();
+        if (resources == null) {
+            return null;
+        }
+        int doneButtonId = resources.getIdentifier("action_mode_close_button", "id", "android");
+        return this.findViewById(doneButtonId);
+    }
+
+
+    private boolean setActionTitle(String title) {
+        if (actionMode == null) {
+            return false;
+        }
+        actionMode.setTitle(title);
+        return true;
+    }
+
 
     private ICookieActionFragment mFragment;
 
@@ -77,7 +112,9 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
     public boolean onCreateActionMode(ActionMode mode, Menu menu) {
         MenuInflater inflater = mode.getMenuInflater();
 
-        inflater.inflate(R.menu.add_scout, menu);
+        if (inflater != null) {
+            inflater.inflate(R.menu.add_scout, menu);
+        }
 
         return true;
     }
@@ -91,9 +128,31 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
         return hashMap;
     }
 
+    public HashMap<String, String> getExpectedValMap() {
+        HashMap<String, String> hashMap = new HashMap<String, String>();
+        for (String cookieType : Constants.CookieTypes) {
+            hashMap.put(cookieType, "0");
+        }
+        return hashMap;
+    }
+
+
     @Override
     public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
         return false;    // To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    protected Integer getBoxesInInventory(String cookieFlavor) {
+        Integer boxesInInventory = 0;
+        List<CookieTransactions> transactionsList = cookieTransactionsDao.queryBuilder()
+                .where(
+                        CookieTransactionsDao.Properties.CookieType.eq(cookieFlavor)
+                )
+                .list();
+        for (CookieTransactions transaction : transactionsList) {
+            boxesInInventory += transaction.getTransBoxes();
+        }
+        return boxesInInventory;
     }
 
     protected abstract boolean isEditable();
@@ -114,12 +173,7 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
         finish();
     }
 
-    //    @TextChange(R.id.cookie_amount)
-//    void changeText(TextView tv, CharSequence text){
-//       mFragment.valuesMap().put(
-//               tv.getTag().toString(),
-//               text.toString());
-//    }
+
     @Override
     public void onDialogNumberSet(int reference, int number, double decimal, boolean isNegative, double fullNumber) {
         mFragment.valuesMap().put(CookieTypes[reference], String.valueOf(number));
@@ -147,11 +201,10 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        //net.kjmaster.cookiemom.global.CookieActionActivity.onCreate returns void
+
         for (String cookieType : Constants.CookieTypes) {
             outState.putString(cookieType, mFragment.valuesMap().get(cookieType));
         }
-        //11/30/13
         super.onSaveInstanceState(outState);
     }
 

@@ -4,6 +4,7 @@ import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
 import com.googlecode.androidannotations.annotations.res.StringRes;
+import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
 
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
@@ -12,6 +13,7 @@ import net.kjmaster.cookiemom.dao.OrderDao;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
 import net.kjmaster.cookiemom.global.ICookieActionFragment;
+import net.kjmaster.cookiemom.global.ISettings_;
 import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment_;
 
 import java.util.Calendar;
@@ -27,6 +29,8 @@ import java.util.List;
 @EActivity(R.layout.scout_order_layout)
 public class ScoutEditActivity extends CookieActionActivity {
 
+    @Pref
+    ISettings_ iSettings;
     private OrderDao dao = Main.daoSession.getOrderDao();
     private HashMap<String, String> valuesMap;
 
@@ -61,7 +65,9 @@ public class ScoutEditActivity extends CookieActionActivity {
                 createFragmentTransaction(
                         fragTag), CookieAmountsListInputFragment_
                 .builder()
-                .isBoxes(true)
+                .hideCases(true)
+                .showExpected(true)
+                .showInventory(false)
                 .isEditable(true)
                 .build(),
                 fragTag

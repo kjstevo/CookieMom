@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
+import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
 
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
@@ -11,6 +12,7 @@ import net.kjmaster.cookiemom.dao.Order;
 import net.kjmaster.cookiemom.dao.OrderDao;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
+import net.kjmaster.cookiemom.global.ISettings_;
 import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment_;
 
 import java.util.Calendar;
@@ -29,6 +31,8 @@ public class CupboardOrderActivity extends CookieActionActivity {
 
 
     private final HashMap<String, String> valMap = new HashMap<String, String>();
+    @Pref
+    ISettings_ iSettings;
     private String fragName;
 
     @AfterViews
@@ -37,7 +41,11 @@ public class CupboardOrderActivity extends CookieActionActivity {
         fragName = getString(R.string.add_cupboard_order);
         replaceFrag(
                 createFragmentTransaction(fragName),
-                CookieAmountsListInputFragment_.builder().isBoxes(false).isEditable(this.isEditable()).build(),
+                CookieAmountsListInputFragment_.builder()
+                        .hideCases(false)
+                        .showInventory(true)
+                        .showExpected(true)
+                        .isEditable(this.isEditable()).build(),
                 fragName);
 
 

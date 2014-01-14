@@ -19,6 +19,7 @@ import eu.inmite.android.lib.dialogs.SimpleDialogFragment;
  * Time: 8:10 PM
  */
 public abstract class CookieOrCashDialogBase extends CookieActionActivity implements ISimpleDialogListener {
+
     private Long mId;
 
     protected void CreateDialog(Long id, FragmentActivity activity, String title) {

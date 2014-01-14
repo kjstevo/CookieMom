@@ -46,7 +46,7 @@ public class CookieCardHeaderInStock extends CardHeader {
             for (int i = 0; i < Constants.CookieTypes.length; i++) {
                 String cookie = Constants.CookieTypes[i];
                 if (cookie.equals(cookieType)) {
-                    headerTitle.setTextColor(getContext().getResources().getColor(color));
+                    headerTitle.setTextColor(color);
                 }
             }
 

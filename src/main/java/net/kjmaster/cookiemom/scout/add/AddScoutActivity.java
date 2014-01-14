@@ -8,12 +8,14 @@ import android.os.Bundle;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.FragmentByTag;
+import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
 
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.dao.Scout;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
+import net.kjmaster.cookiemom.global.ISettings_;
 
 
 /**
@@ -28,6 +30,8 @@ public class AddScoutActivity extends CookieActionActivity {
 
     @FragmentByTag("add_scout")
     AddScoutDialogFragment addScoutDialogFragment;
+    @Pref
+    ISettings_ iSettings;
     private String fragTag;
     private boolean isScout = true;
 
@@ -90,9 +94,9 @@ public class AddScoutActivity extends CookieActionActivity {
         //net.kjmaster.cookiemom.scout.add.AddScoutActivity.onSaveInstanceState returns void
         if (isScout) {
             AddScoutDialogFragment fragment = (AddScoutDialogFragment) getSupportFragmentManager().findFragmentByTag(fragTag);
-        if (fragment != null) {
-            outState.putString("scout_name", fragment.editText.getText().toString());
-        }
+            if (fragment != null) {
+                outState.putString("scout_name", fragment.editText.getText().toString());
+            }
         } else {
             AddCustomerDialogFragment fragment = (AddCustomerDialogFragment) getSupportFragmentManager().findFragmentByTag(fragTag);
             if (fragment != null) {

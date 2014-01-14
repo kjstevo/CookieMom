@@ -6,6 +6,7 @@ import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
 import com.googlecode.androidannotations.annotations.res.StringRes;
+import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
 
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
@@ -15,6 +16,7 @@ import net.kjmaster.cookiemom.dao.Order;
 import net.kjmaster.cookiemom.dao.OrderDao;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
+import net.kjmaster.cookiemom.global.ISettings_;
 import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment_;
 
 import java.util.Calendar;
@@ -41,6 +43,8 @@ public class BoothOrderActivity extends CookieActionActivity {
 
     @StringRes(R.string.add_order_title)
     String fragTitle;
+    @Pref
+    ISettings_ iSettings;
 
     @AfterViews
     void afterViewFrag() {
@@ -48,7 +52,9 @@ public class BoothOrderActivity extends CookieActionActivity {
                 createFragmentTransaction(fragTag),
                 CookieAmountsListInputFragment_.builder()
                         .isEditable(true)
-                        .isBoxes(true)
+                        .hideCases(false)
+                        .showInventory(true)
+                        .showExpected(false)
                         .build(),
                 fragTag
         );

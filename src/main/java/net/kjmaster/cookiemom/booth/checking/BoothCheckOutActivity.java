@@ -82,7 +82,11 @@ public class BoothCheckOutActivity extends CookieOrCashDialogBase {
         fragName = getString(R.string.booth_checkout_order);
         replaceFrag(
                 createFragmentTransaction(fragName),
-                CookieAmountsListInputFragment_.builder().isBoxes(true).isEditable(this.isEditable()).build(),
+                CookieAmountsListInputFragment_.builder()
+                        .hideCases(false)
+                        .showInventory(true)
+                        .showExpected(true)
+                        .isEditable(this.isEditable()).build(),
                 fragName);
 
         createActionMode(getString(R.string.checkout));
