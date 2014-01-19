@@ -42,6 +42,7 @@ public class CookieAmountsListInputFragment extends Fragment implements ICookieA
     @ViewById(R.id.carddemo_list_base1)
     CardListView cardListView;
 
+
     @FragmentArg
     boolean isEditable, hideCases, showExpected, autoFill, showInventory;
 
@@ -59,11 +60,20 @@ public class CookieAmountsListInputFragment extends Fragment implements ICookieA
         if (!isRefresh) {
             valuesBoxesMap.putAll(((CookieActionActivity) getActivity()).getValMap());
             expectedValuesMap.putAll(valuesBoxesMap);
+
+
         }
         for (int i = 0; i < Constants.CookieTypes.length; i++) {
             final String cookieType = Constants.CookieTypes[i];
             int amountExpected = 0;
             Integer actualAmount = Integer.valueOf(valuesBoxesMap.get(cookieType));
+            if (autoFill) {
+                if (!isRefresh) {
+                    if (actualAmount % 12 > 0) {
+                        actualAmount = ((actualAmount / 12) + 1) * 12;
+                    }
+                }
+            }
             if (showExpected) {
                 amountExpected = Integer.valueOf(expectedValuesMap.get(cookieType));
             }
@@ -72,7 +82,6 @@ public class CookieAmountsListInputFragment extends Fragment implements ICookieA
                     (new CookieAmountContentCard(
                             getActivity(),
                             amountExpected,
-                            autoFill,
                             showExpected,
                             actualAmount,
                             hideCases
@@ -110,6 +119,7 @@ public class CookieAmountsListInputFragment extends Fragment implements ICookieA
             cardListView.setSelectionFromTop(cardListPos, 0);
         }
     }
+
 
     private CardHeader getCardHeader(String cookieType, int color) {
         List<CookieTransactions> list = Main.daoSession.getCookieTransactionsDao().queryBuilder()

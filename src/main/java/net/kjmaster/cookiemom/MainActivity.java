@@ -40,6 +40,7 @@ import net.kjmaster.cookiemom.global.ISettings_;
 import net.kjmaster.cookiemom.scout.ScoutFragment_;
 import net.kjmaster.cookiemom.scout.pickup.ScoutPickupActivity_;
 import net.kjmaster.cookiemom.scout.select.SelectScoutListActivity_;
+import net.kjmaster.cookiemom.settings.SettingsActivity_;
 import net.kjmaster.cookiemom.summary.SummaryFragment_;
 
 import java.util.Date;
@@ -153,8 +154,14 @@ public class MainActivity extends FragmentActivity {
     @Pref
     ISettings_ iSettings;
 
+    @OptionsItem(R.id.menu_settings)
+    void onSettings() {
+        SettingsActivity_.intent(this).start();
+
+    }
+
     @OptionsItem(R.id.menu_about)
-    void onAbout(){
+    void onAbout() {
         final LicensesDialogFragment fragment = LicensesDialogFragment.newInstance(R.raw.notices, true);
         fragment.show(getSupportFragmentManager(), null);
 

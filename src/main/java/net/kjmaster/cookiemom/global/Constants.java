@@ -1,7 +1,9 @@
 package net.kjmaster.cookiemom.global;
 
+import com.googlecode.androidannotations.annotations.App;
 import com.googlecode.androidannotations.annotations.EBean;
 
+import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 
 import java.util.HashMap;
@@ -15,12 +17,16 @@ import java.util.HashMap;
 @EBean
 public class Constants {
 
+    @App
+    Main main;
 
-    public static final String[] CookieTypes = new String[]{
-            "Smiles", "Trefoils", "Do Si Dos",
-            "Samoas", "Dulce", "Berry",
-            "Tag-a-Longs", "Thin Mint"
-    };
+    //    public static final String[] CookieTypes = new String[]{
+//            "Smiles", "Trefoils", "Do Si Dos",
+//            "Samoas", "Dulce", "Berry",
+//            "Tag-a-Longs", "Thin Mint"
+//    };
+    public static String[] CookieTypes = Main.getCookieTypes();
+
 
     public static final int[] CookieColors = new int[]{
             R.color.color_smiles, R.color.color_trefoils,
@@ -29,6 +35,24 @@ public class Constants {
             R.color.color_tags, R.color.color_thin_mints
     };
 
+    public static HashMap<String, Integer> getCookieNameImages() {
+        cookieImages.put(CookieTypes[7], R.drawable.smile);
+        cookieImages.put(CookieTypes[2], R.drawable.trefoil);
+        cookieImages.put(CookieTypes[4], R.drawable.do_si_do);
+        cookieImages.put(CookieTypes[1], R.drawable.samoa);
+        cookieImages.put(CookieTypes[5], R.drawable.dulce);
+        cookieImages.put(CookieTypes[6], R.drawable.berry);
+        cookieImages.put(CookieTypes[3], R.drawable.tags);
+        cookieImages.put(CookieTypes[0], R.drawable.mint);
+
+
+        return cookieImages;
+
+
+    }
+
+    public static final int SETTINGS_REQUEST = 9090;
+    public static final int SETTINGS_RESULT_DIRTY = 9696;
     public static final int SCOUT_REQUEST = 4343;
 
     public static final int ADD_BOOTH_REQUEST_CODE = 888;
@@ -77,17 +101,4 @@ public class Constants {
     }
 
 
-    public static HashMap<String, Integer> getCookieNameImages() {
-        cookieImages.put(CookieTypes[0], R.drawable.mint);
-        cookieImages.put(CookieTypes[1], R.drawable.samoa);
-        cookieImages.put(CookieTypes[2], R.drawable.trefoil);
-        cookieImages.put(CookieTypes[3], R.drawable.tags);
-        cookieImages.put(CookieTypes[4], R.drawable.do_si_do);
-        cookieImages.put(CookieTypes[5], R.drawable.dulce);
-        cookieImages.put(CookieTypes[6], R.drawable.berry);
-        cookieImages.put(CookieTypes[7], R.drawable.smile);
-        return cookieImages;
-
-
-    }
 }

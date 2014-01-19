@@ -160,5 +160,10 @@
     <string name="select_scout">Select Scout</string>
     <string name="upcoming_booths">Upcoming Booths</string>
     <string name="menu_about">About</string>
+    <string name="auto_case">Automatically adjust to cases for cupboard orders.</string>
+    <string name="auto_case_summary">This will round up your orders to the nearest case size and autofill the order amount on the Cupboard order/pickup screens.</string>
+    <string name="custom_cookie">Customize cookie names</string>
+    <string name="custom_cookie_summary">If your area has a different selection of cookies available, check this box to customize the cookie names.</string>
+    <string name="pref_custom_cookie_name_list_title">Custom Cookies</string>
 
 </resources>

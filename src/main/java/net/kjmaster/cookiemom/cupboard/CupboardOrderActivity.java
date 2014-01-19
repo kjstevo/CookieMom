@@ -45,6 +45,7 @@ public class CupboardOrderActivity extends CookieActionActivity {
                         .hideCases(false)
                         .showInventory(true)
                         .showExpected(true)
+                        .autoFill(iSettings.useAutoFillCases().get())
                         .isEditable(this.isEditable()).build(),
                 fragName);
 
