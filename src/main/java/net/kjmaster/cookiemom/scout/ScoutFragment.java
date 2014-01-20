@@ -63,7 +63,7 @@ public class ScoutFragment extends Fragment implements ISimpleDialogListener, IC
 
         assignDaos();
 
-        List<Scout> scouts = scoutDao.queryBuilder().list();
+        List<Scout> scouts = scoutDao.queryBuilder().orderAsc().list();
 
         if (!scouts.isEmpty()) {
 
