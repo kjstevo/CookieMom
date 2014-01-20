@@ -36,14 +36,14 @@ public class Constants {
     };
 
     public static HashMap<String, Integer> getCookieNameImages() {
-        cookieImages.put(CookieTypes[7], R.drawable.smile);
-        cookieImages.put(CookieTypes[2], R.drawable.trefoil);
-        cookieImages.put(CookieTypes[4], R.drawable.do_si_do);
-        cookieImages.put(CookieTypes[1], R.drawable.samoa);
-        cookieImages.put(CookieTypes[5], R.drawable.dulce);
-        cookieImages.put(CookieTypes[6], R.drawable.berry);
-        cookieImages.put(CookieTypes[3], R.drawable.tags);
-        cookieImages.put(CookieTypes[0], R.drawable.mint);
+        cookieImages.put(CookieTypes[0], R.drawable.smile);
+        cookieImages.put(CookieTypes[1], R.drawable.trefoil);
+        cookieImages.put(CookieTypes[2], R.drawable.do_si_do);
+        cookieImages.put(CookieTypes[3], R.drawable.samoa);
+        cookieImages.put(CookieTypes[4], R.drawable.dulce);
+        cookieImages.put(CookieTypes[5], R.drawable.berry);
+        cookieImages.put(CookieTypes[6], R.drawable.tags);
+        cookieImages.put(CookieTypes[7], R.drawable.mint);
 
 
         return cookieImages;
