@@ -20,6 +20,7 @@ import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
 
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
+import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.ISettings_;
 
 import java.util.ArrayList;
@@ -33,9 +34,6 @@ public class SettingsFragment extends Fragment {
     @ViewById()
     Spinner setting_cookie_list;
 
-    @App
-    Main main;
-
     @ViewById()
     CheckBox setting_custom_cookie_check;
 
@@ -48,6 +46,7 @@ public class SettingsFragment extends Fragment {
     @Pref
     ISettings_ iSettings;
     private CharSequence itemSelected;
+    public boolean isDirty=false;
 
     @AfterViews
     void afterViews() {
@@ -97,8 +96,8 @@ public class SettingsFragment extends Fragment {
     @Click(R.id.setting_save_cookie)
     void onSave() {
         iSettings.CookieList().put(iSettings.CookieList().get().replace(itemSelected, settings_edit_cookie.getText()));
-        fillCookieList();
-        main.RefreshCookieList();
+        isDirty=true;
+
 
     }
 

@@ -156,10 +156,17 @@ public class MainActivity extends FragmentActivity {
 
     @OptionsItem(R.id.menu_settings)
     void onSettings() {
-        SettingsActivity_.intent(this).start();
-
+        SettingsActivity_.intent(this).startForResult(Constants.SETTINGS_REQUEST);
     }
 
+    @OnActivityResult(Constants.SETTINGS_REQUEST)
+    void afterSettings(int resultcode){
+        if(resultcode==Constants.SETTINGS_RESULT_DIRTY){
+
+            finish();
+        }
+
+    }
     @OptionsItem(R.id.menu_about)
     void onAbout() {
         final LicensesDialogFragment fragment = LicensesDialogFragment.newInstance(R.raw.notices, true);

@@ -106,10 +106,5 @@ public class Main extends Application {
 
     }
 
-    public void RefreshCookieList() {
-        android.os.Process.sendSignal(android.os.Process.myPid(), android.os.Process.SIGNAL_QUIT);
-
-    }
-
     public static DaoSession daoSession = null;
 }
