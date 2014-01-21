@@ -47,7 +47,7 @@ import it.gmariotti.cardslib.library.internal.CardHeader;
 /**
  * This class provides a simple card as Google Now ScoutExpanderValues
  *
- * @author Gabriele Mariotti (gabri.mariotti@gmail.com)
+ * @author Steven Dees
  */
 public class ScoutExpanderCookieList extends Card {
     private final Scout scout;
@@ -70,8 +70,7 @@ public class ScoutExpanderCookieList extends Card {
     @Override
     public void setupInnerViewElements(ViewGroup parent, View view) {
 
-//      TextView textView = (TextView) view.findViewById(R.id.carddemo_googlenow_main_inner_lastupdate);
-//      textView.setText("Update 14:57, 16 September"); //should use R.string.
+
         ScoutExpanderListLayout list = (ScoutExpanderListLayout) view.findViewById(R.id.carddemo_googlenow_main_inner_list);
         ScoutExpanderValuesListAdapter mAdapter = new ScoutExpanderValuesListAdapter(super.getContext(), buildArrayHelper());
 
@@ -113,16 +112,7 @@ public class ScoutExpanderCookieList extends Card {
         header.setTitle("$" + cash + "/$" + String.valueOf(cashTotal));    // should use R.string.
         addCardHeader(header);
 
-//      ScoutExpanderValues s1 = new ScoutExpanderValues("GOOG", 889.07f, 0.00f, 0.00f);
-//      ScoutExpanderValues s2 = new ScoutExpanderValues("AAPL", 404.27f, 0.00f, 0.00f);
-//      ScoutExpanderValues s3 = new ScoutExpanderValues("ENI", 17.59f, 0.06f, 0.34f);
-//      ScoutExpanderValues s4 = new ScoutExpanderValues("Don Jones", 15.376f, 0.00f, 0.00f);
-//
-//
-//      list.add(s1);
-//      list.add(s2);
-//      list.add(s3);
-//      list.add(s4);
+
         return list;
     }
 
