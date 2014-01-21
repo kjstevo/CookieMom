@@ -5,6 +5,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -41,6 +42,9 @@ public class SettingsFragment extends Fragment {
     @ViewById
     EditText settings_edit_cookie;
 
+    @ViewById()
+    Button setting_save_cookie;
+
     @Pref
     ISettings_ iSettings;
     public CharSequence itemSelected = "";
@@ -58,7 +62,7 @@ public class SettingsFragment extends Fragment {
         createHooks();
         setting_cookie_list.setEnabled(iSettings.useCustomCookies().get());
         settings_edit_cookie.setEnabled(iSettings.useCustomCookies().get());
-
+        setting_save_cookie.setEnabled(iSettings.useCustomCookies().get());
     }
 
     public String getEditedText() {
@@ -76,6 +80,8 @@ public class SettingsFragment extends Fragment {
                 iSettings.useCustomCookies().put(b);
                 setting_cookie_list.setEnabled(b);
                 settings_edit_cookie.setEnabled(b);
+
+                setting_save_cookie.setEnabled(b);
                 if (!b) {
                     String[] cookies =
                             getResources().getStringArray(R.array.cookie_names_array);

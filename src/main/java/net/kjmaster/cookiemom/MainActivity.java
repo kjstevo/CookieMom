@@ -47,6 +47,8 @@ import net.kjmaster.cookiemom.scout.select.SelectScoutListActivity_;
 import net.kjmaster.cookiemom.settings.SettingsActivity_;
 import net.kjmaster.cookiemom.summary.SummaryFragment_;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -73,7 +75,12 @@ public class MainActivity extends FragmentActivity {
             if (dbName.toString().equals("personal-db")) {
                 menuInflater.inflate(R.menu.activity_main_personal, menu);
             } else {
-                menuInflater.inflate(R.menu.activity_main, menu);
+                if (iSettings.useCustomCookies().get()) {
+                    menuInflater.inflate(R.menu.activity_main_custom_cookie, menu);
+                } else {
+                    menuInflater.inflate(R.menu.activity_main, menu);
+                }
+
             }
         }
 
@@ -95,6 +102,7 @@ public class MainActivity extends FragmentActivity {
 
     private void verifyCookieList() {
         OrderDao dao = Main.daoSession.getOrderDao();
+        CookieTransactionsDao dao2 = Main.daoSession.getCookieTransactionsDao();
         for (int i = 0; i < getResources().getStringArray(R.array.cookie_names_array).length; i++) {
             String cookieType = getResources().getStringArray(R.array.cookie_names_array)[i];
             if (!cookieType.equals(Constants.CookieTypes[i])) {
@@ -103,16 +111,39 @@ public class MainActivity extends FragmentActivity {
                     order.setOrderCookieType(Constants.CookieTypes[i]);
                     order.update();
                 }
-                CookieTransactionsDao dao2 = Main.daoSession.getCookieTransactionsDao();
+
+
                 List<CookieTransactions> list2 = dao2.queryBuilder().where(CookieTransactionsDao.Properties.CookieType.eq(cookieType)).list();
                 for (CookieTransactions cookieTransactions : list2) {
                     cookieTransactions.setCookieType(Constants.CookieTypes[i]);
                     cookieTransactions.update();
+
                 }
             }
         }
 
+
+        List<Order> list = dao.loadAll();
+        //String cookieList = TextUtils.join(",", Constants.CookieTypes);
+        ArrayList<String> arrayList = new ArrayList<String>();
+        Collections.addAll(arrayList, Constants.CookieTypes);
+        for (Order order : list) {
+            Log.d("COOKIE",
+                    order.getOrderCookieType());
+            if (!arrayList.contains(order.getOrderCookieType())) {
+                dao.delete(order);
+
+            }
+        }
+
+        List<CookieTransactions> list2 = dao2.loadAll();
+        for (CookieTransactions cookieTransactions : list2) {
+            if (!arrayList.contains(cookieTransactions.getCookieType())) {
+                dao2.delete(cookieTransactions);
+            }
+        }
     }
+
 
     private void createTabPager() {
         tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
