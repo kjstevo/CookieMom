@@ -25,8 +25,15 @@ public class Constants {
 //            "Samoas", "Dulce", "Berry",
 //            "Tag-a-Longs", "Thin Mint"
 //    };
-    public static String[] CookieTypes = Main.getCookieTypes();
+    public static String[] CookieTypes = getCookieNames();
 
+    private static String[] getCookieNames() {
+        return Main.mCookieTypes;
+    }
+
+    public static void updateCookieTypes(String[] cookieTypes) {
+        CookieTypes = cookieTypes;
+    }
 
     public static final int[] CookieColors = new int[]{
             R.color.color_smiles, R.color.color_trefoils,

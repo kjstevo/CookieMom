@@ -35,6 +35,10 @@ import net.kjmaster.cookiemom.cupboard.CupboardFragment_;
 import net.kjmaster.cookiemom.dao.Booth;
 import net.kjmaster.cookiemom.dao.BoothAssignments;
 import net.kjmaster.cookiemom.dao.BoothAssignmentsDao;
+import net.kjmaster.cookiemom.dao.CookieTransactions;
+import net.kjmaster.cookiemom.dao.CookieTransactionsDao;
+import net.kjmaster.cookiemom.dao.Order;
+import net.kjmaster.cookiemom.dao.OrderDao;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.ISettings_;
 import net.kjmaster.cookiemom.scout.ScoutFragment_;
@@ -84,6 +88,29 @@ public class MainActivity extends FragmentActivity {
 
         changeColor(currentColor);
 
+        verifyCookieList();
+
+
+    }
+
+    private void verifyCookieList() {
+        OrderDao dao = Main.daoSession.getOrderDao();
+        for (int i = 0; i < getResources().getStringArray(R.array.cookie_names_array).length; i++) {
+            String cookieType = getResources().getStringArray(R.array.cookie_names_array)[i];
+            if (!cookieType.equals(Constants.CookieTypes[i])) {
+                List<Order> list = dao.queryBuilder().where(OrderDao.Properties.OrderCookieType.eq(cookieType)).list();
+                for (Order order : list) {
+                    order.setOrderCookieType(Constants.CookieTypes[i]);
+                    order.update();
+                }
+                CookieTransactionsDao dao2 = Main.daoSession.getCookieTransactionsDao();
+                List<CookieTransactions> list2 = dao2.queryBuilder().where(CookieTransactionsDao.Properties.CookieType.eq(cookieType)).list();
+                for (CookieTransactions cookieTransactions : list2) {
+                    cookieTransactions.setCookieType(Constants.CookieTypes[i]);
+                    cookieTransactions.update();
+                }
+            }
+        }
 
     }
 
@@ -160,13 +187,23 @@ public class MainActivity extends FragmentActivity {
     }
 
     @OnActivityResult(Constants.SETTINGS_REQUEST)
-    void afterSettings(int resultcode){
-        if(resultcode==Constants.SETTINGS_RESULT_DIRTY){
-
-            finish();
+    void afterSettings(int resultcode, Intent data) {
+        if (resultcode != Constants.SETTINGS_RESULT_DIRTY) {
+            return;
         }
+        if (data.getExtras() == null) {
+            return;
+        }
+        String cookieList;
+        cookieList = data.getExtras().getString("cookie_list");
+        if (cookieList == null) {
+            return;
+        }
+        main.updateCookieTypes(data.getExtras().getString("cookie_list"));
+        refreshAll();
 
     }
+
     @OptionsItem(R.id.menu_about)
     void onAbout() {
         final LicensesDialogFragment fragment = LicensesDialogFragment.newInstance(R.raw.notices, true);

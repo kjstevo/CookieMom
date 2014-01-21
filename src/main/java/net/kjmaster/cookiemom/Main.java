@@ -23,7 +23,7 @@ import net.kjmaster.cookiemom.global.ISettings_;
 @EApplication
 public class Main extends Application {
 
-    private static String[] mCookieTypes;
+    public static String[] mCookieTypes;
     @Pref
     ISettings_ miSettings;
 
@@ -51,6 +51,15 @@ public class Main extends Application {
         init();
 
 
+    }
+
+    public void updateCookieTypes(String cookieTypes) {
+        mCookieTypes = TextUtils.split(cookieTypes, ",");
+        if (mCookieTypes.length != getResources().getStringArray(R.array.cookie_names_array).length) {
+            mCookieTypes = getResources().getStringArray(R.array.cookie_names_array);
+
+        }
+        miSettings.CookieList().put(cookieTypes);
     }
 
     private void init() {
