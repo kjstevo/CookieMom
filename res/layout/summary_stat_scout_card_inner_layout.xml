@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!--
+Copyright (c) 2014 Steven Dees kjstevokjmaster@gmail.com
+
+Parts of the this code also copyright:
   ~ /*******************************************************************************
   ~   Copyright (c) 2013 Gabriele Mariotti.
   ~
@@ -26,33 +28,66 @@
               android:minHeight="210dp"
               android:layout_height="wrap_content">
     <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
-                  android:layout_height="wrap_content">
-        <TextView
+        android:layout_height="wrap_content"
+        android:gravity="bottom|right"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="right|top">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boxes"
+                android:id="@+id/textView"
+                android:textColor="@color/blue"
+                android:layout_gravity="bottom"
+                android:singleLine="false"
+                android:gravity="bottom|right"
+                android:layout_toLeftOf="@+id/textView1"
+                android:layout_alignParentStart="false"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paid"
+                android:id="@+id/textView1"
+                android:textColor="@color/color_thin_mints"
+                android:layout_gravity="bottom"
+                android:gravity="bottom|right"
+                android:layout_alignParentStart="false"
+                android:layout_toLeftOf="@+id/textView2"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/amt_due"
+                android:id="@+id/textView2"
+                android:gravity="bottom|right"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentTop="false"
+                android:padding="10dp" />
+
+            <TextView
                 style="@style/carddemo_googlenow_main_inner_lastupdate"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:text="Name"
-                android:textColor="@android:color/black" android:paddingLeft="5dp"
-                android:paddingRight="5dp" android:layout_gravity="center_horizontal|bottom" android:layout_weight="3"/>
-        <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Boxes"
-                android:id="@+id/textView" android:textColor="@android:color/holo_blue_dark"
-                android:paddingLeft="5dp" android:paddingRight="5dp"
-                android:layout_gravity="center_horizontal|bottom" android:layout_weight="1"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Paid"
-                android:id="@+id/textView1" android:textColor="@android:color/holo_green_dark"
-                android:paddingLeft="5dp" android:paddingRight="5dp"
-                android:layout_gravity="center_horizontal|bottom" android:layout_weight="1"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Amt Due"
-                android:id="@+id/textView2" android:paddingLeft="5dp"
-                android:paddingRight="5dp" android:layout_gravity="center_horizontal" android:layout_weight="1"/>
+                android:text="@string/name"
+                android:textColor="@android:color/black"
+                android:layout_gravity="left|top"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignWithParentIfMissing="false"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentEnd="false" />
+        </RelativeLayout>
 
     </LinearLayout>
     <TextView

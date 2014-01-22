@@ -51,6 +51,7 @@ public class CupboardPickupActivity extends CookieActionActivity {
                         .isEditable(true)
                         .showInventory(true)
                         .showExpected(true)
+                        .autoFill(iSettings.useAutoFillCases().get())
                         .build(),
                 getString(R.string.pickuo_cupboard_order));
         createActionMode(getString(R.string.pickup_order_title));

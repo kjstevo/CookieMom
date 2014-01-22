@@ -39,9 +39,14 @@ public interface ISettings {
     String CookieColors();
 
 
-    @DefaultString("Thin Mint,Samoas,Trefoils,Tag-a-Longs,Do Si Dos,Dulce,Berry,Smiles")
+    @DefaultString("Smiles,Trefoils,Do Si Dos,Samoas,Dulce,Berry,Tag-a-Longs,Thin Mint")
     String CookieList();
 
+    @DefaultBoolean(false)
+    boolean useAutoFillCases();
+
+    @DefaultBoolean(false)
+    boolean useCustomCookies();
 
     @DefaultString("0,0,0,0,0,0,0,0")
     String MediumBoothAmts();
