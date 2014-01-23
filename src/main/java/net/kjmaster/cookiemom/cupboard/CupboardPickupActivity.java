@@ -1,10 +1,27 @@
-package net.kjmaster.cookiemom.cupboard;
+/*
+ * Copyright (c) 2014.  Author:Steven Dees(kjstevokjmaster@gmail.com)
+ *
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ *
+ *     This program is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *     GNU General Public License for more details.
+ *
+ *     You should have received a copy of the GNU General Public License along
+ *     with this program; if not, write to the Free Software Foundation, Inc.,
+ *     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
 
-import android.annotation.SuppressLint;
+package net.kjmaster.cookiemom.cupboard;
 
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
+import com.googlecode.androidannotations.annotations.res.StringRes;
 import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
 
 import net.kjmaster.cookiemom.Main;
@@ -23,29 +40,33 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
+import de.greenrobot.dao.Property;
+
 /**
  * Created with IntelliJ IDEA.
  * User: KJ Stevo
  * Date: 11/4/13
  * Time: 2:16 PM
  */
-@SuppressLint("Registered")
+
 @EActivity(R.layout.scout_order_layout)
 public class CupboardPickupActivity extends CookieActionActivity {
-
-
-    private final HashMap<String, String> valuesMap = new HashMap<String, String>();
 
     @Pref
     ISettings_ iSettings;
 
-    private String fragTag;
+
+    @StringRes
+    String pickup_order_title,
+            pickup_from_cupboard;
+
+
+    private final HashMap<String, String> valuesMap = new HashMap<String, String>();
 
     @AfterViews
     void afterViewFrag() {
 
-        fragTag = getString(R.string.pickup_from_cupboard);
-        replaceFrag(createFragmentTransaction(fragTag),
+        replaceFrag(createFragmentTransaction(pickup_from_cupboard),
                 CookieAmountsListInputFragment_.builder()
                         .hideCases(false)
                         .isEditable(true)
@@ -53,34 +74,48 @@ public class CupboardPickupActivity extends CookieActionActivity {
                         .showExpected(true)
                         .autoFill(iSettings.useAutoFillCases().get())
                         .build(),
-                getString(R.string.pickuo_cupboard_order));
-        createActionMode(getString(R.string.pickup_order_title));
-
+                pickup_from_cupboard);
+        createActionMode(pickup_order_title);
     }
 
     @Override
     public HashMap<String, String> getValMap() {
+
         for (int i = 0; i < Constants.CookieTypes.length; i++) {
             final String cookieType = Constants.CookieTypes[i];
             Integer amountExpected = 0;
-            List<Order> orderList = Main.daoSession.getOrderDao().queryBuilder()
-                    .where(OrderDao.Properties.OrderedFromCupboard.eq(true),
-                            OrderDao.Properties.OrderCookieType.eq(cookieType),
-                            OrderDao.Properties.PickedUpFromCupboard.eq(false))
 
-                    .list();
+            List<Order> orderList = getOrders(cookieType);
+
             if (orderList.isEmpty()) {
                 valuesMap.put(cookieType, String.valueOf(0));
             } else {
                 for (Order order : orderList) {
                     amountExpected += order.getOrderedBoxes();
-                    if (!((ICookieActionFragment) getSupportFragmentManager().findFragmentByTag(fragTag)).isRefresh()) {
+                    if (!((ICookieActionFragment) getSupportFragmentManager().findFragmentByTag(pickup_from_cupboard)).isRefresh()) {
                         valuesMap.put(cookieType, String.valueOf(amountExpected));
                     }
                 }
             }
         }
         return valuesMap;
+    }
+
+    private List<Order> getOrders(String cookieType) {
+        Property orderedFromCupboard = OrderDao.Properties.OrderedFromCupboard,
+                orderCookieType = OrderDao.Properties.OrderCookieType,
+                pickedUpFromCupboard = OrderDao.Properties.PickedUpFromCupboard;
+
+        return Main.daoSession.getOrderDao().queryBuilder()
+                .where(
+                        orderedFromCupboard
+                                .eq(true),
+                        orderCookieType
+                                .eq(cookieType),
+                        pickedUpFromCupboard
+                                .eq(false)
+                )
+                .list();
     }
 
 

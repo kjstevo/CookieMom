@@ -1,4 +1,23 @@
+<!--
+  ~ Copyright (c) 2014.  Author:Steven Dees(kjstevokjmaster@gmail.com)
+  ~
+  ~     This program is free software; you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation; either version 2 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License along
+  ~     with this program; if not, write to the Free Software Foundation, Inc.,
+  ~     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
 <resources>
+
     <style name="carddemo_googlenow_main_inner_lastupdate">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@android:color/darker_gray</item>
@@ -17,7 +36,7 @@
     </style>
 
 
-    <style name="Now"/>
+    <style name="Now" />
 
     <style name="Now.card_expand_inner_layout">
         <item name="android:paddingLeft">10dp</item>
@@ -45,7 +64,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="AppBaseTheme" parent="android:Theme.Light"/>
+    <style name="AppBaseTheme" parent="android:Theme.Light" />
 
     <style name="AppTheme" parent="AppBaseTheme">
         <item name="android:windowBackground">@color/background_window</item>
@@ -63,53 +82,66 @@
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">sans-serif</item>
     </style>
+
     <style name="medium_bold_hms" parent="medium_bold">
         <item name="android:textSize">@dimen/medium_font_size_hms</item>
     </style>
+
     <style name="medium_light">
         <item name="android:textSize">@dimen/medium_font_size</item>
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
+
     <style name="medium_light_header" parent="medium_light">
         <item name="android:textSize">@dimen/medium_font_size_header</item>
     </style>
+
     <style name="medium_light_hms" parent="medium_light">
         <item name="android:textSize">@dimen/medium_font_size_hms</item>
     </style>
+
     <style name="medium_bold_date" parent="@style/medium_bold">
         <item name="android:textSize">@dimen/medium_date_font_size</item>
     </style>
+
     <style name="medium_light_date" parent="@style/medium_bold">
         <item name="android:textSize">@dimen/medium_date_font_size</item>
     </style>
+
     <style name="medium_light_expiration">
         <item name="android:textSize">@dimen/medium_expiration_font_size</item>
         <item name="android:fontFamily">sans-serif</item>
     </style>
+
     <style name="label">
         <item name="android:textSize">@dimen/label_font_size</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:fontFamily">sans-serif-condensed</item>
     </style>
+
     <style name="dialpad">
         <item name="android:textSize">@dimen/dialpad_font_size</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:fontFamily">sans-serif-light</item>
     </style>
+
     <style name="dialpad_text" parent="dialpad">
         <item name="android:textSize">@dimen/dialpad_font_size_ampm</item>
     </style>
+
     <style name="dialog_button">
         <item name="android:textSize">@dimen/dialog_button_font_size</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:minHeight">48dp</item>
     </style>
+
     <style name="tablet_dialpad">
         <item name="android:textSize">@dimen/tablet_dialpad_font_size</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:fontFamily">sans-serif-condensed</item>
     </style>
+
     <style name="tablet_dialpad_text">
         <item name="android:textSize">@dimen/tablet_dialpad_font_size_ampm</item>
         <item name="android:textAllCaps">true</item>
@@ -128,6 +160,6 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="aosp_day_of_week_label_condensed"/>
+    <style name="aosp_day_of_week_label_condensed" />
 
 </resources>

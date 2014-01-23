@@ -1,30 +1,49 @@
+<!--
+  ~ Copyright (c) 2014.  Author:Steven Dees(kjstevokjmaster@gmail.com)
+  ~
+  ~     This program is free software; you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation; either version 2 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License along
+  ~     with this program; if not, write to the Free Software Foundation, Inc.,
+  ~     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
 
     <com.astuetz.viewpager.extensions.PagerSlidingTabStrip
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="62dip"
-            android:background="@drawable/background_tabs"/>
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="62dip"
+        android:background="@drawable/background_tabs" />
 
 
     <android.support.v4.view.ViewPager
-            android:id="@+id/pager"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tabs"
-            tools:context=".MainActivity"/>
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabs"
+        tools:context=".MainActivity" />
 
     <it.gmariotti.cardslib.library.view.CardListView
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            app:list_card_layout_resourceID="@layout/list_card_thumbnail_layout"
-            android:id="@+id/carddemo_list_base1" android:smoothScrollbar="true"
-            android:layout_centerInParent="true">
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        app:list_card_layout_resourceID="@layout/list_card_thumbnail_layout"
+        android:id="@+id/carddemo_list_base1"
+        android:smoothScrollbar="true"
+        android:layout_centerInParent="true">
 
     </it.gmariotti.cardslib.library.view.CardListView>
 </RelativeLayout>

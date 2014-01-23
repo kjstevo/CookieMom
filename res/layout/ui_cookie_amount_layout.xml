@@ -1,74 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--
+  ~ Copyright (c) 2014.  Author:Steven Dees(kjstevokjmaster@gmail.com)
+  ~
+  ~     This program is free software; you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation; either version 2 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License along
+  ~     with this program; if not, write to the Free Software Foundation, Inc.,
+  ~     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="fill_parent" android:background="@drawable/cab_background_bottom_carddemo"
-              android:baselineAligned="false">
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/cab_background_bottom_carddemo"
+    android:baselineAligned="false">
 
     <LinearLayout
-            android:orientation="vertical"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@android:drawable/picture_frame"
+        android:id="@+id/expected_panel"
+        android:measureWithLargestChild="true">
+
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_weight="0"
-            android:background="@android:drawable/picture_frame" android:id="@+id/expected_panel"
-            android:measureWithLargestChild="true">
+            android:layout_height="wrap_content"
+            android:text="Expected:"
+            android:id="@+id/textView"
+            style="@style/card.base_simple_title"
+            android:textStyle="bold"
+            android:gravity="center_vertical|left"
+            android:singleLine="true" />
+
         <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Expected:"
-                android:id="@+id/textView" style="@style/card.base_simple_title" android:textStyle="bold"
-                android:gravity="center_vertical|left"
-                android:singleLine="true"/>
-        <TextView style="@style/card.header_simple_title" android:layout_width="wrap_content"
-                  android:layout_height="wrap_content" android:text="155" android:id="@+id/amount_expected"
-                  android:textStyle="bold" android:gravity="center_horizontal"
-                  android:layout_gravity="center_horizontal"/>
-        <TextView style="@style/card.header_simple_title" android:layout_width="wrap_content"
-                  android:layout_height="wrap_content" android:text="15cs" android:id="@+id/cases_expected"
-                  android:textStyle="bold" android:visibility="gone" android:gravity="center_horizontal"
-                  android:layout_gravity="center" android:editable="false" android:focusable="false"
-                  android:clickable="false" android:enabled="false"/>
+            style="@style/card.header_simple_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="155"
+            android:id="@+id/amount_expected"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            style="@style/card.header_simple_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15cs"
+            android:id="@+id/cases_expected"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:editable="false"
+            android:focusable="false"
+            android:clickable="false"
+            android:enabled="false" />
     </LinearLayout>
+
     <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginBottom="5dp">
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginBottom="5dp">
 
 
         <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Qty:"
-                android:id="@+id/textView1"
-                style="@style/card.header_simple_title"
-                android:lines="2"
-                android:layout_toLeftOf="@+id/cookie_amount"
-                android:gravity="bottom|fill_vertical" android:layout_alignParentBottom="false"
-                android:layout_alignParentLeft="false" android:layout_alignTop="@+id/cookie_amount"
-                android:layout_alignBottom="@+id/cookie_amount"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qty:"
+            android:id="@+id/textView1"
+            style="@style/card.header_simple_title"
+            android:lines="2"
+            android:layout_toLeftOf="@+id/cookie_amount"
+            android:gravity="bottom|fill_vertical"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignTop="@+id/cookie_amount"
+            android:layout_alignBottom="@+id/cookie_amount" />
+
         <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="000"
-                android:id="@+id/cookie_amount"
-                style="@style/card.header_simple_title"
-                android:gravity="center|right"
-                android:layout_alignParentRight="true"
-                android:singleLine="true" android:paddingLeft="10dp" android:paddingRight="10dp"
-                android:paddingTop="10dp"/>
-        <TextView android:layout_width="wrap_content"
-                  android:layout_height="wrap_content" android:text="000" android:id="@+id/edit_text_cases"
-                  android:layout_alignParentRight="true"
-                  android:singleLine="true"
-                  style="@android:style/TextAppearance.Holo.Small" android:paddingBottom="10dp"
-                  android:paddingRight="10dp"
-                  android:editable="false" android:focusable="false" android:visibility="gone"
-                  android:layout_below="@+id/textView1" android:gravity="center"
-                />
-        <TextView style="@android:style/TextAppearance.Holo.Small" android:layout_width="wrap_content"
-                  android:layout_height="wrap_content" android:text="Cases:" android:id="@+id/amount_cases_caption"
-                  android:visibility="gone"
-                  android:gravity="center" android:layout_toLeftOf="@+id/edit_text_cases"
-                  android:layout_below="@+id/textView1"
-                />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="000"
+            android:id="@+id/cookie_amount"
+            style="@style/card.header_simple_title"
+            android:gravity="center|right"
+            android:layout_alignParentRight="true"
+            android:singleLine="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="000"
+            android:id="@+id/edit_text_cases"
+            android:layout_alignParentRight="true"
+            android:singleLine="true"
+            style="@android:style/TextAppearance.Holo.Small"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
+            android:editable="false"
+            android:focusable="false"
+            android:visibility="gone"
+            android:layout_below="@+id/textView1"
+            android:gravity="center" />
+
+        <TextView
+            style="@android:style/TextAppearance.Holo.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cases:"
+            android:id="@+id/amount_cases_caption"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_toLeftOf="@+id/edit_text_cases"
+            android:layout_below="@+id/textView1" />
     </RelativeLayout>
 </LinearLayout>
