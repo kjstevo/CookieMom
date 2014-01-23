@@ -1,28 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--
+  ~ Copyright (c) 2014.  Author:Steven Dees(kjstevokjmaster@gmail.com)
+  ~
+  ~     This program is free software; you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation; either version 2 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License along
+  ~     with this program; if not, write to the Free Software Foundation, Inc.,
+  ~     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content" android:background="@drawable/cab_background_bottom_carddemo"
-              android:baselineAligned="false" android:padding="5dp" android:measureWithLargestChild="true">
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cab_background_bottom_carddemo"
+    android:baselineAligned="false"
+    android:padding="5dp"
+    android:measureWithLargestChild="true">
 
     <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp" android:background="@drawable/dialog_full_holo_light">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/dialog_full_holo_light">
+
         <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:id="@+id/available_action_text" style="@android:style/Widget.DeviceDefault.Light.TextView"
-                android:textStyle="bold"
-                android:singleLine="false"
-                android:padding="5dp" android:maxLines="3"/>
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/available_action_text"
+            style="@android:style/Widget.DeviceDefault.Light.TextView"
+            android:textStyle="bold"
+            android:singleLine="false"
+            android:padding="5dp"
+            android:maxLines="3" />
     </FrameLayout>
+
     <ListView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/action_list"
-            android:choiceMode="singleChoice" android:paddingLeft="5dp" android:clickable="true"
-            android:focusable="false" android:stackFromBottom="true" android:layout_weight="1"
-            android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/action_list"
+        android:choiceMode="singleChoice"
+        android:paddingLeft="5dp"
+        android:clickable="true"
+        android:focusable="false"
+        android:stackFromBottom="true"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
 </LinearLayout>

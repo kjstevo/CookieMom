@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--
+  ~ Copyright (c) 2014.  Author:Steven Dees(kjstevokjmaster@gmail.com)
+  ~
+  ~     This program is free software; you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation; either version 2 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License along
+  ~     with this program; if not, write to the Free Software Foundation, Inc.,
+  ~     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent" android:focusable="false" style="@style/DialogStyleLight">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    style="@style/DialogStyleLight">
 
     <EditText
-            android:layout_width="match_parent"
-            android:layout_height="@android:dimen/app_icon_size"
-            android:id="@+id/editText" android:hint="Location Name" android:inputType="textCapWords"/>
-    <EditText android:layout_width="match_parent" android:layout_height="@android:dimen/app_icon_size"
-              android:id="@+id/add_booth_address" android:hint="Address" android:inputType="textCapWords"/>
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:id="@+id/editText"
+        android:hint="Location Name"
+        android:inputType="textCapWords" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/app_icon_size"
+        android:id="@+id/add_booth_address"
+        android:hint="Address"
+        android:inputType="textCapWords" />
     <!--<DatePicker-->
     <!--android:layout_width="wrap_content"-->
     <!--android:layout_height="wrap_content"-->
@@ -22,20 +49,35 @@
     <!--android:id="@+id/booth_timePicker"/>-->
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:layout_width="fill_parent" android:layout_height="fill_parent">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
         <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/text_date_time_hidden" android:layout_gravity="center_horizontal|top"
-                android:visibility="gone"
-                />
-        <Button android:id="@+id/date_time_picker_button" android:layout_height="wrap_content"
-                android:layout_width="0dip" android:layout_weight="1" android:text="Set Date/Time"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_date_time_hidden"
+            android:layout_gravity="center_horizontal|top"
+            android:visibility="gone" />
 
-        <TextView android:id="@+id/Date" android:layout_height="wrap_content"
-                  android:layout_width="0dip" android:layout_weight="1" android:text="Date"/>
+        <Button
+            android:id="@+id/date_time_picker_button"
+            android:layout_height="wrap_content"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:text="Set Date/Time" />
 
-        <TextView android:id="@+id/Time" android:layout_height="wrap_content"
-                  android:layout_width="0dip" android:layout_weight="1" android:text="Time"/>
+        <TextView
+            android:id="@+id/Date"
+            android:layout_height="wrap_content"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/Time"
+            android:layout_height="wrap_content"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:text="Time" />
     </LinearLayout>
 </LinearLayout>

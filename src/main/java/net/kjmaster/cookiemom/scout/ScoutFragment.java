@@ -1,3 +1,21 @@
+/*
+ * Copyright (c) 2014.  Author:Steven Dees(kjstevokjmaster@gmail.com)
+ *
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ *
+ *     This program is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *     GNU General Public License for more details.
+ *
+ *     You should have received a copy of the GNU General Public License along
+ *     with this program; if not, write to the Free Software Foundation, Inc.,
+ *     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
 package net.kjmaster.cookiemom.scout;
 
 import android.support.v4.app.Fragment;
@@ -239,14 +257,14 @@ public class ScoutFragment extends Fragment implements ISimpleDialogListener, IC
                 isDelete = true;
                 SimpleDialogFragment.createBuilder(getActivity(), getActivity().getSupportFragmentManager())
                         .setTitle("WARNING!")
-                    .setMessage("Are you sure you want to delete this? This action can not be undone!")
-                    .setPositiveButtonText("Delete")
-                    .setNegativeButtonText("Cancel")
-                    .setCancelable(true)
-                    .setTargetFragment(this, scout.getId().intValue())
-                    .setRequestCode(scout.getId().intValue())
-                    .setTag(scout.getId().toString())
-                    .show();
+                        .setMessage("Are you sure you want to delete this? This action can not be undone!")
+                        .setPositiveButtonText("Delete")
+                        .setNegativeButtonText("Cancel")
+                        .setCancelable(true)
+                        .setTargetFragment(this, scout.getId().intValue())
+                        .setRequestCode(scout.getId().intValue())
+                        .setTag(scout.getId().toString())
+                        .show();
                 break;
             case R.id.menu_scout_edit_order:
                 ScoutEditActivity_.intent(getActivity()).ScoutId(scout.getId()).requestCode(Constants.SCOUT_REQUEST).startForResult(Constants.SCOUT_REQUEST);
@@ -284,8 +302,6 @@ public class ScoutFragment extends Fragment implements ISimpleDialogListener, IC
     public boolean isRefresh() {
         return isRefresh;
     }
-
-
 
 
 }

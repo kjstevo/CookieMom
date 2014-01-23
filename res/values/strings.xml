@@ -1,3 +1,21 @@
+<!--
+  ~ Copyright (c) 2014.  Author:Steven Dees(kjstevokjmaster@gmail.com)
+  ~
+  ~     This program is free software; you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation; either version 2 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License along
+  ~     with this program; if not, write to the Free Software Foundation, Inc.,
+  ~     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  -->
+
 <resources>
 
     <string name="app_name">Cookie MoMster</string>
@@ -99,8 +117,8 @@
     <!-- DO NOT TRANSLATE -->
     <string name="day_of_week_label_typeface">sans-serif</string>
     <string name="place_cupboard_order">Order</string>
-    <string name="pickuo_cupboard_order">Pickup</string>
-    <string name="add_cupboard_order">add_cupboard_order</string>
+    <string name="pickup_cupboard_order">Pickup</string>
+    <string name="internal_add_cupboard_order">add_cupboard_order</string>
     <string name="add_cupboard_order_title">Order from Cupboard</string>
     <string name="pickup_order">pickup_order</string>
     <string name="pickup_order_title">Pickup Order</string>
