@@ -1,33 +1,31 @@
 /*
  * Copyright (c) 2014.  Author:Steven Dees(kjstevokjmaster@gmail.com)
  *
- *     This program is free software; you can redistribute it and/or modify
- *     it under the terms of the GNU General Public License as published by
- *     the Free Software Foundation; either version 2 of the License, or
- *     (at your option) any later version.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     This program is distributed in the hope that it will be useful,
- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *     GNU General Public License for more details.
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
- *     You should have received a copy of the GNU General Public License along
- *     with this program; if not, write to the Free Software Foundation, Inc.,
- *     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
  */
 
 package net.kjmaster.cookiemom.cupboard;
 
 import android.annotation.SuppressLint;
+import android.view.ActionMode;
+import android.view.MenuItem;
 
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
+import com.googlecode.androidannotations.annotations.OptionsItem;
 import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
 
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.dao.Order;
 import net.kjmaster.cookiemom.dao.OrderDao;
+import net.kjmaster.cookiemom.dao.Scout;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
 import net.kjmaster.cookiemom.global.ISettings_;
@@ -39,6 +37,7 @@ import java.util.List;
 
 import static net.kjmaster.cookiemom.dao.OrderDao.Properties.OrderCookieType;
 import static net.kjmaster.cookiemom.dao.OrderDao.Properties.OrderDate;
+import static net.kjmaster.cookiemom.dao.OrderDao.Properties.OrderScoutId;
 import static net.kjmaster.cookiemom.dao.OrderDao.Properties.OrderedBoxes;
 import static net.kjmaster.cookiemom.dao.OrderDao.Properties.OrderedFromCupboard;
 import static net.kjmaster.cookiemom.dao.OrderDao.Properties.PickedUpFromCupboard;
@@ -53,8 +52,9 @@ import static net.kjmaster.cookiemom.dao.OrderDao.Properties.PickedUpFromCupboar
 @SuppressLint("Registered")
 @EActivity(R.layout.scout_order_layout)
 public class CupboardOrderActivity extends CookieActionActivity {
-
-
+    boolean isByScout = false;
+    Scout thisScout;
+    List<Scout> scoutList = Main.daoSession.getScoutDao().loadAll();
     private final HashMap<String, String> valMap = new HashMap<String, String>();
     @Pref
     ISettings_ iSettings;
@@ -65,7 +65,9 @@ public class CupboardOrderActivity extends CookieActionActivity {
         String fragName = getString(R.string.internal_add_cupboard_order);
         String orderTitle = getString(R.string.order);
         boolean autoFill = iSettings.useAutoFillCases().get();
-
+        if (scoutList == null) {
+            scoutList = Main.daoSession.getScoutDao().loadAll();
+        }
         replaceFrag(
                 createFragmentTransaction(fragName),
                 CookieAmountsListInputFragment_.builder()
@@ -75,9 +77,27 @@ public class CupboardOrderActivity extends CookieActionActivity {
                         .autoFill(autoFill)
                         .isEditable(this.isEditable()).build(),
                 fragName);
+        if (isByScout) {
+            if (thisScout != null) {
+                boolean doNext = false;
+                for (Scout scout : scoutList) {
+                    if (doNext) {
+                        thisScout = scout;
+                        doNext = false;
+                    } else {
+                        if (thisScout.equals(scout)) doNext = true;
 
-        createActionMode(orderTitle);
+                    }
+                }
 
+            } else {
+                thisScout = scoutList.get(0);
+            }
+            createActionMode(thisScout.getScoutName(), R.menu.cookie_order_by_scout);
+        } else {
+            createActionMode(orderTitle, R.menu.cookie_order);
+
+        }
     }
 
 
@@ -89,13 +109,15 @@ public class CupboardOrderActivity extends CookieActionActivity {
 
     @Override
     public HashMap<String, String> getValMap() {
-
         for (String cookieType : Constants.CookieTypes) {
-            List<Order> orderList = Main.daoSession.getOrderDao().queryBuilder()
-                    .where(OrderedFromCupboard.eq(false),
-                            OrderCookieType.eq(cookieType),
-                            PickedUpFromCupboard.eq(false),
-                            OrderedBoxes.gt(0)).list();
+            List<Order> orderList;
+            if (isByScout) {
+                orderList = getOrdersByScout(cookieType, thisScout);
+
+            } else {
+
+                orderList = getOrders(cookieType);
+            }
             int totalOrdered = 0;
             if (orderList != null) {
                 for (Order order : orderList) {
@@ -105,9 +127,26 @@ public class CupboardOrderActivity extends CookieActionActivity {
 
             }
             valMap.put(cookieType, String.valueOf(totalOrdered));
-        }
 
+        }
         return this.valMap;
+    }
+
+    private List<Order> getOrdersByScout(String cookieType, Scout thisScout) {
+        return Main.daoSession.getOrderDao().queryBuilder()
+                .where(OrderedFromCupboard.eq(false),
+                        OrderCookieType.eq(cookieType),
+                        PickedUpFromCupboard.eq(false),
+                        OrderScoutId.eq(thisScout.getId()),
+                        OrderedBoxes.gt(0)).list();
+    }
+
+    private List<Order> getOrders(String cookieType) {
+        return Main.daoSession.getOrderDao().queryBuilder()
+                .where(OrderedFromCupboard.eq(false),
+                        OrderCookieType.eq(cookieType),
+                        PickedUpFromCupboard.eq(false),
+                        OrderedBoxes.gt(0)).list();
     }
 
 
@@ -121,13 +160,14 @@ public class CupboardOrderActivity extends CookieActionActivity {
             //calculate the pending order total for each cookie
             String cookieFlavor = Constants.CookieTypes[i];
             Integer totalBoxes = Integer.valueOf(getFragment().valuesMap().get(cookieFlavor));
-
-            List<Order> orders = dao.queryBuilder()
-                    .where(
-                            OrderCookieType.eq(cookieFlavor),
-                            OrderedFromCupboard.eq(false))
-                    .orderAsc(OrderDate)
-                    .list();
+            List<Order> orders;
+            long scoutId = -1;
+            if (isByScout) {
+                scoutId = thisScout.getId();
+                orders = getFinalOrdersByScout(cookieFlavor, thisScout);
+            } else {
+                orders = getFinalOrders(cookieFlavor);
+            }
 
             for (Order order : orders) {
                 //check if we ordered enough boxes and mark it as ordered
@@ -165,15 +205,70 @@ public class CupboardOrderActivity extends CookieActionActivity {
                         new Order(
                                 null,
                                 c.getTime(),
-                                -1L,
+                                scoutId,
                                 cookieFlavor,
                                 Boolean.TRUE,
                                 totalBoxes, false
                         ));
             }
         }
+        if (!isByScout) {
+            super.isFinished = true;
+        }
     }
 
+    private List<Order> getFinalOrdersByScout(String cookieFlavor, Scout thisScout) {
+        OrderDao dao = orderDao;
+        return dao.queryBuilder()
+                .where(
+                        OrderCookieType.eq(cookieFlavor),
+                        OrderScoutId.eq(thisScout.getId()),
+                        OrderedFromCupboard.eq(false))
+                .orderAsc(OrderDate)
+                .list();
+    }
+
+    private List<Order> getFinalOrders(String cookieFlavor) {
+        OrderDao dao = orderDao;
+        return dao.queryBuilder()
+                .where(
+                        OrderCookieType.eq(cookieFlavor),
+                        OrderedFromCupboard.eq(false))
+                .orderAsc(OrderDate)
+                .list();
+    }
+
+
+    @Override
+    public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+
+        if (item.getTitle().equals(getString(R.string.Scouts))) {
+            isByScout = true;
+            afterViewFrag();
+        }
+        if (item.getTitle().equals(getString(R.string.next))) {
+            saveData();
+            if (scoutList.get(scoutList.size() - 1).equals(thisScout)) {
+                super.isFinished = true;
+            } else {
+                afterViewFrag();
+            }
+        }
+        return super.onActionItemClicked(mode, item);
+    }
+
+    @OptionsItem(R.id.menu_switch_scout)
+    void orderByScout() {
+        isByScout = true;
+        afterViewFrag();
+    }
+
+
+    @OptionsItem(R.id.menu_next)
+    void onNext() {
+        saveData();
+        afterViewFrag();
+    }
 
 }
 

@@ -1,19 +1,13 @@
 /*
  * Copyright (c) 2014.  Author:Steven Dees(kjstevokjmaster@gmail.com)
  *
- *     This program is free software; you can redistribute it and/or modify
- *     it under the terms of the GNU General Public License as published by
- *     the Free Software Foundation; either version 2 of the License, or
- *     (at your option) any later version.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     This program is distributed in the hope that it will be useful,
- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *     GNU General Public License for more details.
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
- *     You should have received a copy of the GNU General Public License along
- *     with this program; if not, write to the Free Software Foundation, Inc.,
- *     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
  */
 
 package net.kjmaster.cookiemom.global;
@@ -54,14 +48,20 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
     protected final CookieTransactionsDao cookieTransactionsDao = Main.daoSession.getCookieTransactionsDao();
     protected final OrderDao orderDao = Main.daoSession.getOrderDao();
     private ActionMode actionMode;
+    private int actionMenu = R.menu.add_scout;
 
-    protected void createActionMode(String title) {
-
+    protected void createActionMode(String title, int menuId) {
+        actionMenu = menuId;
         actionMode = startActionMode(this);
         if (actionMode == null) return;
         if (!setActionTitle(title)) return;
 
         setDoneAction();
+    }
+
+    protected void createActionMode(String title) {
+
+        this.createActionMode(title, R.menu.add_scout);
     }
 
     private boolean setDoneAction() {
@@ -131,7 +131,7 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
         MenuInflater inflater = mode.getMenuInflater();
 
         if (inflater != null) {
-            inflater.inflate(R.menu.add_scout, menu);
+            inflater.inflate(actionMenu, menu);
         }
 
         return true;
@@ -180,15 +180,21 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
 
     @Override
     public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
-
-        setResult(RESULT_CANCELED);
-        mode.finish();
+        if (item.getTitle().equals(getString(R.string.cancel))) {
+            setResult(RESULT_CANCELED);
+            mode.finish();
+            return true;
+        }
         return true;
     }
 
+    public boolean isFinished = false;
+
     @Override
     public void onDestroyActionMode(ActionMode mode) {
-        finish();
+        if (isFinished) {
+            finish();
+        }
     }
 
 
