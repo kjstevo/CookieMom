@@ -12,10 +12,15 @@
 
 package net.kjmaster.cookiemom.editor;
 
-import android.app.Activity;
+
 import android.content.Context;
+import android.support.v4.app.FragmentActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.ActionMode;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -31,36 +36,51 @@ import net.kjmaster.cookiemom.dao.CookieTransactions;
 import net.kjmaster.cookiemom.dao.CookieTransactionsDao;
 
 import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Dell_Owner on 2/14/14.
  */
 @EActivity(R.layout.edit_data_layout)
-public class EditDataActivity extends Activity {
+public class EditDataActivity extends FragmentActivity implements ActionMode.Callback {
 
     @ViewById
     TableLayout edit_data_table;
 
-    @AfterViews
-    void afterViews() {
-        //edit_data_table.setCookieTransactionsList(Main.daoSession.getCookieTransactionsDao().loadAll());
-        populateTable(Main.daoSession.getCookieTransactionsDao().queryBuilder().orderDesc(CookieTransactionsDao.Properties.TransScoutId, CookieTransactionsDao.Properties.TransDate).list(), this);
+
+    private final ArrayList<CookieTransactions> cookieTransactionsList = new ArrayList<CookieTransactions>();
+
+    private boolean isCancel = false;
+
+    private ActionMode mActionMode = null;
+    private final ActionMode.Callback actionCall;
+    private CookieTransactionsDao dao;
+
+    public EditDataActivity() {
+        actionCall = this;
+
+        dao = Main.daoSession.getCookieTransactionsDao();
     }
 
-    private void populateTable(List<CookieTransactions> cookieTransactionsList, Context mContext) {
+    @AfterViews
+    void afterViews() {
+
+
+        populateTable(dao.queryBuilder().orderDesc(CookieTransactionsDao.Properties.TransScoutId, CookieTransactionsDao.Properties.TransDate).list(), this);
+    }
+
+    private void populateTable(final List<CookieTransactions> cookieTransactionsList, Context mContext) {
         edit_data_table.setShrinkAllColumns(true);
         for (final CookieTransactions cookieTransactions : cookieTransactionsList) {
-            if ((cookieTransactions.getTransBoxes() == 0) && (cookieTransactions.getTransCash() == 0)) {
-                continue;
-            } else {
-
+            if ((cookieTransactions.getTransBoxes() != 0) || (cookieTransactions.getTransCash() != 0)) {
                 TableRow tr = new TableRow(mContext);
                 tr.setTag(cookieTransactions);
 
                 TextView textView = new TextView(mContext);
                 textView.setText(java.text.DateFormat.getInstance().format(cookieTransactions.getTransDate()));
                 textView.setEnabled(false);
+
                 tr.addView(textView);
 
                 TextView textView2 = new TextView(mContext);
@@ -90,7 +110,9 @@ public class EditDataActivity extends Activity {
                 textView3.addTextChangedListener(new TextWatcher() {
                     @Override
                     public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-
+                        if (mActionMode == null) {
+                            startActionMode(actionCall);
+                        }
                     }
 
                     @Override
@@ -102,8 +124,10 @@ public class EditDataActivity extends Activity {
                     public void afterTextChanged(Editable editable) {
                         try {
                             cookieTransactions.setTransBoxes(Integer.valueOf(editable.toString()));
-                            Main.daoSession.getCookieTransactionsDao().update(cookieTransactions);
-                        } catch (Exception e) {
+
+                            cookieTransactionsList.add(cookieTransactions);
+                            //Main.daoSession.getCookieTransactionsDao().update(cookieTransactions);
+                        } catch (Exception ignored) {
                         }
                     }
                 });
@@ -114,7 +138,9 @@ public class EditDataActivity extends Activity {
                 textView4.addTextChangedListener(new TextWatcher() {
                     @Override
                     public void beforeTextChanged(CharSequence charSequence, int i, int i2, int i3) {
-
+                        if (mActionMode == null) {
+                            startActionMode(actionCall);
+                        }
                     }
 
                     @Override
@@ -125,8 +151,11 @@ public class EditDataActivity extends Activity {
                     @Override
                     public void afterTextChanged(Editable editable) {
                         try {
+
                             cookieTransactions.setTransCash(Double.valueOf(editable.toString()));
-                        } catch (Exception e) {
+                            cookieTransactionsList.add(cookieTransactions);
+
+                        } catch (Exception ignored) {
                         }
 
                     }
@@ -140,5 +169,43 @@ public class EditDataActivity extends Activity {
     }
 
 
+    @Override
+    public boolean onCreateActionMode(ActionMode actionMode, Menu menu) {
+        MenuInflater inflater = actionMode.getMenuInflater();
+
+        if (inflater != null) {
+            inflater.inflate(R.menu.add_scout, menu);
+        }
+        mActionMode = actionMode;
+        isCancel = false;
+        return true;
+
+    }
+
+
+    @Override
+    public boolean onPrepareActionMode(ActionMode actionMode, Menu menu) {
+        return false;
+    }
+
+    @Override
+    public boolean onActionItemClicked(ActionMode actionMode, MenuItem menuItem) {
+        if (menuItem.getTitle().equals(getString(R.string.cancel))) {
+            cookieTransactionsList.clear();
+            actionMode.finish();
+            afterViews();
+            return true;
+        }
+        return true;
+    }
+
+    @Override
+    public void onDestroyActionMode(ActionMode actionMode) {
+        if (cookieTransactionsList.size() > 0) {
+
+            dao.updateInTx(cookieTransactionsList);
+        }
+        mActionMode = null;
+    }
 }
 

@@ -184,5 +184,7 @@
     <string name="location">Location</string>
     <string name="next">Next</string>
     <string name="edit_data">Edit Data</string>
+    <string name="date">Date</string>
+    <string name="cash">Cash</string>
 
 </resources>
