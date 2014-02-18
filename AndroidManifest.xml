@@ -64,6 +64,9 @@
         <activity
             android:name=".settings.SettingsActivity_"
             android:label="@string/menu_settings" />
+        <activity
+            android:name=".editor.EditDataActivity_"
+            android:label="Edit Data" />
     </application>
 
 </manifest>

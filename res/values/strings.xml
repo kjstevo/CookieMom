@@ -183,5 +183,6 @@
     <string name="diff_goc">Diff/GoC</string>
     <string name="location">Location</string>
     <string name="next">Next</string>
+    <string name="edit_data">Edit Data</string>
 
 </resources>

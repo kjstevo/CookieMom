@@ -166,7 +166,10 @@ public class CookieAmountContentCard extends Card {
     private void updateCaeaActual() {
         if (mCookieAmountCases != null) {
             mCookieAmountCases.setVisibility(View.VISIBLE);
-            mCookieAmountCases.setText(String.valueOf(actualCasesAmount) + "(" + String.valueOf(actualCasesAmount * 12) + "bxs)");
+            mCookieAmountCases.setText(String.valueOf(actualCasesAmount) + "(" + String.valueOf(actualCasesAmount * 12) + "bxs)")
+
+
+            ;
         }
         if (mAmountCasesCaption != null) {
             mAmountCasesCaption.setVisibility(View.VISIBLE);
