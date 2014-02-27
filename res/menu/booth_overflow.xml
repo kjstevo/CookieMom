@@ -43,4 +43,10 @@
     <item
         android:id="@+id/menu_booth_checkin"
         android:title="@string/checkin" />
+
+    <item
+        android:id="@+id/menu_booth_cash_checkin"
+        android:title="@string/cash_checkin" />
+
+
 </menu>

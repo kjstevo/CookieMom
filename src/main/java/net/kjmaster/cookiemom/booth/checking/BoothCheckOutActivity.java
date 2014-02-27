@@ -31,6 +31,7 @@ import net.kjmaster.cookiemom.dao.CookieTransactionsDao;
 import net.kjmaster.cookiemom.dao.Order;
 import net.kjmaster.cookiemom.dao.OrderDao;
 import net.kjmaster.cookiemom.global.Constants;
+import net.kjmaster.cookiemom.global.CookieActionActivity;
 import net.kjmaster.cookiemom.global.CookieOrCashDialogBase;
 import net.kjmaster.cookiemom.global.ICookieActionFragment;
 import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment;
@@ -50,26 +51,9 @@ import static net.kjmaster.cookiemom.global.Constants.CookieTypes;
  */
 @SuppressLint("Registered")
 @EActivity(R.layout.scout_order_layout)
-public class BoothCheckOutActivity extends CookieOrCashDialogBase {
+public class BoothCheckOutActivity extends CookieActionActivity {
     private String fragName;
     private final HashMap<String, String> valuesMap = new HashMap<String, String>();
-
-    @Override
-    protected void createActionFragment() {
-        createFrag();
-    }
-
-    @Override
-    protected boolean isEditableValue() {
-        return true;
-    }
-
-
-    @Override
-    protected void saveForemData() {
-        //performCheckOut();
-        savePickupData();
-    }
 
     @Override
     protected boolean isEditable() {
@@ -84,16 +68,10 @@ public class BoothCheckOutActivity extends CookieOrCashDialogBase {
         performCheckOut();
     }
 
-    @Override
-    protected boolean isNegative() {
-        return true;
-    }
 
     @AfterViews
     void afterViewFrag() {
-        super.CreateDialog(BoothId, this, "Booth Check-out");
-
-
+        createFrag();
     }
 
     private void createFrag() {
@@ -110,111 +88,111 @@ public class BoothCheckOutActivity extends CookieOrCashDialogBase {
         createActionMode(getString(R.string.checkout));
     }
 
-    private void savePickupData() {
-
-
-        Calendar c = Calendar.getInstance();
-
-        CookieTransactionsDao dao = Main.daoSession.getCookieTransactionsDao();
-
-        OrderDao orderDao = Main.daoSession.getOrderDao();
-
-        for (String cookieFlavor : CookieTypes) {
-            Integer boxesInInventory = 0;
-            List<CookieTransactions> transactionsList = Main.daoSession.getCookieTransactionsDao().queryBuilder()
-                    .where(
-                            CookieTransactionsDao.Properties.CookieType.eq(cookieFlavor)
-                    )
-                    .list();
-            for (CookieTransactions transaction : transactionsList) {
-                boxesInInventory += transaction.getTransBoxes();
-            }
-
-            Integer requestedBoxes = Integer.valueOf(getFragment().valuesMap().get(cookieFlavor));
-            if (boxesInInventory > 0) {
-                if (requestedBoxes <= boxesInInventory) {
-                    CookieTransactions cookieTransactions = new CookieTransactions(
-                            null, -1L, BoothId, cookieFlavor, requestedBoxes * -1,
-                            c.getTime(),
-                            (double) 0
-                    );
-                    dao.insert(cookieTransactions);
-                } else {
-                    CookieTransactions cookieTransactions = new CookieTransactions(
-                            null, -1L, BoothId, cookieFlavor, boxesInInventory * -1,
-                            c.getTime(),
-                            (double) 0
-                    );
-                    dao.insert(cookieTransactions);
-                    requestedBoxes = boxesInInventory;
-                }
-            } else {
-                List<Order> orders = orderDao.queryBuilder()
-                        .where(
-                                OrderDao.Properties.OrderScoutId.eq(Constants.CalculateNegativeBoothId(BoothId)),
-                                OrderDao.Properties.OrderCookieType.eq(cookieFlavor)
-                        ).list();
-                for (Order order : orders) {
-                    order.setPickedUpFromCupboard(false);
-                    orderDao.update(order);
-                }
-
-            }
-
-
-            List<Order> orderList =
-                    orderDao.queryBuilder().where(
-                            OrderDao.Properties.OrderCookieType.eq(cookieFlavor),
-                            OrderDao.Properties.OrderScoutId.eq(Constants.CalculateNegativeBoothId(BoothId))
-
-                    ).orderAsc(
-                            OrderDao.Properties.OrderDate
-                    )
-                            .list();
-
-            for (Order order : orderList) {
-                if (requestedBoxes >= order.getOrderedBoxes()) {
-                    requestedBoxes = requestedBoxes - order.getOrderedBoxes();
-
-                    if (order.getPickedUpFromCupboard()) {
-                        orderDao.delete(order);
-                    } else {
-                        order.setOrderScoutId(-1);
-                        orderDao.update(order);
-                    }
-                } else {
-                    if (requestedBoxes > 0) {
-                        Order order2 = new Order(
-                                null,
-                                order.getOrderDate(),
-                                order.getOrderScoutId(),
-                                order.getOrderCookieType(),
-                                false,
-                                (order.getOrderedBoxes() - requestedBoxes),
-                                false
-
-                        );
-
-                        orderDao.insert(order2);
-
-                        if (order.getPickedUpFromCupboard()) {
-
-                            orderDao.delete(order);
-                        } else {
-                            order.setOrderScoutId(-1);
-                            order.setOrderedBoxes(order.getOrderedBoxes() - order2.getOrderedBoxes());
-                            orderDao.update(order);
-                            orderDao.delete(order);
-                        }
-
-                        requestedBoxes = 0;
-                    }
-                }
-
-            }
-
-        }
-    }
+//    private void savePickupData() {
+//
+//
+//        Calendar c = Calendar.getInstance();
+//
+//        CookieTransactionsDao dao = Main.daoSession.getCookieTransactionsDao();
+//
+//        OrderDao orderDao = Main.daoSession.getOrderDao();
+//
+//        for (String cookieFlavor : CookieTypes) {
+//            Integer boxesInInventory = 0;
+//            List<CookieTransactions> transactionsList = Main.daoSession.getCookieTransactionsDao().queryBuilder()
+//                    .where(
+//                            CookieTransactionsDao.Properties.CookieType.eq(cookieFlavor)
+//                    )
+//                    .list();
+//            for (CookieTransactions transaction : transactionsList) {
+//                boxesInInventory += transaction.getTransBoxes();
+//            }
+//
+//            Integer requestedBoxes = Integer.valueOf(getFragment().valuesMap().get(cookieFlavor));
+//            if (boxesInInventory > 0) {
+//                if (requestedBoxes <= boxesInInventory) {
+//                    CookieTransactions cookieTransactions = new CookieTransactions(
+//                            null, -1L, BoothId, cookieFlavor, requestedBoxes * -1,
+//                            c.getTime(),
+//                            (double) 0
+//                    );
+//                    dao.insert(cookieTransactions);
+//                } else {
+//                    CookieTransactions cookieTransactions = new CookieTransactions(
+//                            null, -1L, BoothId, cookieFlavor, boxesInInventory * -1,
+//                            c.getTime(),
+//                            (double) 0
+//                    );
+//                    dao.insert(cookieTransactions);
+//                    requestedBoxes = boxesInInventory;
+//                }
+//            } else {
+//                List<Order> orders = orderDao.queryBuilder()
+//                        .where(
+//                                OrderDao.Properties.OrderScoutId.eq(Constants.CalculateNegativeBoothId(BoothId)),
+//                                OrderDao.Properties.OrderCookieType.eq(cookieFlavor)
+//                        ).list();
+//                for (Order order : orders) {
+//                    order.setPickedUpFromCupboard(false);
+//                    orderDao.update(order);
+//                }
+//
+//            }
+//
+//
+//            List<Order> orderList =
+//                    orderDao.queryBuilder().where(
+//                            OrderDao.Properties.OrderCookieType.eq(cookieFlavor),
+//                            OrderDao.Properties.OrderScoutId.eq(Constants.CalculateNegativeBoothId(BoothId))
+//
+//                    ).orderAsc(
+//                            OrderDao.Properties.OrderDate
+//                    )
+//                            .list();
+//
+//            for (Order order : orderList) {
+//                if (requestedBoxes >= order.getOrderedBoxes()) {
+//                    requestedBoxes = requestedBoxes - order.getOrderedBoxes();
+//
+//                    if (order.getPickedUpFromCupboard()) {
+//                        orderDao.delete(order);
+//                    } else {
+//                        order.setOrderScoutId(-1);
+//                        orderDao.update(order);
+//                    }
+//                } else {
+//                    if (requestedBoxes > 0) {
+//                        Order order2 = new Order(
+//                                null,
+//                                order.getOrderDate(),
+//                                order.getOrderScoutId(),
+//                                order.getOrderCookieType(),
+//                                false,
+//                                (order.getOrderedBoxes() - requestedBoxes),
+//                                false
+//
+//                        );
+//
+//                        orderDao.insert(order2);
+//
+//                        if (order.getPickedUpFromCupboard()) {
+//
+//                            orderDao.delete(order);
+//                        } else {
+//                            order.setOrderScoutId(-1);
+//                            order.setOrderedBoxes(order.getOrderedBoxes() - order2.getOrderedBoxes());
+//                            orderDao.update(order);
+//                            orderDao.delete(order);
+//                        }
+//
+//                        requestedBoxes = 0;
+//                    }
+//                }
+//
+//            }
+//
+//        }
+//    }
 
 
     private void performCheckOut() {
