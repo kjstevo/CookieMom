@@ -32,6 +32,7 @@ import net.kjmaster.cookiemom.dao.Order;
 import net.kjmaster.cookiemom.dao.OrderDao;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.CookieActionActivity;
+import net.kjmaster.cookiemom.global.ICookieActionFragment;
 import net.kjmaster.cookiemom.global.ISettings_;
 import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment_;
 
@@ -79,6 +80,7 @@ public class ScoutOrderActivity extends CookieActionActivity {
     }
 
 
+
     protected void saveData() {
         OrderDao dao = Main.daoSession.getOrderDao();
         Calendar c = Calendar.getInstance();
@@ -100,4 +102,6 @@ public class ScoutOrderActivity extends CookieActionActivity {
             }
         }
     }
+
+
 }

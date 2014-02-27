@@ -186,5 +186,6 @@
     <string name="edit_data">Edit Data</string>
     <string name="date">Date</string>
     <string name="cash">Cash</string>
+    <string name="cash_checkin">Cash In</string>
 
 </resources>

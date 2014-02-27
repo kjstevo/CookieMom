@@ -23,12 +23,14 @@ import android.annotation.SuppressLint;
 import com.googlecode.androidannotations.annotations.AfterViews;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
+import com.googlecode.androidannotations.annotations.res.StringRes;
 
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.dao.CookieTransactions;
 import net.kjmaster.cookiemom.global.Constants;
-import net.kjmaster.cookiemom.global.CookieOrCashDialogBase;
+import net.kjmaster.cookiemom.global.CookieActionActivity;
+import net.kjmaster.cookiemom.global.ICookieActionFragment;
 import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment;
 import net.kjmaster.cookiemom.ui.cookies.CookieAmountsListInputFragment_;
 
@@ -42,50 +44,31 @@ import java.util.Calendar;
  */
 @SuppressLint("Registered")
 @EActivity(R.layout.scout_order_layout)
-public class BoothCheckInActivity extends CookieOrCashDialogBase {
-    private String fragName;
+public class BoothCheckInActivity extends CookieActionActivity {
 
-    @Override
-    protected boolean isEditable() {
-        return true;  //To change body of implemented methods use File | Settings | File Templates.
-    }
+
+    @StringRes()
+    String checkin,booth_checkin_order;
 
     @Extra
     long BoothId;
 
-    @Override
-    protected void saveData() {
-        performCheckIn();
-    }
-
-    @Override
-    protected boolean isNegative() {
-        return false;
-    }
 
     @AfterViews
     void afterViewFrag() {
-
-        super.CreateDialog(BoothId, this, "Booth Check-in");
-    }
-
-    @Override
-    protected void createActionFragment() {
-        fragName = getString(R.string.booth_checkin_order);
         replaceFrag(
-                createFragmentTransaction(fragName),
+                createFragmentTransaction(booth_checkin_order),
                 CookieAmountsListInputFragment_.builder()
                         .hideCases(false)
                         .showExpected(false)
                         .showInventory(false)
                         .isEditable(this.isEditable()).build(),
-                fragName);
+                booth_checkin_order);
 
-        createActionMode(getString(R.string.checkin));
+        createActionMode(checkin);
     }
-
     private void performCheckIn() {
-        CookieAmountsListInputFragment fragment = (CookieAmountsListInputFragment) getSupportFragmentManager().findFragmentByTag(fragName);
+        CookieAmountsListInputFragment fragment = (CookieAmountsListInputFragment)getSupportFragmentManager().findFragmentByTag(booth_checkin_order);
         Calendar c = Calendar.getInstance();
         if (fragment != null) {
             for (String cookieType : Constants.CookieTypes) {
@@ -99,15 +82,21 @@ public class BoothCheckInActivity extends CookieOrCashDialogBase {
     }
 
     @Override
-    protected boolean isEditableValue() {
-        return true;
+    protected boolean isEditable() {
+        return true;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+
+    @Override
+    protected void saveData() {
+        performCheckIn();
     }
 
     @Override
-    protected void saveForemData() {
-        performCheckIn();
-
+    protected ICookieActionFragment getFragment() {
+        return (ICookieActionFragment) getFragmentManager().findFragmentByTag(booth_checkin_order);
     }
+
 
 
 }

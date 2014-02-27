@@ -116,10 +116,11 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
         }
         return ft;
     }
-
+private Fragment testFrag;
     protected void replaceFrag(FragmentTransaction ft, Fragment frag, String fragName) {
 
         mFragment = (ICookieActionFragment) frag;
+        testFrag=frag;
         ft.replace(R.id.content, frag, fragName);
         ft.commit();
 
@@ -228,6 +229,7 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
 
         for (String cookieType : Constants.CookieTypes) {
             outState.putString(cookieType, mFragment.valuesMap().get(cookieType));
+            outState.putInt("FragTag", testFrag.getId());
         }
         super.onSaveInstanceState(outState);
     }
@@ -235,16 +237,22 @@ public abstract class CookieActionActivity extends FragmentActivity implements A
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
+                try{
+             if(mFragment==null){
+                 mFragment=(ICookieActionFragment)getSupportFragmentManager().findFragmentById(testFrag.getId()); 
+             }      
         for (String cookieType : Constants.CookieTypes) {
             mFragment.valuesMap().put(cookieType, savedInstanceState.getString(cookieType));
 
         }
         mFragment.refreshView();
+        } catch (Exception ignored){
+
+        }
 
         //11/30/13
         super.onRestoreInstanceState(savedInstanceState);
-    }
-
+}
 
 }
 

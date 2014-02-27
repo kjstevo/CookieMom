@@ -32,6 +32,7 @@ import net.kjmaster.cookiemom.R;
 import net.kjmaster.cookiemom.booth.add.AddBoothActivity_;
 import net.kjmaster.cookiemom.booth.checking.BoothCheckInActivity_;
 import net.kjmaster.cookiemom.booth.checking.BoothCheckOutActivity_;
+import net.kjmaster.cookiemom.booth.checking.BoothCashCheckIn_;
 import net.kjmaster.cookiemom.booth.expander.CustomBoothExpander;
 import net.kjmaster.cookiemom.booth.order.BoothOrderActivity_;
 import net.kjmaster.cookiemom.dao.Booth;
@@ -148,11 +149,13 @@ public class BoothFragment
 
             case R.id.menu_booth_checkin:
                 BoothCheckInActivity_.intent(getActivity()).BoothId(booth.getId()).startForResult(Constants.BOOTH_ORDER);
-
+             //   BoothCashCheckIn_.intent(getActivity()).BoothId(booth.getId()).startForResult(Constants.BOOTH_ORDER);
                 break;
             case R.id.menu_booth_order:
                 BoothOrderActivity_.intent(getActivity()).boothId(booth.getId()).requestCode(Constants.BOOTH_ORDER).startForResult(Constants.BOOTH_ORDER);
 
+            case R.id.menu_booth_cash_checkin:
+                BoothCashCheckIn_.intent(getActivity()).BoothId(booth.getId()).startForResult(Constants.BOOTH_ORDER);
             default:
 
         }

@@ -67,6 +67,9 @@
         <activity
             android:name=".editor.EditDataActivity_"
             android:label="Edit Data" />
+        <activity android:name=".booth.checking.BoothCashCheckIn_"
+            android:label="@string/checkin"/>
+
     </application>
 
 </manifest>
