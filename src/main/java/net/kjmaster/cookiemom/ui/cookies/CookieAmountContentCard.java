@@ -17,6 +17,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -124,11 +125,16 @@ public class CookieAmountContentCard extends Card {
         mAmountCasesCaption = (TextView) parent.findViewById(R.id.amount_cases_caption);
         mCookieAmountCases = (TextView) parent.findViewById(R.id.edit_text_cases);
         mExpectedPanel = (LinearLayout) parent.findViewById(R.id.expected_panel);
+        Button mPlus = (Button) parent.findViewById(R.id.plus);
+        Button mMinus = (Button) parent.findViewById(R.id.minus);
+        mPlus.setOnClickListener((View.OnClickListener) mContext);
 
+        mMinus.setOnClickListener((View.OnClickListener) mContext);
         mCookieAmount.addTextChangedListener(new CookieTextWatcher());
 
         mCookieAmount.setTag(this.getCardHeader().getTitle());
-
+        mPlus.setTag(this.getCardHeader().getTitle());
+        mMinus.setTag(this.getCardHeader().getTitle());
         updateActualAmount();
 
         if (showExpected) {

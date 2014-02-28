@@ -22,6 +22,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import net.kjmaster.cookiemom.Main;
 import net.kjmaster.cookiemom.R;
@@ -43,12 +44,33 @@ import static net.kjmaster.cookiemom.global.Constants.CookieTypes;
  * Time: 7:59 PM
  */
 
-public abstract class CookieActionActivity extends FragmentActivity implements ActionMode.Callback, NumberPickerDialogFragment.NumberPickerDialogHandler {
+public abstract class CookieActionActivity extends FragmentActivity implements ActionMode.Callback, NumberPickerDialogFragment.NumberPickerDialogHandler, Button.OnClickListener {
 
     protected final CookieTransactionsDao cookieTransactionsDao = Main.daoSession.getCookieTransactionsDao();
     protected final OrderDao orderDao = Main.daoSession.getOrderDao();
     private ActionMode actionMode;
     private int actionMenu = R.menu.add_scout;
+
+    @Override
+    public void onClick(View view) {
+        Integer currVal = 0;
+        switch (view.getId()) {
+            case R.id.plus:
+                currVal = Integer.valueOf(mFragment.valuesMap().get(view.getTag().toString()));
+                currVal += 12;
+                mFragment.valuesMap().put(view.getTag().toString(), currVal.toString());
+                mFragment.refreshView();
+                break;
+            case R.id.minus:
+                currVal = Integer.valueOf(mFragment.valuesMap().get(view.getTag().toString()));
+                currVal -= 12;
+                mFragment.valuesMap().put(view.getTag().toString(), currVal.toString());
+                mFragment.refreshView();
+                break;
+            default:
+
+        }
+    }
 
     protected void createActionMode(String title, int menuId) {
         actionMenu = menuId;
@@ -121,6 +143,7 @@ private Fragment testFrag;
 
         mFragment = (ICookieActionFragment) frag;
         testFrag=frag;
+
         ft.replace(R.id.content, frag, fragName);
         ft.commit();
 
