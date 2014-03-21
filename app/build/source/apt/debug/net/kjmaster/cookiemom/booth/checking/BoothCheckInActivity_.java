@@ -32,8 +32,8 @@ public final class BoothCheckInActivity_
 
     private void init_(Bundle savedInstanceState) {
         Resources resources_ = this.getResources();
-        checkin = resources_.getString(string.checkin);
         booth_checkin_order = resources_.getString(string.booth_checkin_order);
+        checkin = resources_.getString(string.checkin);
         injectExtras_();
     }
 

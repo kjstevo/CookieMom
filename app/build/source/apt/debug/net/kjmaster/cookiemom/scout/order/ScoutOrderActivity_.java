@@ -34,8 +34,8 @@ public final class ScoutOrderActivity_
     private void init_(Bundle savedInstanceState) {
         iSettings = new ISettings_(this);
         Resources resources_ = this.getResources();
-        fragTitle = resources_.getString(string.add_order_title);
         fragTag = resources_.getString(string.add_order);
+        fragTitle = resources_.getString(string.add_order_title);
         injectExtras_();
     }
 

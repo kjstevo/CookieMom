@@ -29,8 +29,8 @@ public final class SummarySalesFragment_
     }
 
     private void afterSetContentView_() {
-        legend = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.bar_legend));
         barGraph = ((BarGraph) findViewById(net.kjmaster.cookiemom.R.id.bargraph));
+        legend = ((TextView) findViewById(net.kjmaster.cookiemom.R.id.bar_legend));
         afterViews();
     }
 

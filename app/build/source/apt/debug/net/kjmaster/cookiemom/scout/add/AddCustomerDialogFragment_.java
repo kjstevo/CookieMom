@@ -28,8 +28,8 @@ public final class AddCustomerDialogFragment_
     }
 
     private void afterSetContentView_() {
-        editText = ((EditText) findViewById(net.kjmaster.cookiemom.R.id.editText));
         editContact = ((EditText) findViewById(net.kjmaster.cookiemom.R.id.edit_contact));
+        editText = ((EditText) findViewById(net.kjmaster.cookiemom.R.id.editText));
     }
 
     @Override

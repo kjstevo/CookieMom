@@ -34,8 +34,8 @@ public final class CupboardPickupActivity_
     private void init_(Bundle savedInstanceState) {
         iSettings = new ISettings_(this);
         Resources resources_ = this.getResources();
-        pickup_order_title = resources_.getString(string.pickup_order_title);
         pickup_from_cupboard = resources_.getString(string.pickup_from_cupboard);
+        pickup_order_title = resources_.getString(string.pickup_order_title);
         injectExtras_();
     }
 

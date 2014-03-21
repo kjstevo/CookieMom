@@ -142,7 +142,7 @@ public class CookieAmountContentCard extends Card {
 
         } else {
             if (mExpectedPanel != null) {
-                mExpectedPanel.setVisibility(View.GONE);
+                mExpectedPanel.setVisibility(View.INVISIBLE);
             }
         }
 

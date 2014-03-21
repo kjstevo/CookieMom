@@ -34,11 +34,11 @@ public final class SettingsFragment_
     }
 
     private void afterSetContentView_() {
-        setting_save_cookie = ((Button) findViewById(net.kjmaster.cookiemom.R.id.setting_save_cookie));
         settings_auot_fill_cases_check = ((CheckBox) findViewById(net.kjmaster.cookiemom.R.id.settings_auot_fill_cases_check));
         setting_custom_cookie_check = ((CheckBox) findViewById(net.kjmaster.cookiemom.R.id.setting_custom_cookie_check));
-        settings_edit_cookie = ((EditText) findViewById(net.kjmaster.cookiemom.R.id.settings_edit_cookie));
         setting_cookie_list = ((Spinner) findViewById(net.kjmaster.cookiemom.R.id.setting_cookie_list));
+        setting_save_cookie = ((Button) findViewById(net.kjmaster.cookiemom.R.id.setting_save_cookie));
+        settings_edit_cookie = ((EditText) findViewById(net.kjmaster.cookiemom.R.id.settings_edit_cookie));
         {
             View view = findViewById(net.kjmaster.cookiemom.R.id.setting_save_cookie);
             if (view!= null) {

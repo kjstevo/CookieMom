@@ -86,16 +86,16 @@ public final class SelectScoutListActivity_
                     Log.e("SelectScoutListActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("requestCode")) {
+            if (extras_.containsKey("FragmentTag")) {
                 try {
-                    requestCode = ((Integer) extras_.get("requestCode"));
+                    FragmentTag = cast_(extras_.get("FragmentTag"));
                 } catch (ClassCastException e) {
                     Log.e("SelectScoutListActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("FragmentTag")) {
+            if (extras_.containsKey("requestCode")) {
                 try {
-                    FragmentTag = cast_(extras_.get("FragmentTag"));
+                    requestCode = ((Integer) extras_.get("requestCode"));
                 } catch (ClassCastException e) {
                     Log.e("SelectScoutListActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -150,13 +150,13 @@ public final class SelectScoutListActivity_
             return this;
         }
 
-        public SelectScoutListActivity_.IntentBuilder_ requestCode(int requestCode) {
-            intent_.putExtra("requestCode", requestCode);
+        public SelectScoutListActivity_.IntentBuilder_ FragmentTag(String FragmentTag) {
+            intent_.putExtra("FragmentTag", FragmentTag);
             return this;
         }
 
-        public SelectScoutListActivity_.IntentBuilder_ FragmentTag(String FragmentTag) {
-            intent_.putExtra("FragmentTag", FragmentTag);
+        public SelectScoutListActivity_.IntentBuilder_ requestCode(int requestCode) {
+            intent_.putExtra("requestCode", requestCode);
             return this;
         }
 

@@ -109,34 +109,46 @@
         android:layout_below="@+id/expected_panel"
         android:gravity="center_horizontal|top">
 
+<!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" android:orientation="horizontal">-->
+    <LinearLayout android:id="@+id/llayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qty:"
+        android:id="@+id/textView1"
+        style="@style/card.header_simple_title"
+            android:gravity="right"
+       />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-5dp"
+        android:text="00000"
+        android:gravity="left"
+        android:id="@+id/cookie_amount"
+        style="@style/card.header_simple_title"
+        />
+        <!--android:layout_toRightOf="@+id/textView1"-->
+
+
+</LinearLayout>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Qty:"
-            android:id="@+id/textView1"
-            style="@style/card.header_simple_title"
-            android:lines="2" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="00000"
-            android:id="@+id/cookie_amount"
-            style="@style/card.header_simple_title"
-            android:singleLine="false"
-            android:layout_toRightOf="@+id/textView1"
-            android:paddingRight="10dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="000"
+            android:text="2(24bxs)"
             android:id="@+id/edit_text_cases"
             style="@android:style/TextAppearance.Holo.Small"
             android:editable="false"
             android:focusable="false"
-            android:layout_toRightOf="@+id/cookie_amount" />
+            android:layout_toRightOf="@+id/llayout" />
 
         <TextView
             style="@android:style/TextAppearance.Holo.Small"
@@ -144,8 +156,8 @@
             android:layout_height="wrap_content"
             android:text="Cases:"
             android:id="@+id/amount_cases_caption"
-            android:layout_toRightOf="@+id/cookie_amount"
+            android:layout_toRightOf="@+id/llayout"
             android:layout_below="@+id/edit_text_cases"
-            android:autoText="false" />
+            />
     </RelativeLayout>
 </RelativeLayout>

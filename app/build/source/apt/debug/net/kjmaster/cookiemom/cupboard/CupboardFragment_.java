@@ -77,16 +77,16 @@ public final class CupboardFragment_
             return true;
         }
         int itemId_ = item.getItemId();
-        if (itemId_ == net.kjmaster.cookiemom.R.id.menu_pickup_cupboard_order) {
-            pickupOrder();
-            return true;
-        }
         if (itemId_ == net.kjmaster.cookiemom.R.id.menu_place_cupboard_order) {
             placeOrder();
             return true;
         }
         if (itemId_ == net.kjmaster.cookiemom.R.id.menu_edit_data) {
             editData();
+            return true;
+        }
+        if (itemId_ == net.kjmaster.cookiemom.R.id.menu_pickup_cupboard_order) {
+            pickupOrder();
             return true;
         }
         return false;

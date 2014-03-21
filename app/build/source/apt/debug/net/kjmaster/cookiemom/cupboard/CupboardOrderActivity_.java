@@ -75,12 +75,12 @@ public final class CupboardOrderActivity_
             return true;
         }
         int itemId_ = item.getItemId();
-        if (itemId_ == id.menu_switch_scout) {
-            orderByScout();
-            return true;
-        }
         if (itemId_ == id.menu_next) {
             onNext();
+            return true;
+        }
+        if (itemId_ == id.menu_switch_scout) {
+            orderByScout();
             return true;
         }
         return false;

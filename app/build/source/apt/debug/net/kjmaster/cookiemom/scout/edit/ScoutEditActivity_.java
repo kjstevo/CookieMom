@@ -34,8 +34,8 @@ public final class ScoutEditActivity_
     private void init_(Bundle savedInstanceState) {
         iSettings = new ISettings_(this);
         Resources resources_ = this.getResources();
-        fragTag = resources_.getString(string.edit_order);
         fragTitle = resources_.getString(string.edit_order_title);
+        fragTag = resources_.getString(string.edit_order);
         injectExtras_();
     }
 
@@ -77,16 +77,16 @@ public final class ScoutEditActivity_
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
         if (extras_!= null) {
-            if (extras_.containsKey("requestCode")) {
+            if (extras_.containsKey("ScoutId")) {
                 try {
-                    requestCode = ((Integer) extras_.get("requestCode"));
+                    ScoutId = ((Long) extras_.get("ScoutId"));
                 } catch (ClassCastException e) {
                     Log.e("ScoutEditActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("ScoutId")) {
+            if (extras_.containsKey("requestCode")) {
                 try {
-                    ScoutId = ((Long) extras_.get("ScoutId"));
+                    requestCode = ((Integer) extras_.get("requestCode"));
                 } catch (ClassCastException e) {
                     Log.e("ScoutEditActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -131,13 +131,13 @@ public final class ScoutEditActivity_
             }
         }
 
-        public ScoutEditActivity_.IntentBuilder_ requestCode(int requestCode) {
-            intent_.putExtra("requestCode", requestCode);
+        public ScoutEditActivity_.IntentBuilder_ ScoutId(long ScoutId) {
+            intent_.putExtra("ScoutId", ScoutId);
             return this;
         }
 
-        public ScoutEditActivity_.IntentBuilder_ ScoutId(long ScoutId) {
-            intent_.putExtra("ScoutId", ScoutId);
+        public ScoutEditActivity_.IntentBuilder_ requestCode(int requestCode) {
+            intent_.putExtra("requestCode", requestCode);
             return this;
         }
 
