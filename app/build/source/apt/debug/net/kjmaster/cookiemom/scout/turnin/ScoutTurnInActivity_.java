@@ -34,10 +34,10 @@ public final class ScoutTurnInActivity_
     private void init_(Bundle savedInstanceState) {
         iSettings = new ISettings_(this);
         Resources resources_ = this.getResources();
+        scout_turn_in__title = resources_.getString(string.scout_turn_in_title);
+        turn_in = resources_.getString(string.turn_in);
         scout_turn_in = resources_.getString(string.scout_turn_in);
         resCancel = resources_.getString(string.cancel);
-        turn_in = resources_.getString(string.turn_in);
-        scout_turn_in__title = resources_.getString(string.scout_turn_in_title);
         injectExtras_();
     }
 

@@ -1,19 +1,13 @@
 /*
  * Copyright (c) 2014.  Author:Steven Dees(kjstevokjmaster@gmail.com)
  *
- *     This program is free software; you can redistribute it and/or modify
- *     it under the terms of the GNU General Public License as published by
- *     the Free Software Foundation; either version 2 of the License, or
- *     (at your option) any later version.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *     This program is distributed in the hope that it will be useful,
- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *     GNU General Public License for more details.
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
- *     You should have received a copy of the GNU General Public License along
- *     with this program; if not, write to the Free Software Foundation, Inc.,
- *     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
  */
 
 package net.kjmaster.cookiemom.summary.stat.scout;
@@ -103,6 +97,9 @@ public class SummaryStatScoutCard extends Card {
     ArrayList<SummaryStatScoutValues> buildArrayHelper() {
         //DataStore        dataStore = new DataStore(getContext());
         ArrayList<SummaryStatScoutValues> list = new ArrayList<SummaryStatScoutValues>();
+        float grandDeltaTotal = 0;
+        float grandDelttaPercTotal = 0;
+        float grandValueTotal = 0;
         String cash = "$0.00/$0.00";
         float cashTotal = 0;
         List<Scout> scoutList = Main.daoSession.getScoutDao().loadAll();
@@ -115,20 +112,26 @@ public class SummaryStatScoutCard extends Card {
             try {
                 float possTotal = Float.valueOf(orderTotals.get("PossTotal")) * -1;
                 float orderTotal = Float.valueOf(orderTotals.get("OrderTotal"));
-
                 summaryStatScoutValues.setValue(possTotal);
-
+                grandValueTotal += possTotal;
 
                 cash = orderTotals.get("CashTotal");
                 cashTotal = (cashTotal + (summaryStatScoutValues.getValue() * 4));
                 summaryStatScoutValues.setDelta(Float.valueOf(cash));
+                grandDeltaTotal += Float.valueOf(cash);
                 summaryStatScoutValues.setDeltaPerc((possTotal * 4) - Float.valueOf(cash));
+                grandDelttaPercTotal += ((possTotal * 4) - Float.valueOf(cash));
             } catch (Exception e) {
                 Log.e("cookiemom", "error in Google ScoutExpanderValues Card");
             }
             list.add(summaryStatScoutValues);
         }
-
+        SummaryStatScoutValues summaryStatScoutValues = new SummaryStatScoutValues();
+        summaryStatScoutValues.setValue(grandValueTotal);
+        summaryStatScoutValues.setDelta(grandDeltaTotal);
+        summaryStatScoutValues.setDeltaPerc(grandDelttaPercTotal);
+        summaryStatScoutValues.setCode("Total");
+        list.add(summaryStatScoutValues);
         CardHeader header = new CardHeader(getContext());
 
         header.setButtonExpandVisible(false);

@@ -78,16 +78,16 @@ public final class CookieAmountsListInputFragment_
                     Log.e("CookieAmountsListInputFragment_", "Could not cast argument to the expected type, the field is left to its default value", e);
                 }
             }
-            if (args_.containsKey("isEditable")) {
+            if (args_.containsKey("autoFill")) {
                 try {
-                    isEditable = args_.getBoolean("isEditable");
+                    autoFill = args_.getBoolean("autoFill");
                 } catch (ClassCastException e) {
                     Log.e("CookieAmountsListInputFragment_", "Could not cast argument to the expected type, the field is left to its default value", e);
                 }
             }
-            if (args_.containsKey("autoFill")) {
+            if (args_.containsKey("isEditable")) {
                 try {
-                    autoFill = args_.getBoolean("autoFill");
+                    isEditable = args_.getBoolean("isEditable");
                 } catch (ClassCastException e) {
                     Log.e("CookieAmountsListInputFragment_", "Could not cast argument to the expected type, the field is left to its default value", e);
                 }
@@ -139,13 +139,13 @@ public final class CookieAmountsListInputFragment_
             return this;
         }
 
-        public CookieAmountsListInputFragment_.FragmentBuilder_ isEditable(boolean isEditable) {
-            args_.putBoolean("isEditable", isEditable);
+        public CookieAmountsListInputFragment_.FragmentBuilder_ autoFill(boolean autoFill) {
+            args_.putBoolean("autoFill", autoFill);
             return this;
         }
 
-        public CookieAmountsListInputFragment_.FragmentBuilder_ autoFill(boolean autoFill) {
-            args_.putBoolean("autoFill", autoFill);
+        public CookieAmountsListInputFragment_.FragmentBuilder_ isEditable(boolean isEditable) {
+            args_.putBoolean("isEditable", isEditable);
             return this;
         }
 

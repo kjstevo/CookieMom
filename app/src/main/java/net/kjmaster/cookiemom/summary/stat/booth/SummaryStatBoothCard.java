@@ -101,6 +101,9 @@ public class SummaryStatBoothCard extends Card {
     ArrayList<SummaryStatBoothValues> buildArrayHelper() {
         //DataStore        dataStore = new DataStore(getContext());
         ArrayList<SummaryStatBoothValues> list = new ArrayList<SummaryStatBoothValues>();
+        float grandDeltaTotal = 0;
+        float grandDelttaPercTotal = 0;
+        float grandValueTotal = 0;
         String cash = "$0.00/$0.00";
         float cashTotal = 0;
         List<Booth> boothList = Main.daoSession.getBoothDao().loadAll();
@@ -108,25 +111,33 @@ public class SummaryStatBoothCard extends Card {
             String boothName = booth.getBoothLocation();
             HashMap<String, String> orderTotals = getTotalOrderPossCashForBoothCookieType(booth);
             SummaryStatBoothValues summaryStatBoothValues = new SummaryStatBoothValues();
-
-            summaryStatBoothValues.setCode(boothName);
+             summaryStatBoothValues.setCode(boothName);
             try {
                 float possTotal = Float.valueOf(orderTotals.get("PossTotal")) * -1;
                 float orderTotal = Float.valueOf(orderTotals.get("OrderTotal"));
-
                 summaryStatBoothValues.setValue(possTotal);
-
+                grandValueTotal+=possTotal;
 
                 cash = orderTotals.get("CashTotal");
                 cashTotal = (cashTotal + (summaryStatBoothValues.getValue() * 4));
                 summaryStatBoothValues.setDelta(Float.valueOf(cash));
+                grandDeltaTotal+=Float.valueOf(cash);
                 summaryStatBoothValues.setDeltaPerc(((possTotal * 4) - Float.valueOf(cash)) * -1);
+                grandDelttaPercTotal+=((possTotal*4)-Float.valueOf(cash));
             } catch (Exception e) {
                 Log.e("cookiemom", "error in Google BoothExpanderValues Card");
             }
+
             list.add(summaryStatBoothValues);
         }
+        SummaryStatBoothValues summaryStatBoothValues=new SummaryStatBoothValues();
+        summaryStatBoothValues.setValue(grandValueTotal);
+        summaryStatBoothValues.setDelta(grandDeltaTotal);
+        summaryStatBoothValues.setDeltaPerc((grandDelttaPercTotal));
+        summaryStatBoothValues.setCode("Total");
+        list.add(summaryStatBoothValues);
 
+          ;
         CardHeader header = new CardHeader(getContext());
 
         header.setButtonExpandVisible(false);

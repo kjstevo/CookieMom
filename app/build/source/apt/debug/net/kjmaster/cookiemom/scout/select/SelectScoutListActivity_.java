@@ -79,16 +79,16 @@ public final class SelectScoutListActivity_
         Intent intent_ = getIntent();
         Bundle extras_ = intent_.getExtras();
         if (extras_!= null) {
-            if (extras_.containsKey("requestCode")) {
+            if (extras_.containsKey("targetId")) {
                 try {
-                    requestCode = ((Integer) extras_.get("requestCode"));
+                    targetId = ((Long) extras_.get("targetId"));
                 } catch (ClassCastException e) {
                     Log.e("SelectScoutListActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
             }
-            if (extras_.containsKey("targetId")) {
+            if (extras_.containsKey("requestCode")) {
                 try {
-                    targetId = ((Long) extras_.get("targetId"));
+                    requestCode = ((Integer) extras_.get("requestCode"));
                 } catch (ClassCastException e) {
                     Log.e("SelectScoutListActivity_", "Could not cast extra to expected type, the field is left to its default value", e);
                 }
@@ -145,13 +145,13 @@ public final class SelectScoutListActivity_
             }
         }
 
-        public SelectScoutListActivity_.IntentBuilder_ requestCode(int requestCode) {
-            intent_.putExtra("requestCode", requestCode);
+        public SelectScoutListActivity_.IntentBuilder_ targetId(long targetId) {
+            intent_.putExtra("targetId", targetId);
             return this;
         }
 
-        public SelectScoutListActivity_.IntentBuilder_ targetId(long targetId) {
-            intent_.putExtra("targetId", targetId);
+        public SelectScoutListActivity_.IntentBuilder_ requestCode(int requestCode) {
+            intent_.putExtra("requestCode", requestCode);
             return this;
         }
 
