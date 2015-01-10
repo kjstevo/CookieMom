@@ -94,12 +94,13 @@ public class ScoutExpanderCookieList extends Card {
             try {
                 float possTotal = Float.valueOf(orderTotals.get("PossTotal")) * -1;
                 float orderTotal = Float.valueOf(orderTotals.get("OrderTotal"));
-
+                float possTotalValue = Float.valueOf(orderTotals.get("PossTotalValue")) * -1;
                 scoutExpanderValues.setValue(possTotal);
                 scoutExpanderValues.setDelta(orderTotal);
-                scoutExpanderValues.setDeltaPerc((possTotal) * 4);
+                scoutExpanderValues.setDeltaPerc((possTotal) * Main.getCookieCosts(cookieType));
                 cash = orderTotals.get("CashTotal");
-                cashTotal = (cashTotal + (scoutExpanderValues.getValue() * 4));
+
+                cashTotal = (cashTotal + possTotalValue);
             } catch (Exception e) {
                 Log.e("cookiemom", "error in Google ScoutExpanderValues Card");
             }
@@ -129,6 +130,7 @@ public class ScoutExpanderCookieList extends Card {
         hashMap.put("OrderTotal", "0");
 
         int intVal;
+        double dblValue;
         for (Order order : orderListStockAdapter) {
             intVal = order.getOrderedBoxes();
             intVal = intVal + Integer.valueOf(hashMap.get("OrderTotal"));
@@ -143,10 +145,14 @@ public class ScoutExpanderCookieList extends Card {
                 .list();
         //noinspection UnusedAssignment
         intVal = 0;
+        dblValue = 0;
         hashMap.put("PossTotal", "0");
+        hashMap.put("PossTotalValue", "0.0");
         for (CookieTransactions cookieTransactions : poss) {
             intVal = cookieTransactions.getTransBoxes() + Integer.valueOf(hashMap.get("PossTotal"));
+            dblValue = intVal;
             hashMap.put("PossTotal", String.valueOf(intVal));
+            hashMap.put("PossTotalValue", String.valueOf(dblValue * Main.getCookieCosts(cookieTransactions.getCookieType())));
         }
         List<CookieTransactions> cashs = Main.daoSession.getCookieTransactionsDao().queryBuilder()
                 .where(

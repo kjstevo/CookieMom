@@ -31,6 +31,8 @@ import net.kjmaster.cookiemom.dao.DaoSession;
 import net.kjmaster.cookiemom.global.Constants;
 import net.kjmaster.cookiemom.global.ISettings_;
 
+import java.util.HashMap;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -42,8 +44,10 @@ import net.kjmaster.cookiemom.global.ISettings_;
 public class Main extends Application {
 
     public static String[] mCookieTypes;
+    public static HashMap<String, Integer> mCookieCosts = new HashMap<String, Integer>();
     @Pref
     ISettings_ miSettings;
+
 
     @StringArrayRes(R.array.cookie_names_array)
     String[] CookieTypes;
@@ -62,6 +66,10 @@ public class Main extends Application {
         return mCookieTypes;
     }
 
+    public static Integer getCookieCosts(String cookieType) {
+        return mCookieCosts.get(cookieType);
+    }
+
     public void switchDb(String newDbName) {
         dbName = newDbName;
 
@@ -70,6 +78,7 @@ public class Main extends Application {
 
 
     }
+
 
     public void updateCookieTypes(String cookieTypes) {
         mCookieTypes = TextUtils.split(cookieTypes, ",");
@@ -96,7 +105,9 @@ public class Main extends Application {
         DaoMaster daoMaster = new DaoMaster(db);
         daoSession = daoMaster.newSession();
 
+
     }
+
 
     private void initCookieList(String cookieListString) {
         if (cookieListString != null) {
@@ -111,6 +122,11 @@ public class Main extends Application {
             miSettings.CookieList().put(TextUtils.join(",", CookieTypes));
             mCookieTypes = CookieTypes;
         }
+        for (int i = 0; i < mCookieTypes.length; i++) {
+            mCookieCosts.put(mCookieTypes[i], 4);
+
+        }
+        mCookieCosts.put("Toffee", 5);
     }
 
     private void initStrings(boolean isPersonal) {
@@ -134,4 +150,6 @@ public class Main extends Application {
     }
 
     public static DaoSession daoSession = null;
+
+
 }

@@ -57,19 +57,32 @@ public class Constants {
     public static final int[] CookieColors = new int[]{
             R.color.color_smiles, R.color.color_trefoils,
             R.color.color_dosidos, R.color.color_samoas,
-            R.color.color_dulce, R.color.color_berry,
-            R.color.color_tags, R.color.color_thin_mints
+            R.color.color_raisins, R.color.color_tags,
+            R.color.color_thin_mints, R.color.color_toffee
     };
 
+    public static HashMap<String, Integer> getCookieCosts() {
+        HashMap<String, Integer> cookieCosts = new HashMap<String, Integer>();
+        cookieCosts.put(CookieTypes[0], 4);
+        cookieCosts.put(CookieTypes[1], 4);
+        cookieCosts.put(CookieTypes[2], 4);
+        cookieCosts.put(CookieTypes[3], 4);
+        cookieCosts.put(CookieTypes[4], 4);
+        cookieCosts.put(CookieTypes[5], 4);
+        cookieCosts.put(CookieTypes[6], 4);
+        cookieCosts.put(CookieTypes[7], 4);
+        cookieCosts.put("Toffee", 5);
+        return cookieCosts;
+    }
     public static HashMap<String, Integer> getCookieNameImages() {
         cookieImages.put(CookieTypes[0], R.drawable.smile);
         cookieImages.put(CookieTypes[1], R.drawable.trefoil);
         cookieImages.put(CookieTypes[2], R.drawable.do_si_do);
         cookieImages.put(CookieTypes[3], R.drawable.samoa);
-        cookieImages.put(CookieTypes[4], R.drawable.dulce);
-        cookieImages.put(CookieTypes[5], R.drawable.berry);
+        cookieImages.put(CookieTypes[4], R.drawable.raisins);
         cookieImages.put(CookieTypes[6], R.drawable.tags);
         cookieImages.put(CookieTypes[7], R.drawable.mint);
+        cookieImages.put(CookieTypes[5], R.drawable.toffee);
 
 
         return cookieImages;

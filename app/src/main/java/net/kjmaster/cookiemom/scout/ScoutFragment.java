@@ -19,6 +19,7 @@
 package net.kjmaster.cookiemom.scout;
 
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.googlecode.androidannotations.annotations.AfterViews;
@@ -177,18 +178,27 @@ public class ScoutFragment extends Fragment implements ISimpleDialogListener, IC
     private void getTransactions(ScoutCard mCard, List<CookieTransactions> transactionse) {
         Integer transTotal = 0;
         Double cashTotal = 0D;
+        Double transTotalValue = 0.0;
         for (CookieTransactions cookieTransactions : transactionse) {
             transTotal = transTotal + cookieTransactions.getTransBoxes();
             cashTotal = cashTotal + cookieTransactions.getTransCash();
+            try {
+                Double cookieCosts = Double.valueOf(Main.getCookieCosts(cookieTransactions.getCookieType()));
+                Integer transBoxes = Integer.valueOf(cookieTransactions.getTransBoxes());
+                transTotalValue += transBoxes * cookieCosts;
+            } catch (Exception ex) {
+                Log.d("kjmaster", "No cokie type");
+
+            }
         }
 //because boxes taken from inv are represented as negative numbers, but that looks weird.
         transTotal = transTotal * -1;
-
+        transTotalValue = transTotalValue * -1;
 
         mCard.setAltCount(transTotal.toString());
         mCard.setPaidText(getNumberFormatAsCash(cashTotal));
-        mCard.setOwedText(getNumberFormatAsCash((transTotal * 4) - cashTotal));
-        mCard.setTotalText(getNumberFormatAsCash((double) (transTotal * 4)));
+        mCard.setOwedText(getNumberFormatAsCash(transTotalValue - cashTotal));
+        mCard.setTotalText(getNumberFormatAsCash((transTotalValue)));
 
     }
 

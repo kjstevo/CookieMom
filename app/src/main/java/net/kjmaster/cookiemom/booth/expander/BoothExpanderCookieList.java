@@ -98,12 +98,13 @@ public class BoothExpanderCookieList extends Card {
             try {
                 float possTotal = Float.valueOf(orderTotals.get("PossTotal")) * -1;
                 float orderTotal = Float.valueOf(orderTotals.get("OrderTotal"));
-
+                float possTotalValue = Float.valueOf(orderTotals.get("PossTotalValue")) * -1;
+                float orderTotalValue = Float.valueOf(orderTotals.get("OrderTotalValue"));
                 scoutExpanderValues.setValue(possTotal);
                 scoutExpanderValues.setDelta(orderTotal);
-                scoutExpanderValues.setDeltaPerc((possTotal) * 4);
+                scoutExpanderValues.setDeltaPerc(possTotalValue);
                 cash = orderTotals.get("CashTotal");
-                cashTotal = (cashTotal + (scoutExpanderValues.getValue() * 4));
+                cashTotal = (cashTotal + (possTotalValue));
             } catch (Exception e) {
                 Log.e("cookiemom", "error in Google ScoutExpanderValues Card");
             }
@@ -140,12 +141,15 @@ public class BoothExpanderCookieList extends Card {
         HashMap<String, String> hashMap = new HashMap<String, String>();
 
         hashMap.put("OrderTotal", "0");
-
+        hashMap.put("OrderTotalValue", "0.00");
         int intVal;
+        double dblVal;
         for (Order order : orderListStockAdapter) {
             intVal = order.getOrderedBoxes();
             intVal = intVal + Integer.valueOf(hashMap.get("OrderTotal"));
+            dblVal = intVal;
             hashMap.put("OrderTotal", String.valueOf(intVal));
+            hashMap.put("OrderTotalValue", String.valueOf(dblVal * Main.getCookieCosts(order.getOrderCookieType())));
         }
 
         List<CookieTransactions> poss = Main.daoSession.getCookieTransactionsDao().queryBuilder()
@@ -156,10 +160,14 @@ public class BoothExpanderCookieList extends Card {
                 .list();
         //noinspection UnusedAssignment
         intVal = 0;
+        dblVal = 0.0;
         hashMap.put("PossTotal", "0");
+        hashMap.put("PossTotalValue", "0.00");
         for (CookieTransactions cookieTransactions : poss) {
             intVal = cookieTransactions.getTransBoxes() + Integer.valueOf(hashMap.get("PossTotal"));
+            dblVal = intVal;
             hashMap.put("PossTotal", String.valueOf(intVal));
+            hashMap.put("PossTotalValue", String.valueOf(dblVal * Main.getCookieCosts(cookieTransactions.getCookieType())));
         }
         List<CookieTransactions> cashs = Main.daoSession.getCookieTransactionsDao().queryBuilder()
                 .where(

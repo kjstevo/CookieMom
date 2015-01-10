@@ -19,6 +19,7 @@
 package net.kjmaster.cookiemom.summary.stat.totals;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -85,6 +86,7 @@ public class SummaryStatTotalsCard extends Card {
         TextView gocView = (TextView) parent.findViewById(R.id.summary_stat_totals_goc_text);
         TextView gocCaption = (TextView) parent.findViewById(R.id.summary_stat_totals_goc_caption);
         int totalBoxes = 0;
+        double totalBoxesValue = 0.00;
         double totalCash = 0.0;
         double totalGoc = 0.0;
 
@@ -97,8 +99,13 @@ public class SummaryStatTotalsCard extends Card {
                 .list();
         for (CookieTransactions transaction : transactionsList) {
             totalBoxes += transaction.getTransBoxes();
+            try {
+                totalBoxesValue += transaction.getTransBoxes() * Main.getCookieCosts(transaction.getCookieType()).doubleValue();
+            } catch (Exception e) {
+                Log.d("kjmaster", "No cookie type");
+            }
         }
-        totalGoc = totalCash - (totalBoxes * 4);
+        totalGoc = totalCash - (totalBoxesValue);
         NumberFormat fmt = NumberFormat.getCurrencyInstance();
         fmt.setMaximumFractionDigits(0);
         fmt.setMinimumFractionDigits(0);

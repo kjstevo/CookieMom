@@ -65,6 +65,7 @@ import java.util.Date;
 import java.util.List;
 
 import de.psdev.licensesdialog.LicensesDialogFragment;
+import eu.inmite.android.lib.dialogs.SimpleDialogFragment;
 
 @SuppressLint("Registered")
 @EActivity(R.layout.main_activity)
@@ -251,6 +252,11 @@ public class MainActivity extends FragmentActivity {
 
     }
 
+    @OptionsItem(R.id.menu_archive)
+    void onArchive() {
+
+    }
+
     @OptionsItem(R.id.menu_about)
     void onAbout() {
         final LicensesDialogFragment fragment = LicensesDialogFragment.newInstance(R.raw.notices, true);
@@ -402,7 +408,9 @@ public class MainActivity extends FragmentActivity {
                                 data.getStringExtra("add_booth"),
                                 data.getStringExtra("address"),
                                 new Date(data.getLongExtra("booth_date", 0)
-                                )));
+                                )
+                        )
+                );
 
             } else {
                 Log.e("No data intent on booth result", "LOG00000:");

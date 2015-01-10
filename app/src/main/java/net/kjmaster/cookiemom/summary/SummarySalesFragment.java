@@ -19,6 +19,7 @@
 package net.kjmaster.cookiemom.summary;
 
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.echo.holographlibrary.Bar;
@@ -56,11 +57,13 @@ public class SummarySalesFragment extends Fragment {
     void afterViews() {
         List<CookieTransactions> list = Main.daoSession.getCookieTransactionsDao().loadAll();
         int total = 0;
+        Double totalValue = 0.0;
         Double totalCash = 0.0;
         int totalScout = 0;
         int totalBooth = 0;
         Double totalScoutCash = 0.0;
         Double totalBoothCash = 0.0;
+        Double totalScoutValue = 0.0;
         final HashMap<String, Integer> hashMap = new HashMap<String, Integer>();
         for (CookieTransactions cookieTransactions : list) {
 
@@ -71,9 +74,20 @@ public class SummarySalesFragment extends Fragment {
             } else {
                 if (cookieTransactions.getTransScoutId() >= 0) {
                     totalScout += (cookieTransactions.getTransBoxes());
+                    try {
+                        totalScoutValue += cookieTransactions.getTransBoxes() * Main.getCookieCosts(cookieTransactions.getCookieType());
+                    } catch (Exception ex) {
+                        Log.d("kjmaster", "no cookie type");
+                    }
+
                     totalScoutCash += cookieTransactions.getTransCash();
                 } else {
                     total += cookieTransactions.getTransBoxes();
+                    try {
+                        totalValue += cookieTransactions.getTransBoxes() * Main.getCookieCosts(cookieTransactions.getCookieType());
+                    } catch (Exception e) {
+                        Log.d("kjmaster", "No cookie type");
+                    }
                 }
 
             }
@@ -87,9 +101,9 @@ public class SummarySalesFragment extends Fragment {
 
         d.setColor(getResources().getColor(R.color.bar_due));
         d.setName("Due");
-        d.setValue(total * 4);
+        d.setValue(totalValue.floatValue());
         hashMap.put("Due", total);
-        d.setValueString(fmt.format(total * 4));
+        d.setValueString(fmt.format(totalValue));
         Bar d2 = new Bar();
         d2.setColor(getResources().getColor(R.color.bar_cash));
         d2.setName("Cash");

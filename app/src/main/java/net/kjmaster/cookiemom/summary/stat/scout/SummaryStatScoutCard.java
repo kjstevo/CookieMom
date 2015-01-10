@@ -111,16 +111,21 @@ public class SummaryStatScoutCard extends Card {
             summaryStatScoutValues.setCode(scoutName);
             try {
                 float possTotal = Float.valueOf(orderTotals.get("PossTotal")) * -1;
+
                 float orderTotal = Float.valueOf(orderTotals.get("OrderTotal"));
+
+                float possTotalValue = Float.valueOf(orderTotals.get("PossTotalValue")) * -1;
+
+                float orderTotalValue = Float.valueOf(orderTotals.get("OrderTotalValue"));
                 summaryStatScoutValues.setValue(possTotal);
                 grandValueTotal += possTotal;
 
                 cash = orderTotals.get("CashTotal");
-                cashTotal = (cashTotal + (summaryStatScoutValues.getValue() * 4));
+                cashTotal = (cashTotal + possTotalValue);
                 summaryStatScoutValues.setDelta(Float.valueOf(cash));
                 grandDeltaTotal += Float.valueOf(cash);
-                summaryStatScoutValues.setDeltaPerc((possTotal * 4) - Float.valueOf(cash));
-                grandDelttaPercTotal += ((possTotal * 4) - Float.valueOf(cash));
+                summaryStatScoutValues.setDeltaPerc((possTotalValue) - Float.valueOf(cash));
+                grandDelttaPercTotal += ((possTotalValue) - Float.valueOf(cash));
             } catch (Exception e) {
                 Log.e("cookiemom", "error in Google ScoutExpanderValues Card");
             }
@@ -159,23 +164,37 @@ public class SummaryStatScoutCard extends Card {
         HashMap<String, String> hashMap = new HashMap<String, String>();
 
         hashMap.put("OrderTotal", "0");
-
+        hashMap.put("OrderTotalValue", "0.00");
         int intVal;
+        Double dblVal = 0.0;
         for (CookieTransactions transactions : transactionsList) {
             if (transactions.getTransBoxes() < 0) {
                 intVal = transactions.getTransBoxes();
                 intVal = intVal + Integer.valueOf(hashMap.get("OrderTotal"));
+                try {
+                    dblVal += transactions.getTransBoxes() * Main.getCookieCosts(transactions.getCookieType()).doubleValue();
+                } catch (Exception e) {
+                    Log.d("kjmaster", "no cookie type");
+                }
                 hashMap.put("OrderTotal", String.valueOf(intVal));
+                hashMap.put("OrderTotalValue", String.valueOf(dblVal));
             }
         }
 
         //noinspection UnusedAssignment
         intVal = 0;
+        dblVal = 0.00;
         hashMap.put("PossTotal", "0");
         for (CookieTransactions cookieTransactions : transactionsList) {
 
             intVal = cookieTransactions.getTransBoxes() + Integer.valueOf(hashMap.get("PossTotal"));
+            try {
+                dblVal += cookieTransactions.getTransBoxes() * Main.getCookieCosts(cookieTransactions.getCookieType()).doubleValue();
+            } catch (Exception e) {
+                Log.d("kjmaster", "no cookie type");
+            }
             hashMap.put("PossTotal", String.valueOf(intVal));
+            hashMap.put("PossTotalValue", String.valueOf(dblVal));
         }
         Double dVal;
         hashMap.put("CashTotal", String.valueOf(0));

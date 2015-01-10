@@ -111,33 +111,35 @@ public class SummaryStatBoothCard extends Card {
             String boothName = booth.getBoothLocation();
             HashMap<String, String> orderTotals = getTotalOrderPossCashForBoothCookieType(booth);
             SummaryStatBoothValues summaryStatBoothValues = new SummaryStatBoothValues();
-             summaryStatBoothValues.setCode(boothName);
+            summaryStatBoothValues.setCode(boothName);
             try {
                 float possTotal = Float.valueOf(orderTotals.get("PossTotal")) * -1;
+                float possTotalValue = Float.valueOf(orderTotals.get("PossTotalValue")) * -1;
                 float orderTotal = Float.valueOf(orderTotals.get("OrderTotal"));
+                float orderTotalValue = Float.valueOf(orderTotals.get("OrderTotalValue"));
                 summaryStatBoothValues.setValue(possTotal);
-                grandValueTotal+=possTotal;
+                grandValueTotal += possTotal;
 
                 cash = orderTotals.get("CashTotal");
-                cashTotal = (cashTotal + (summaryStatBoothValues.getValue() * 4));
+                cashTotal = (cashTotal + possTotalValue);
                 summaryStatBoothValues.setDelta(Float.valueOf(cash));
-                grandDeltaTotal+=Float.valueOf(cash);
-                summaryStatBoothValues.setDeltaPerc(((possTotal * 4) - Float.valueOf(cash)) * -1);
-                grandDelttaPercTotal+=((possTotal*4)-Float.valueOf(cash));
+                grandDeltaTotal += Float.valueOf(cash);
+                summaryStatBoothValues.setDeltaPerc(((possTotalValue) - Float.valueOf(cash)) * -1);
+                grandDelttaPercTotal += ((possTotalValue) - Float.valueOf(cash));
             } catch (Exception e) {
                 Log.e("cookiemom", "error in Google BoothExpanderValues Card");
             }
 
             list.add(summaryStatBoothValues);
         }
-        SummaryStatBoothValues summaryStatBoothValues=new SummaryStatBoothValues();
+        SummaryStatBoothValues summaryStatBoothValues = new SummaryStatBoothValues();
         summaryStatBoothValues.setValue(grandValueTotal);
         summaryStatBoothValues.setDelta(grandDeltaTotal);
         summaryStatBoothValues.setDeltaPerc((grandDelttaPercTotal));
         summaryStatBoothValues.setCode("Total");
         list.add(summaryStatBoothValues);
 
-          ;
+
         CardHeader header = new CardHeader(getContext());
 
         header.setButtonExpandVisible(false);
@@ -157,23 +159,39 @@ public class SummaryStatBoothCard extends Card {
         HashMap<String, String> hashMap = new HashMap<String, String>();
 
         hashMap.put("OrderTotal", "0");
-
+        hashMap.put("OrderTotalValue", "0.00");
+        Double dblVal = 0.0;
         int intVal;
         for (CookieTransactions transactions : transactionsList) {
             if (transactions.getTransBoxes() < 0) {
+
                 intVal = transactions.getTransBoxes();
                 intVal = intVal + Integer.valueOf(hashMap.get("OrderTotal"));
+                try {
+                    dblVal += transactions.getTransBoxes() * Main.getCookieCosts(transactions.getCookieType()).doubleValue();
+                } catch (Exception e) {
+                    Log.d("kjmaster", "no cookie type");
+                }
                 hashMap.put("OrderTotal", String.valueOf(intVal));
+                hashMap.put("OrderTotalValue", String.valueOf(dblVal));
             }
         }
 
         //noinspection UnusedAssignment
         intVal = 0;
+        dblVal = 0.0;
         hashMap.put("PossTotal", "0");
+        hashMap.put("PossTotalValue", "0.00");
         for (CookieTransactions cookieTransactions : transactionsList) {
 
             intVal = cookieTransactions.getTransBoxes() + Integer.valueOf(hashMap.get("PossTotal"));
+            try {
+                dblVal += Double.valueOf(cookieTransactions.getTransBoxes() * Main.getCookieCosts(cookieTransactions.getCookieType()));
+            } catch (Exception e) {
+                Log.d("kjmaster", "no cookie type");
+            }
             hashMap.put("PossTotal", String.valueOf(intVal));
+            hashMap.put("PossTotalValue", String.valueOf(dblVal));
         }
         Double dVal;
         hashMap.put("CashTotal", String.valueOf(0));

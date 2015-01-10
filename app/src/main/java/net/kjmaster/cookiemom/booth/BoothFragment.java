@@ -113,7 +113,15 @@ public class BoothFragment
     }
 
     private void selectBoothMenu(BaseCard card, MenuItem item) {
-        Booth booth = ((BoothContentCard) card.getParentCard()).getBooth();
+        BoothContentCard parentCard = (BoothContentCard) card.getParentCard();
+        Booth booth;
+
+        try {
+            booth = parentCard.getBooth();
+        } catch (Exception e) {
+            booth = ((BoothContentCard) card).getBooth();
+        }
+
         switch (item.getItemId()) {
 
             case R.id.menu_assign_scout:
